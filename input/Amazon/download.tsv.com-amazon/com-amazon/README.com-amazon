@@ -1,0 +1,70 @@
+Amazon (MDS) network, part of the Koblenz Network Collection
+===========================================================================
+
+This directory contains the TSV and related files of the com-amazon network: This is the co-purchase network of Amazon based on the "customers who bought this also bought" feature. Nodes are products and an undirected edge between two nodes shows that the corresponding products have been frequently bought together.
+
+
+More information about the network is provided here: 
+http://konect.cc/networks/com-amazon
+
+Files: 
+    meta.com-amazon -- Metadata about the network 
+    out.com-amazon -- The adjacency matrix of the network in whitespace-separated values format, with one edge per line
+      The meaning of the columns in out.com-amazon are: 
+        First column: ID of from node 
+        Second column: ID of to node
+        Third column (if present): weight or multiplicity of edge
+        Fourth column (if present):  timestamp of edges Unix time
+
+
+Use the following References for citation:
+
+@MISC{konect:2017:com-amazon,
+    title = {Amazon (MDS) network dataset -- {KONECT}},
+    month = oct,
+    year = {2017},
+    url = {http://konect.cc/networks/com-amazon}
+}
+
+@inproceedings{konect:leskovec2012,
+	title = {Defining and Evaluating Network Communities based on Ground-Truth},
+	author = {Yang, Jaewon and Leskovec, Jure},
+	booktitle = {Proc. ACM SIGKDD Workshop on Min. Data Semant.},
+	pages = {3},
+	year = {2012},
+}
+
+@inproceedings{konect:leskovec2012,
+	title = {Defining and Evaluating Network Communities based on Ground-Truth},
+	author = {Yang, Jaewon and Leskovec, Jure},
+	booktitle = {Proc. ACM SIGKDD Workshop on Min. Data Semant.},
+	pages = {3},
+	year = {2012},
+}
+
+
+@inproceedings{konect,
+	title = {{KONECT} -- {The} {Koblenz} {Network} {Collection}},
+	author = {Jérôme Kunegis},
+	year = {2013},
+	booktitle = {Proc. Int. Conf. on World Wide Web Companion},
+	pages = {1343--1350},
+	url = {http://dl.acm.org/citation.cfm?id=2488173},
+	url_presentation = {https://www.slideshare.net/kunegis/presentationwow},
+	url_web = {http://konect.cc/},
+	url_citations = {https://scholar.google.com/scholar?cites=7174338004474749050},
+}
+
+@inproceedings{konect,
+	title = {{KONECT} -- {The} {Koblenz} {Network} {Collection}},
+	author = {Jérôme Kunegis},
+	year = {2013},
+	booktitle = {Proc. Int. Conf. on World Wide Web Companion},
+	pages = {1343--1350},
+	url = {http://dl.acm.org/citation.cfm?id=2488173},
+	url_presentation = {https://www.slideshare.net/kunegis/presentationwow},
+	url_web = {http://konect.cc/},
+	url_citations = {https://scholar.google.com/scholar?cites=7174338004474749050},
+}
+
+

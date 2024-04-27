@@ -1,0 +1,11 @@
+category: Social
+code: GW
+name: Gowalla
+description: User–user friendship
+url: http://snap.stanford.edu/data/loc-gowalla.html
+extr: snap
+long-description: This undirected network contains user–user friendship relations from Gowalla, a former location-based social network where user shared their locations. A node represents a user and an edge indicates that a friendship exists between the user represented by the left node and the user represented by the right node.
+cite: konect:cho2011
+entity-names: user
+relationship-names: friendship
+timeiso:  2012
