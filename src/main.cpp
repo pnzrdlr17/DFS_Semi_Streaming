@@ -237,8 +237,10 @@ void getAllRandomEdges(int vertc,int edgec){
         edgS.push_back(edg(edS[c-1][0],edS[c-1][1]));
         c--; edgec--;
     }
+    
+    free(edS);
 
-
+    // cout << edgS.size() << endl;
     // for(auto it=edgS.begin();it!=edgS.end();it++){
     //     cout << "( "<<it->first << "," << it->second << " )" << ", ";
     // }
@@ -580,14 +582,16 @@ int main(int argc, char *argv[])
 
         #ifdef VARN
 	    step=10;
+        cout << t << endl;
 	    for(vertCount=10;vertCount<=n;vertCount+=step)
-		{
+		{       
+            cout << vertCount << endl;
 			if(vertCount>=100) step=50;
             edgeCount=edgSpars(vertCount,spars);
             // getAllRandomEdges(vertCount,edgeCount);
             // getAllPowLawRandomEdges(vertCount,edgeCount);
             getAllPowLawRandomEdgesV2(vertCount,edgeCount,"VARN",t);
-            vector<double> all_params = get_all_params(vertCount,edgS);
+            // vector<double> all_params = get_all_params(vertCount,edgS);
 	    #endif
 
 	    #ifdef VARM
@@ -595,8 +599,10 @@ int main(int argc, char *argv[])
         step=100;
 	    for(edgeCount=100;edgeCount<=m;edgeCount+=step)
 		{   
+            cout << t << " " << edgeCount << endl;
 			if(edgeCount>=1000) step=1000;
-			if(edgeCount>=10000) step=10000;
+			// if(edgeCount>=10000) step=10000;
+            if(edgeCount>=20000) step=10000;
 			if(edgeCount>=100000) step=100000;
             // if(edgeCount>=2000 && edgeCount<=3500) step=100;
             // if(edgeCount>=4600 && edgeCount<=6500) step=100;
@@ -604,7 +610,7 @@ int main(int argc, char *argv[])
             // cout << edgeCount << endl;
             // getAllPowLawRandomEdges(vertCount,edgeCount);
             getAllPowLawRandomEdgesV2(vertCount,edgeCount,"VARM",t);
-            vector<double> all_params = get_all_params(vertCount,edgS);
+            // vector<double> all_params = get_all_params(vertCount,edgS);
 
 	    #endif
 
@@ -613,7 +619,7 @@ int main(int argc, char *argv[])
         // getAllRandomEdges(vertCount,edgeCount);
         // getAllPowLawRandomEdges(vertCount,edgeCount);
         getAllPowLawRandomEdgesV2(vertCount,edgeCount,"VARK",t);
-        vector<double> all_params = get_all_params(vertCount,edgS);
+        // vector<double> all_params = get_all_params(vertCount,edgS);
         #endif
 
         #ifdef VARK
@@ -621,7 +627,7 @@ int main(int argc, char *argv[])
         step=1;
         for(k=1;k<=spaceOpt;k+=step){
 
-            // cout << k << endl;
+            cout << t << " " << k << endl;
 
             if(k>=40) step=5;
             if(k>=100) step=50;
@@ -681,10 +687,10 @@ int main(int argc, char *argv[])
 			param[dp] = vertCount;
 			avgPass[dp] += p;
             avgHeight[dp] += h;
-            maxComp[dp] += all_params[0];
-            numComp[dp] += all_params[1];
-            meanComp[dp] += all_params[2];
-            stdComp[dp] += all_params[3];
+            // maxComp[dp] += all_params[0];
+            // numComp[dp] += all_params[1];
+            // meanComp[dp] += all_params[2];
+            // stdComp[dp] += all_params[3];
 			if(maxPass[dp]<p) maxPass[dp]=p;
 			dp++;
 		}
@@ -693,10 +699,10 @@ int main(int argc, char *argv[])
 			param[dp] = edgeCount;
 			avgPass[dp] += p;
             avgHeight[dp] += h;
-            maxComp[dp] += all_params[0];
-            numComp[dp] += all_params[1];
-            meanComp[dp] += all_params[2];
-            stdComp[dp] += all_params[3];
+            // maxComp[dp] += all_params[0];
+            // numComp[dp] += all_params[1];
+            // meanComp[dp] += all_params[2];
+            // stdComp[dp] += all_params[3];
 			if(maxPass[dp]<p) maxPass[dp]=p;
 			dp++;
 		}
@@ -706,10 +712,10 @@ int main(int argc, char *argv[])
 			param[dp] = k;
 			avgPass[dp] += p;
             avgHeight[dp] += h;
-            maxComp[dp] += all_params[0];
-            numComp[dp] += all_params[1];
-            meanComp[dp] += all_params[2];
-            stdComp[dp] += all_params[3];
+            // maxComp[dp] += all_params[0];
+            // numComp[dp] += all_params[1];
+            // meanComp[dp] += all_params[2];
+            // stdComp[dp] += all_params[3];
 			if(maxPass[dp]<p) maxPass[dp]=p;
 			dp++;
 		}
@@ -723,11 +729,11 @@ int main(int argc, char *argv[])
 	{
 		avgPass[i]/= tst;
         avgHeight[i]/=tst;
-        maxComp[i]/=tst;
-        numComp[i]/=tst;
-        meanComp[i]/=tst;
-        stdComp[i]/=tst;
-		cout << param[i] << " " << avgPass[i] << " " << maxPass[i] << endl;
+        // maxComp[i]/=tst;
+        // numComp[i]/=tst;
+        // meanComp[i]/=tst;
+        // stdComp[i]/=tst;
+		cout << param[i] << " " << avgPass[i] << " " << maxPass[i] << " " << avgHeight[i] << endl;
         // cout << avgHeight[i] << " " << maxComp[i] << " " << numComp[i] << " " << meanComp[i] << " " << stdComp[i] << endl;
 	}
     #endif

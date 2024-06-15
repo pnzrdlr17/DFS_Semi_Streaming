@@ -1,10 +1,11 @@
 reset
 set terminal png size 640,540 enhanced font "arial,15"
+#set terminal png size 700,600 enhanced font "arial,17"
 N=ARG1
 SP=ARG2
 TST=ARG3
 TYP=ARG4
-location="./output/powlaw/final/"
+location="./output/powlaw/"
 
 if(TYP==1){
 COL=2
@@ -35,7 +36,7 @@ COL=8
 LAB='Std Dev Comp Size'
 }
 
-set output 'plots/powlaw/new/klev_VarK_'.N.'_SP'.SP.'_'.LAB.'.png'
+set output 'plots/powlaw/new/kpath_VarK_'.N.'_SP'.SP.'_'.LAB.'.png'
 
 set multiplot
 
@@ -48,6 +49,8 @@ if(SP=='4') 	M=  'n*n/2'
 set   autoscale
 set xlabel "Space Parameter k"
 set xtics 200
+#set xtics ("2" 200, "4" 400,  "6" 600, "8" 800, "10" 1000)
+
 
 if(TYP==1||TYP==2){
 set ylabel "Number of passes"
@@ -145,13 +148,42 @@ set key box
    #  "".location."latest/new/KPath_VarK_4.txt" using 1:(column(COL)) title 'kPathN(3)' with linespoints, \
 
 
-
 #plot "".location."previous/corrected/klev_VarK_2.txt" using 1:(column(COL)) title 'kLevO(1)' with linespoints, \
    #  "".location."latest/new/klev_VarK_2.txt" using 1:(column(COL)) title 'kLevN(1)' with linespoints, \
    #  "".location."previous/corrected/klev_VarK_3.txt" using 1:(column(COL)) title 'kLevO(2)' with linespoints, \
    #  "".location."latest/new/klev_VarK_3.txt" using 1:(column(COL)) title 'kLevN(2)' with linespoints, \
    #  "".location."previous/corrected/klev_VarK_4.txt" using 1:(column(COL)) title 'kLevO(3)' with linespoints, \
    #  "".location."latest/new/klev_VarK_4.txt" using 1:(column(COL)) title 'kLevN(3)' with linespoints, \
+
+#plot "".location."/oldkpath/main_KPath_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'KPathO(1)' with linespoints, \
+  #   "".location."/newkpath/main_KPath_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'KPathN(1)' with linespoints, \
+  #   "".location."/oldkpath/main_KPath_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'KPathO(2)' with linespoints, \
+  #   "".location."/newkpath/main_KPath_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'KPathN(2)' with linespoints, \
+  #   "".location."/oldkpath/main_KPath_VarK_".N."_3_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'KPathO(3)' with linespoints, \
+  #   "".location."/newkpath/main_KPath_VarK_".N."_3_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'KPathN(3)' with linespoints, \
+
+
+#plot "".location."1000_old/main_KPath_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPath(1)' with linespoints, \
+   #  "".location."1000_old/main_KLev_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLev(1)' with linespoints, \
+    #  "".location."1000_old/main_KPath_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPath(2)' with linespoints, \
+    #  "".location."1000_old/main_KLev_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLev(2)' with linespoints, \
+    #  "".location."1000_old/main_KPath_VarK_".N."_3_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPath(3)' with linespoints, \
+    #  "".location."1000_old/main_KLev_VarK_".N."_3_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLev(3)' with linespoints, \
+
+
+#plot "".location."1000_old/main_KPath_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathO(1)' with linespoints, \
+  #   "".location."1000_new/main_KPath_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathN(1)' with linespoints, \
+  #   "".location."1000_old/main_KPath_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathO(2)' with linespoints, \
+  #   "".location."1000_new/main_KPath_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathN(2)' with linespoints, \
+  #   "".location."1000_old/main_KPath_VarK_".N."_3_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathO(3)' with linespoints, \
+  #   "".location."1000_new/main_KPath_VarK_".N."_3_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathN(3)' with linespoints, \
+
+#plot "".location."1000_old/main_KLev_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevO(1)' with linespoints, \
+  #   "".location."1000_new/main_KLev_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevN(1)' with linespoints, \
+  #   "".location."1000_old/main_KLev_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevO(2)' with linespoints, \
+  #   "".location."1000_new/main_KLev_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevN(2)' with linespoints, \
+  #   "".location."1000_old/main_KLev_VarK_".N."_3_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevO(3)' with linespoints, \
+  #   "".location."1000_new/main_KLev_VarK_".N."_3_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevN(3)' with linespoints, \
 
 # FOR POWERLAW GRAPHS
 
@@ -161,13 +193,25 @@ set key box
   #   "".location."latest/new/KPath_VarK_3.txt" using 1:(column(COL)) title 'kPathN(2)' with linespoints, \
 
 
-plot "".location."previous/corrected/klev_VarK_2.txt" using 1:(column(COL)) title 'kLevO(1)' with linespoints, \
-     "".location."latest/new/klev_VarK_2.txt" using 1:(column(COL)) title 'kLevN(1)' with linespoints, \
-     "".location."previous/corrected/klev_VarK_3.txt" using 1:(column(COL)) title 'kLevO(2)' with linespoints, \
-     "".location."latest/new/klev_VarK_3.txt" using 1:(column(COL)) title 'kLevN(2)' with linespoints, \
+#plot "".location."previous/corrected/klev_VarK_2.txt" using 1:(column(COL)) title 'kLevO(1)' with linespoints, \
+  #   "".location."latest/new/klev_VarK_2.txt" using 1:(column(COL)) title 'kLevN(1)' with linespoints, \
+  #   "".location."previous/corrected/klev_VarK_3.txt" using 1:(column(COL)) title 'kLevO(2)' with linespoints, \
+  #   "".location."latest/new/klev_VarK_3.txt" using 1:(column(COL)) title 'kLevN(2)' with linespoints, \
  
 
-if(TYP==1||TYP==2){
+plot "".location."1000_old/main_KPath_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathO(1)' with linespoints, \
+     "".location."1000_new/main_KPath_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathN(1)' with linespoints, \
+   "".location."1000_old/main_KPath_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathO(2)' with linespoints, \
+     "".location."1000_new/main_KPath_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathN(2)' with linespoints, \
+
+#plot "".location."1000_old/main_KLev_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevO(1)' with linespoints, \
+  #   "".location."1000_new/main_KLev_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevN(1)' with linespoints, \
+  #   "".location."1000_old/main_KLev_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevO(2)' with linespoints, \
+  #   "".location."1000_new/main_KLev_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevN(2)' with linespoints, \
+
+
+
+if((TYP==1||TYP==2)&&1){
 unset key
 unset label
 set size 0.5,0.6
@@ -181,7 +225,6 @@ set xtics 10
 set xlabel ""
 set ylabel ""
 
-
 # FOR RANDOM GRAPHS
 
 #plot "".location."main_KPath_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPath(1)' with linespoints, \
@@ -208,7 +251,6 @@ set ylabel ""
    #  "".location."latest/new/KPath_VarK_4.txt" using 1:(column(COL)) title 'kPathN(3)' with linespoints, \
 
 
-
 #plot "".location."previous/corrected/klev_VarK_2.txt" using 1:(column(COL)) title 'kLevO(1)' with linespoints, \
    #  "".location."latest/new/klev_VarK_2.txt" using 1:(column(COL)) title 'kLevN(1)' with linespoints, \
    #  "".location."previous/corrected/klev_VarK_3.txt" using 1:(column(COL)) title 'kLevO(2)' with linespoints, \
@@ -216,6 +258,35 @@ set ylabel ""
    #  "".location."previous/corrected/klev_VarK_4.txt" using 1:(column(COL)) title 'kLevO(3)' with linespoints, \
    #  "".location."latest/new/klev_VarK_4.txt" using 1:(column(COL)) title 'kLevN(3)' with linespoints, \
 
+#plot "".location."/oldkpath/main_KPath_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'KPathO(1)' with linespoints, \
+  #   "".location."/newkpath/main_KPath_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'KPathN(1)' with linespoints, \
+  #   "".location."/oldkpath/main_KPath_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'KPathO(2)' with linespoints, \
+  #   "".location."/newkpath/main_KPath_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'KPathN(2)' with linespoints, \
+  #   "".location."/oldkpath/main_KPath_VarK_".N."_3_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'KPathO(3)' with linespoints, \
+  #   "".location."/newkpath/main_KPath_VarK_".N."_3_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'KPathN(3)' with linespoints, \
+
+
+#plot "".location."1000_old/main_KPath_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPath(1)' with linespoints, \
+   #  "".location."1000_old/main_KLev_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLev(1)' with linespoints, \
+    #  "".location."1000_old/main_KPath_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPath(2)' with linespoints, \
+    #  "".location."1000_old/main_KLev_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLev(2)' with linespoints, \
+    #  "".location."1000_old/main_KPath_VarK_".N."_3_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPath(3)' with linespoints, \
+    #  "".location."1000_old/main_KLev_VarK_".N."_3_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLev(3)' with linespoints, \
+
+
+#plot "".location."1000_old/main_KPath_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathO(1)' with linespoints, \
+  #   "".location."1000_new/main_KPath_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathN(1)' with linespoints, \
+  #   "".location."1000_old/main_KPath_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathO(2)' with linespoints, \
+  #   "".location."1000_new/main_KPath_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathN(2)' with linespoints, \
+  #   "".location."1000_old/main_KPath_VarK_".N."_3_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathO(3)' with linespoints, \
+  #   "".location."1000_new/main_KPath_VarK_".N."_3_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathN(3)' with linespoints, \
+
+#plot "".location."1000_old/main_KLev_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevO(1)' with linespoints, \
+  #   "".location."1000_new/main_KLev_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevN(1)' with linespoints, \
+  #   "".location."1000_old/main_KLev_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevO(2)' with linespoints, \
+  #   "".location."1000_new/main_KLev_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevN(2)' with linespoints, \
+  #   "".location."1000_old/main_KLev_VarK_".N."_3_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevO(3)' with linespoints, \
+  #   "".location."1000_new/main_KLev_VarK_".N."_3_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevN(3)' with linespoints, \
 
 # FOR POWERLAW GRAPHS
 
@@ -225,11 +296,21 @@ set ylabel ""
   #   "".location."latest/new/KPath_VarK_3.txt" using 1:(column(COL)) title 'kPathN(2)' with linespoints, \
 
 
-plot "".location."previous/corrected/klev_VarK_2.txt" using 1:(column(COL)) title 'kLevO(1)' with linespoints, \
-     "".location."latest/new/klev_VarK_2.txt" using 1:(column(COL)) title 'kLevN(1)' with linespoints, \
-     "".location."previous/corrected/klev_VarK_3.txt" using 1:(column(COL)) title 'kLevO(2)' with linespoints, \
-     "".location."latest/new/klev_VarK_3.txt" using 1:(column(COL)) title 'kLevN(2)' with linespoints, \
+#plot "".location."previous/corrected/klev_VarK_2.txt" using 1:(column(COL)) title 'kLevO(1)' with linespoints, \
+  #   "".location."latest/new/klev_VarK_2.txt" using 1:(column(COL)) title 'kLevN(1)' with linespoints, \
+  #   "".location."previous/corrected/klev_VarK_3.txt" using 1:(column(COL)) title 'kLevO(2)' with linespoints, \
+  #   "".location."latest/new/klev_VarK_3.txt" using 1:(column(COL)) title 'kLevN(2)' with linespoints, \
+ 
 
+plot "".location."1000_old/main_KPath_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathO(1)' with linespoints, \
+     "".location."1000_new/main_KPath_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathN(1)' with linespoints, \
+   "".location."1000_old/main_KPath_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathO(2)' with linespoints, \
+     "".location."1000_new/main_KPath_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathN(2)' with linespoints, \
+
+#plot "".location."1000_old/main_KLev_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevO(1)' with linespoints, \
+  #   "".location."1000_new/main_KLev_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevN(1)' with linespoints, \
+  #   "".location."1000_old/main_KLev_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevO(2)' with linespoints, \
+  #   "".location."1000_new/main_KLev_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevN(2)' with linespoints, \
 
 
 
@@ -238,18 +319,16 @@ plot "".location."previous/corrected/klev_VarK_2.txt" using 1:(column(COL)) titl
 if(1){
 unset key
 unset label
-set size 0.4,0.55
-set origin 0.12,0.33
+set size 0.38,0.6
+set origin 0.14,0.3
 #set title 'Zoom' offset 0,-2
 
-set yrange [0:4]
-set ytics 1
+set yrange [0:70]
+set ytics 20
 set xrange [0:5]
 set xtics 2
 set xlabel ""
 set ylabel ""
-
-
 
 # FOR RANDOM GRAPHS
 
@@ -277,13 +356,42 @@ set ylabel ""
    #  "".location."latest/new/KPath_VarK_4.txt" using 1:(column(COL)) title 'kPathN(3)' with linespoints, \
 
 
-
 #plot "".location."previous/corrected/klev_VarK_2.txt" using 1:(column(COL)) title 'kLevO(1)' with linespoints, \
    #  "".location."latest/new/klev_VarK_2.txt" using 1:(column(COL)) title 'kLevN(1)' with linespoints, \
    #  "".location."previous/corrected/klev_VarK_3.txt" using 1:(column(COL)) title 'kLevO(2)' with linespoints, \
    #  "".location."latest/new/klev_VarK_3.txt" using 1:(column(COL)) title 'kLevN(2)' with linespoints, \
    #  "".location."previous/corrected/klev_VarK_4.txt" using 1:(column(COL)) title 'kLevO(3)' with linespoints, \
    #  "".location."latest/new/klev_VarK_4.txt" using 1:(column(COL)) title 'kLevN(3)' with linespoints, \
+
+#plot "".location."/oldkpath/main_KPath_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'KPathO(1)' with linespoints, \
+  #   "".location."/newkpath/main_KPath_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'KPathN(1)' with linespoints, \
+  #   "".location."/oldkpath/main_KPath_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'KPathO(2)' with linespoints, \
+  #   "".location."/newkpath/main_KPath_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'KPathN(2)' with linespoints, \
+  #   "".location."/oldkpath/main_KPath_VarK_".N."_3_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'KPathO(3)' with linespoints, \
+  #   "".location."/newkpath/main_KPath_VarK_".N."_3_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'KPathN(3)' with linespoints, \
+
+
+#plot "".location."1000_old/main_KPath_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPath(1)' with linespoints, \
+   #  "".location."1000_old/main_KLev_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLev(1)' with linespoints, \
+    #  "".location."1000_old/main_KPath_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPath(2)' with linespoints, \
+    #  "".location."1000_old/main_KLev_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLev(2)' with linespoints, \
+    #  "".location."1000_old/main_KPath_VarK_".N."_3_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPath(3)' with linespoints, \
+    #  "".location."1000_old/main_KLev_VarK_".N."_3_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLev(3)' with linespoints, \
+
+
+#plot "".location."1000_old/main_KPath_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathO(1)' with linespoints, \
+  #   "".location."1000_new/main_KPath_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathN(1)' with linespoints, \
+  #   "".location."1000_old/main_KPath_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathO(2)' with linespoints, \
+  #   "".location."1000_new/main_KPath_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathN(2)' with linespoints, \
+  #   "".location."1000_old/main_KPath_VarK_".N."_3_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathO(3)' with linespoints, \
+  #   "".location."1000_new/main_KPath_VarK_".N."_3_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathN(3)' with linespoints, \
+
+#plot "".location."1000_old/main_KLev_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevO(1)' with linespoints, \
+  #   "".location."1000_new/main_KLev_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevN(1)' with linespoints, \
+  #   "".location."1000_old/main_KLev_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevO(2)' with linespoints, \
+  #   "".location."1000_new/main_KLev_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevN(2)' with linespoints, \
+  #   "".location."1000_old/main_KLev_VarK_".N."_3_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevO(3)' with linespoints, \
+  #   "".location."1000_new/main_KLev_VarK_".N."_3_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevN(3)' with linespoints, \
 
 # FOR POWERLAW GRAPHS
 
@@ -293,10 +401,21 @@ set ylabel ""
   #   "".location."latest/new/KPath_VarK_3.txt" using 1:(column(COL)) title 'kPathN(2)' with linespoints, \
 
 
-plot "".location."previous/corrected/klev_VarK_2.txt" using 1:(column(COL)) title 'kLevO(1)' with linespoints, \
-     "".location."latest/new/klev_VarK_2.txt" using 1:(column(COL)) title 'kLevN(1)' with linespoints, \
-     "".location."previous/corrected/klev_VarK_3.txt" using 1:(column(COL)) title 'kLevO(2)' with linespoints, \
-     "".location."latest/new/klev_VarK_3.txt" using 1:(column(COL)) title 'kLevN(2)' with linespoints, \
+#plot "".location."previous/corrected/klev_VarK_2.txt" using 1:(column(COL)) title 'kLevO(1)' with linespoints, \
+  #   "".location."latest/new/klev_VarK_2.txt" using 1:(column(COL)) title 'kLevN(1)' with linespoints, \
+  #   "".location."previous/corrected/klev_VarK_3.txt" using 1:(column(COL)) title 'kLevO(2)' with linespoints, \
+  #   "".location."latest/new/klev_VarK_3.txt" using 1:(column(COL)) title 'kLevN(2)' with linespoints, \
+ 
+
+plot "".location."1000_old/main_KPath_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathO(1)' with linespoints, \
+     "".location."1000_new/main_KPath_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathN(1)' with linespoints, \
+   "".location."1000_old/main_KPath_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathO(2)' with linespoints, \
+     "".location."1000_new/main_KPath_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kPathN(2)' with linespoints, \
+
+#plot "".location."1000_old/main_KLev_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevO(1)' with linespoints, \
+  #   "".location."1000_new/main_KLev_VarK_".N."_1_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevN(1)' with linespoints, \
+  #   "".location."1000_old/main_KLev_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevO(2)' with linespoints, \
+  #   "".location."1000_new/main_KLev_VarK_".N."_2_".SP."_".TST."_S1.txt" using 1:(column(COL)) title 'kLevN(2)' with linespoints, \
 
 
 
