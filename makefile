@@ -1,4 +1,5 @@
-CC = g++ -std=c++0x  #g++ -std=c++11
+# CC = g++ -std=c++0x  #g++ -std=c++11
+CC = /opt/homebrew/bin/g++-14 -w -std=c++0x  #g++ -std=c++11
 DEBUG = -g
 CFLAGS = -Wall -c -O3 $(DEBUG)
 LFLAGS = -Wall -O3 $(DEBUG)
