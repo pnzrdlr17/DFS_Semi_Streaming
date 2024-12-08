@@ -2,7 +2,7 @@
 
 iterations=${1:-1} # Number of iterations per input
 timestamp=$(date +"%Y%m%d_%H%M%S")
-output_file="benchmarks/benchmark_time_memory_$timestamp.csv"
+output_file="output/benchmarks/benchmark_time_memory_$timestamp.csv"
 
 # Initialize the CSV file with headers
 echo "input,K,run,user_time,max_mem_kb,program_output" > $output_file
