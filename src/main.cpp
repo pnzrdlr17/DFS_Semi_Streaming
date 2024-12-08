@@ -5,7 +5,11 @@
 #include "simp.cpp"
 #include "improv.cpp"
 #include "k_lev.cpp"
-#include "kpath.cpp"
+#include "../lib/algorithms/kPath/kPath0.cpp"
+#include "../lib/algorithms/kPath/kPath1.cpp"
+#include "../lib/algorithms/kPath/kPath1x.cpp"
+#include "../lib/algorithms/kPath/kPath2.cpp"
+#include "../lib/algorithms/kPath/kPathN.cpp"
 #include "../lib/verifydfs.cpp"
 #include "comp_params.cpp"
 
@@ -15,7 +19,7 @@ using namespace std;
 #define edg pair<int, int>
 
 // #define PRINTTREE
-#define VERIFYDFS
+// #define VERIFYDFS
 // #define PRINTREALHEIGHT
 // #define PRINTREALCOMPSIZEPARAMS
 #define PRINTRANDHEIGHT
@@ -23,14 +27,21 @@ using namespace std;
 
 #ifdef REAL
 int n, m, algoType, opt, spaceOpt;
+char variant;
 string filePath;
 #else
 int n, m, spars, tst, algoType, opt, spaceOpt;
+char variant;
 #endif
 
 
 #define GET_SPOPT(x) 	\
 	if(argc>x) spaceOpt= atoi(argv[x]);
+
+/* Variants: 0 1 2 N X */
+#define GET_VARIANT(x) \
+    variant = 'N'; \
+    if (argc > x) variant = argv[x][0];
 
 #ifdef REAL
 	#define GET_ARGS() 	\
@@ -39,7 +50,8 @@ int n, m, spars, tst, algoType, opt, spaceOpt;
     filePath = argv[3]; \
     algoType = atoi(argv[4]); \
     opt = atoi(argv[5]); \
-	GET_SPOPT(6)
+	GET_SPOPT(6) \
+    GET_VARIANT(7)
 
 #else
 	#define GET_ARGS() 	\
@@ -49,6 +61,7 @@ int n, m, spars, tst, algoType, opt, spaceOpt;
     algoType = atoi(argv[4]); \
     opt = atoi(argv[5]); \
 	GET_SPOPT(6)
+    GET_VARIANT(7)
 #endif
 
 
@@ -138,32 +151,50 @@ int findimprovDFS()
 
 int findkpathDFS()
 {
-    k_path kPathDFS = k_path(n, spaceOpt);
+    kPathBase* kPathDFS = nullptr;
+
+    switch (variant) {
+        case '0':
+            kPathDFS = new kPath0(n, spaceOpt);
+            break;
+        case '1':
+            kPathDFS = new kPath1(n, spaceOpt);
+            break;
+        case '2':
+            kPathDFS = new kPath2(n, spaceOpt);
+            break;
+        case 'X':
+            kPathDFS = new kPath1x(n, spaceOpt);
+            break;
+        default: // Default variant N
+            kPathDFS = new kPathN(n, spaceOpt);
+            break;
+    }
 
     while(1)
     {
-        int ans = kPathDFS.addEdgeS(edgS);
+        int ans = kPathDFS->addEdgeS(edgS);
         if(ans) break;
     }
 
     #ifdef PRINTTREE
     cout << "TREE : " << endl;
-    kPathDFS.getT().printT(0);
+    kPathDFS->getT().printT(0);
     printf("\n");
     #endif
 
     #ifdef PRINTREALHEIGHT
     cout << "HEIGHT : " << endl;
-    cout << kPathDFS.getT().getHeight(0);
+    cout << kPathDFS->getT().getHeight(0);
     printf("\n");
     #endif
-    
+
     #ifdef VERIFYDFS
-    if(verifyDFS(edgS,kPathDFS.getT())) cout << "VALID DFS Tree" << endl;
+    if(verifyDFS(edgS,kPathDFS->getT())) cout << "VALID DFS Tree" << endl;
     else cout << "INVALID DFS Tree" << endl;
     #endif
 
-    return kPathDFS.getPass();
+    return kPathDFS->getPass();
 }
 
 int findklevDFS()
@@ -323,9 +354,8 @@ void getAllPowLawRandomEdges(ll vertc,ll edgec){
     {
         edgS.push_back(edg(0, i));
     } // making disconnected graph connected
-  
-    ll num_vertices =  vertc , num_edges = edgec ;
-    
+
+    ll num_vertices =  vertc , num_edges = edgec;
 
     vector<vector<ll>> graph(num_vertices,vector<ll> ());
     set<pair<ll,ll>> edge_visited;
@@ -335,7 +365,7 @@ void getAllPowLawRandomEdges(ll vertc,ll edgec){
     segtree st(num_vertices);
 
     ll val=0;
-    for (ll j = 0; j < num_vertices; ++j) {      
+    for (ll j = 0; j < num_vertices; ++j) {
             ll expval=graph[j].size()+1;
             val=(expval*expval*expval);
             st.set(j,val);
@@ -661,14 +691,33 @@ int main(int argc, char *argv[])
         }
 
         if(algoType == 2){
-            k_path kPathDFS = k_path(vertCount, k);
+            kPathBase* kPathDFS = nullptr;
+
+            switch (variant) {
+                case '0':
+                    kPathDFS = new kPath0(vertCount, k);
+                    break;
+                case '1':
+                    kPathDFS = new kPath1(vertCount, k);
+                    break;
+                case '2':
+                    kPathDFS = new kPath2(vertCount, k);
+                    break;
+                case 'X':
+                    kPathDFS = new kPath1x(vertCount, k);
+                    break;
+                default: // Default variant N
+                    kPathDFS = new kPathN(vertCount, k);
+                    break;
+            }
+
             while(1)
             {
-                int ans = kPathDFS.addEdgeS(edgS);
+                int ans = kPathDFS->addEdgeS(edgS);
                 if(ans) break;
             }
-            p = kPathDFS.getPass();
-            h = kPathDFS.getT().getHeight(0);
+            p = kPathDFS->getPass();
+            h = kPathDFS->getT().getHeight(0);
         }
 
         if(algoType == 3){
