@@ -6,12 +6,12 @@ PTH = .
 SRC = $(PTH)/src
 INC = $(PTH)/lib
 BIN = $(PTH)/bin
+KPATH = $(PTH)/lib/algorithms/kPath
+KLEV = $(PTH)/lib/algorithms/kLev
 
 .all: clean real random
 
-
-
-$(BIN)/check_src: $(SRC)/main.cpp $(SRC)/simp.cpp $(SRC)/improv.cpp $(SRC)/kpath.cpp $(SRC)/k_lev.cpp 
+$(BIN)/check_src: $(SRC)/main.cpp $(SRC)/simp.cpp $(SRC)/improv.cpp $(SRC)/k_lev.cpp $(KPATH)/kPathBase.h $(KPATH)/kPath0.cpp $(KPATH)/kPath1.cpp $(KPATH)/kPath1x.cpp $(KPATH)/kPath2.cpp $(KPATH)/kPathN.cpp
 
 $(BIN)/check_lib: $(INC)/levelAnc.cpp $(INC)/tree.cpp $(INC)/verifydfs.cpp
 
@@ -42,7 +42,7 @@ $(BIN)/main_random: $(BIN)/main_varn $(BIN)/main_varm $(BIN)/main_vark
 
 
 clean:
-	rm bin/*
+	rm -r bin/*
 
 real: $(BIN)/main_real
 
