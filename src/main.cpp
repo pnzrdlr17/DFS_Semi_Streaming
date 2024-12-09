@@ -4,6 +4,12 @@
 #include <cstring>
 #include "simp.cpp"
 #include "improv.cpp"
+#include "../lib/algorithms/kLev/kLev0.cpp"
+#include "../lib/algorithms/kLev/kLev0x.cpp"
+#include "../lib/algorithms/kLev/kLev1.cpp"
+#include "../lib/algorithms/kLev/kLev1y.cpp"
+#include "../lib/algorithms/kLev/kLev2.cpp"
+#include "../lib/algorithms/kLev/kLevN.cpp"
 #include "k_lev.cpp"
 #include "../lib/algorithms/kPath/kPath0.cpp"
 #include "../lib/algorithms/kPath/kPath1.cpp"
@@ -199,32 +205,52 @@ int findkpathDFS()
 
 int findklevDFS()
 {
-    
-    k_lev kLevDFS = k_lev(n, spaceOpt);
+    kLevBase* kLevDFS = nullptr;
+
+    switch (variant) {
+        case '0':
+            kLevDFS = new kLev0(n, spaceOpt);
+            break;
+        case '1':
+            kLevDFS = new kLev1(n, spaceOpt);
+            break;
+        case '2':
+            kLevDFS = new kLev2(n, spaceOpt);
+            break;
+        case 'X':
+            kLevDFS = new kLev0x(n, spaceOpt);
+            break;
+        case 'Y':
+            kLevDFS = new kLev1y(n, spaceOpt);
+            break;
+        default: // Default variant N
+            kLevDFS = new kLevN(n, spaceOpt);
+            break;
+    }
 
     while(1){
-        int ans = kLevDFS.addEdgeS(edgS);
+        int ans = kLevDFS->addEdgeS(edgS);
         if(ans) break;
     }
-    
+
     #ifdef PRINTTREE
     cout << "TREE : " << endl;
-    kLevDFS.getT().printT(0);
+    kLevDFS->getT().printT(0);
     printf("\n");
     #endif
 
     #ifdef PRINTREALHEIGHT
     cout << "HEIGHT : " << endl;
-    cout << kLevDFS.getT().getHeight(0);
+    cout << kLevDFS->getT().getHeight(0);
     printf("\n");
     #endif
 
     #ifdef VERIFYDFS
-    if(verifyDFS(edgS,kLevDFS.getT())) cout << "VALID DFS Tree" << endl;
+    if(verifyDFS(edgS,kLevDFS->getT())) cout << "VALID DFS Tree" << endl;
     else cout << "INVALID DFS Tree" << endl;
     #endif
 
-    return kLevDFS.getPass();
+    return kLevDFS->getPass();
 }
 
 
@@ -721,13 +747,35 @@ int main(int argc, char *argv[])
         }
 
         if(algoType == 3){
-            k_lev kLevDFS = k_lev(vertCount, k);
+            kLevBase* kLevDFS = nullptr;
+
+            switch (variant) {
+                case '0':
+                    kLevDFS = new kLev0(vertCount, k);
+                    break;
+                case '1':
+                    kLevDFS = new kLev1(vertCount, k);
+                    break;
+                case '2':
+                    kLevDFS = new kLev2(vertCount, k);
+                    break;
+                case 'X':
+                    kLevDFS = new kLev0x(vertCount, k);
+                    break;
+                case 'Y':
+                    kLevDFS = new kLev1y(vertCount, k);
+                    break;
+                default: // Default variant N
+                    kLevDFS = new kLevN(vertCount, k);
+                    break;
+            }
+
             while(1){
-                int ans = kLevDFS.addEdgeS(edgS);
+                int ans = kLevDFS->addEdgeS(edgS);
                 if(ans) break;
             }
-            p = kLevDFS.getPass();
-            h = kLevDFS.getT().getHeight(0);
+            p = kLevDFS->getPass();
+            h = kLevDFS->getT()->getHeight(0);
         }
 
         // cout << vertCount << " " << edgeCount << " " << p << endl;
