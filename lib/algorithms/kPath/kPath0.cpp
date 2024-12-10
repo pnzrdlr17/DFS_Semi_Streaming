@@ -271,7 +271,7 @@ public:
         }
     }
 
-    int addEdgeS(list<edg> edges) override {
+    int addEdgeS(list<edg>& edges) override {
         prepass();
         if(pass == 1)
         {
@@ -287,6 +287,44 @@ public:
         }
         for(auto it=edges.begin();it!=edges.end();it++){
             addEdge(it->first,it->second);
+        }
+
+        return postpass();
+    }
+
+    int addEdgeStream(ifstream& fileStream) override {
+        prepass();
+
+        if(pass == 1)
+        {
+            visC = 1;
+            visited[0] = 1;
+            for(int i=1; i<n; i++)
+            {
+                comp[i] = i;
+                compEdge[i] = {0,i};
+                compL[i].push_back(i);
+                processed[i] = 1;
+            }
+        }
+
+        for (int i = 1; i < n; ++i) // Add artificial edges (disconnected graph connections)
+            addEdge(0, i);
+
+        if (!fileStream.is_open()) {
+            cerr << "Error opening file: " << strerror(errno) << endl;
+            return 0;
+        }
+
+        string line;
+        while (getline(fileStream, line)) {
+            istringstream iss(line);
+            int e1, e2;
+            if (!(iss >> e1 >> e2)) {
+                cerr << "Error: Malformed or incomplete line: " << line << endl;
+                break; // Exit loop if edge format is invalid
+            }
+            addEdge(e1, e2);
         }
 
         return postpass();

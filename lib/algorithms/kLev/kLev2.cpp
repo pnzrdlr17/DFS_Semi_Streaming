@@ -99,6 +99,7 @@ class kLev2: public kLevBase{
 public:
 
     kLev2 (int size, int space_optimality) {
+        n = size+1;
         pass = 0;
         k = space_optimality;
 

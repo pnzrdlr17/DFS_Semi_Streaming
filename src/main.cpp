@@ -34,6 +34,7 @@ using namespace std;
 int n, m, algoType, opt, spaceOpt;
 char variant;
 string filePath;
+ifstream fileStream;
 #else
 int n, m, spars, tst, algoType, opt, spaceOpt;
 char variant;
@@ -74,6 +75,10 @@ char variant;
 
 list<edg> edgS;
 
+void resetFileStream(ifstream& fileStream) {
+    fileStream.clear();
+    fileStream.seekg(0);
+}
 
 int edgSpars(int n,int i)
 {
@@ -88,7 +93,7 @@ int edgSpars(int n,int i)
 
 
 int findsimpDFS()
-{   
+{
 
     DFSSimp simpdfs = DFSSimp(n, opt);
 
@@ -176,11 +181,15 @@ int findkpathDFS()
             break;
     }
 
-    while(1)
-    {
-        int ans = kPathDFS->addEdgeS(edgS);
-        if(ans) break;
+    fileStream.open(filePath);
+
+    while (1) {
+        /* if (kPathDFS->addEdgeS(edgS)) break; */
+        if (kPathDFS->addEdgeStream(fileStream)) break;
+        resetFileStream(fileStream);
     }
+
+    fileStream.close();
 
     #ifdef PRINTTREE
     cout << "TREE : " << endl;
@@ -227,10 +236,15 @@ int findklevDFS()
             break;
     }
 
-    while(1){
-        int ans = kLevDFS->addEdgeS(edgS);
-        if(ans) break;
+    fileStream.open(filePath);
+
+    while (1) {
+        /* if (kLevDFS->addEdgeS(edgS)) break; */
+        if (kLevDFS->addEdgeStream(fileStream)) break;
+        resetFileStream(fileStream);
     }
+
+    fileStream.close();
 
     #ifdef PRINTTREE
     cout << "TREE : " << endl;
@@ -287,13 +301,13 @@ void getAllRandomEdges(int vertc,int edgec){
         e2 = edS[c-1][1];
         edS[c-1][0] = edS[i][0];
         edS[c-1][1] = edS[i][1];
-        edS[i][0] = e1;	
-        edS[i][1] = e2;	
+        edS[i][0] = e1;
+        edS[i][1] = e2;
         // edgS.push_back(edg(e1,e2));
         edgS.push_back(edg(edS[c-1][0],edS[c-1][1]));
         c--; edgec--;
     }
-    
+
     free(edS);
 
     // cout << edgS.size() << endl;
@@ -318,7 +332,7 @@ public:
     void set(ll i, ll v){
         set(i, v, 0, 0, size);
     }
-    
+
     void set(ll i, ll v, ll x, ll lx, ll rx){
         if(lx == rx-1){
             val[x] = v;
@@ -344,7 +358,7 @@ public:
 
 
 int select_node_by_probability(segtree &st,ll num_vertices) {
-  
+
     ll lval=st.get(0,num_vertices);
     double random_value = rand() % lval;
 
@@ -362,7 +376,6 @@ int select_node_by_probability(segtree &st,ll num_vertices) {
 
     if(st.get(0,high+1)<=random_value) return high;
     if(st.get(0,low+1)<=random_value) return low;
-    
 
     return num_vertices-1;
 }
@@ -408,7 +421,7 @@ void getAllPowLawRandomEdges(ll vertc,ll edgec){
             graph[node2].push_back(node1);
             edge_visited.insert(make_pair(node1,node2));
             edge_visited.insert(make_pair(node2,node1));
-            
+
             ll node1_bf=st.get(node1,node1+1);
             ll eexp = (int)(ceil(pow(node1_bf,0.33)))+1;
             st.set(node1, eexp*eexp*eexp);
@@ -476,7 +489,6 @@ void getAllPowLawRandomEdgesV2(ll vertc,ll edgec,string vartype,ll tstcase){
     fp+=to_string(tstcase);
 
     // cout << fp << endl;
-    
 
     ifstream file(fp);
     if (!file.is_open())
@@ -507,7 +519,7 @@ void getAllPowLawRandomEdgesV2(ll vertc,ll edgec,string vartype,ll tstcase){
 }
 
 void getAllRealEdges()
-{   
+{
     #ifdef REAL
 
     for (int i = 1; i <= n; i++)
@@ -550,7 +562,7 @@ int main(int argc, char *argv[])
 
     #ifdef REAL
 
-    getAllRealEdges();
+    // getAllRealEdges(); // not reading the entire file in memory
 
     vector<double> all_params = get_all_params(n,edgS);
 
@@ -639,7 +651,7 @@ int main(int argc, char *argv[])
 	    step=10;
         cout << t << endl;
 	    for(vertCount=10;vertCount<=n;vertCount+=step)
-		{       
+		{
             cout << vertCount << endl;
 			if(vertCount>=100) step=50;
             edgeCount=edgSpars(vertCount,spars);
@@ -650,10 +662,10 @@ int main(int argc, char *argv[])
 	    #endif
 
 	    #ifdef VARM
-	    
+
         step=100;
 	    for(edgeCount=100;edgeCount<=m;edgeCount+=step)
-		{   
+		{
             cout << t << " " << edgeCount << endl;
 			if(edgeCount>=1000) step=1000;
 			// if(edgeCount>=10000) step=10000;
@@ -736,11 +748,16 @@ int main(int argc, char *argv[])
                     break;
             }
 
-            while(1)
-            {
-                int ans = kPathDFS->addEdgeS(edgS);
-                if(ans) break;
+            fileStream.open(filePath);
+
+            while (1) {
+                /* if (kPathDFS->addEdgeS(edgS)) break; */
+                if (kPathDFS->addEdgeStream(fileStream)) break;
+                resetFileStream(fileStream);
             }
+
+            fileStream.close();
+
             p = kPathDFS->getPass();
             h = kPathDFS->getT().getHeight(0);
         }
@@ -769,10 +786,16 @@ int main(int argc, char *argv[])
                     break;
             }
 
-            while(1){
-                int ans = kLevDFS->addEdgeS(edgS);
-                if(ans) break;
+            fileStream.open(filePath);
+
+            while (1) {
+                /* if (kLevDFS->addEdgeS(edgS)) break; */
+                if (kLevDFS->addEdgeStream(fileStream)) break;
+                resetFileStream(fileStream);
             }
+
+            fileStream.close();
+
             p = kLevDFS->getPass();
             h = kLevDFS->getT()->getHeight(0);
         }

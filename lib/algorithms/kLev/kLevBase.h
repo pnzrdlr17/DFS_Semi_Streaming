@@ -19,7 +19,7 @@ protected:
     Tree T;
     LevelAnc LA;
 
-    int pass, k, art_root, vis_cnt;
+    int n, pass, k, art_root, vis_cnt;
 
     vector<int> visited, next_root, comp, comp_size, marked; // marked only unused in kLev1
     vector<edg> compEdg;
@@ -69,13 +69,39 @@ public:
     virtual void prePass() = 0;
     virtual int postPass() = 0;
 
-    // Default Common implementation for all derived classes
+    /* Default Common implementation for all derived classes */
+
     int addEdgeS(list<edg> &edgAdd) {
         pass++;
         prePass();
         for(auto &it: edgAdd){
             addEdge(it.first, it.second);
         }
+        return postPass();
+    }
+
+    int addEdgeStream(ifstream& fileStream) { // overridden in kPath0
+        pass++;
+        prePass();
+        for (int i = 1; i < n; ++i) // Add artificial edges (disconnected graph connections)
+            addEdge(0, i);
+
+        if (!fileStream.is_open()) {
+            cerr << "Error opening file: " << strerror(errno) << endl;
+            return 0;
+        }
+
+        string line;
+        while (getline(fileStream, line)) {
+            istringstream iss(line);
+            int e1, e2;
+            if (!(iss >> e1 >> e2)) {
+                cerr << "Error: Malformed or incomplete line: " << line << endl;
+                break; // Exit loop if edge format is invalid
+            }
+            addEdge(e1, e2);
+        }
+
         return postPass();
     }
 

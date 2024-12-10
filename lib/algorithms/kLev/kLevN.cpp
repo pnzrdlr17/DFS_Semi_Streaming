@@ -108,6 +108,7 @@ public:
 
     kLevN (int size, int space_optimality) {
         // cout<<"star vertex heuristic algo"<<endl;
+        n = size+1;
         pass = 0;
         k = space_optimality;
         star_vertex = 0; //(sri) added here.

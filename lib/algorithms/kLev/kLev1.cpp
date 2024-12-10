@@ -62,6 +62,7 @@ class kLev1 : public kLevBase{
 public:
 
     kLev1 (int size, int space_optimality) {
+        n = size+1;
         pass = 0;
         k = space_optimality;
 

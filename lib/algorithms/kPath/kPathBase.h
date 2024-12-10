@@ -38,12 +38,35 @@ public:
 
     /* Default Common implementation for all derived classes */
 
-    virtual int addEdgeS(list<edg> edges) { // overridden in kPath0
-        cout<<"calledBase ";
+    virtual int addEdgeS(list<edg>& edges) { // overridden in kPath0
         prepass();
         for(auto it=edges.begin();it!=edges.end();it++){
             addEdge(it->first,it->second);
         }
+        return postpass();
+    }
+
+    virtual int addEdgeStream(ifstream& fileStream) { // overridden in kPath0
+        prepass();
+        for (int i = 1; i < n; ++i) // Add artificial edges (disconnected graph connections)
+            addEdge(0, i);
+
+        if (!fileStream.is_open()) {
+            cerr << "Error opening file: " << strerror(errno) << endl;
+            return 0;
+        }
+
+        string line;
+        while (getline(fileStream, line)) {
+            istringstream iss(line);
+            int e1, e2;
+            if (!(iss >> e1 >> e2)) {
+                cerr << "Error: Malformed or incomplete line: " << line << endl;
+                break; // Exit loop if edge format is invalid
+            }
+            addEdge(e1, e2);
+        }
+
         return postpass();
     }
 
