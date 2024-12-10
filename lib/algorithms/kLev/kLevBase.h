@@ -27,7 +27,7 @@ protected:
 
     virtual list<edg> reroot(int x, int y) = 0;
 
-    // implementation slightly different in kLevY hence overridden there
+    // implementation slightly different in kLev0x hence overridden there
     int updateComp(int x, int root, int flag) {
         int cnt = 0;
         if(flag) cnt++;

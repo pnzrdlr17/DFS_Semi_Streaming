@@ -35,9 +35,18 @@ public:
     virtual void process_edge(int u, int v) = 0;
     virtual void addEdge(int x, int y) = 0;
     virtual int postpass() = 0;
-    virtual int addEdgeS(list<edg> edges) = 0;
 
-    // Default Common implementation for all derived classes
+    /* Default Common implementation for all derived classes */
+
+    virtual int addEdgeS(list<edg> edges) { // overridden in kPath0
+        cout<<"calledBase ";
+        prepass();
+        for(auto it=edges.begin();it!=edges.end();it++){
+            addEdge(it->first,it->second);
+        }
+        return postpass();
+    }
+
     Tree getT() const {
         return T;
     }

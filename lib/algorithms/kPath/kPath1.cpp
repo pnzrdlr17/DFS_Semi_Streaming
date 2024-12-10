@@ -252,33 +252,4 @@ public:
             }
         }
     }
-
-    int addEdgeS(list<edg> edges) {
-        prepass();
-        // if(pass == 1)
-        // {
-        //     visC = 1;
-        //     visited[0] = 1;
-        //     for(int i=1; i<n; i++)
-        //     {
-        //         comp[i] = i;
-        //         compEdge[i] = {0,i};
-        //         compL[i].push_back(i);
-        //         processed[i] = 1;
-        //     }
-        // }
-        for(auto it=edges.begin();it!=edges.end();it++){
-            addEdge(it->first,it->second);
-        }
-        int res = postpass();
-        // for(int i=0; i<n; i++){
-        //     if(visited[i] == 0 && i == comp[i]){
-        //         cout<<"component: "<<i<<endl;
-        //         for(auto it:compL[i]) cout<<it<<" ";
-        //         cout<<"ending component"<<endl;
-        //     }
-        // }
-
-        return res;
-    }
 };

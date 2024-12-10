@@ -271,7 +271,7 @@ public:
         }
     }
 
-    int addEdgeS(list<edg> edges) {
+    int addEdgeS(list<edg> edges) override {
         prepass();
         if(pass == 1)
         {
@@ -288,15 +288,7 @@ public:
         for(auto it=edges.begin();it!=edges.end();it++){
             addEdge(it->first,it->second);
         }
-        int res = postpass();
-        // for(int i=0; i<n; i++){
-        //     if(visited[i] == 0 && i == comp[i]){
-        //         cout<<"component: "<<i<<endl;
-        //         for(auto it:compL[i]) cout<<it<<" ";
-        //         cout<<"ending component"<<endl;
-        //     }
-        // }
 
-        return res;
+        return postpass();
     }
 };

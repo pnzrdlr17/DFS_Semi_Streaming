@@ -246,13 +246,4 @@ public:
             }
         }
     }
-
-    int addEdgeS(list<edg> edges) {
-        prepass();
-        for(auto it=edges.begin();it!=edges.end();it++){
-            addEdge(it->first,it->second);
-        }
-        int res = postpass();
-        return res;
-    }
 };
