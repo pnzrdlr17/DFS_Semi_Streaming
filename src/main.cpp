@@ -813,7 +813,7 @@ int main(int argc, char *argv[])
             fileStream.close();
 
             p = kLevDFS->getPass();
-            h = kLevDFS->getT()->getHeight(0);
+            h = kLevDFS->getT().getHeight(0);
         }
 
         // cout << vertCount << " " << edgeCount << " " << p << endl;
