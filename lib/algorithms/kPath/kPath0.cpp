@@ -292,7 +292,7 @@ public:
         return postpass();
     }
 
-    int addEdgeStream(ifstream& fileStream) override {
+    int processEdgeStream(ifstream& fileStream) override {
         prepass();
 
         if(pass == 1)

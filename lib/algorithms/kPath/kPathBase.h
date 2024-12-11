@@ -46,7 +46,7 @@ public:
         return postpass();
     }
 
-    virtual int addEdgeStream(ifstream& fileStream) { // overridden in kPath0
+    virtual int processEdgeStream(ifstream& fileStream) { // overridden in kPath0
         prepass();
         for (int i = 1; i < n; ++i) // Add artificial edges (disconnected graph connections)
             addEdge(0, i);

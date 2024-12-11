@@ -80,7 +80,7 @@ public:
         return postPass();
     }
 
-    int addEdgeStream(ifstream& fileStream) { // overridden in kPath0
+    int processEdgeStream(ifstream& fileStream) { // overridden in kPath0
         pass++;
         prePass();
         for (int i = 1; i < n; ++i) // Add artificial edges (disconnected graph connections)

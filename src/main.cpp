@@ -185,7 +185,7 @@ int findkpathDFS()
 
     while (1) {
         /* if (kPathDFS->addEdgeS(edgS)) break; */
-        if (kPathDFS->addEdgeStream(fileStream)) break;
+        if (kPathDFS->processEdgeStream(fileStream)) break;
         resetFileStream(fileStream);
     }
 
@@ -240,7 +240,7 @@ int findklevDFS()
 
     while (1) {
         /* if (kLevDFS->addEdgeS(edgS)) break; */
-        if (kLevDFS->addEdgeStream(fileStream)) break;
+        if (kLevDFS->processEdgeStream(fileStream)) break;
         resetFileStream(fileStream);
     }
 
@@ -752,7 +752,7 @@ int main(int argc, char *argv[])
 
             while (1) {
                 /* if (kPathDFS->addEdgeS(edgS)) break; */
-                if (kPathDFS->addEdgeStream(fileStream)) break;
+                if (kPathDFS->processEdgeStream(fileStream)) break;
                 resetFileStream(fileStream);
             }
 
@@ -790,7 +790,7 @@ int main(int argc, char *argv[])
 
             while (1) {
                 /* if (kLevDFS->addEdgeS(edgS)) break; */
-                if (kLevDFS->addEdgeStream(fileStream)) break;
+                if (kLevDFS->processEdgeStream(fileStream)) break;
                 resetFileStream(fileStream);
             }
 
