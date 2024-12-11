@@ -8,7 +8,7 @@ using namespace std;
 
 class DFSSimp
 {
-
+    int n;
     Tree T;    // DFS tree
     int opt;   // with or without heuristic
     int pass;  // Number of Passes
@@ -22,7 +22,7 @@ class DFSSimp
 public:
     DFSSimp(int size, int optimality)
     {
-
+        n = size + 1;
         T = Tree(size + 1);
         T.setRoot(0);
         pass = 0;
@@ -107,6 +107,29 @@ public:
         {
             addEdge(it->first, it->second);
         }
+        return addEdge(-1, -1);
+    }
+
+    int processEdgeStream(ifstream& fileStream) {
+        for (int i = 1; i < n; ++i) // Add artificial edges (disconnected graph connections)
+            addEdge(0, i);
+
+        if (!fileStream.is_open()) {
+            cerr << "Error opening file: " << strerror(errno) << endl;
+            return 1;
+        }
+
+        string line;
+        while (getline(fileStream, line)) {
+            istringstream iss(line);
+            int e1, e2;
+            if (!(iss >> e1 >> e2)) {
+                cerr << "Error: Malformed or incomplete line: " << line << endl;
+                break; // Exit loop if edge format is invalid
+            }
+            addEdge(e1, e2);
+        }
+
         return addEdge(-1, -1);
     }
 

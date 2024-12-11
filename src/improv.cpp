@@ -8,7 +8,7 @@ using namespace std;
 
 class DFSImprov
 {
-
+    int n;
     Tree T;              // DFS tree
     int pass;            // Number of Passes
     int visC;            // Visited Counter
@@ -25,7 +25,7 @@ class DFSImprov
 public:
     DFSImprov(int size)
     {
-
+        n = size + 1;
         T = Tree(size + 1);
         T.setRoot(0);
         pass = 0;
@@ -108,13 +108,13 @@ public:
         {
 
             if (visited[x] == 0 && visited[y] == 0 && comp[x] != comp[y])
-            {   
-              
+            {
+
                 if (compL[comp[x]].size() < compL[comp[y]].size())
                 {
                     swap(x, y);
                 }
- 
+
                 int z = comp[y];
                 for (auto itc = compL[z].begin(); itc != compL[z].end(); itc++)
                 {
@@ -122,7 +122,7 @@ public:
                     comp[*itc] = comp[x];
                 }
                 compL[z].clear();
-              
+
             }
             else
             {
@@ -149,6 +149,29 @@ public:
         {
             addEdge(it->first, it->second);
         }
+        return addEdge(-1, -1);
+    }
+
+    int processEdgeStream(ifstream& fileStream) {
+        for (int i = 1; i < n; ++i) // Add artificial edges (disconnected graph connections)
+            addEdge(0, i);
+
+        if (!fileStream.is_open()) {
+            cerr << "Error opening file: " << strerror(errno) << endl;
+            return 1;
+        }
+
+        string line;
+        while (getline(fileStream, line)) {
+            istringstream iss(line);
+            int e1, e2;
+            if (!(iss >> e1 >> e2)) {
+                cerr << "Error: Malformed or incomplete line: " << line << endl;
+                break; // Exit loop if edge format is invalid
+            }
+            addEdge(e1, e2);
+        }
+
         return addEdge(-1, -1);
     }
 

@@ -44,7 +44,7 @@ char variant;
 #define GET_SPOPT(x) 	\
 	if(argc>x) spaceOpt= atoi(argv[x]);
 
-/* Variants: 0 1 2 N X */
+/* Variants: 0 1 2 N X Y */
 #define GET_VARIANT(x) \
     variant = 'N'; \
     if (argc > x) variant = argv[x][0];
@@ -97,13 +97,15 @@ int findsimpDFS()
 
     DFSSimp simpdfs = DFSSimp(n, opt);
 
-    while (1)
-    {
+    fileStream.open(filePath);
 
-        int ans = simpdfs.addEdgeS(edgS);
-        if (ans)
-            break;
+    while (1) {
+        /* if (simpdfs.addEdgeS(edgS)) break; */
+        if (simpdfs.processEdgeStream(fileStream)) break;
+        resetFileStream(fileStream);
     }
+
+    fileStream.close();
 
     #ifdef PRINTTREE
     cout << "TREE : " << endl;
@@ -131,13 +133,15 @@ int findimprovDFS()
 
     DFSImprov improvdfs = DFSImprov(n);
 
-    while (1)
-    {
+    fileStream.open(filePath);
 
-        int ans = improvdfs.addEdgeS(edgS);
-        if (ans)
-            break;
+    while (1) {
+        /* if (improvdfs.addEdgeS(edgS)) break; */
+        if (improvdfs.processEdgeStream(fileStream)) break;
+        resetFileStream(fileStream);
     }
+
+    fileStream.close();
 
     #ifdef PRINTTREE
     cout << "TREE : " << endl;
@@ -707,22 +711,34 @@ int main(int argc, char *argv[])
 
         if(algoType == 0){
             DFSSimp simpdfs = DFSSimp(vertCount, opt);
-            while(1)
-            {
-                int ans = simpdfs.addEdgeS(edgS);
-                if(ans) break;
+
+            fileStream.open(filePath);
+
+            while (1) {
+                /* if (simpdfs.addEdgeS(edgS)) break; */
+                if (simpdfs.processEdgeStream(fileStream)) break;
+                resetFileStream(fileStream);
             }
+
+            fileStream.close();
+
             p = simpdfs.getPass();
             h = simpdfs.getT().getHeight(0);
         }
 
         if(algoType == 1){
             DFSImprov improvdfs = DFSImprov(vertCount);
-            while (1)
-            {
-                int ans = improvdfs.addEdgeS(edgS);
-                if(ans) break;
+
+            fileStream.open(filePath);
+
+            while (1) {
+                /* if (improvdfs.addEdgeS(edgS)) break; */
+                if (improvdfs.processEdgeStream(fileStream)) break;
+                resetFileStream(fileStream);
             }
+
+            fileStream.close();
+
             p = improvdfs.getPass();
             h = improvdfs.getT().getHeight(0);
         }
