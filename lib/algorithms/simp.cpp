@@ -1,4 +1,7 @@
-#include <bits/stdc++.h>
+#include <cstring>
+#include <vector>
+#include <fstream>
+#include <sstream>
 #include "../tree.cpp"
 #define edg pair<int, int>
 using namespace std;

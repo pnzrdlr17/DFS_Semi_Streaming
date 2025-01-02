@@ -1,5 +1,6 @@
 // kpath with one pass heuristic + without nk space correction + with duplicates
-#include <bits/stdc++.h>
+#include <algorithm>
+#include <functional>
 #include "../../tree.cpp"
 #include "kPathBase.h"
 #define edg pair<int, int>

@@ -1,18 +1,18 @@
 // with one pass heuristic + with marked/unmarked + with nk space correction (backedges thing)
 // with total nk space + without top path
 #include <iostream>
+#include <set>
 #include <fstream>
 #include <string>
 #include <sstream>
 #include <cstring>
+#include <climits>
 #include "kLevBase.h"
 #include "../../levelAnc.cpp"
-
-using namespace std;
-
 #define edg pair<int, int>
 #define pii pair<int, int>
 
+using namespace std;
 class kLev2: public kLevBase{
 
     int limit_k;
@@ -211,13 +211,13 @@ public:
                 comp_size[a] = 0;
                 comp[a] = 0;
                 next_root[a] = 0;
-                
+
                 // updateComp(compEdg[a].second, compEdg[a].second, 0);
                 updateComp(compEdg[a].second, compEdg[a].second, 0);
                 LA.updateT(compEdg[a].second); //(sri) moved to down.
             }
         }
-        
+
         set_backEdges.clear();
 
         if(vis_cnt == T.getSize()) return 1;

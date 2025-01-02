@@ -1,6 +1,10 @@
 // new code starts from below : n(k+1) to n(k) and no duplicates // final code
 // kpath with one pass heuristic + with nk space correction + with no duplicates
-#include <bits/stdc++.h>
+#include <vector>
+#include <set>
+#include <list>
+#include <algorithm>
+#include <functional>
 #include "kPathBase.h"
 #include "../../tree.cpp"
 #define edg pair<int, int>

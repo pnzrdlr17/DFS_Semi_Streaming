@@ -1,4 +1,6 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <list>
 using namespace std;
 
 #ifndef TREE_H
@@ -65,13 +67,13 @@ public:
 
         for (auto it = adjL[x].begin(); it != adjL[x].end(); it++)
         {
-            printf(" (%d)->(%d) ", x, *it);
+            cout<<" ("<<x<<")->("<<*it<<") ";
             printT(*it);
         }
     }
 
 
-    int remEdge(int x,int y)	
+    int remEdge(int x,int y)
 	{
         adjL[x].erase(parIt[y]);
         parent[y]=-1;
@@ -79,7 +81,7 @@ public:
 	}
 
     int getHeight(int x)
-    {   
+    {
         int cnt=0;
         for (auto it = adjL[x].begin(); it != adjL[x].end(); it++)
         {

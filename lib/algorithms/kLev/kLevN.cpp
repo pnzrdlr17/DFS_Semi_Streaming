@@ -10,14 +10,16 @@
 #include <string>
 #include <sstream>
 #include <cstring>
+#include <climits>
+#include <vector>
+#include <list>
+#include <set>
 #include "../../levelAnc.cpp"
 #include "kLevBase.h"
-
-using namespace std;
-
 #define edg pair<int, int>
 #define pii pair<int, int>
 
+using namespace std;
 class kLevN: public kLevBase{
 
     int limit_k, star_vertex;
@@ -31,7 +33,7 @@ class kLevN: public kLevBase{
 
         if(set_backEdges.size() >= T.getSize()*k){
             pair<pii, edg> pr = *set_backEdges.begin();
-            limit_k = min(limit_k, (-pr.first.first)); 
+            limit_k = min(limit_k, (-pr.first.first));
             auto it = set_backEdges.begin();
             set<int> removed_vertices;
             while(it != set_backEdges.end()){
@@ -44,7 +46,7 @@ class kLevN: public kLevBase{
             }
 
             for(auto &it: removed_vertices){
-                backEdge[it].clear(); 
+                backEdge[it].clear();
             }
         }
 
@@ -221,12 +223,12 @@ public:
                 comp_size[a] = 0;
                 comp[a] = 0;
                 next_root[a] = 0;
-                
+
                 updateComp(compEdg[a].second, compEdg[a].second, 0);
-                LA.updateT(compEdg[a].second); 
+                LA.updateT(compEdg[a].second);
             }
         }
-        
+
         set_backEdges.clear();
 
         if(vis_cnt == T.getSize()) return 1;

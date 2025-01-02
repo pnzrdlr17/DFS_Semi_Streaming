@@ -1,5 +1,6 @@
 // kpath with one pass heuristic + with corrected nk space +  with duplicates
-#include <bits/stdc++.h>
+#include <algorithm>
+#include <functional>
 #include "../../tree.cpp"
 #include "kPathBase.h"
 #define edg pair<int, int>
@@ -93,7 +94,7 @@ public:
             }
         };
 
-        
+
         if(compEdge[compN].first == -1) level[root] = 1;
         else level[root] = level[compEdge[compN].first]+1;
         add_dfs_tree(compEdge[compN].first, root);
@@ -103,7 +104,7 @@ public:
         //     processed[it] = 1;
         //     visited[it] = 1;
         // }
-        
+
         compL[compN].clear();
         sptree[compN].clear();
         saved_edges[compN].clear();

@@ -1,51 +1,54 @@
+# Compiler and flags
 # CC = g++ -std=c++0x  #g++ -std=c++11
-CC = /opt/homebrew/bin/g++-14 -w -std=c++0x  #g++ -std=c++11
-DEBUG = -g
-CFLAGS = -Wall -c -O3 $(DEBUG)
-LFLAGS = -Wall -O3 $(DEBUG)
-PTH = .
-SRC = $(PTH)/src
-INC = $(PTH)/lib
-BIN = $(PTH)/bin
-ALG = $(PTH)/lib/algorithms
-KPATH = $(PTH)/lib/algorithms/kPath
-KLEV = $(PTH)/lib/algorithms/kLev
+CXX = /opt/homebrew/bin/g++-14
+CXXFLAGS = -std=c++17 -Wall -O3 -g -w
+LDFLAGS = -Wall -O3 -g -w
 
-.all: clean real random
+# Paths
+SRC_DIR = src
+LIB_DIR = lib
+BIN_DIR = bin
+ALG_DIR = $(LIB_DIR)/algorithms
+KPATH_DIR = $(ALG_DIR)/kPath
+KLEV_DIR = $(ALG_DIR)/kLev
 
-$(BIN)/check_src: $(SRC)/main.cpp $(SRC)/algo_runner.cpp $(SRC)/graph_generator.cpp $(ALG)/simp.cpp $(ALG)/improv.cpp $(KPATH)/kPathBase.h $(KPATH)/kPath0.cpp $(KPATH)/kPath1.cpp $(KPATH)/kPath1x.cpp $(KPATH)/kPath2.cpp $(KPATH)/kPathN.cpp
+# Source files
+SRC_FILES = $(wildcard $(SRC_DIR)/*.cpp) $(wildcard $(LIB_DIR)/*.cpp) $(wildcard $(ALG_DIR)/*.cpp) $(wildcard $(KPATH_DIR)/*.cpp) $(wildcard $(KLEV_DIR)/*.cpp)
 
-$(BIN)/check_lib: $(INC)/levelAnc.cpp $(INC)/tree.cpp $(INC)/verifydfs.cpp
+# Object files
+OBJ_FILES = $(patsubst $(SRC_DIR)/%.cpp, $(BIN_DIR)/src/%.o, $(wildcard $(SRC_DIR)/*.cpp)) \
+            $(patsubst $(LIB_DIR)/%.cpp, $(BIN_DIR)/lib/%.o, $(wildcard $(LIB_DIR)/*.cpp)) \
+            $(patsubst $(ALG_DIR)/%.cpp, $(BIN_DIR)/lib/algorithms/%.o, $(wildcard $(ALG_DIR)/*.cpp)) \
+            $(patsubst $(KPATH_DIR)/%.cpp, $(BIN_DIR)/lib/algorithms/kPath/%.o, $(wildcard $(KPATH_DIR)/*.cpp)) \
+            $(patsubst $(KLEV_DIR)/%.cpp, $(BIN_DIR)/lib/algorithms/kLev/%.o, $(wildcard $(KLEV_DIR)/*.cpp))
 
+# Targets
+all: $(BIN_DIR)/main
 
+$(BIN_DIR)/main: $(OBJ_FILES)
+	$(CXX) $(LDFLAGS) -o $@ $^
 
-$(BIN)/main_varn: $(BIN)/check_src $(BIN)/check_lib
-	$(CC) $(LFLAGS) -D VARN $(SRC)/main.cpp -o \
-				$(BIN)/main_VARN
+$(BIN_DIR)/src/%.o: $(SRC_DIR)/%.cpp
+	@mkdir -p $(dir $@)
+	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
-$(BIN)/main_varm: $(BIN)/check_src $(BIN)/check_lib
-	$(CC) $(LFLAGS) -D VARM $(SRC)/main.cpp -o \
-				$(BIN)/main_VARM
+$(BIN_DIR)/lib/%.o: $(LIB_DIR)/%.cpp
+	@mkdir -p $(dir $@)
+	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
-$(BIN)/main_vark: $(BIN)/check_src $(BIN)/check_lib
-	$(CC) $(LFLAGS) -D VARK $(SRC)/main.cpp -o \
-				$(BIN)/main_VARK
+$(BIN_DIR)/lib/algorithms/%.o: $(ALG_DIR)/%.cpp
+	@mkdir -p $(dir $@)
+	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
+$(BIN_DIR)/lib/algorithms/kPath/%.o: $(KPATH_DIR)/%.cpp
+	@mkdir -p $(dir $@)
+	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
-
-
-$(BIN)/main_real: $(BIN)/check_src $(BIN)/check_lib
-	$(CC) $(LFLAGS) -D REAL $(SRC)/main.cpp -o \
-				$(BIN)/main_REAL
-
-$(BIN)/main_random: $(BIN)/main_varn $(BIN)/main_varm $(BIN)/main_vark
-
-
-
+$(BIN_DIR)/lib/algorithms/kLev/%.o: $(KLEV_DIR)/%.cpp
+	@mkdir -p $(dir $@)
+	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
 clean:
-	rm -r bin/*
+	rm -rf $(BIN_DIR)/src $(BIN_DIR)/lib $(BIN_DIR)/main
 
-real: $(BIN)/main_real
-
-random: $(BIN)/main_random
+.PHONY: all clean

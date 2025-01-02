@@ -1,12 +1,7 @@
-#include <bits/stdc++.h>
-using namespace std;
-#include "levelAnc.cpp"
-
 #include "tree.cpp"
-
+#include "levelAnc.cpp"
 #define edg pair<int, int>
-
-
+using namespace std;
 
 bool isAncestor(int x,int y, Tree T){
     if(x==-1) return false;
@@ -38,7 +33,7 @@ bool verifyDFS(list<edg> &edges, Tree T){
             swap(levelx, levely);
         }
         if(LA.la(x, levelx - levely) != y) return 0;
-        
+
         // if(isAncestor(x,y,T) || isDescendant(x,y,T)) continue;
         // else return false;
     }

@@ -1,6 +1,10 @@
 // kpath with one pass heuristic + with nk space correction + with no duplicates + with optimal_k
 
-#include <bits/stdc++.h>
+#include <vector>
+#include <list>
+#include <set>
+#include <algorithm>
+#include <functional>
 #include "../../tree.cpp"
 #include "kPathBase.h"
 #define edg pair<int, int>

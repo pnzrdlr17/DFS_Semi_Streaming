@@ -1,7 +1,8 @@
 #ifndef KPATHBASE_H
 #define KPATHBASE_H
-
-#include <bits/stdc++.h>
+#include <cstring>
+#include <fstream>
+#include <sstream>
 #include "../../tree.cpp"
 #define edg pair<int, int>
 using namespace std;

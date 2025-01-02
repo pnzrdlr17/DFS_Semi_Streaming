@@ -1,18 +1,18 @@
 // with one pass heuristic + without marked/unmarked + with nk space correction (backedges thing)
 // with total nk space + without top path
 #include <iostream>
+#include <set>
 #include <fstream>
 #include <string>
 #include <sstream>
 #include <cstring>
+#include <climits>
 #include "../../levelAnc.cpp"
 #include "kLevBase.h"
-
-using namespace std;
-
 #define edg pair<int, int>
 #define pii pair<int, int>
 
+using namespace std;
 class kLev0x: public kLevBase{
 
     int limit_k;

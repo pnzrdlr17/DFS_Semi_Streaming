@@ -1,10 +1,9 @@
-#include <bits/stdc++.h>
+#include <iostream>
 #include <fstream>
 #include <sstream>
 #include <cstring>
-#include "./algo_runner.cpp"
-#include "./graph_generator.cpp"
-#include "../lib/verifydfs.cpp"
+#include "./algo_runner.h"
+#include "./graph_generator.h"
 #define ll long long int
 using namespace std;
 
