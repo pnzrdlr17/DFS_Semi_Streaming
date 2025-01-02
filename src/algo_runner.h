@@ -1,3 +1,6 @@
+#ifndef ALGO_RUNNER_H
+#define ALGO_RUNNER_H
+
 #include "../lib/algorithms/simp.cpp"
 #include "../lib/algorithms/improv.cpp"
 #include "../lib/algorithms/kLev/kLev0.cpp"
@@ -95,3 +98,5 @@ AlgorithmResult runAlgorithm(ll n, ll m, const std::string& filePath, int algori
     fileStream.close();
     return result;
 }
+
+#endif

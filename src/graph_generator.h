@@ -1,7 +1,12 @@
-#include <vector>
-#include <set>
-#include <random>
+#ifndef GRAPH_GEN_H
+#define GRAPH_GEN_H
+
+#include <iostream>
 #include <fstream>
+#include <sstream>
+#include <set>
+#include <vector>
+#include <random>
 #define ll long long int
 
 using namespace std;
@@ -123,3 +128,5 @@ string generateRandomGraph(ll n, ll m, ll seed_token, string graph_type) {
 
     return "Invalid graph generation type";
 }
+
+#endif
