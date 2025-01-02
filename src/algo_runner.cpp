@@ -1,5 +1,5 @@
-#include "simp.cpp"
-#include "improv.cpp"
+#include "../lib/algorithms/simp.cpp"
+#include "../lib/algorithms/improv.cpp"
 #include "../lib/algorithms/kLev/kLev0.cpp"
 #include "../lib/algorithms/kLev/kLev0x.cpp"
 #include "../lib/algorithms/kLev/kLev1.cpp"

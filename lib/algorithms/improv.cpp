@@ -1,10 +1,7 @@
 #include <bits/stdc++.h>
-using namespace std;
-
-#include "../lib/tree.cpp"
-
+#include "../tree.cpp"
 #define edg pair<int, int>
-
+using namespace std;
 
 class DFSImprov
 {
