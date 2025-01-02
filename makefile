@@ -7,12 +7,13 @@ PTH = .
 SRC = $(PTH)/src
 INC = $(PTH)/lib
 BIN = $(PTH)/bin
+ALG = $(PTH)/lib/algorithms
 KPATH = $(PTH)/lib/algorithms/kPath
 KLEV = $(PTH)/lib/algorithms/kLev
 
 .all: clean real random
 
-$(BIN)/check_src: $(SRC)/main.cpp $(SRC)/simp.cpp $(SRC)/improv.cpp $(SRC)/k_lev.cpp $(KPATH)/kPathBase.h $(KPATH)/kPath0.cpp $(KPATH)/kPath1.cpp $(KPATH)/kPath1x.cpp $(KPATH)/kPath2.cpp $(KPATH)/kPathN.cpp
+$(BIN)/check_src: $(SRC)/main.cpp $(SRC)/algo_runner.cpp $(SRC)/graph_generator.cpp $(ALG)/simp.cpp $(ALG)/improv.cpp $(KPATH)/kPathBase.h $(KPATH)/kPath0.cpp $(KPATH)/kPath1.cpp $(KPATH)/kPath1x.cpp $(KPATH)/kPath2.cpp $(KPATH)/kPathN.cpp
 
 $(BIN)/check_lib: $(INC)/levelAnc.cpp $(INC)/tree.cpp $(INC)/verifydfs.cpp
 
