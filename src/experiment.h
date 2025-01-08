@@ -1,0 +1,28 @@
+#ifndef EXPERIMENT_H
+#define EXPERIMENT_H
+
+#include <iostream>
+#include <cmath>
+#include <climits>
+#include <random>
+#include <cstring>
+#include <vector>
+#include "./graph_generator.h"
+#include "./algo_runner.h"
+#define ll long long int
+using namespace std;
+
+struct ExpResult {
+    // TODO: fill this; figure out how to store the results
+    vector<pair<ll, double>> avgPasses; // <variable(N/M/K), avgPasses>
+};
+
+ll calculateM(ll n, int sparsity);
+
+ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int sparsity, string graph_type, int iterations, ll seed_token, int algorithm = 0, int variant = 0, ll k = 0);
+
+void prepareExperiment(int experiment_type, ll n, int sparsity, string graph_type, int iterations, ll seed_token);
+
+vector<pair<ll, double>> runExperiment(int experiment_type, ll n, int sparsity, string graph_type, int iterations, ll seed_token, int algorithm, int variant, ll k);
+
+#endif // EXPERIMENT_H
