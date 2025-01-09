@@ -68,12 +68,12 @@ int main(int argc, char *argv[]) {
             cout << "Generated graph at: " << filePath << "\n";
             break;
         }
-        case PREP_EXP: {
+        case PREP_EXP: { // Execute this before running an experiment with same args for generating required graphs
             prepareExperiment(experiment_type, n, sparsity, graph_type, iterations, seed_token);
             cout << "Seed: " << seed_token << "\n";
             break;
         }
-        case RUN_EXP: { //TODO: Add a check that file exists otherwise ask the user to call prep_exp
+        case RUN_EXP: {
             vector<pair<ll,double>> avgPasses = runExperiment(experiment_type, n, sparsity, graph_type, iterations, seed_token, algorithm, variant, k);
 
             cout << "Experiment Type: " << experiment_type << endl << " Average Passes: \n";
