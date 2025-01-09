@@ -14,6 +14,8 @@ extern const string randomGraphsDirectory;
 
 string generate_file_name(ll n, ll m, const string& type, ll seed);
 
+bool file_exists(const string& filePath);
+
 ll select_node_by_degree(const vector<ll>& values, mt19937& rng);
 
 void generate_power_law_graph(ll n, ll m, ll seed, string &filePath);

@@ -10,6 +10,16 @@ string generate_file_name(ll n, ll m, const string& type, ll seed) {
     return ss.str();
 }
 
+bool file_exists(const string& filePath) {
+    /*namespace fs = std::filesystem;
+    return fs::exists(filePath);*/
+
+    ifstream file(filePath);
+    bool exists = file.good();
+    file.close();
+    return exists;
+}
+
 // TODO: Try segment tree for better performance
 // Function to select a node based on preferential attachment (probability proportional to degree)
 ll select_node_by_degree(const vector<ll>& values, mt19937& rng) {
@@ -95,20 +105,9 @@ void generate_uniform_graph(ll n, ll m, ll seed, string &filePath) {
 string generateRandomGraph(ll n, ll m, ll seed_token, string graph_type) {
     string filePath = randomGraphsDirectory + generate_file_name(n, m, graph_type, seed_token);
 
-    /*
-    namespace fs = std::filesystem;
-    if (fs::exists(filePath)) {
-        return filePath;
-    }
-    */
-
-    // TODO: Make this a function and use this in experiment.cpp
-    ifstream file(filePath);
-    if (file.good()) {
-        file.close();
+    if (file_exists(filePath)) {
         return filePath; // Graph already exists no need to generate it again
     }
-    file.close();
 
     if (graph_type == "POWLAW") {
         generate_power_law_graph(n, m, seed_token, filePath);

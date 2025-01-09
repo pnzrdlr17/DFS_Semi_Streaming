@@ -52,6 +52,11 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
                     if (runMode) {
                         current_file = randomGraphsDirectory + generate_file_name(current_n, current_m, graph_type, seeds[itr]);
 
+                        if (!file_exists(current_file)) {
+                            cerr << "File not found: " << current_file << endl << "Run PREP_EXP with same args before trying RUN_EXP" << endl;
+                            exit(1);
+                        }
+
                         result = runAlgorithm(current_n, current_m, current_file, algorithm, variant, k);
 
                         avgPass[i].second += result.passCount;
@@ -99,6 +104,12 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
 
                     if (runMode) {
                         current_file = randomGraphsDirectory + generate_file_name(n, current_m, graph_type, seeds[itr]);
+
+                        if (!file_exists(current_file)) {
+                            cerr << "File not found: " << current_file << endl << "Run PREP_EXP with same args before trying RUN_EXP" << endl;
+                            exit(1);
+                        }
+
                         result = runAlgorithm(n, current_m, current_file, algorithm, variant, k);
 
                         avgPass[i].second += result.passCount;
@@ -138,6 +149,11 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
                     current_k = 1;
                     step = 1;
                     current_file = randomGraphsDirectory + generate_file_name(n, m, graph_type, seeds[itr]);
+
+                    if (!file_exists(current_file)) {
+                        cerr << "File not found: " << current_file << endl << "Run PREP_EXP with same args before trying RUN_EXP" << endl;
+                        exit(1);
+                    }
 
                     while (current_k <= k) {
                         if (itr == 0) {
