@@ -66,6 +66,12 @@ Mode parseArgs(int argc, char *argv[]) {
 
             n = stoll(argv[2]);
             m = stoll(argv[3]);
+
+            if (m > (n * (n - 1)) / 2) {
+                cerr << "Invalid number of edges (m), must not be more than n*(n-1)/2\n";
+                exit(1);
+            }
+
             filePath = argv[4];
             algorithm = stoi(argv[5]);
 
@@ -94,6 +100,11 @@ Mode parseArgs(int argc, char *argv[]) {
 
             n = stoll(argv[2]);
             m = stoll(argv[3]);
+
+            if (m > (n * (n - 1)) / 2) {
+                cerr << "Invalid number of edges (m), must not be more than n*(n-1)/2\n";
+                exit(1);
+            }
 
             if (argc > 4) seed_token = stoll(argv[4]);
             if (argc > 5) graph_type = argv[5];

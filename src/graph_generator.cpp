@@ -165,7 +165,7 @@ void generate_power_law_graph_old(ll n, ll m, ll seed, string &filePath) {
     set<pair<ll, ll>> edge_visited;
 
     for (ll i = 0; i < n; ++i) {
-        st.set(i, 1); / Initialize the segment tree
+        st.set(i, 1); // Initialize the segment tree
     }
 
     ofstream fileStream(filePath);
@@ -239,6 +239,11 @@ void generate_uniform_graph_old(ll n, ll m, ll seed, string &filePath) {
 }
 
 string generateRandomGraph(ll n, ll m, ll seed_token, string graph_type) {
+    if (m > (n * (n - 1)) / 2) {
+        cerr << "Invalid number of edges (m), must not be more than n*(n-1)/2\n";
+        exit(1);
+    }
+
     string filePath = randomGraphsDirectory + generate_file_name(n, m, graph_type, seed_token);
 
     if (file_exists(filePath)) {

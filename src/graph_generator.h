@@ -7,6 +7,7 @@
 #include <set>
 #include <vector>
 #include <random>
+#include <algorithm>
 #define ll long long int
 using namespace std;
 
