@@ -14,7 +14,8 @@ using namespace std;
 
 struct ExpResult {
     vector<AlgorithmStats> algorithmStats; // Algorithm-related statistics (average passes, tree height etc.)
-    vector<GraphStats> graphStats;         // Graph-related statistics (component size etc.)
+    vector<vector<GraphStats>> graphStats; // Graph-related statistics (component size etc.)
+    // {for each iteration we would have a vector of GraphStats, i.e. same values of n, m but different seed per iteration}
 };
 
 ll calculateM(ll n, int sparsity);

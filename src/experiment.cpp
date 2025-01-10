@@ -6,8 +6,8 @@ extern const string randomGraphsDirectory;
 
 inline ll calculateM (ll n, int sparsity) {
     switch (sparsity) {
-        case 0: return 2ll * n;
-        case 1: return 5ll * n;
+        case 0: return min(2ll * n, (n * (n - 1ll)) / 2);
+        case 1: return min(5ll * n, (n * (n - 1ll)) / 2);
         case 2: return n * log2(n);
         case 3: return n * sqrt(n);
         case 4: return (n * (n - 1ll)) / 2;
@@ -37,7 +37,7 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
     AlgorithmResult result;
     string current_file;
     vector<AlgorithmStats> algoStats;
-    vector<GraphStats> graphStats;
+    vector<vector<GraphStats>> graphStats;
 
     ll step, testCount, seeds[iterations];
     mt19937_64 rng(seed_token);
@@ -50,7 +50,7 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
         case 0: { // VARN
             ll current_m, current_n;
             testCount = (n < 100) ? (n / 10) : (9 + (n - 100 + 50) / 50);
-            runMode ? algoStats.resize(testCount) : graphStats.resize(testCount);
+            runMode ? algoStats.resize(testCount) : graphStats.resize(iterations, vector<GraphStats>(testCount));
 
             for (int itr = 0, i; itr < iterations; ++itr) {
                 i = 0; // counter for the current graph (current_n, current_m)
@@ -76,9 +76,10 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
                         if (result.passCount > algoStats[i].maxPasses) algoStats[i].maxPasses = result.passCount;
                     }
                     else {
-                        cout << "Generating random graph for n = " << current_n << " m = " << current_m << " seed = " << seeds[itr] << endl;
-                        // generateRandomGraph(current_n, current_m, seeds[itr], graph_type);
-                        // graphStats[i] = getGraphStats(current_n, current_m, seeds[itr], sparsity, graph_type);
+                        // cout << "Generating random graph for n = " << current_n << " m = " << current_m << " seed = " << seeds[itr] << endl;
+                        generateRandomGraph(current_n, current_m, seeds[itr], graph_type);
+                        graphStats[itr][i] = getGraphStats(current_n, current_m, seeds[itr], sparsity, graph_type);
+                        // TODO: this only stores for the graphs generated during last iteration, we may need it for all iterations
                     }
 
                     if (current_n >= 100) step = 50;
@@ -254,15 +255,23 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
 
 void prepareExperiment(int experiment_type, ll n, int sparsity, string graph_type, int iterations, ll seed_token) {
     ExpResult result = experimentFramework(0, experiment_type, n, sparsity, graph_type, iterations, seed_token);
-    // vector<GraphStats> graphStats = result.graphStats;
 
     cout << "Experiment Type: " << getExperimentLabel(experiment_type) << endl << "Graph Stats: \n";
 
-    // for (int i = 0; i < graphStats.size(); ++i) {
-    //     cout << graphStats[i].n << " " << graphStats[i].m << " " << graphStats[i].seed << " " << graphStats[i].sparsity << " " << graphStats[i].graph_type << " " << graphStats[i].maxCompSize << " " << graphStats[i].numComps << " " << graphStats[i].meanCompSize << " " << graphStats[i].stdDevCompSize << "\n";
-    // }
+    int i = 0;
+    for (const auto& iterationStats : result.graphStats) {
+        cout << "Iteration " << ++i << ":\n";
+        for (const auto& stats : iterationStats) {
+            cout << "n=" << stats.n << " m=" << stats.m
+                // << " seed=" << stats.seed
+                << " sparsity=" << stats.sparsity
+                << " graph_type=" << stats.graph_type << " maxCompSize=" << stats.maxCompSize
+                << " numComps=" << stats.numComps << " meanCompSize=" << stats.meanCompSize
+                << " stdDevCompSize=" << stats.stdDevCompSize << "\n";
+        }
+    }
 
-    // TODO: use ifdefs to write cout or write to file
+    // TODO: use if-else to write cout or write to file
 }
 
 void runExperiment(int experiment_type, ll n, int sparsity, string graph_type, int iterations, ll seed_token, int algorithm, int variant, ll k) {
