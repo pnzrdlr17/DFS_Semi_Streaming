@@ -40,6 +40,49 @@ ll Segtree::get(ll l, ll r, ll x, ll lx, ll rx) {
 
 /*SEGTREE*/
 
+/*DSU*/
+DSU::DSU(ll n) {
+    max_size = 1;
+    num_comps = n;
+    size.assign(n, 1LL);
+    p.assign(n, 0LL);
+    for(ll i=0; i<n; i++) p[i] = i;
+}
+
+ll DSU::get(ll a) {
+    if(a == p[a]) return a;
+    return p[a] = get(p[a]);
+}
+
+void DSU::un(ll a, ll b) {
+    a = get(a);
+    b = get(b);
+    if(a == b) return;
+    if(size[a] >= size[b]){
+        p[b] = a;
+        size[a] += size[b];
+    }
+    else{
+        p[a] = b;
+        size[b] += size[a];
+    }
+    num_comps--;
+    max_size = max(max_size, max(size[a], size[b]));
+}
+
+ll DSU::get_max_size() {
+    return max_size;
+}
+
+ll DSU::get_num_comps() {
+    return num_comps;
+}
+
+ll DSU::get_size(ll a) {
+    return size[get(a)];
+}
+/*DSU*/
+
 string generate_file_name(ll n, ll m, const string& type, ll seed) {
     stringstream ss;
     ss << "graph_" << n << "_" << m << "_" << type << "_" << seed << ".txt";
@@ -56,6 +99,63 @@ bool file_exists(const string& filePath) {
     return exists;
 }
 
+GraphStats getGraphStats(ll n, ll m, ll seed, int sparsity, const string& graph_type) {
+    string filePath = randomGraphsDirectory + generate_file_name(n, m, graph_type, seed);
+
+    if (!file_exists(filePath)) {
+        cerr << "File not found: " << filePath << endl;
+        exit(1);
+    }
+
+    ifstream fileStream(filePath);
+
+    DSU st(n);
+
+    ll u, v;
+    while (fileStream >> u >> v) {
+        if(u != 0 && v != 0){
+            u--; v--;
+            st.un(u, v);
+        }
+    }
+
+    fileStream.close();
+
+
+    double maxCompSize = st.get_max_size()/double(n) * 100; // percentage of nodes in largest component
+    double numComps = st.get_num_comps();
+
+    vector<ll> sizes;
+    for(int i = 0; i < n; i++){
+        if (st.get(i) == i) {
+            sizes.push_back(st.get_size(i));
+        }
+    }
+
+    double sum = accumulate(sizes.begin(), sizes.end(), 0LL);
+    double mean = sum / sizes.size();
+    double stdDev = 0;
+    for(auto &it : sizes) {
+        stdDev += pow(it - mean, 2);
+    }
+    stdDev = sqrt(stdDev/sizes.size());
+
+    /**
+     * @brief Structure to hold statistics of a generated graph.
+     *
+     * @param n Number of nodes in the graph.
+     * @param m Number of edges in the graph.
+     * @param seed Seed used for random graph generation.
+     * @param sparsity Sparsity measure of the graph.
+     * @param graph_type Type of the graph (POWLAW, UNIFORM, REAL).
+     * @param maxCompSize Size (perecentage) of the largest connected component.
+     * @param numComps Number of connected components in the graph.
+     * @param mean Mean degree of the component sizez.
+     * @param stdDev Standard deviation of the component sizes.
+     */
+    GraphStats res = {n, m, seed, sparsity, graph_type, maxCompSize, numComps, mean, stdDev};
+    return res;
+}
 // TODO: Try segment tree for better performance
 // Function to select a node based on preferential attachment (probability proportional to degree)
 ll select_node_by_degree(const vector<ll>& values, mt19937& rng) {
@@ -238,7 +338,7 @@ void generate_uniform_graph_old(ll n, ll m, ll seed, string &filePath) {
     fileStream.close();
 }
 
-string generateRandomGraph(ll n, ll m, ll seed_token, string graph_type) {
+string generateRandomGraph(ll n, ll m, ll seed_token, const string& graph_type) {
     if (m > (n * (n - 1)) / 2) {
         cerr << "Invalid number of edges (m), must not be more than n*(n-1)/2\n";
         exit(1);
