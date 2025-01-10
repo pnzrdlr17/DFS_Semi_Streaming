@@ -21,6 +21,11 @@ struct AlgorithmResult {
     Tree T;
 };
 
+struct AlgorithmStats {
+    ll current_x; // (n, m, k)
+    double avgPasses, avgHeight, maxPasses;
+};
+
 AlgorithmResult runAlgorithm(ll n, ll m, const std::string& filePath, int algorithm, char variant = '0', ll k = 1);
 
 #endif // ALGO_RUNNER_H

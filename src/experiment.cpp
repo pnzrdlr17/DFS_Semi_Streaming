@@ -36,6 +36,8 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
     ExpResult expr;
     AlgorithmResult result;
     string current_file;
+    vector<AlgorithmStats> algoStats;
+    vector<GraphStats> graphStats;
 
     ll step, testCount, seeds[iterations];
     mt19937_64 rng(seed_token);
@@ -48,7 +50,7 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
         case 0: { // VARN
             ll current_m, current_n;
             testCount = (n < 100) ? (n / 10) : (9 + (n - 100 + 50) / 50);
-            vector<pair<ll, double>> avgPass(testCount), maxPass(testCount), avgHeight(testCount);// TODO: make use of ifdef to declare variables conditionally
+            runMode ? algoStats.resize(testCount) : graphStats.resize(testCount);
 
             for (int itr = 0, i; itr < iterations; ++itr) {
                 i = 0; // counter for the current graph (current_n, current_m)
@@ -56,13 +58,10 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
                 step = 10;
                 while (current_n <= n) {
                     current_m = calculateM(current_n, sparsity);
-                    if (itr == 0) {
-                        avgPass[i] = {current_n, 0};
-                        maxPass[i] = {current_n, 0};
-                        avgHeight[i] = {current_n, 0};
-                    }
 
                     if (runMode) {
+                        if (itr == 0) algoStats[i] = {current_n, 0, 0, 0}; // (current_x, avgPasses, avgHeight, maxPasses)
+
                         current_file = randomGraphsDirectory + generate_file_name(current_n, current_m, graph_type, seeds[itr]);
 
                         if (!file_exists(current_file)) {
@@ -72,12 +71,14 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
 
                         result = runAlgorithm(current_n, current_m, current_file, algorithm, variant, k);
 
-                        avgPass[i].second += result.passCount;
-                        avgHeight[i].second += result.T.getHeight(0);
-                        if (result.passCount > maxPass[i].second) maxPass[i].second = result.passCount;
+                        algoStats[i].avgPasses += result.passCount;
+                        algoStats[i].avgHeight += result.T.getHeight(0);
+                        if (result.passCount > algoStats[i].maxPasses) algoStats[i].maxPasses = result.passCount;
                     }
                     else {
-                        generateRandomGraph(current_n, current_m, seeds[itr], graph_type);
+                        cout << "Generating random graph for n = " << current_n << " m = " << current_m << " seed = " << seeds[itr] << endl;
+                        // generateRandomGraph(current_n, current_m, seeds[itr], graph_type);
+                        // graphStats[i] = getGraphStats(current_n, current_m, seeds[itr], sparsity, graph_type);
                     }
 
                     if (current_n >= 100) step = 50;
@@ -88,10 +89,13 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
 
             if (runMode) {
                 for (int i = 0; i < testCount; ++i) {
-                    avgPass[i].second /= iterations;
-                    avgHeight[i].second /= iterations;
+                    algoStats[i].avgPasses /= iterations;
+                    algoStats[i].avgHeight /= iterations;
                 }
-                expr.avgPasses = avgPass;
+                expr.algorithmStats = algoStats;
+            }
+            else {
+                expr.graphStats = graphStats;
             }
 
             break;
@@ -102,20 +106,17 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
                         (m < 20000) ? 9 + (m - 1000) / 1000 + 1 :
                         (m < 100000) ? 9 + 19 + (m - 20000) / 10000 + 1 :
                         (9 + 19 + 8 + (m - 100000) / 100000 + 1);
-            vector<pair<ll, double>> avgPass(testCount), maxPass(testCount), avgHeight(testCount);// TODO: make use of ifdef to declare variables conditionally
+            runMode ? algoStats.resize(testCount) : graphStats.resize(testCount);
 
             for (int itr = 0, i; itr < iterations; ++itr) {
                 i = 0; // counter for the current graph (n, current_m)
                 current_m = 100;
                 step = 100;
                 while (current_m <= m) {
-                    if (itr == 0) {
-                        avgPass[i] = {current_m, 0};
-                        maxPass[i] = {current_m, 0};
-                        avgHeight[i] = {current_m, 0};
-                    }
 
                     if (runMode) {
+                        if (itr == 0) algoStats[i] = {current_m, 0, 0, 0}; // (current_x, avgPasses, avgHeight, maxPasses)
+
                         current_file = randomGraphsDirectory + generate_file_name(n, current_m, graph_type, seeds[itr]);
 
                         if (!file_exists(current_file)) {
@@ -125,9 +126,9 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
 
                         result = runAlgorithm(n, current_m, current_file, algorithm, variant, k);
 
-                        avgPass[i].second += result.passCount;
-                        avgHeight[i].second += result.T.getHeight(0);
-                        if (result.passCount > maxPass[i].second) maxPass[i].second = result.passCount;
+                        algoStats[i].avgPasses += result.passCount;
+                        algoStats[i].avgHeight += result.T.getHeight(0);
+                        if (result.passCount > algoStats[i].maxPasses) algoStats[i].maxPasses = result.passCount;
                     }
                     else {
                         generateRandomGraph(n, current_m, seeds[itr], graph_type);
@@ -143,18 +144,21 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
 
             if (runMode) {
                 for (int i = 0; i < testCount; ++i) {
-                    avgPass[i].second /= iterations;
-                    avgHeight[i].second /= iterations;
+                    algoStats[i].avgPasses /= iterations;
+                    algoStats[i].avgHeight /= iterations;
                 }
-                expr.avgPasses = avgPass;
+                expr.algorithmStats = algoStats;
             }
+            else {
+                expr.graphStats = graphStats;
+            }
+
             break;
         }
         case 2: { // VARK
             ll m = calculateM(n, sparsity), current_k;
             testCount = (k < 40) ? k : (k < 100) ? (39 + (k - 40 + 5) / 5) : (39 + 12 + (k - 100 + 50) / 50);
-            vector<pair<ll, double>> avgPass(testCount), maxPass(testCount), avgHeight(testCount);// TODO: make use of ifdef to declare variables conditionally
-
+            runMode ? algoStats.resize(testCount) : graphStats.resize(testCount);
 
             for (int itr = 0, i; itr < iterations; ++itr) {
                 if (runMode) {
@@ -169,17 +173,13 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
                     }
 
                     while (current_k <= k) {
-                        if (itr == 0) {
-                            avgPass[i] = {current_k, 0};
-                            maxPass[i] = {current_k, 0};
-                            avgHeight[i] = {current_k, 0};
-                        }
+                        if (itr == 0) algoStats[i] = {current_k, 0, 0, 0}; // (current_x, avgPasses, avgHeight, maxPasses)
 
                         result = runAlgorithm(n, m, current_file, algorithm, variant, current_k);
 
-                        avgPass[i].second += result.passCount;
-                        avgHeight[i].second += result.T.getHeight(0);
-                        if (result.passCount > maxPass[i].second) maxPass[i].second = result.passCount;
+                        algoStats[i].avgPasses += result.passCount;
+                        algoStats[i].avgHeight += result.T.getHeight(0);
+                        if (result.passCount > algoStats[i].maxPasses) algoStats[i].maxPasses = result.passCount;
 
                         if (k >= 40) step = 5;
                         if (k >= 100) step = 50;
@@ -194,17 +194,21 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
 
             if (runMode) {
                 for (int i = 0; i < testCount; ++i) {
-                    avgPass[i].second /= iterations;
-                    avgHeight[i].second /= iterations;
+                    algoStats[i].avgPasses /= iterations;
+                    algoStats[i].avgHeight /= iterations;
                 }
-                expr.avgPasses = avgPass;
+                expr.algorithmStats = algoStats;
             }
+            else {
+                expr.graphStats = graphStats;
+            }
+
             break;
         }
         case 3: { // FIXNM
             ll m = calculateM(n, sparsity);
             testCount = 1;
-            vector<pair<ll, double>> avgPass(testCount), maxPass(testCount), avgHeight(testCount);// TODO: make use of ifdef to declare variables conditionally
+            runMode ? algoStats.resize(testCount) : graphStats.resize(testCount);
 
             for (int itr = 0; itr < iterations; ++itr) {
                 if (runMode) {
@@ -217,9 +221,9 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
 
                     result = runAlgorithm(n, m, current_file, algorithm, variant, k);
 
-                    avgPass[0].second += result.passCount;
-                    avgHeight[0].second += result.T.getHeight(0);
-                    if (result.passCount > maxPass[0].second) maxPass[0].second = result.passCount;
+                    algoStats[0].avgPasses += result.passCount;
+                    algoStats[0].avgHeight += result.T.getHeight(0);
+                    if (result.passCount > algoStats[0].maxPasses) algoStats[0].maxPasses = result.passCount;
                 }
                 else {
                     generateRandomGraph(n, m, seeds[itr], graph_type);
@@ -227,10 +231,17 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
             }
 
             if (runMode) {
-                avgPass[0].second /= iterations;
-                avgHeight[0].second /= iterations;
-                expr.avgPasses = avgPass;
+                for (int i = 0; i < testCount; ++i) {
+                    algoStats[i].avgPasses /= iterations;
+                    algoStats[i].avgHeight /= iterations;
+                }
+                expr.algorithmStats = algoStats;
             }
+            else {
+                expr.graphStats = graphStats;
+            }
+
+            break;
         }
         default: {
             cerr << "Invalid experiment type\n";
@@ -243,13 +254,13 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
 
 void prepareExperiment(int experiment_type, ll n, int sparsity, string graph_type, int iterations, ll seed_token) {
     ExpResult result = experimentFramework(0, experiment_type, n, sparsity, graph_type, iterations, seed_token);
-    vector<GraphStats> graphStats = result.graphStats;
+    // vector<GraphStats> graphStats = result.graphStats;
 
-    cout << "Experiment Type: " << getExperimentLabel(experiment_type) << endl << " Graph Stats: \n";
+    cout << "Experiment Type: " << getExperimentLabel(experiment_type) << endl << "Graph Stats: \n";
 
-    for (int i = 0; i < graphStats.size(); ++i) {
-        cout << graphStats[i].n << " " << graphStats[i].m << " " << graphStats[i].seed << " " << graphStats[i].sparsity << " " << graphStats[i].graph_type << " " << graphStats[i].maxCompSize << " " << graphStats[i].numComps << " " << graphStats[i].meanCompSize << " " << graphStats[i].stdDevCompSize << "\n";
-    }
+    // for (int i = 0; i < graphStats.size(); ++i) {
+    //     cout << graphStats[i].n << " " << graphStats[i].m << " " << graphStats[i].seed << " " << graphStats[i].sparsity << " " << graphStats[i].graph_type << " " << graphStats[i].maxCompSize << " " << graphStats[i].numComps << " " << graphStats[i].meanCompSize << " " << graphStats[i].stdDevCompSize << "\n";
+    // }
 
     // TODO: use ifdefs to write cout or write to file
 }
@@ -258,7 +269,7 @@ void runExperiment(int experiment_type, ll n, int sparsity, string graph_type, i
     ExpResult result = experimentFramework(1, experiment_type, n, sparsity, graph_type, iterations, seed_token, algorithm, variant, k);
     vector<AlgorithmStats> algorithmStats = result.algorithmStats;
 
-    cout << "Experiment Type: " << getExperimentLabel(experiment_type) << endl << " Average Passes: \n";
+    cout << "Experiment Type: " << getExperimentLabel(experiment_type) << endl << "Average Passes: \n";
 
     for (int i = 0; i < algorithmStats.size(); ++i) {
         cout << algorithmStats[i].current_x << " " << algorithmStats[i].avgPasses << "\n";

@@ -12,18 +12,6 @@
 #define ll long long int
 using namespace std;
 
-struct AlgorithmStats {
-    ll current_x; // (n, m, k)
-    double avgPasses, avgHeight, maxPasses;
-};
-
-struct GraphStats {
-    ll n, m, seed;
-    int sparsity;
-    string graph_type;
-    double maxCompSize, numComps, meanCompSize, stdDevCompSize;
-};
-
 struct ExpResult {
     vector<AlgorithmStats> algorithmStats; // Algorithm-related statistics (average passes, tree height etc.)
     vector<GraphStats> graphStats;         // Graph-related statistics (component size etc.)
