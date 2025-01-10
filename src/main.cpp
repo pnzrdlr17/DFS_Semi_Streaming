@@ -17,6 +17,7 @@ RUN_ALGO: Run the given algorithm for the given (filepath) graph
 GEN_GRAPH: Generate a random graph with the given parameters
 PREP_EXP: [Prerun for a particular type of experiment] -- generate all the required graphs in advance
 RUN_EXP: Run an experiment [VARN, VARM, VARK] with the given parameters
+TODO: Add verify DFS mode
 */
 
 Mode mode = RUN_ALGO;
@@ -52,6 +53,8 @@ Sparsity: M based on N
 4 - N*(N-1)/2
 */
 
+// TODO: 1. getAll Params as earlier for each of the experiments DueJan09
+
 int main(int argc, char *argv[]) {
 
     mode = parseArgs(argc, argv);
@@ -70,16 +73,13 @@ int main(int argc, char *argv[]) {
         }
         case PREP_EXP: { // Execute this before running an experiment with same args for generating required graphs
             prepareExperiment(experiment_type, n, sparsity, graph_type, iterations, seed_token);
+            cout << "Graphs generated!\n";
             cout << "Seed: " << seed_token << "\n";
             break;
         }
         case RUN_EXP: {
-            vector<pair<ll,double>> avgPasses = runExperiment(experiment_type, n, sparsity, graph_type, iterations, seed_token, algorithm, variant, k);
-
-            cout << "Experiment Type: " << experiment_type << endl << " Average Passes: \n";
-            for (int i = 0; i < avgPasses.size(); ++i) {
-                cout << avgPasses[i].first << " " << avgPasses[i].second << "\n";
-            }
+            runExperiment(experiment_type, n, sparsity, graph_type, iterations, seed_token, algorithm, variant, k);
+            cout << "Completed running!\n";
             break;
         }
         default:

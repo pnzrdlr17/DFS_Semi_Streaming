@@ -18,6 +18,19 @@ inline ll calculateM (ll n, int sparsity) {
     }
 }
 
+inline string getExperimentLabel(int experiment_type) {
+    switch (experiment_type) {
+        case 0: return "VARN";
+        case 1: return "VARM";
+        case 2: return "VARK";
+        case 3: return "FIXNM";
+        default: {
+            cerr << "Invalid experiment type\n";
+            exit(1);
+        }
+    }
+}
+
 // runMode: 0 - prepare, 1 - run
 ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int sparsity, string graph_type, int iterations, ll seed_token, int algorithm, int variant, ll k)  {
     ExpResult expr;
@@ -188,6 +201,37 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
             }
             break;
         }
+        case 3: { // FIXNM
+            ll m = calculateM(n, sparsity);
+            testCount = 1;
+            vector<pair<ll, double>> avgPass(testCount), maxPass(testCount), avgHeight(testCount);// TODO: make use of ifdef to declare variables conditionally
+
+            for (int itr = 0; itr < iterations; ++itr) {
+                if (runMode) {
+                    current_file = randomGraphsDirectory + generate_file_name(n, m, graph_type, seeds[itr]);
+
+                    if (!file_exists(current_file)) {
+                        cerr << "File not found: " << current_file << endl << "Run PREP_EXP with same args before trying RUN_EXP" << endl;
+                        exit(1);
+                    }
+
+                    result = runAlgorithm(n, m, current_file, algorithm, variant, k);
+
+                    avgPass[0].second += result.passCount;
+                    avgHeight[0].second += result.T.getHeight(0);
+                    if (result.passCount > maxPass[0].second) maxPass[0].second = result.passCount;
+                }
+                else {
+                    generateRandomGraph(n, m, seeds[itr], graph_type);
+                }
+            }
+
+            if (runMode) {
+                avgPass[0].second /= iterations;
+                avgHeight[0].second /= iterations;
+                expr.avgPasses = avgPass;
+            }
+        }
         default: {
             cerr << "Invalid experiment type\n";
             exit(1);
@@ -198,10 +242,27 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
 }
 
 void prepareExperiment(int experiment_type, ll n, int sparsity, string graph_type, int iterations, ll seed_token) {
-    experimentFramework(0, experiment_type, n, sparsity, graph_type, iterations, seed_token);
+    ExpResult result = experimentFramework(0, experiment_type, n, sparsity, graph_type, iterations, seed_token);
+    vector<GraphStats> graphStats = result.graphStats;
+
+    cout << "Experiment Type: " << getExperimentLabel(experiment_type) << endl << " Graph Stats: \n";
+
+    for (int i = 0; i < graphStats.size(); ++i) {
+        cout << graphStats[i].n << " " << graphStats[i].m << " " << graphStats[i].seed << " " << graphStats[i].sparsity << " " << graphStats[i].graph_type << " " << graphStats[i].maxCompSize << " " << graphStats[i].numComps << " " << graphStats[i].meanCompSize << " " << graphStats[i].stdDevCompSize << "\n";
+    }
+
+    // TODO: use ifdefs to write cout or write to file
 }
 
-vector<pair<ll, double>> runExperiment(int experiment_type, ll n, int sparsity, string graph_type, int iterations, ll seed_token, int algorithm, int variant, ll k) {
+void runExperiment(int experiment_type, ll n, int sparsity, string graph_type, int iterations, ll seed_token, int algorithm, int variant, ll k) {
     ExpResult result = experimentFramework(1, experiment_type, n, sparsity, graph_type, iterations, seed_token, algorithm, variant, k);
-    return result.avgPasses;
+    vector<AlgorithmStats> algorithmStats = result.algorithmStats;
+
+    cout << "Experiment Type: " << getExperimentLabel(experiment_type) << endl << " Average Passes: \n";
+
+    for (int i = 0; i < algorithmStats.size(); ++i) {
+        cout << algorithmStats[i].current_x << " " << algorithmStats[i].avgPasses << "\n";
+    }
+
+    // TODO: write to file / console
 }

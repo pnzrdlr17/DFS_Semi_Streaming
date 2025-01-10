@@ -22,6 +22,7 @@ Experiment types:
 0 - VARN
 1 - VARM
 2 - VARK
+3 - FIXNM {for a fixed N and M, run the algorithm by creating different graphs using different seeds}
 */
 
 /*
