@@ -107,7 +107,7 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
                         (m < 20000) ? 9 + (m - 1000) / 1000 + 1 :
                         (m < 100000) ? 9 + 19 + (m - 20000) / 10000 + 1 :
                         (9 + 19 + 8 + (m - 100000) / 100000 + 1);
-            runMode ? algoStats.resize(testCount) : graphStats.resize(testCount);
+            runMode ? algoStats.resize(testCount) : graphStats.resize(iterations, vector<GraphStats>(testCount));
 
             for (int itr = 0, i; itr < iterations; ++itr) {
                 i = 0; // counter for the current graph (n, current_m)
@@ -133,6 +133,7 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
                     }
                     else {
                         generateRandomGraph(n, current_m, seeds[itr], graph_type);
+                        graphStats[itr][i] = getGraphStats(n, current_m, seeds[itr], sparsity, graph_type);
                     }
 
                     if (current_m >= 1000) step = 1000;
@@ -159,7 +160,7 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
         case 2: { // VARK
             ll m = calculateM(n, sparsity), current_k;
             testCount = (k < 40) ? k : (k < 100) ? (39 + (k - 40 + 5) / 5) : (39 + 12 + (k - 100 + 50) / 50);
-            runMode ? algoStats.resize(testCount) : graphStats.resize(testCount);
+            runMode ? algoStats.resize(testCount) : graphStats.resize(iterations, vector<GraphStats>(1));
 
             for (int itr = 0, i; itr < iterations; ++itr) {
                 if (runMode) {
@@ -190,6 +191,7 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
                 }
                 else {
                     generateRandomGraph(n, m, seeds[itr], graph_type);
+                    graphStats[itr][0] = getGraphStats(n, m, seeds[itr], sparsity, graph_type);
                 }
             }
 
@@ -209,7 +211,7 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
         case 3: { // FIXNM
             ll m = calculateM(n, sparsity);
             testCount = 1;
-            runMode ? algoStats.resize(testCount) : graphStats.resize(testCount);
+            runMode ? algoStats.resize(testCount) : graphStats.resize(iterations, vector<GraphStats>(testCount));
 
             for (int itr = 0; itr < iterations; ++itr) {
                 if (runMode) {
@@ -228,6 +230,7 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
                 }
                 else {
                     generateRandomGraph(n, m, seeds[itr], graph_type);
+                    graphStats[itr][0] = getGraphStats(n, m, seeds[itr], sparsity, graph_type);
                 }
             }
 
