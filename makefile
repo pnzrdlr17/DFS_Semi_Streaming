@@ -1,6 +1,6 @@
 # Compiler and flags
 # CC = g++ -std=c++0x  #g++ -std=c++11
-CXX = /opt/homebrew/bin/g++-14
+CXX = g++
 CXXFLAGS = -std=c++17 -Wall -O3 -g -w
 LDFLAGS = -Wall -O3 -g -w
 
