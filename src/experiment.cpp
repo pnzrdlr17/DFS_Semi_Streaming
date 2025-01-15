@@ -258,20 +258,20 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
 void prepareExperiment(int experiment_type, ll n, int sparsity, string graph_type, int iterations, ll seed_token) {
     ExpResult result = experimentFramework(0, experiment_type, n, sparsity, graph_type, iterations, seed_token);
 
-    cout << "Experiment Type: " << getExperimentLabel(experiment_type) << endl << "Graph Stats: \n";
+    // cout << "Experiment Type: " << getExperimentLabel(experiment_type) << endl << "Graph Stats: \n";
 
-    int i = 0;
-    for (const auto& iterationStats : result.graphStats) {
-        cout << "Iteration " << ++i << ":\n";
-        for (const auto& stats : iterationStats) {
-            cout << "n=" << stats.n << " m=" << stats.m
-                // << " seed=" << stats.seed
-                << " sparsity=" << stats.sparsity
-                << " graph_type=" << stats.graph_type << " maxCompSize=" << stats.maxCompSize
-                << " numComps=" << stats.numComps << " meanCompSize=" << stats.meanCompSize
-                << " stdDevCompSize=" << stats.stdDevCompSize << "\n";
-        }
-    }
+    // int i = 0;
+    // for (const auto& iterationStats : result.graphStats) {
+    //     cout << "Iteration " << ++i << ":\n";
+    //     for (const auto& stats : iterationStats) {
+    //         cout << "n=" << stats.n << " m=" << stats.m
+    //             // << " seed=" << stats.seed
+    //             << " sparsity=" << stats.sparsity
+    //             << " graph_type=" << stats.graph_type << " maxCompSize=" << stats.maxCompSize
+    //             << " numComps=" << stats.numComps << " meanCompSize=" << stats.meanCompSize
+    //             << " stdDevCompSize=" << stats.stdDevCompSize << "\n";
+    //     }
+    // }
 
     // TODO: use if-else to write cout or write to file
 }
@@ -280,11 +280,12 @@ void runExperiment(int experiment_type, ll n, int sparsity, string graph_type, i
     ExpResult result = experimentFramework(1, experiment_type, n, sparsity, graph_type, iterations, seed_token, algorithm, variant, k);
     vector<AlgorithmStats> algorithmStats = result.algorithmStats;
 
-    cout << "Experiment Type: " << getExperimentLabel(experiment_type) << endl << "Average Passes: \n";
+    // cout << "Experiment Type: " << getExperimentLabel(experiment_type) << endl << "Average Passes: \n";
 
-    for (int i = 0; i < algorithmStats.size(); ++i) {
-        cout << algorithmStats[i].current_x << " " << algorithmStats[i].avgPasses << "\n";
-    }
+    // for (int i = 0; i < algorithmStats.size(); ++i) {
+    //     cout << algorithmStats[i].current_x << " " << algorithmStats[i].avgPasses << "\n";
+    // }
+    cout<< algorithmStats[0].avgPasses << endl;
 
     // TODO: write to file / console
 }
