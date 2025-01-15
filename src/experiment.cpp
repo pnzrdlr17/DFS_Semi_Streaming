@@ -79,7 +79,6 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
                         // cout << "Generating random graph for n = " << current_n << " m = " << current_m << " seed = " << seeds[itr] << endl;
                         generateRandomGraph(current_n, current_m, seeds[itr], graph_type);
                         graphStats[itr][i] = getGraphStats(current_n, current_m, seeds[itr], sparsity, graph_type);
-                        // TODO: this only stores for the graphs generated during last iteration, we may need it for all iterations
                     }
 
                     if (current_n >= 100) step = 50;

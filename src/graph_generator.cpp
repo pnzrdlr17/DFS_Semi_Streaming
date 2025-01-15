@@ -347,6 +347,7 @@ string generateRandomGraph(ll n, ll m, ll seed_token, const string& graph_type) 
     string filePath = randomGraphsDirectory + generate_file_name(n, m, graph_type, seed_token);
 
     if (file_exists(filePath)) {
+        cout << "Graph already exists at: " << filePath << "\n";
         return filePath; // Graph already exists no need to generate it again
     }
 

@@ -63,12 +63,16 @@ int main(int argc, char *argv[]) {
         case RUN_ALGO: {
             AlgorithmResult result = runAlgorithm(n, m, filePath, algorithm, variant, k);
             // TODO fix n, m, k to ll in all algorithm files
-            cout << "PassCount: " << result.passCount << "\n";
+            // cout << "PassCount: " << result.passCount << "\n";
+            cout<< result.passCount << endl;
             break;
         }
         case GEN_GRAPH: {
             filePath = generateRandomGraph(n, m, seed_token, graph_type);
             cout << "Generated graph at: " << filePath << "\n";
+            GraphStats stats = getGraphStats(n, m, seed_token, sparsity, graph_type);
+            cout << "Graph Stats:\n";
+            cout << "Nodes: " << stats.n << "\nEdges: " << stats.m << "\nSeed: " << stats.seed << "\nSparsity: " << stats.sparsity << "\n" << "MaxCompSize: " << stats.maxCompSize << "\nNumComps: " << stats.numComps << "\nMeanCompSize: " << stats.meanCompSize << "\nStdDevCompSize: " << stats.stdDevCompSize << "\n";
             break;
         }
         case PREP_EXP: { // Execute this before running an experiment with same args for generating required graphs
