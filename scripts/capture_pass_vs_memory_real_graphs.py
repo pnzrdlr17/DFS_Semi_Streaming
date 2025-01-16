@@ -29,7 +29,7 @@ def run_experiments(algorithm, output_dir, iterations):
     ]
 
     # Memory scaling steps
-    memory_steps = list(range(10000, 26000, 1000)) + list(range(30000, 55000, 5000)) + list(range(60000, 110000, 10000)) + list(range(200000, 600000, 100000))
+    memory_steps = list(range(5000, 26000, 1000)) + list(range(30000, 55000, 5000)) + list(range(60000, 110000, 10000)) + list(range(200000, 600000, 100000))
 
     # Ensure output directory exists
     Path(output_dir).mkdir(parents=True, exist_ok=True)
@@ -37,6 +37,7 @@ def run_experiments(algorithm, output_dir, iterations):
     # Loop over each graph
     for graph in graphs:
         label, n, m, input_path = graph["label"], graph["n"], graph["m"], graph["path"]
+        k_threshold = int(2 * m / n)
         graph_output_dir = os.path.join(output_dir, label)
         Path(graph_output_dir).mkdir(parents=True, exist_ok=True)
 
@@ -117,6 +118,10 @@ def run_experiments(algorithm, output_dir, iterations):
                         if pass_count < min_passes:
                             min_passes = pass_count
                             optimal_k = current_k
+
+                        if current_k > k_threshold:
+                            print(f"    Optimal k={optimal_k} assumed as current k={current_k} exceeded 2 * m / n")
+                            break
 
                         if (variant == "0" and min_passes == 2):
                             print(f"    Optimal k={optimal_k} found with 2 passes and {avg_memory} KB memory")
