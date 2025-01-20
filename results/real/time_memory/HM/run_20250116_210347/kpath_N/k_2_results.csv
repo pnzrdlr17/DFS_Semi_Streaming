@@ -1,0 +1,4 @@
+K,Iteration,User Time (s),Memory (KB),Passes
+2,1,0.02,5252.0,3
+2,2,0.01,5252.0,3
+2,3,0.02,5260.0,3
