@@ -60,7 +60,7 @@ def run_experiments(iterations, seed_token, output_dir):
                     # Run the Experiment [RUN_EXP]
                     try:
                         result = subprocess.run(
-                            ["gtime", "-f", "%U,%M", "./bin/main", "RUN_EXP", "3", str(n), str(sparsity), "UNIFORM", str(iterations), str(seed_token), algorithm_code, variant, str(k)],
+                            ["/usr/bin/time", "-f", "%U,%M", "./bin/main", "RUN_EXP", "3", str(n), str(sparsity), "UNIFORM", str(iterations), str(seed_token), algorithm_code, variant, str(k)],
                             stdout=subprocess.PIPE,
                             stderr=subprocess.PIPE,
                             text=True,
