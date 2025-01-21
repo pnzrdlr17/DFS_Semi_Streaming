@@ -17,11 +17,12 @@ def run_experiments(iterations, seed_token, output_dir):
 
     # Add a timestamped directory for each run
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    run_output_dir = os.path.join(output_dir, f"run_{timestamp}")
+    run_output_dir = os.path.join(output_dir, f"run_{timestamp}_seed_{seed_token}")
     Path(run_output_dir).mkdir(parents=True, exist_ok=True)
 
     for sparsity in sparsity_values:
         sparsity_folder = f"sparsity_logN" if sparsity == 2 else f"sparsity_sqrtN"
+        sparsity_folder += f"_seed_{seed_token}_k{k}"
         sparsity_output_dir = os.path.join(run_output_dir, sparsity_folder)
         Path(sparsity_output_dir).mkdir(parents=True, exist_ok=True)
 
@@ -70,7 +71,7 @@ def run_experiments(iterations, seed_token, output_dir):
                     # Parse the output
                     output_lines = result.stdout.strip().split("\n")
                     user_time_mem = result.stderr.strip()  # Time and memory are in stderr
-                    avg_passes = round(float(output_lines[-1]), 4)  # Assuming pass count is the last line of stdout
+                    avg_passes = round(float(output_lines[-1]), 2)  # Assuming pass count is the last line of stdout
                     print(f"      Average Passes: {avg_passes}, Time/Memory: {user_time_mem}")
 
                     # Extract time and memory
@@ -81,8 +82,8 @@ def run_experiments(iterations, seed_token, output_dir):
                         continue
 
                     # Calculate average time
-                    avg_time = round(user_time / iterations, 4)
-                    memory = round(memory, 4)
+                    avg_time = round(user_time / iterations, 2)
+                    memory = round(memory, 2)
 
                     # Write data to CSV
                     csvwriter.writerow([n, avg_time, memory, avg_passes])
