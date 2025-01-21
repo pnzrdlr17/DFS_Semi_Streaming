@@ -11,13 +11,15 @@ def run_experiments(iterations, seed_token, output_dir):
     sparsity_values = [2, 3]
     k = 10
 
+    print(f"Running experiments with {iterations} iterations, varying N from 10 to 10,000 and seed token {seed_token}")
+
     Path(output_dir).mkdir(parents=True, exist_ok=True)
 
     n_values = list(range(10, 101, 10)) + list(range(150, 550, 50)) + list(range(600, 1100, 100)) + list(range(1200, 2200, 200)) + list(range(2500, 5500, 500)) + list(range(6000, 11000, 1000))
 
     # Add a timestamped directory for each run
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    run_output_dir = os.path.join(output_dir, f"run_{timestamp}_seed_{seed_token}")
+    run_output_dir = os.path.join(output_dir, f"run_random_uniform_{timestamp}_seed_{seed_token}_iter_{iterations}")
     Path(run_output_dir).mkdir(parents=True, exist_ok=True)
 
     for sparsity in sparsity_values:
@@ -31,7 +33,7 @@ def run_experiments(iterations, seed_token, output_dir):
         file_objects = {}
         for algorithm_name, algorithm_code in algorithms.items():
             for variant in variants:
-                results_file = os.path.join(sparsity_output_dir, f"{algorithm_name}_{variant}_results.csv")
+                results_file = os.path.join(sparsity_output_dir, f"{algorithm_name}_{variant}.csv")
                 csvfile = open(results_file, "w", newline="")
                 csvwriter = csv.writer(csvfile, delimiter=',')
                 csvwriter.writerow(["N", "Time (s)", "Memory (KB)", "Passes"])
@@ -58,7 +60,7 @@ def run_experiments(iterations, seed_token, output_dir):
                     # Run the Experiment [RUN_EXP]
                     try:
                         result = subprocess.run(
-                            ["/usr/bin/time", "-f", "%U,%M", "./bin/main", "RUN_EXP", "3", str(n), str(sparsity), "UNIFORM", str(iterations), str(seed_token), algorithm_code, variant, str(k)],
+                            ["gtime", "-f", "%U,%M", "./bin/main", "RUN_EXP", "3", str(n), str(sparsity), "UNIFORM", str(iterations), str(seed_token), algorithm_code, variant, str(k)],
                             stdout=subprocess.PIPE,
                             stderr=subprocess.PIPE,
                             text=True,
