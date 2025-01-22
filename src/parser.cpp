@@ -5,14 +5,14 @@ using namespace std;
 extern Mode mode;
 extern ll n, m, k, seed_token;
 extern int algorithm, experiment_type, sparsity, iterations;
-extern char variant;
+extern char algo_variant;
 extern string filePath, graph_type, modesText;
 extern ifstream fileStream;
 
 /*
 Algorithm codes:
 0 - Simple DFS {only two variants 0 and 1}  {doesn't need k}
-1 - Improved DFS {doesn't have a variant}   {doesn't need k}
+1 - Improved DFS {doesn't have a algo_variant}   {doesn't need k}
 2 - kPath DFS {needs k}
 3 - kLev DFS {needs k}
 */
@@ -61,7 +61,7 @@ Mode parseArgs(int argc, char *argv[]) {
     switch (mode) {
         case RUN_ALGO: {
             if (argc < 6) {
-                cerr << "Usage: " << argv[0] << " <mode:RUN_ALGO> <n> <m> <filepath> <algorithm> <variant> <k>\n";
+                cerr << "Usage: " << argv[0] << " <mode:RUN_ALGO> <n> <m> <filepath> <algorithm> <algo_variant> <k>\n";
                 exit(1);
             }
 
@@ -78,15 +78,15 @@ Mode parseArgs(int argc, char *argv[]) {
 
             if (algorithm == 0 || algorithm == 2 || algorithm == 3) {
                 if (argc < 7) {
-                    cerr << "Usage: <mode:RUN_ALGO> <n> <m> <filepath> <algorithm> <variant> <k>\nVariant must be specified for simp(0), kPath(2) and kLev(3) algorithms\n";
+                    cerr << "Usage: <mode:RUN_ALGO> <n> <m> <filepath> <algorithm> <algo_variant> <k>\nVariant must be specified for simp(0), kPath(2) and kLev(3) algorithms\n";
                     exit(1);
                 }
-                variant = argv[6][0];
+                algo_variant = argv[6][0];
             }
 
             if (algorithm == 2 || algorithm == 3) {
                 if (argc < 8) {
-                    cerr << "Usage: <mode:RUN_ALGO> <n> <m> <filepath> <algorithm> <variant> <k>\nk must be specified for kPath(2) and kLev(3) algorithms\n";
+                    cerr << "Usage: <mode:RUN_ALGO> <n> <m> <filepath> <algorithm> <algo_variant> <k>\nk must be specified for kPath(2) and kLev(3) algorithms\n";
                     exit(1);
                 }
                 k = stoll(argv[7]);
@@ -128,7 +128,7 @@ Mode parseArgs(int argc, char *argv[]) {
         }
         case RUN_EXP: {
             if (argc < 9) {
-                cerr << "Usage: " << argv[0] << " <mode:RUN_EXP> <exp_type> <N> <sparsity> <graph_type> <Iterations> <seed> <algorithm> <variant> <k>\n";
+                cerr << "Usage: " << argv[0] << " <mode:RUN_EXP> <exp_type> <N> <sparsity> <graph_type> <Iterations> <seed> <algorithm> <algo_variant> <k>\n";
                 exit(1);
             }
 
@@ -143,15 +143,15 @@ Mode parseArgs(int argc, char *argv[]) {
 
             if (algorithm == 0 || algorithm == 2 || algorithm == 3) {
                 if (argc < 10) {
-                    cerr << "Usage: <mode:RUN_EXP> <exp_type> <N> <sparsity> <Iterations> <seed> <algorithm> <variant> <k>\nVariant must be specified for simp(0), kPath(2) and kLev(3) algorithms\n";
+                    cerr << "Usage: <mode:RUN_EXP> <exp_type> <N> <sparsity> <Iterations> <seed> <algorithm> <algo_variant> <k>\nVariant must be specified for simp(0), kPath(2) and kLev(3) algorithms\n";
                     exit(1);
                 }
-                variant = argv[9][0];
+                algo_variant = argv[9][0];
             }
 
             if (algorithm == 2 || algorithm == 3) {
                 if (argc < 11) {
-                    cerr << "Usage: <mode:RUN_EXP> <exp_type> <N> <sparsity> <Iterations> <seed> <algorithm> <variant> <k>\nk must be specified for kPath(2) and kLev(3) algorithms\n";
+                    cerr << "Usage: <mode:RUN_EXP> <exp_type> <N> <sparsity> <Iterations> <seed> <algorithm> <algo_variant> <k>\nk must be specified for kPath(2) and kLev(3) algorithms\n";
                     exit(1);
                 }
                 k = stoll(argv[10]);

@@ -17,7 +17,7 @@ enum Mode {
 extern Mode mode;
 extern ll n, m, k, seed_token;
 extern int algorithm, experiment_type, sparsity, iterations;
-extern char variant;
+extern char algo_variant;
 extern string filePath, graph_type;
 extern ifstream fileStream;
 extern string modesText;

@@ -32,7 +32,7 @@ inline string getExperimentLabel(int experiment_type) {
 }
 
 // runMode: 0 - prepare, 1 - run
-ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int sparsity, string graph_type, int iterations, ll seed_token, int algorithm, int variant, ll k)  {
+ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int sparsity, string graph_type, int iterations, ll seed_token, int algorithm, int algo_variant, ll k)  {
     ExpResult expr;
     AlgorithmResult result;
     string current_file;
@@ -69,7 +69,7 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
                             exit(1);
                         }
 
-                        result = runAlgorithm(current_n, current_m, current_file, algorithm, variant, k);
+                        result = runAlgorithm(current_n, current_m, current_file, algorithm, algo_variant, k);
 
                         algoStats[i].avgPasses += result.passCount;
                         algoStats[i].avgHeight += result.T.getHeight(0);
@@ -124,7 +124,7 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
                             exit(1);
                         }
 
-                        result = runAlgorithm(n, current_m, current_file, algorithm, variant, k);
+                        result = runAlgorithm(n, current_m, current_file, algorithm, algo_variant, k);
 
                         algoStats[i].avgPasses += result.passCount;
                         algoStats[i].avgHeight += result.T.getHeight(0);
@@ -176,7 +176,7 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
                     while (current_k <= k) {
                         if (itr == 0) algoStats[i] = {current_k, 0, 0, 0}; // (current_x, avgPasses, avgHeight, maxPasses)
 
-                        result = runAlgorithm(n, m, current_file, algorithm, variant, current_k);
+                        result = runAlgorithm(n, m, current_file, algorithm, algo_variant, current_k);
 
                         algoStats[i].avgPasses += result.passCount;
                         algoStats[i].avgHeight += result.T.getHeight(0);
@@ -221,7 +221,7 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
                         exit(1);
                     }
 
-                    result = runAlgorithm(n, m, current_file, algorithm, variant, k);
+                    result = runAlgorithm(n, m, current_file, algorithm, algo_variant, k);
 
                     algoStats[0].avgPasses += result.passCount;
                     algoStats[0].avgHeight += result.T.getHeight(0);
@@ -276,8 +276,8 @@ void prepareExperiment(int experiment_type, ll n, int sparsity, string graph_typ
     // TODO: use if-else to write cout or write to file
 }
 
-void runExperiment(int experiment_type, ll n, int sparsity, string graph_type, int iterations, ll seed_token, int algorithm, int variant, ll k) {
-    ExpResult result = experimentFramework(1, experiment_type, n, sparsity, graph_type, iterations, seed_token, algorithm, variant, k);
+void runExperiment(int experiment_type, ll n, int sparsity, string graph_type, int iterations, ll seed_token, int algorithm, int algo_variant, ll k) {
+    ExpResult result = experimentFramework(1, experiment_type, n, sparsity, graph_type, iterations, seed_token, algorithm, algo_variant, k);
     vector<AlgorithmStats> algorithmStats = result.algorithmStats;
 
     // cout << "Experiment Type: " << getExperimentLabel(experiment_type) << endl << "Average Passes: \n";

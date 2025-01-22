@@ -23,7 +23,7 @@ TODO: Add verify DFS mode
 Mode mode = RUN_ALGO;
 ll n, m, k = 1, seed_token = 42;
 int algorithm, experiment_type, sparsity, iterations;
-char variant = '0';
+char algo_variant = '0';
 string filePath, graph_type = "POWLAW";
 ifstream fileStream;
 string modesText = "Modes: RUN_ALGO, GEN_GRAPH, RUN_EXP, PREP_EXP\n";
@@ -31,8 +31,8 @@ const string randomGraphsDirectory = "./input/random_graphs/";
 
 /*
 Algorithm codes:
-0 - Simple DFS {only two variants 0 and 1}  {doesn't need k}
-1 - Improved DFS {doesn't have a variant}   {doesn't need k}
+0 - Simple DFS {only two algo_variants 0 and 1}  {doesn't need k}
+1 - Improved DFS {doesn't have a algo_variant}   {doesn't need k}
 2 - kPath DFS {needs k}
 3 - kLev DFS {needs k}
 */
@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
 
     switch (mode) {
         case RUN_ALGO: {
-            AlgorithmResult result = runAlgorithm(n, m, filePath, algorithm, variant, k);
+            AlgorithmResult result = runAlgorithm(n, m, filePath, algorithm, algo_variant, k);
             // TODO fix n, m, k to ll in all algorithm files
             // cout << "PassCount: " << result.passCount << "\n";
             cout<< result.passCount << endl;
@@ -81,7 +81,7 @@ int main(int argc, char *argv[]) {
             break;
         }
         case RUN_EXP: {
-            runExperiment(experiment_type, n, sparsity, graph_type, iterations, seed_token, algorithm, variant, k);
+            runExperiment(experiment_type, n, sparsity, graph_type, iterations, seed_token, algorithm, algo_variant, k);
             // cout << "Completed running!\n";
             break;
         }

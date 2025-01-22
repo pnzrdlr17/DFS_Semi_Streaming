@@ -1,6 +1,6 @@
 #include "algo_runner.h"
 
-AlgorithmResult runAlgorithm(ll n, ll m, const std::string& filePath, int algorithm, char variant, ll k) {
+AlgorithmResult runAlgorithm(ll n, ll m, const std::string& filePath, int algorithm, char algo_variant, ll k) {
     AlgorithmResult result = {0, Tree()};
     std::ifstream fileStream(filePath);
 
@@ -12,7 +12,7 @@ AlgorithmResult runAlgorithm(ll n, ll m, const std::string& filePath, int algori
 
     switch (algorithm) {
         case 0: { // Simple DFS
-            DFSSimp dfs(n, (variant == '1') ? 1 : 0);
+            DFSSimp dfs(n, (algo_variant == '1') ? 1 : 0);
             while (true) {
                 if (dfs.processEdgeStream(fileStream)) break;
                 resetFileStream();
@@ -33,7 +33,7 @@ AlgorithmResult runAlgorithm(ll n, ll m, const std::string& filePath, int algori
         }
         case 2: { // kPath DFS
             kPathBase* dfs = nullptr;
-            switch (variant) {
+            switch (algo_variant) {
                 case '0': dfs = new kPath0(n, k); break;
                 case '1': dfs = new kPath1(n, k); break;
                 case '2': dfs = new kPath2(n, k); break;
@@ -51,7 +51,7 @@ AlgorithmResult runAlgorithm(ll n, ll m, const std::string& filePath, int algori
         }
         case 3: { // kLev DFS
             kLevBase* dfs = nullptr;
-            switch (variant) {
+            switch (algo_variant) {
                 case '0': dfs = new kLev0(n, k); break;
                 case '1': dfs = new kLev1(n, k); break;
                 case '2': dfs = new kLev2(n, k); break;
