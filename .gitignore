@@ -2,3 +2,9 @@ input/
 
 output/benchmarks/
 output/benchmark_mem_results_csv/
+bin/lib/
+bin/main
+bin/src/
+results/random/
+results/real/
+scripts/logs/
