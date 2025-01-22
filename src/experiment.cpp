@@ -224,7 +224,7 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
                     result = runAlgorithm(n, m, current_file, algorithm, algo_variant, k);
 
                     algoStats[0].avgPasses += result.passCount;
-                    algoStats[0].avgHeight += result.T.getHeight(0);
+                    // algoStats[0].avgHeight += result.T.getHeight(0);
                     if (result.passCount > algoStats[0].maxPasses) algoStats[0].maxPasses = result.passCount;
                 }
                 else {
@@ -236,7 +236,7 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
             if (runMode) {
                 for (int i = 0; i < testCount; ++i) {
                     algoStats[i].avgPasses /= iterations;
-                    algoStats[i].avgHeight /= iterations;
+                    // algoStats[i].avgHeight /= iterations;
                 }
                 expr.algorithmStats = algoStats;
             }
