@@ -1,0 +1,157 @@
+File not found: ./input/random_graphs/graph_10_33_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_20_86_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_30_147_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_40_212_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_50_282_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_60_354_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_70_429_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_80_505_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_90_584_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_100_664_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_150_1084_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_200_1528_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_250_1991_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_300_2468_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_350_2957_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_400_3457_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_450_3966_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_500_4482_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_600_5537_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_700_6615_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_800_7715_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_900_8832_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_1000_9965_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_1200_12274_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_1400_14631_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_1600_17030_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_1800_19464_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_2000_21931_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_2500_28219_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_3000_34652_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_3500_41205_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_4000_47863_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_4500_54610_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_5000_61438_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_6000_75304_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_7000_89411_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_8000_103726_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_9000_118221_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_10000_132877_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_10_31_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_20_89_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_30_164_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_40_252_UNIFORM_758363428223858691.txt
+Running experiments with 1000 iterations, varying N from 10 to 10,000 and seed token 18831
+Error generating graph with N=10, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '10', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=20, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '20', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=30, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '30', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=40, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '40', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=50, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '50', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=60, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '60', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=70, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '70', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=80, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '80', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=90, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '90', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=100, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '100', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=150, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '150', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=200, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '200', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=250, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '250', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=300, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '300', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=350, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '350', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=400, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '400', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=450, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '450', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=500, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '500', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=600, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '600', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=700, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '700', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=800, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '800', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=900, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '900', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=1000, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '1000', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=1200, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '1200', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=1400, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '1400', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=1600, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '1600', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=1800, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '1800', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=2000, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '2000', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=2500, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '2500', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=3000, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '3000', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=3500, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '3500', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=4000, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '4000', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=4500, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '4500', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=5000, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '5000', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=6000, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '6000', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=7000, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '7000', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=8000, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '8000', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=9000, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '9000', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=10000, sparsity=2, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '10000', '2', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=10, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '10', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=20, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '20', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=30, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '30', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+File not found: ./input/random_graphs/graph_50_353_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_60_464_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_70_585_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_80_715_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_90_853_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_100_1000_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_150_1837_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_200_2828_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_250_3952_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_300_5196_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_350_6547_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_400_8000_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_450_9545_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_500_11180_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_600_14696_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_700_18520_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_800_22627_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_900_27000_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_1000_31622_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_1200_41569_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_1400_52383_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_1600_64000_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_1800_76367_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_2000_89442_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_2500_125000_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_3000_164316_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_3500_207062_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_4000_252982_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_4500_301869_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_5000_353553_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_6000_464758_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_7000_585662_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_8000_715541_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_9000_853814_UNIFORM_758363428223858691.txt
+File not found: ./input/random_graphs/graph_10000_1000000_UNIFORM_758363428223858691.txt
+Error generating graph with N=40, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '40', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=50, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '50', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=60, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '60', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=70, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '70', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=80, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '80', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=90, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '90', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=100, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '100', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=150, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '150', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=200, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '200', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=250, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '250', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=300, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '300', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=350, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '350', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=400, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '400', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=450, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '450', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=500, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '500', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=600, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '600', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=700, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '700', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=800, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '800', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=900, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '900', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=1000, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '1000', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=1200, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '1200', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=1400, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '1400', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=1600, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '1600', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=1800, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '1800', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=2000, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '2000', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=2500, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '2500', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=3000, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '3000', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=3500, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '3500', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=4000, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '4000', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=4500, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '4500', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=5000, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '5000', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=6000, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '6000', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=7000, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '7000', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=8000, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '8000', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=9000, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '9000', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
+Error generating graph with N=10000, sparsity=3, iterations=1000, seed=18831: Command '['./bin/main', 'PREP_EXP', '3', '10000', '3', 'UNIFORM', '1000', '18831']' returned non-zero exit status 1.
