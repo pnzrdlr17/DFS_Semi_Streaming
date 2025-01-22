@@ -6,9 +6,6 @@ bin/
 bin/lib/
 bin/main
 bin/src/
-results/random/
-results/real/
-scripts/logs/
 
 # IDE
 .idea/
