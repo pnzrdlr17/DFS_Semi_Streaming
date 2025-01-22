@@ -69,7 +69,7 @@ def run_experiments(algorithm, iterations, output_dir):
                             # Execute the binary
                             try:
                                 result = subprocess.run(
-                                    ["/usr/bin/time", "-f", "%U,%M", "./bin/main", "RUN_ALGO", str(n), str(m), input_path,
+                                    ["gtime", "-f", "%U,%M", "./bin/main", "RUN_ALGO", str(n), str(m), input_path,
                                      "2" if algorithm == "kpath" else "3", variant, str(k)],
                                     stdout=subprocess.PIPE,
                                     stderr=subprocess.PIPE,
