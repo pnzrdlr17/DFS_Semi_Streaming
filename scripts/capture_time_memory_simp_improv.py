@@ -58,7 +58,7 @@ def run_experiments(algorithm, output_dir):
                 # Execute the binary
                 try:
                     result = subprocess.run(
-                        ["gtime", "-f", "%U,%M", "./bin/main", "RUN_ALGO", str(n), str(m), input_path,
+                        ["/usr/bin/time", "-f", "%U,%M", "./bin/main", "RUN_ALGO", str(n), str(m), input_path,
                          "0" if algorithm == "simp" else "1", variant],
                         stdout=subprocess.PIPE,
                         stderr=subprocess.PIPE,
