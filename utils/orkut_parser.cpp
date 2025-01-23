@@ -11,12 +11,23 @@
  * 6. You should get an output file with the name `output_orkut_graph.edg` in accordance with the required format.
 */
 
+/*
+    **Graph Verification** -- as of 23-01-2025
+    * 1. Contains N=3072441 nodes
+    * 2. Contains M=117185083 edges
+    * 3. No self-loops found
+    * 4. No duplicate edges found
+    ! 5. Nodes labelled from 1 to 3072626 (instead of 3072441)
+        ? This is fixed by the below code and the output file has the nodes labelled from 1 to 3072441.
+    * 6. The verification logic is commented out currently and it only generates the output file.
+*/
+
 #include <iostream>
 #include <vector>
 #include <fstream>
 #include <cstring>
 #include <map>
-#include <set>
+// #include <set>
 using namespace std;
 #define ll long long
 #define endl '\n'
@@ -48,10 +59,11 @@ int main(int argc, char *argv[]) {
     ll u, v, e = 0;
     vector<pll> edges;
     map<ll, ll> nodes;
-
+    /*
     ll line = 1;
     pll p;
     set<pll> duplicate_edges;
+    */
 
     for (int i = 0; i < 4; ++i) getline(infile, s); // Skip the first 4 lines of the file as they have meta data
 
@@ -62,7 +74,7 @@ int main(int argc, char *argv[]) {
 
         edges.push_back({u, v});
 
-
+        /*
         if (u == v) {
             cout << "Self-loop found at line " << line << endl;
         }
@@ -73,11 +85,12 @@ int main(int argc, char *argv[]) {
         }
         else duplicate_edges.insert(p);
         line++;
-
+        */
     }
 
     infile.close();
 
+    /*
     if (nodes.size() != N) {
         cout << "Number of nodes mismatched: " << nodes.size() << " instead of " << N << endl;
     }
@@ -99,6 +112,7 @@ int main(int argc, char *argv[]) {
     }
 
     cout << "Verification completed" << endl;
+    */
 
     e = 1;
     for (auto& node : nodes) node.second = e++; // Renumbering the nodes consecutively from 1 to N
