@@ -3,10 +3,12 @@
  * 1. Download the file as mentioned in graph_sources.md and extract it.
  * 2. Use the `com-lj.ungraph.txt` file directly as input to this program.
  * 3. Compile the program using the following command:
- *    g++ -o liveJournal_parser liveJournal_parser.cpp
+ *      g++ -o liveJournal_parser liveJournal_parser.cpp
  * 4. Run the program with the path to the CSV file as an argument:
- *    ./liveJournal_parser <path_to_com-lj.ungraph.txt>
- * 5. You should get an output file with the name `output_liveJournal_graph.edg` in accordance with the required format.
+ *      ./liveJournal_parser <path_to_com-lj.ungraph.txt>
+ * 5. OR compile and run at once using:
+ *      g++ -o liveJournal_parser liveJournal_parser.cpp && ./liveJournal_parser <path_to_com-lj.ungraph.txt>
+ * 6. You should get an output file with the name `output_liveJournal_graph.edg` in accordance with the required format.
 */
 
 /*
@@ -25,6 +27,7 @@
 #include <fstream>
 #include <cstring>
 #include <map>
+// #include <set>
 using namespace std;
 #define ll long long
 #define endl '\n'

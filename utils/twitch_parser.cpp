@@ -3,10 +3,12 @@
  * 1. Download the file as mentioned in graph_sources.md and extract it.
  * 2. Use the `large_twitch_edges.csv` file directly as input to this program.
  * 3. Compile the program using the following command:
- *    g++ -o twitch_parser twitch_parser.cpp
+ *      g++ -o twitch_parser twitch_parser.cpp
  * 4. Run the program with the path to the CSV file as an argument:
- *    ./twitch_parser <path_to_large_twitch_edges.csv>
- * 5. You should get an output file with the name `output_twitch_graph.edg` in accordance with the required format.
+ *      ./twitch_parser <path_to_large_twitch_edges.csv>
+ * 5. OR compile and run at once using:
+ *      g++ -o twitch_parser twitch_parser.cpp && ./twitch_parser <path_to_large_twitch_edges.csv>
+ * 6. You should get an output file with the name `output_twitch_graph.edg` in accordance with the required format.
 */
 
 /*
