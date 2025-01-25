@@ -47,7 +47,7 @@ bool verifyNodes(ifstream& infile) {
     ll minLabel = *nodes.begin(), maxLabel = *nodes.rbegin();
 
     if (minLabel != 1ll || maxLabel != N) {
-        cout << "Nodes not labelled from "<< minLabel << " to " << maxLabel << " instead of 1 to " << N << endl;
+        cout << "Nodes labelled from "<< minLabel << " to " << maxLabel << " instead of 1 to " << N << endl;
         if (maxLabel - minLabel + 1 == N) {
             cout << "Nodes labelled continuously, adding "<< 1ll - minLabel << " would fix it" << endl;
         }
@@ -71,7 +71,6 @@ bool verifyEdges(ifstream& infile) {
 
     while (infile >> u >> v) {
         p = (u <= v) ? make_pair(u, v) : make_pair(v, u);
-        edges.insert(p);
 
         if (u == v) {
             cout << "Self-loop found at line " << line << endl;
