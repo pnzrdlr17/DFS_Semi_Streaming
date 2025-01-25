@@ -9,6 +9,8 @@
  * 5. OR compile and run at once using:
  *      g++ -o friendster_parser friendster_parser.cpp && ./friendster_parser <path_to_com-friendster.ungraph.txt>
  * 6. You should get an output file with the name `output_friendster_graph.edg` in accordance with the required format.
+ * 7. If you want to verify it's recommended to do this one at a time, like first verify number of nodes, then edges, node labels, self-loops, etc.
+ * 8. Since the file is large, you may also need to increase stack limit (on linux ulimit -s unlimited) works.
 */
 
 #include <iostream>
@@ -25,6 +27,107 @@ using namespace std;
 const ll N = 65608366; // Number of nodes
 const ll M = 1806067135; // Number of edges
 
+bool verifyNodes(ifstream& infile) {
+    set<ll> nodes;
+    bool flag = true;
+
+    ll u, v;
+    while (infile >> u >> v) {
+        nodes.insert(u);
+        nodes.insert(v);
+    }
+    infile.close();
+
+    if ((ll)nodes.size() != N) {
+        cout << "Number of nodes mismatched: " << nodes.size() << " instead of " << N << endl;
+        flag = false;
+    }
+    else cout << "Number of nodes matched: " << N << endl;
+
+    ll minLabel = *nodes.begin(), maxLabel = *nodes.rbegin();
+
+    if (minLabel != 1ll || maxLabel != N) {
+        cout << "Nodes not labelled from "<< minLabel << " to " << maxLabel << " instead of 1 to " << N << endl;
+        if (maxLabel - minLabel + 1 == N) {
+            cout << "Nodes labelled continuously, adding "<< 1ll - minLabel << " would fix it" << endl;
+        }
+        else {
+            cout << "Nodes not labelled continuously, needs to be re-mapped" << endl;
+        }
+        flag = false;
+    }
+    else cout << "Nodes labelled from 1 to " << N << endl;
+
+    cout << "Nodes Verification completed" << endl;
+
+    return flag;
+}
+
+bool verifyEdges(ifstream& infile) {
+    ll u, v, line = 4;
+    pll p;
+    set<pll> edges;
+    bool flag = true;
+
+    while (infile >> u >> v) {
+        p = (u <= v) ? make_pair(u, v) : make_pair(v, u);
+        edges.insert(p);
+
+        if (u == v) {
+            cout << "Self-loop found at line " << line << endl;
+            flag = false;
+        }
+
+        if (edges.find(p) != edges.end()) {
+            cout << "Duplicate edge found at line " << line << " with nodes: " << u << ' ' << v << endl;
+            flag = false;
+        }
+        else edges.insert(p);
+        line++;
+    }
+
+    infile.close();
+
+    if (edges.size() != M) {
+        cout << "Number of edges mismatched: " << edges.size() << " instead of " << M << endl;
+        flag = false;
+    }
+    else cout << "Number of edges matched: " << M << endl;
+
+    return flag;
+}
+
+void generateOutputFile(ifstream& infile) {
+    string outputFileName = "output_friendster_graph.edg";
+    ofstream outfile(outputFileName);
+
+    cout << "Re-mapping nodes from 1 to " << N << endl;
+
+    ll u, v, e = 1;
+    vector<pll> edges;
+    map<ll, ll> nodes;
+    pll p;
+
+    edges.reserve(M);
+
+    while (infile >> u >> v) {
+        nodes.insert({u, 0});
+        nodes.insert({v, 0});
+        edges.emplace_back(u, v);
+    }
+    infile.close();
+
+
+    for (auto& node : nodes) node.second = e++; // Renumbering the nodes consecutively from 1 to N
+
+    for (auto& edge : edges) outfile << nodes[edge.first] << ' ' << nodes[edge.second] << endl;
+
+    outfile.close();
+
+    cout << "Nodes re-mapped successfully" << endl;
+    cout << "Output written to " << outputFileName << endl;
+}
+
 int main(int argc, char *argv[]) {
     ios::sync_with_stdio(0);
 	cin.tie(0); cout.tie(0);
@@ -40,76 +143,19 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    string outputFileName = "output_friendster_graph.edg";
-    ofstream outfile(outputFileName);
-
-
     string s;
-    ll u, v, e = 0;
-    vector<pll> edges;
-    map<ll, ll> nodes;
-    ll line = 1;
-    pll p;
-    set<pll> duplicate_edges;
-
     for (int i = 0; i < 4; ++i) getline(infile, s); // Skip the first 4 lines of the file as they have meta data
 
-    while (infile >> u >> v) {
-        // Putting the nodes in map with default mapping
-        nodes[u] = 0;
-		nodes[v] = 0;
+    /*This verifies the number of nodes, their continuous labelling*/
+    if (verifyNodes(infile)) cout << "Nodes verified successfully" << endl;
+    else cout << "Nodes verification failed" << endl;
 
-        edges.push_back({u, v});
+    /*This verifies the number of edges, self-loops, and duplicates (parallel edges)*/
+    if (verifyEdges(infile)) cout << "Edges verified successfully" << endl;
+    else cout << "Edges verification failed" << endl;
 
-
-        if (u == v) {
-            cout << "Self-loop found at line " << line << endl;
-        }
-        if (u > v) swap(u, v);
-        p = {u, v};
-        if (duplicate_edges.find(p) != duplicate_edges.end()) {
-            cout << "Duplicate edge found at line " << line << " with nodes: " << u << ' ' << v << endl;
-        }
-        else duplicate_edges.insert(p);
-        line++;
-
-    }
-
-    infile.close();
-
-
-    if (nodes.size() != N) {
-        cout << "Number of nodes mismatched: " << nodes.size() << " instead of " << N << endl;
-    }
-
-    if (edges.size() != M) {
-        cout << "Number of edges mismatched: " << edges.size() << " instead of " << M << endl;
-    }
-
-    ll minLabel = nodes.begin()->first, maxLabel = nodes.rbegin()->first;
-
-    if (minLabel != 1 || maxLabel != N) {
-        cout << "Nodes not labelled from "<< minLabel << " to " << maxLabel << " instead of 1 to " << N << endl;
-        if (maxLabel - minLabel + 1 == N) {
-            cout << "Nodes labelled continuously, adding "<< 1ll - minLabel << " would fix it" << endl;
-        }
-        else {
-            cout << "Nodes not labelled continuously, needs to be re-mapped" << endl;
-        }
-    }
-    else cout << "Nodes labelled from 1 to " << N << endl;
-
-    cout << "Verification completed" << endl;
-
-
-    e = 1;
-    for (auto& node : nodes) node.second = e++; // Renumbering the nodes consecutively from 1 to N
-
-    for (auto& edge : edges) outfile << nodes[edge.first] << ' ' << nodes[edge.second] << endl;
-
-    outfile.close();
-
-    cout << "Output written to " << outputFileName << endl;
+    /*This generates the output file in the required format, takes a parameter whether to relabel nodes 1-N */
+    generateOutputFile(infile); // true for re-mapping nodes
 
 	return 0;
 }
