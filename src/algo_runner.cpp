@@ -1,8 +1,22 @@
 #include "algo_runner.h"
 
-AlgorithmResult runAlgorithm(ll n, ll m, const std::string& filePath, int algorithm, char algo_variant, ll k) {
+AlgorithmResult runAlgorithm(ll n, ll m, const string& filePath, int algorithm, char algo_variant, ll k) {
     AlgorithmResult result = {0, Tree()};
-    std::ifstream fileStream(filePath);
+    ifstream fileStream(filePath);
+
+    if (!fs::exists(filePath)) {
+        cerr << "Error: File does not exist: " << filePath << endl;
+        exit(1);
+    }
+    if (!fs::is_regular_file(filePath)) {
+        cerr << "Error: Path is not a file: " << filePath << endl;
+        exit(1);
+    }
+    if(!fileStream.good()) {
+        cerr << "Error opening file: " << filePath << endl;
+        fileStream.close();
+        exit(1);
+    }
 
     // Reset file stream helper
     auto resetFileStream = [&fileStream]() {
@@ -69,7 +83,7 @@ AlgorithmResult runAlgorithm(ll n, ll m, const std::string& filePath, int algori
             break;
         }
         default:
-            std::cerr << "Invalid algorithm\n";
+            cerr << "Invalid algorithm\n";
             fileStream.close();
             exit(1);
     }

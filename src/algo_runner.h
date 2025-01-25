@@ -14,7 +14,10 @@
 #include "../lib/algorithms/kPath/kPath1x.cpp"
 #include "../lib/algorithms/kPath/kPath2.cpp"
 #include "../lib/algorithms/kPath/kPathN.cpp"
+#include <filesystem>
 #define ll long long int
+using namespace std;
+namespace fs = std::filesystem;
 
 struct AlgorithmResult {
     ll passCount;
@@ -26,6 +29,6 @@ struct AlgorithmStats {
     double avgPasses, avgHeight, maxPasses;
 };
 
-AlgorithmResult runAlgorithm(ll n, ll m, const std::string& filePath, int algorithm, char algo_variant = '0', ll k = 1);
+AlgorithmResult runAlgorithm(ll n, ll m, const string& filePath, int algorithm, char algo_variant = '0', ll k = 1);
 
 #endif // ALGO_RUNNER_H
