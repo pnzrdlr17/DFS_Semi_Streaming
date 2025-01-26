@@ -13,6 +13,17 @@
  * 8. Since the file is large, you may also need to increase stack limit (on linux ulimit -s unlimited) works.
 */
 
+/*
+    **Graph Verification** -- as of 25-01-2025
+    * 1. Contains N=65608366 nodes
+    * 2. Contains M=1806067135 edges
+    * 3. No self-loops found
+    * 4. No duplicate edges found
+    ! 5. Nodes labelled from 101 to 124836179 (instead of 1 to 65608366)
+        ? This is fixed by the below code and the output file has the nodes labelled from 1 to 65608366.
+    * 6. The verification logic is commented out currently and it only generates the output file.
+*/
+
 #include <iostream>
 #include <vector>
 #include <fstream>
@@ -64,7 +75,7 @@ bool verifyNodes(ifstream& infile) {
 }
 
 bool verifyEdges(ifstream& infile) {
-    ll u, v, line = 4;
+    ll u, v, line = 5;
     pll p;
     set<pll> edges;
     bool flag = true;
@@ -146,12 +157,11 @@ int main(int argc, char *argv[]) {
     for (int i = 0; i < 4; ++i) getline(infile, s); // Skip the first 4 lines of the file as they have meta data
 
     /*This verifies the number of nodes, their continuous labelling*/
-    if (verifyNodes(infile)) cout << "Nodes verified successfully" << endl;
-    else cout << "Nodes verification failed" << endl;
+    // cout << "Verifying nodes..." << (verifyNodes(infile) ? "No issues found" : "Some issues found") << endl;
+
 
     /*This verifies the number of edges, self-loops, and duplicates (parallel edges)*/
-    if (verifyEdges(infile)) cout << "Edges verified successfully" << endl;
-    else cout << "Edges verification failed" << endl;
+    // cout << "Verifying edges..." << (verifyEdges(infile) ? "No issues found" : "Some issues found") << endl;
 
     /*This generates the output file in the required format, takes a parameter whether to relabel nodes 1-N */
     generateOutputFile(infile); // true for re-mapping nodes
