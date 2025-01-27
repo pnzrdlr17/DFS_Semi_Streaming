@@ -20,8 +20,13 @@ This document lists the sources for larger graph datasets used in this project a
    - Size: ~450MB compressed, ~1.7GB uncompressed.
    - Nodes: 3,072,441
    - Edges: 117,185,083
+5. [**Belcastro Human Gene**](https://sparse.tamu.edu/Belcastro/human_gene2): [Download Link](https://suitesparse-collection-website.herokuapp.com/MM/Belcastro/human_gene2.tar.gz)
+   - Size: ~63MB compressed, ~184MB uncompressed.
+   - Graph given as adjacency matrix.
+   - Nodes: 14,340
+   - Edges: 9,027,024 (excluding self-loops)
 
-<!-- 5. [**Agatha_2015 Sybrandt**](https://sparse.tamu.edu/Sybrandt/AGATHA_2015): [Download Link](https://example.com/graph5)
+<!-- X. [**Agatha_2015 Sybrandt**](https://sparse.tamu.edu/Sybrandt/AGATHA_2015): [Download Link](https://example.com/graph5)
    - Size: ~900MB compressed, ~4.3GB uncompressed.
    - Nodes: 183,964,077
    - Edges: 11,588,725,964 -->
