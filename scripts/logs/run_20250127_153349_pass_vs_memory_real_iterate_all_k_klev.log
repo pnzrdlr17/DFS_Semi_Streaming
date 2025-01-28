@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/reniztva/Desktop/essDFS/DFS_Semi_Streaming/scripts/pass_vs_memory_real_iterate_all_k.py", line 138, in <module>
+    run_experiments(args.algorithm, args.output_dir, args.iterations, args.threshold_factor)
+                                                     ^^^^^^^^^^^^^^^
+AttributeError: 'Namespace' object has no attribute 'iterations'
