@@ -55,7 +55,7 @@ def run_experiments(algorithm, output_dir):
             aggregate_file = os.path.join(variant_output_dir, f"aggregate_results.csv")
             with open(aggregate_file, "w", newline="") as agg_csvfile:
                 agg_csvwriter = csv.writer(agg_csvfile, delimiter=',')
-                agg_csvwriter.writerow(["User Time (s)", "Memory (KB)"])
+                agg_csvwriter.writerow(["User Time (s)", "Memory (KB)", "Passes"])
 
                 print(f"\nRunning {label} for algorithm {algorithm} variant {variant}...")
 
@@ -91,7 +91,7 @@ def run_experiments(algorithm, output_dir):
                     continue
 
                 # Write aggregate data
-                agg_csvwriter.writerow([user_time, memory])
+                agg_csvwriter.writerow([user_time, memory, pass_count])
 
             print(f"Results for {label} algorithm {algorithm} variant {variant} saved to {variant_output_dir}")
 
