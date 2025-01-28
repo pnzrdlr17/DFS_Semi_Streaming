@@ -1,0 +1,8 @@
+
+Running Belcastro for algorithm simp variant 0...
+    Passes: 14022, Time/Memory: 30736.83,3860, Output: ['14022']
+Results for Belcastro algorithm simp variant 0 saved to ./results/real/time_memory/Belcastro/run_20250128_002402/simp_0
+
+Running Belcastro for algorithm simp variant 1...
+    Passes: 2829, Time/Memory: 5900.38,3996, Output: ['2829']
+Results for Belcastro algorithm simp variant 1 saved to ./results/real/time_memory/Belcastro/run_20250128_002402/simp_1

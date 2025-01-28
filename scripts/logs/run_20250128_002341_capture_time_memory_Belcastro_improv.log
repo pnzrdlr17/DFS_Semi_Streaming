@@ -1,0 +1,4 @@
+
+Running Belcastro for algorithm improv variant ...
+    Passes: 11450, Time/Memory: 25207.15,201476, Output: ['11450']
+Results for Belcastro algorithm improv variant  saved to ./results/real/time_memory/Belcastro/run_20250128_002341/improv_
