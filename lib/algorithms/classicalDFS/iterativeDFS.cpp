@@ -1,4 +1,4 @@
-#include "classicalDFS.h"
+#include "iterativeDFS.h"
 
 Tree classicalIterativeDFS(ll n, ll m, const string& filePath) {
     Tree dfsTree(n);

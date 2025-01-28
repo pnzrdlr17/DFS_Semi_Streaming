@@ -46,6 +46,13 @@ AlgorithmResult runAlgorithm(ll n, ll m, const string& filePath, int algorithm, 
             break;
         }
         case 2: { // kPath DFS
+            if (n * k >= m) { // When k is sufficient to store all the edges -> Use classicalDFS instead
+                Tree dfsTree = classicalIterativeDFS(n, m, filePath);
+                result.passCount = 1;
+                result.T = dfsTree;
+                break;
+            }
+
             kPathBase* dfs = nullptr;
             switch (algo_variant) {
                 case '0': dfs = new kPath0(n, k); break;
@@ -64,6 +71,13 @@ AlgorithmResult runAlgorithm(ll n, ll m, const string& filePath, int algorithm, 
             break;
         }
         case 3: { // kLev DFS
+            if (n * k >= m) { // When k is sufficient to store all the edges -> Use classicalDFS instead
+                Tree dfsTree = classicalIterativeDFS(n, m, filePath);
+                result.passCount = 1;
+                result.T = dfsTree;
+                break;
+            }
+
             kLevBase* dfs = nullptr;
             switch (algo_variant) {
                 case '0': dfs = new kLev0(n, k); break;
