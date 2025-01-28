@@ -11,6 +11,7 @@ BIN_DIR = bin
 ALG_DIR = $(LIB_DIR)/algorithms
 KPATH_DIR = $(ALG_DIR)/kPath
 KLEV_DIR = $(ALG_DIR)/kLev
+CDFS_DIR = $(ALG_DIR)/classicalDFS
 
 # Source files
 SRC_FILES = $(wildcard $(SRC_DIR)/*.cpp) $(wildcard $(LIB_DIR)/*.cpp) $(wildcard $(ALG_DIR)/*.cpp) $(wildcard $(KPATH_DIR)/*.cpp) $(wildcard $(KLEV_DIR)/*.cpp)
@@ -20,7 +21,8 @@ OBJ_FILES = $(patsubst $(SRC_DIR)/%.cpp, $(BIN_DIR)/src/%.o, $(wildcard $(SRC_DI
             $(patsubst $(LIB_DIR)/%.cpp, $(BIN_DIR)/lib/%.o, $(wildcard $(LIB_DIR)/*.cpp)) \
             $(patsubst $(ALG_DIR)/%.cpp, $(BIN_DIR)/lib/algorithms/%.o, $(wildcard $(ALG_DIR)/*.cpp)) \
             $(patsubst $(KPATH_DIR)/%.cpp, $(BIN_DIR)/lib/algorithms/kPath/%.o, $(wildcard $(KPATH_DIR)/*.cpp)) \
-            $(patsubst $(KLEV_DIR)/%.cpp, $(BIN_DIR)/lib/algorithms/kLev/%.o, $(wildcard $(KLEV_DIR)/*.cpp))
+            $(patsubst $(KLEV_DIR)/%.cpp, $(BIN_DIR)/lib/algorithms/kLev/%.o, $(wildcard $(KLEV_DIR)/*.cpp)) \
+			$(patsubst $(CDFS_DIR)/%.cpp, $(BIN_DIR)/lib/algorithms/classicalDFS/%.o, $(wildcard $(CDFS_DIR)/*.cpp))
 
 # Targets
 all: $(BIN_DIR)/main
