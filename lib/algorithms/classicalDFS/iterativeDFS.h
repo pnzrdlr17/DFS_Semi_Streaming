@@ -11,6 +11,6 @@
 #define ll long long int
 using namespace std;
 
-Tree classicalIterativeDFS(ll n, ll m, const string& filePath);
+Tree* classicalIterativeDFS(ll n, ll m, const string& filePath);
 
 #endif // CLASSICAL_DFS_H

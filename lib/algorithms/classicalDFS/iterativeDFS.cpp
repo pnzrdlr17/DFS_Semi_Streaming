@@ -1,7 +1,7 @@
 #include "iterativeDFS.h"
 
-Tree classicalIterativeDFS(ll n, ll m, const string& filePath) {
-    Tree dfsTree(n);
+Tree* classicalIterativeDFS(ll n, ll m, const string& filePath) {
+    Tree* dfsTree = new Tree(n + 1);
     ifstream fileStream(filePath);
 
     if (!fileStream.is_open()) {
@@ -40,7 +40,7 @@ Tree classicalIterativeDFS(ll n, ll m, const string& filePath) {
         for (ll neighbor : adjList[node]) {
             if (!visited[neighbor]) {
                 visited[neighbor] = true;
-                dfsTree.addEdge(node, neighbor);
+                dfsTree->addEdge(node, neighbor);
                 dfsStack.push(neighbor);
             }
         }
