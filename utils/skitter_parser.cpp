@@ -11,11 +11,20 @@
  * 6. You should get an output file with the name `output_skitter_graph.edg` in accordance with the required format.
 */
 
+/*
+    **Graph Verification** -- as of 29-01-2025
+    * 1. Contains N=1696415 nodes
+    * 2. Contains M=11095298 edges
+    * 3. No self-loops found
+    * 4. No duplicate edges found
+    ! 5. Nodes labelled from 0 to 1696414 (instead of 1 to 1696415)
+        ? This is fixed by the below code and the output file has the nodes labelled from 1 to 1696415.
+    * 6. The verification logic is commented out currently and it only generates the output file.
+*/
+
 #include <iostream>
-#include <vector>
 #include <fstream>
 #include <cstring>
-#include <map>
 #include <set>
 using namespace std;
 #define ll long long
@@ -98,30 +107,17 @@ void generateOutputFile(ifstream& infile) {
     string outputFileName = "output_skitter_graph.edg";
     ofstream outfile(outputFileName);
 
-    cout << "Re-mapping nodes from 1 to " << N << endl;
+    cout << "Relabelling nodes from 1 to " << N << endl;
 
-    ll u, v, e = 1;
-    vector<pll> edges;
-    map<ll, ll> nodes;
-    pll p;
-
-    edges.reserve(M);
-
+    ll u, v;
     while (infile >> u >> v) {
-        nodes.insert({u, 0});
-        nodes.insert({v, 0});
-        edges.emplace_back(u, v);
+        outfile << (u + 1ll) << ' ' << (v + 1ll) << endl;
     }
+
     infile.close();
-
-
-    for (auto& node : nodes) node.second = e++; // Renumbering the nodes consecutively from 1 to N
-
-    for (auto& edge : edges) outfile << nodes[edge.first] << ' ' << nodes[edge.second] << endl;
-
     outfile.close();
 
-    cout << "Nodes re-mapped successfully" << endl;
+    cout << "Added 1 to all node labels" << endl;
     cout << "Output written to " << outputFileName << endl;
 }
 
@@ -144,14 +140,13 @@ int main(int argc, char *argv[]) {
     for (int i = 0; i < 5; ++i) getline(infile, s); // Skip the first 5 lines of the file as they have meta data
 
     /*This verifies the number of nodes, their continuous labelling*/
-    cout << "Verifying nodes..." << (verifyNodes(infile) ? "No issues found" : "Some issues found") << endl;
-
+    // cout << "Verifying nodes..." << (verifyNodes(infile) ? "No issues found" : "Some issues found") << endl;
 
     /*This verifies the number of edges, self-loops, and duplicates (parallel edges)*/
     // cout << "Verifying edges..." << (verifyEdges(infile) ? "No issues found" : "Some issues found") << endl;
 
     /*This generates the output file in the required format*/
-    // generateOutputFile(infile);
+    generateOutputFile(infile);
 
 	return 0;
 }
