@@ -1,25 +1,14 @@
 /*
     **Instructions to run the program**
  * 1. Download the file as mentioned in graph_sources.md and extract it.
- * 2. Use the `com-youtube.ungraph.txt` file directly as input to this program.
+ * 2. Use the `as-skitter.txt` file directly as input to this program.
  * 3. Compile the program using the following command:
- *      g++ -o youtube_parser youtube_parser.cpp
+ *      g++ -o skitter_parser skitter_parser.cpp
  * 4. Run the program with the path to the CSV file as an argument:
- *      ./youtube_parser <path_to_com-youtube.ungraph.txt>
+ *      ./skitter_parser <path_to_as-skitter.txt>
  * 5. OR compile and run at once using:
- *      g++ -o youtube_parser youtube_parser.cpp && ./youtube_parser <path_to_com-youtube.ungraph.txt>
- * 6. You should get an output file with the name `output_youtube_graph.edg` in accordance with the required format.
-*/
-
-/*
-    **Graph Verification** -- as of 29-01-2025
-    * 1. Contains N=1134890 nodes
-    * 2. Contains M=2987624 edges
-    * 3. No self-loops found
-    * 4. No duplicate edges found
-    ! 5. Nodes labelled from 1 to 1157827 (instead of 1 to 1134890)
-        ? This is fixed by the below code and the output file has the nodes labelled from 1 to 1134890.
-    * 6. The verification logic is commented out currently and it only generates the output file.
+ *      g++ -o skitter_parser skitter_parser.cpp && ./skitter_parser <path_to_as-skitter.txt>
+ * 6. You should get an output file with the name `output_skitter_graph.edg` in accordance with the required format.
 */
 
 #include <iostream>
@@ -33,8 +22,8 @@ using namespace std;
 #define endl '\n'
 #define pll pair<ll,ll>
 
-const ll N = 1134890; // Number of nodes
-const ll M = 2987624; // Number of edges
+const ll N = 1696415; // Number of nodes
+const ll M = 11095298; // Number of edges
 
 bool verifyNodes(ifstream& infile) {
     set<ll> nodes;
@@ -73,7 +62,7 @@ bool verifyNodes(ifstream& infile) {
 }
 
 bool verifyEdges(ifstream& infile) {
-    ll u, v, line = 5;
+    ll u, v, line = 6;
     pll p;
     set<pll> edges;
     bool flag = true;
@@ -106,7 +95,7 @@ bool verifyEdges(ifstream& infile) {
 }
 
 void generateOutputFile(ifstream& infile) {
-    string outputFileName = "output_youtube_graph.edg";
+    string outputFileName = "output_skitter_graph.edg";
     ofstream outfile(outputFileName);
 
     cout << "Re-mapping nodes from 1 to " << N << endl;
@@ -152,17 +141,17 @@ int main(int argc, char *argv[]) {
     }
 
     string s;
-    for (int i = 0; i < 4; ++i) getline(infile, s); // Skip the first 4 lines of the file as they have meta data
+    for (int i = 0; i < 5; ++i) getline(infile, s); // Skip the first 5 lines of the file as they have meta data
 
     /*This verifies the number of nodes, their continuous labelling*/
-    // cout << "Verifying nodes..." << (verifyNodes(infile) ? "No issues found" : "Some issues found") << endl;
+    cout << "Verifying nodes..." << (verifyNodes(infile) ? "No issues found" : "Some issues found") << endl;
 
 
     /*This verifies the number of edges, self-loops, and duplicates (parallel edges)*/
     // cout << "Verifying edges..." << (verifyEdges(infile) ? "No issues found" : "Some issues found") << endl;
 
     /*This generates the output file in the required format*/
-    generateOutputFile(infile);
+    // generateOutputFile(infile);
 
 	return 0;
 }

@@ -29,6 +29,10 @@ This document lists the sources for larger graph datasets used in this project a
    - Size: ~11MB compressed, ~37MB uncompressed.
    - Nodes: 1,134,890
    - Edges: 2,987,624
+7. [**Autonomous systems by Skitter**](https://snap.stanford.edu/data/as-Skitter.html): [Download Link](https://snap.stanford.edu/data/as-skitter.txt.gz)
+   - Size: ~32MB compressed, ~143MB uncompressed.
+   - Nodes: 1,696,415
+   - Edges: 11,095,298
 
 <!-- X. [**Agatha_2015 Sybrandt**](https://sparse.tamu.edu/Sybrandt/AGATHA_2015): [Download Link](https://example.com/graph5)
    - Size: ~900MB compressed, ~4.3GB uncompressed.
