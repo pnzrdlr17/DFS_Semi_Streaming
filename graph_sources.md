@@ -25,6 +25,10 @@ This document lists the sources for larger graph datasets used in this project a
    - Graph given as adjacency matrix.
    - Nodes: 14,340
    - Edges: 9,027,024 (excluding self-loops)
+6. [**Youtube**](https://snap.stanford.edu/data/com-Youtube.html): [Download Link](https://snap.stanford.edu/data/bigdata/communities/com-youtube.ungraph.txt.gz)
+   - Size: ~11MB compressed, ~37MB uncompressed.
+   - Nodes: 1,134,890
+   - Edges: 2,987,624
 
 <!-- X. [**Agatha_2015 Sybrandt**](https://sparse.tamu.edu/Sybrandt/AGATHA_2015): [Download Link](https://example.com/graph5)
    - Size: ~900MB compressed, ~4.3GB uncompressed.
