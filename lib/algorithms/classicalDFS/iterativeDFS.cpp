@@ -25,11 +25,12 @@ Tree* classicalIterativeDFS(ll n, ll m, const string& filePath) {
 
     fileStream.close();
 
-    ll node = 1;// Start from node 1 // or maybe the first node in the graph
+    ll node = 1;// Rooting the tree at node 1
     stack<ll> dfsStack;
     bool visited[n + 1];
     memset(visited, false, sizeof(visited));
 
+    dfsTree->setRoot(node);
     dfsStack.push(node);
     visited[node] = true;
 
