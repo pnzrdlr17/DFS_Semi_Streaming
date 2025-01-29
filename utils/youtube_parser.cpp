@@ -11,6 +11,16 @@
  * 6. You should get an output file with the name `output_youtube_graph.edg` in accordance with the required format.
 */
 
+/*
+    **Graph Verification** -- as of 29-01-2025
+    * 1. Contains N=1134890 nodes
+    * 2. Contains M=2987624 edges
+    * 3. No self-loops found
+    * 4. No duplicate edges found
+    ! 5. Nodes labelled from 1 to 1157827 (instead of 1 to 1134890)
+        ? This is fixed by the below code and the output file has the nodes labelled from 1 to 1134890.
+    * 6. The verification logic is commented out currently and it only generates the output file.
+*/
 
 #include <iostream>
 #include <vector>
@@ -96,7 +106,7 @@ bool verifyEdges(ifstream& infile) {
 }
 
 void generateOutputFile(ifstream& infile) {
-    string outputFileName = "output_friendster_graph.edg";
+    string outputFileName = "output_youtube_graph.edg";
     ofstream outfile(outputFileName);
 
     cout << "Re-mapping nodes from 1 to " << N << endl;
@@ -145,14 +155,14 @@ int main(int argc, char *argv[]) {
     for (int i = 0; i < 4; ++i) getline(infile, s); // Skip the first 4 lines of the file as they have meta data
 
     /*This verifies the number of nodes, their continuous labelling*/
-    cout << "Verifying nodes..." << (verifyNodes(infile) ? "No issues found" : "Some issues found") << endl;
+    // cout << "Verifying nodes..." << (verifyNodes(infile) ? "No issues found" : "Some issues found") << endl;
 
 
     /*This verifies the number of edges, self-loops, and duplicates (parallel edges)*/
     // cout << "Verifying edges..." << (verifyEdges(infile) ? "No issues found" : "Some issues found") << endl;
 
     /*This generates the output file in the required format*/
-    // generateOutputFile(infile); //
+    generateOutputFile(infile);
 
 	return 0;
 }
