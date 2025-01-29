@@ -2,7 +2,7 @@ import os
 import subprocess
 import argparse
 import csv
-import math
+from math import ceil
 from datetime import datetime
 from pathlib import Path
 
@@ -133,8 +133,8 @@ def run_experiments(algorithm, output_dir):
         Path(run_output_dir).mkdir(parents=True, exist_ok=True)
 
         if algorithm == "kpath" or algorithm == "klev":
-            k_experiments(algorithm, graph, 10, run_output_dir) # Run for k=1 to 10
-            # k_experiments(algorithm, graph, math.ceil(float(graph["m"])/float(graph["n"])), run_output_dir) # Run for k=1 to m/n
+            th = min(10, ceil(graph["m"] / graph["n"]))
+            k_experiments(algorithm, graph, max(2, th), run_output_dir) # Run for k=1, 2, ..., min(10, ceil(m/n))
         if algorithm == "simp":
             run_simp(graph, run_output_dir, "0")
             run_simp(graph, run_output_dir, "1")
