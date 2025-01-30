@@ -23,8 +23,8 @@ graphs = [
     # {"label": "Gowalla", "n": 196591, "m": 950327, "path": "./input/Gowalla/download.tsv.loc-gowalla_edges/loc-gowalla_edges/out.loc-gowalla_edges"},
     # {"label": "Dblp", "n": 317080, "m": 1049866, "path": "./input/Dblp/download.tsv.com-dblp/com-dblp/out.com-dblp"},
     # {"label": "Amazon", "n": 334863, "m": 925872, "path": "./input/Amazon/download.tsv.com-amazon/com-amazon/out.com-amazon"},
-    # {"label": "Youtube", "n": 1134890, "m": 2987624, "path": "./input/Youtube/youtube_n_1134890_m_2987624.edg"},
-    {"label": "Skitter", "n": 1696415, "m": 11095298, "path": "./input/Skitter/skitter_n_1696415_m_11095298.edg"},
+    {"label": "Youtube", "n": 1134890, "m": 2987624, "path": "./input/Youtube/youtube_n_1134890_m_2987624.edg"},
+    # {"label": "Skitter", "n": 1696415, "m": 11095298, "path": "./input/Skitter/skitter_n_1696415_m_11095298.edg"},
     # {"label": "Orkut", "n": 3072441, "m": 117185083, "path": "./input/Orkut/orkut_graph_n_3072441_m_117185083.edg"},
     # {"label": "LiveJournal", "n": 3997962, "m": 34681189, "path": "./input/LiveJournal/live_journal_n_3997962_m_34681189.edg"},
     # {"label": "Friendster", "n": 65608366, "m": 1806067135, "path": "./input/Friendster/friendster_n_65608366_m_1806067135.edg"},
@@ -32,7 +32,7 @@ graphs = [
 
 base_command = ['/usr/bin/time', '-f', '%U,%M', './bin/main', 'RUN_ALGO']
 
-def run_command(command, label, variant = None, k = 0):
+def run_command(command, label, algorithm, variant = None, k = 0):
     try:
         result = subprocess.run(
             command, # Execute the binary
@@ -44,12 +44,12 @@ def run_command(command, label, variant = None, k = 0):
             # TODO: Ensure proper timeout
         )
     except subprocess.TimeoutExpired:
-        print(f"Timeout (12hrs) expired for graph {label}, algorithm simp variant {variant}")
-        return
+        print(f"Timeout (12hrs) expired for graph {label}, {algorithm}{variant}, k={k}")
+        return None, None, None
     except subprocess.CalledProcessError as e:
-        print(f"Error running graph {label}, variant {variant}: {e}")
-        return
-    
+        print(f"Error running graph {label}, {algorithm}{variant}: {e}, k={k}")
+        return None, None, None
+
     # Parse the output
     output_lines = result.stdout.strip().split("\n")
     time_mem = result.stderr.strip()  # Time and memory are in stderr
@@ -60,7 +60,7 @@ def run_command(command, label, variant = None, k = 0):
         time, memory = map(float, time_mem.split(","))
     except ValueError:
         print(f"Error parsing time/memory for {label}, variant {variant}, k={k}: {e}")
-        return
+        return None, None, None
     
     return time, memory, pass_count
 
@@ -82,7 +82,7 @@ def k_experiments(algorithm, graph, runThreshold, output_dir):
                 # Execute the binary
                 time, memory, pass_count = run_command(
                     base_command + [str(n), str(m), input_path,"2" if algorithm == "kpath" else "3", variant, str(k)],
-                    label, variant, k
+                    label, algorithm, variant, k
                 )
                 
                 if time is None or memory is None or pass_count is None: 
@@ -102,7 +102,7 @@ def run_simp(graph, output_dir, variant):
 
         print(f"\nRunning {label} for variant {variant}...")
         
-        time, memory, pass_count = run_command(base_command + [str(n), str(m), input_path, "0", variant], label, variant)
+        time, memory, pass_count = run_command(base_command + [str(n), str(m), input_path, "0", variant], label, "simp", variant)
         
         simp_csvwriter.writerow([time, memory, pass_count])
 
@@ -117,7 +117,7 @@ def run_improv(graph, output_dir):
 
         print(f"\nRunning {label} for improv...")
         
-        time, memory, pass_count = run_command(base_command + [str(n), str(m), input_path, "1"], label)
+        time, memory, pass_count = run_command(base_command + [str(n), str(m), input_path, "1"], label, "improv")
         
         improv_csvwriter.writerow([time, memory, pass_count])
 
