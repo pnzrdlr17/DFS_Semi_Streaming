@@ -11,17 +11,32 @@
  * 6. You should get an output file with the name `output_roadnetPA_graph.edg` in accordance with the required format.
 */
 
+/*
+    **Graph Verification** -- as of 30-01-2025
+    * 1. Contains N=1088092 nodes
+    * 2. Contains M=1541893 edges (unique)
+    * 3. No self-loops found
+    * 4. No duplicate edges found
+    ! 5. Nodes labelled from 0 to 1090919 (instead of 1 to 1088092)
+        ? This is fixed by the below code and the output file has the nodes labelled from 1 to 1088092.
+    ! 6. The graph has duplicate for each edge, so the actual number of edges is 1541893, but the file contains 3083796 edges
+        ? Only one of the duplicate edges is considered while generating the output file, so M=1541893.
+    * 7. The verification logic is commented out currently and it only generates the output file.
+*/
+
 #include <iostream>
+#include <vector>
 #include <fstream>
 #include <cstring>
 #include <set>
+#include <map>
 using namespace std;
 #define ll long long
 #define endl '\n'
 #define pll pair<ll,ll>
 
 const ll N = 1088092; // Number of nodes
-const ll M = 3083796; // Number of edges
+const ll M = 1541893; // Number of edges (unique)
 
 bool verifyNodes(ifstream& infile) {
     set<ll> nodes;
@@ -60,7 +75,7 @@ bool verifyNodes(ifstream& infile) {
 }
 
 bool verifyEdges(ifstream& infile) {
-    ll u, v, line = 5;
+    ll u, v, line = 5, duplicateEdges = 0;
     pll p;
     set<pll> edges;
     bool flag = true;
@@ -75,6 +90,7 @@ bool verifyEdges(ifstream& infile) {
 
         if (edges.find(p) != edges.end()) {
             cout << "Duplicate edge found at line " << line << " with nodes: " << u << ' ' << v << endl;
+            duplicateEdges++;
             flag = false;
         }
         else edges.insert(p);
@@ -82,6 +98,8 @@ bool verifyEdges(ifstream& infile) {
     }
 
     infile.close();
+
+    cout << "Number of duplicate edges: " << duplicateEdges << endl;
 
     if (edges.size() != M) {
         cout << "Number of edges mismatched: " << edges.size() << " instead of " << M << endl;
@@ -96,17 +114,35 @@ void generateOutputFile(ifstream& infile) {
     string outputFileName = "output_roadnetPA_graph.edg";
     ofstream outfile(outputFileName);
 
-    cout << "Relabelling nodes from 1 to " << N << endl;
+    cout << "Re-mapping nodes from 1 to " << N << endl;
 
-    ll u, v;
+    ll u, v, e = 1;
+    vector<pll> edges;
+    set<pll> edgeSet;
+    map<ll, ll> nodes;
+    pll p;
+
+    edges.reserve(M);
+
     while (infile >> u >> v) {
-        outfile << (u + 1ll) << ' ' << (v + 1ll) << endl;
+        nodes.insert({u, 0});
+        nodes.insert({v, 0});
+        p = (u <= v) ? make_pair(u, v) : make_pair(v, u);
+        if (edgeSet.find(p) == edgeSet.end()) {
+            edgeSet.insert(p);
+            edges.emplace_back(u, v);
+        }
     }
-
     infile.close();
+
+
+    for (auto& node : nodes) node.second = e++; // Renumbering the nodes consecutively from 1 to N
+
+    for (auto& edge : edges) outfile << nodes[edge.first] << ' ' << nodes[edge.second] << endl;
+
     outfile.close();
 
-    cout << "Added 1 to all node labels" << endl;
+    cout << "Nodes re-mapped and duplicate edges removed successfully" << endl;
     cout << "Output written to " << outputFileName << endl;
 }
 
@@ -129,13 +165,13 @@ int main(int argc, char *argv[]) {
     for (int i = 0; i < 4; ++i) getline(infile, s); // Skip the first 4 lines of the file as they have meta data
 
     /*This verifies the number of nodes, their continuous labelling*/
-    cout << "Verifying nodes..." << (verifyNodes(infile) ? "No issues found" : "Some issues found") << endl;
+    // cout << "Verifying nodes..." << (verifyNodes(infile) ? "No issues found" : "Some issues found") << endl;
 
     /*This verifies the number of edges, self-loops, and duplicates (parallel edges)*/
     // cout << "Verifying edges..." << (verifyEdges(infile) ? "No issues found" : "Some issues found") << endl;
 
     /*This generates the output file in the required format*/
-    // generateOutputFile(infile);
+    generateOutputFile(infile);
 
 	return 0;
 }
