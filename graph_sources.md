@@ -33,6 +33,18 @@ This document lists the sources for larger graph datasets used in this project a
    - Size: ~32MB compressed, ~143MB uncompressed.
    - Nodes: 1,696,415
    - Edges: 11,095,298
+8. [**California road network**](https://snap.stanford.edu/data/roadNet-CA.html): [Download Link](https://snap.stanford.edu/data/roadNet-CA.txt.gz)
+   - Size: ~18MB compressed, ~84MB uncompressed.
+   - Nodes: 1,965,206
+   - Edges: 5,533,214
+9. [**Pennsylvania road network**](https://snap.stanford.edu/data/roadNet-PA.html): [Download Link](https://snap.stanford.edu/data/roadNet-PA.txt.gz)
+   - Size: ~9.5MB compressed, ~44MB uncompressed.
+   - Nodes: 1,088,092
+   - Edges: 3,083,796
+<!-- 10. [**Texas road network**](https://snap.stanford.edu/data/roadNet-TX.html): [Download Link](https://snap.stanford.edu/data/roadNet-TX.txt.gz)
+    - Size: ~12MB compressed, ~57MB uncompressed.
+    - Nodes: 1,379,917
+    - Edges: 3,843,320 -->
 
 <!-- X. [**Agatha_2015 Sybrandt**](https://sparse.tamu.edu/Sybrandt/AGATHA_2015): [Download Link](https://example.com/graph5)
    - Size: ~900MB compressed, ~4.3GB uncompressed.
