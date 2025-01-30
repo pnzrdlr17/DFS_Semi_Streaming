@@ -1,0 +1,12 @@
+
+Running Youtube for improv...
+Timeout (12hrs) expired for graph Youtube, algorithm simp variant None
+Traceback (most recent call last):
+  File "/home/user/SemiStreamingDFS/DFS_Semi_Streaming/scripts/get_real_time_memory_passes/capture_real_stats.py", line 160, in <module>
+    run_experiments(args.algorithm, args.output_dir)
+  File "/home/user/SemiStreamingDFS/DFS_Semi_Streaming/scripts/get_real_time_memory_passes/capture_real_stats.py", line 144, in run_experiments
+    run_improv(graph, run_output_dir)
+  File "/home/user/SemiStreamingDFS/DFS_Semi_Streaming/scripts/get_real_time_memory_passes/capture_real_stats.py", line 120, in run_improv
+    time, memory, pass_count = run_command(base_command + [str(n), str(m), input_path, "1"], label)
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
