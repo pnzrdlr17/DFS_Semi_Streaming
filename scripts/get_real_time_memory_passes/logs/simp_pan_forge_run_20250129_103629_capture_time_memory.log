@@ -1,0 +1,78 @@
+
+Running CU for variant 0...
+    Passes: 49, Time/Memory: 0.00,3700, Output: ['49']
+Results for CU running simp0 saved to ./results/real/sc_optimized_stats/CU/simp_run_20250129_103629
+
+Running CU for variant 1...
+    Passes: 23, Time/Memory: 0.00,3632, Output: ['23']
+Results for CU running simp1 saved to ./results/real/sc_optimized_stats/CU/simp_run_20250129_103629
+
+Running AJazz for variant 0...
+    Passes: 198, Time/Memory: 0.12,3820, Output: ['198']
+Results for AJazz running simp0 saved to ./results/real/sc_optimized_stats/AJazz/simp_run_20250129_103629
+
+Running AJazz for variant 1...
+    Passes: 53, Time/Memory: 0.03,3620, Output: ['53']
+Results for AJazz running simp1 saved to ./results/real/sc_optimized_stats/AJazz/simp_run_20250129_103629
+
+Running HM for variant 0...
+    Passes: 2426, Time/Memory: 9.14,4092, Output: ['2426']
+Results for HM running simp0 saved to ./results/real/sc_optimized_stats/HM/simp_run_20250129_103629
+
+Running HM for variant 1...
+    Passes: 1307, Time/Memory: 5.04,3952, Output: ['1307']
+Results for HM running simp1 saved to ./results/real/sc_optimized_stats/HM/simp_run_20250129_103629
+
+Running Belcastro for variant 0...
+    Passes: 14022, Time/Memory: 22646.38,4664, Output: ['14022']
+Results for Belcastro running simp0 saved to ./results/real/sc_optimized_stats/Belcastro/simp_run_20250129_103643
+
+Running Belcastro for variant 1...
+    Passes: 2829, Time/Memory: 4532.29,5368, Output: ['2829']
+Results for Belcastro running simp1 saved to ./results/real/sc_optimized_stats/Belcastro/simp_run_20250129_103643
+
+Running ArxAP for variant 0...
+    Passes: 18771, Time/Memory: 701.17,6040, Output: ['18771']
+Results for ArxAP running simp0 saved to ./results/real/sc_optimized_stats/ArxAP/simp_run_20250129_181251
+
+Running ArxAP for variant 1...
+    Passes: 9361, Time/Memory: 381.72,6004, Output: ['9361']
+Results for ArxAP running simp1 saved to ./results/real/sc_optimized_stats/ArxAP/simp_run_20250129_181251
+
+Running AsCaida for variant 0...
+    Passes: 26475, Time/Memory: 256.62,7056, Output: ['26475']
+Results for AsCaida running simp0 saved to ./results/real/sc_optimized_stats/AsCaida/simp_run_20250129_183104
+
+Running AsCaida for variant 1...
+    Passes: 24698, Time/Memory: 305.67,7040, Output: ['24698']
+Results for AsCaida running simp1 saved to ./results/real/sc_optimized_stats/AsCaida/simp_run_20250129_183104
+
+Running BrightK for variant 0...
+    Passes: 58228, Time/Memory: 2321.61,11592, Output: ['58228']
+Results for BrightK running simp0 saved to ./results/real/sc_optimized_stats/BrightK/simp_run_20250129_184028
+
+Running BrightK for variant 1...
+    Passes: 43326, Time/Memory: 1727.66,11684, Output: ['43326']
+Results for BrightK running simp1 saved to ./results/real/sc_optimized_stats/BrightK/simp_run_20250129_184028
+
+Running LMocha for variant 0...
+    Passes: 104103, Time/Memory: 41575.19,18124, Output: ['104103']
+Results for LMocha running simp0 saved to ./results/real/sc_optimized_stats/LMocha/simp_run_20250129_194827
+
+Running LMocha for variant 1...
+    Passes: 66407, Time/Memory: 25920.67,18152, Output: ['66407']
+Results for LMocha running simp1 saved to ./results/real/sc_optimized_stats/LMocha/simp_run_20250129_194827
+
+Running FlickrE for variant 0...
+Timeout (12hrs) expired for graph FlickrE, algorithm simp variant 0
+Traceback (most recent call last):
+  File "/home/user/SemiStreamingDFS/DFS_Semi_Streaming/scripts/get_real_time_memory_passes/capture_real_stats.py", line 158, in <module>
+    help="Directory to save the results (default: ./results/real/sc_optimized_stats)"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/SemiStreamingDFS/DFS_Semi_Streaming/scripts/get_real_time_memory_passes/capture_real_stats.py", line 139, in run_experiments
+    if algorithm == "kpath" or algorithm == "klev":
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/SemiStreamingDFS/DFS_Semi_Streaming/scripts/get_real_time_memory_passes/capture_real_stats.py", line 103, in run_simp
+    simp_csvwriter.writerow(["Time (s)", "Memory (KB)", "Passes"])
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object

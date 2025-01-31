@@ -1,0 +1,8 @@
+
+Running Youtube for variant 0...
+Timeout (12hrs) expired for graph Youtube, simp0, k=0
+Results for Youtube running simp0 saved to ./results/real/sc_optimized_stats/Youtube/simp_run_20250130_104145
+
+Running Youtube for variant 1...
+Timeout (12hrs) expired for graph Youtube, simp1, k=0
+Results for Youtube running simp1 saved to ./results/real/sc_optimized_stats/Youtube/simp_run_20250130_104145
