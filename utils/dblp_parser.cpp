@@ -14,6 +14,9 @@
 #include <iostream>
 #include <fstream>
 #include <cstring>
+#include <map>
+#include <set>
+#include <vector>
 using namespace std;
 #define ll long long
 #define endl '\n'
@@ -26,11 +29,27 @@ void generateOutputFile(ifstream& infile) {
     ofstream outfile(outputFileName);
 
     ll u, v;
+    map<ll, ll> nodes1, nodes2;
+    vector<pll> edges;
+    set<pll> edgeSet;
 
     while (infile >> u >> v) {
-        outfile << u << ' ' << v + N1 << endl;
+        nodes1.insert({u, 0});
+        nodes2.insert({v, 0});
+        if (u == v) continue; // Skip self-loops
+        pll p = (u <= v) ? make_pair(u, v) : make_pair(v, u);
+        if (edgeSet.find(p) == edgeSet.end()) {
+            edgeSet.insert(p);
+            edges.push_back(p);
+        }
     }
     infile.close();
+
+    ll e = 1;
+    for (auto& [node, label] : nodes1) nodes1[node] = e++;
+    for (auto& [node, label] : nodes2) nodes2[node] = e++;
+
+    for (auto& [u, v] : edges) outfile << nodes1[u] << ' ' << nodes2[v] << endl;
 
     outfile.close();
 
