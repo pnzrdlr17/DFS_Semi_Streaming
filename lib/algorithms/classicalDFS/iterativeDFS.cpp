@@ -25,24 +25,28 @@ Tree* classicalIterativeDFS(ll n, ll m, const string& filePath) {
 
     fileStream.close();
 
-    ll node = 1;// Rooting the tree at node 1
     stack<ll> dfsStack;
     bool visited[n + 1];
     memset(visited, false, sizeof(visited));
 
-    dfsTree->setRoot(node);
-    dfsStack.push(node);
-    visited[node] = true;
+    for (ll node = 1; node <= n; node++) {
+        if (visited[node]) continue;
 
-    while (!dfsStack.empty()) {
-        node = dfsStack.top();
-        dfsStack.pop();
+        dfsTree->setRoot(node);
 
-        for (ll neighbor : adjList[node]) {
-            if (!visited[neighbor]) {
-                visited[neighbor] = true;
-                dfsTree->addEdge(node, neighbor);
-                dfsStack.push(neighbor);
+        dfsStack.push(node);
+        visited[node] = true;
+
+        while (!dfsStack.empty()) {
+            node = dfsStack.top();
+            dfsStack.pop();
+
+            for (ll neighbor : adjList[node]) {
+                if (!visited[neighbor]) {
+                    visited[neighbor] = true;
+                    dfsTree->addEdge(node, neighbor);
+                    dfsStack.push(neighbor);
+                }
             }
         }
     }
