@@ -66,13 +66,13 @@ def run_command(command, label, algorithm, variant = None, k = 0):
     
     return time, memory, pass_count
 
-def k_experiments(algorithm, graph, output_dir):
+def k_experiments(algorithm, graph, run_for_c, output_dir):
     label, n, m, input_path = graph["label"], graph["n"], graph["m"], graph["path"]
     variants = ["0", "1", "2", "N"]
     
     for variant in variants:
         print(f"\nRunning {label} for variant {variant}...")
-
+    
         for k in range(3, 11):
             print(f"  Running k={k},...")
             # Execute the binary
@@ -91,15 +91,34 @@ def k_experiments(algorithm, graph, output_dir):
                 with open(output_file, "w") as file:
                     file.write(f"{time},{memory},{pass_count}\n")
 
+        if run_for_c:
+            c = ceil(m / n)
+            if c > 10:
+                print(f"  Running c={c},...")
+                time, memory, pass_count = run_command(
+                base_command + [str(n), str(m), input_path, "2" if algorithm == "kpath" else "3", variant, str(c)],
+                label, algorithm, variant, c
+                )
+                
+                output_file = os.path.join(output_dir, f"{label}_{algorithm}_{variant}_c.txt")
+                
+                if time is None or memory is None or pass_count is None: 
+                    print(f"Error running graph {label}, variant {variant}, c={c}")
+                    with open(output_file, "w") as file:
+                        file.write(f"ERROR\n")
+                else:
+                    with open(output_file, "w") as file:
+                        file.write(f"{time},{memory},{pass_count}\n")
+
         print(f"Results for {label} running {algorithm}{variant} saved to {output_dir}")
 
 
-def run_experiments(algorithm, output_dir):
+def run_experiments(algorithm, run_for_c, output_dir):
     Path(output_dir).mkdir(parents=True, exist_ok=True) # Ensure output directory exists
 
     for graph in graphs: # Loop over each graph
         if algorithm == "kpath" or algorithm == "klev":
-            k_experiments(algorithm, graph, output_dir)
+            k_experiments(algorithm, graph, run_for_c, output_dir)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run k-path or k-level algorithms on real graphs and capture time and memory data.")
@@ -109,10 +128,15 @@ if __name__ == "__main__":
         help="Algorithm to run: kpath (for KPath) or klev (for KLev) or simp (for Simp) or improv (for Improv)"
     )
     parser.add_argument(
+        "-c", "--run-for-c",
+        action="store_true",
+        help="Run the algorithm for c (m/n) as well"
+    )
+    parser.add_argument(
         "-o", "--output-dir",
         default="./results/real/auto_results_2",
         help="Directory to save the results (default: ./results/real/sc_optimized_stats)"
     )
     args = parser.parse_args()
 
-    run_experiments(args.algorithm, args.output_dir)
+    run_experiments(args.algorithm, args.run_for_c, args.output_dir)
