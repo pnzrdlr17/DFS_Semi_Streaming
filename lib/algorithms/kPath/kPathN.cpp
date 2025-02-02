@@ -139,10 +139,7 @@ public:
         }
 
         list<int> comp_list = compL[compN];
-        for(auto it = compL[compN].begin(); it != compL[compN].end(); ){
-            comp_list.push_back(*it);
-            it = compL[compN].erase(it);
-        }
+        compL[compN].clear();
 
         for(auto &it: edge_set){
             int u = it.first, v = it.second;
