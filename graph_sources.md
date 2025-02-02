@@ -41,7 +41,13 @@ This document lists the sources for larger graph datasets used in this project a
    - Size: ~9.5MB compressed, ~44MB uncompressed.
    - Nodes: 1,088,092
    - Edges: 3,083,796
-<!-- 10. [**Texas road network**](https://snap.stanford.edu/data/roadNet-TX.html): [Download Link](https://snap.stanford.edu/data/roadNet-TX.txt.gz)
+10. [**Konect DBLP**](http://konect.cc/networks/dblp-author/): [Download Link](http://konect.cc/files/download.tsv.dblp-author.tar.bz2)
+    - Size: ~MB compressed, ~MB uncompressed.
+    - Nodes: 7,577,304
+    - Edges: 12,282,059
+    - Bipartite graph
+
+<!-- W. [**Texas road network**](https://snap.stanford.edu/data/roadNet-TX.html): [Download Link](https://snap.stanford.edu/data/roadNet-TX.txt.gz)
     - Size: ~12MB compressed, ~57MB uncompressed.
     - Nodes: 1,379,917
     - Edges: 3,843,320 -->
