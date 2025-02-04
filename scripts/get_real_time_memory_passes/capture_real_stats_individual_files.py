@@ -30,7 +30,7 @@ graphs = [
     # {"label": "Orkut", "n": 3072441, "m": 117185083, "path": "./input/Orkut/orkut_graph_n_3072441_m_117185083.edg"},
     # {"label": "LiveJournal", "n": 3997962, "m": 34681189, "path": "./input/LiveJournal/live_journal_n_3997962_m_34681189.edg"},
     # {"label": "Friendster", "n": 65608366, "m": 1806067135, "path": "./input/Friendster/friendster_n_65608366_m_1806067135.edg"},
-    # {"label": "KonnectDblp", "n": 7577304, "m": 12282059, "path": "./input/KonnectDblp/konnect_dblp_n_7577304_m_12282059.edg"},
+    # {"label": "KonectDblp", "n": 7577304, "m": 12282059, "path": "./input/KonectDblp/konect_dblp_n_7577304_m_12282059.edg"},
 ]
 
 base_command = ['/usr/bin/time', '-f', '%U,%M', './bin/main', 'RUN_ALGO']
@@ -112,12 +112,12 @@ def k_experiments(algorithm, graph, output_dir):
         print(f"Results for {label} running {algorithm}{variant} saved to {output_dir}")
 
 
-def run_experiments(algorithm, run_for_c, output_dir):
+def run_experiments(algorithm, output_dir):
     Path(output_dir).mkdir(parents=True, exist_ok=True) # Ensure output directory exists
 
     for graph in graphs: # Loop over each graph
         if algorithm == "kpath" or algorithm == "klev":
-            k_experiments(algorithm, graph, run_for_c, output_dir)
+            k_experiments(algorithm, graph, output_dir)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run k-path or k-level algorithms on real graphs and capture time and memory data.")
