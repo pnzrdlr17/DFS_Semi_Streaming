@@ -2,6 +2,8 @@
 
 Tree* classicalIterativeDFS(ll n, ll m, const string& filePath) {
     Tree* dfsTree = new Tree(n + 1);
+    // This actually may return a Forest instead of a Tree, if the graph is not connected
+    // The root will refer to some Tree's root in the Forest
     ifstream fileStream(filePath);
 
     if (!fileStream.is_open()) {

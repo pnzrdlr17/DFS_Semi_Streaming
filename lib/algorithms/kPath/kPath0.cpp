@@ -293,7 +293,7 @@ public:
         return postpass();
     }
 
-    int processEdgeStream(ifstream& fileStream) override {
+    int processEdgeStream(ifstream& fileStream) override { // No artifical root & edges here
         prepass();
 
         if(pass == 1)
@@ -308,9 +308,6 @@ public:
                 processed[i] = 1;
             }
         }
-
-        for (int i = 1; i < n; ++i) // Add artificial edges (disconnected graph connections)
-            addEdge(0, i);
 
         if (!fileStream.is_open()) {
             cerr << "Error opening file: " << strerror(errno) << endl;

@@ -80,9 +80,10 @@ public:
         return postPass();
     }
 
-    int processEdgeStream(ifstream& fileStream) {
+    virtual int processEdgeStream(ifstream& fileStream) { // Overridden in kLev0
         pass++;
         prePass();
+        // ? Heuristic H1
         for (int i = 1; i < n; ++i) // Add artificial edges (disconnected graph connections)
             addEdge(0, i);
 
