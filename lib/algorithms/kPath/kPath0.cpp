@@ -309,6 +309,9 @@ public:
             }
         }
 
+        for (int i = 1; i < n; ++i) // Add artificial edges (disconnected graph connections)
+            addEdge(0, i);
+
         if (!fileStream.is_open()) {
             cerr << "Error opening file: " << strerror(errno) << endl;
             return 0;
