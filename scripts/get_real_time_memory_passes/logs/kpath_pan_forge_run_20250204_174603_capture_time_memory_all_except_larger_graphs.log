@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/user/SemiStreamingDFS/DFS_Semi_Streaming/scripts/get_real_time_memory_passes/capture_real_stats_individual_files.py", line 136, in <module>
+    run_experiments(args.algorithm, args.output_dir)
+TypeError: run_experiments() missing 1 required positional argument: 'output_dir'
