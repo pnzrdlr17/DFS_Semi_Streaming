@@ -1,0 +1,29 @@
+\begin{table}[h!]
+\centering
+\scalebox{0.75}{
+\begin{tabular}{ |p{1.3cm}|p{0.9cm}|p{0.9cm}|p{0.8cm} |p{1.3cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}|p{0.8cm}| }
+\hline
+Dataset & $n$ & $m$ & $m/n$ & Heuristic & $k=1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$ & $\left\lceil m/n\right\rceil$\\
+\hline
+\multirow{4}{*}{Belcastro} & \multirow{4}{*}{14.0K} & \multirow{4}{*}{9.03M} & \multirow{4}{*}{643.78}
+& \texttt{kLev0} & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 \\
+& & &  & \texttt{kLev1} & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 1 \\
+& & &  & \texttt{kLev2} & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 1 \\
+& & &  & \texttt{kLevN} & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 1 \\
+\hline
+\multirow{4}{*}{ArxAP} & \multirow{4}{*}{18.8K} & \multirow{4}{*}{198K} & \multirow{4}{*}{10.55}
+& \texttt{kLev0} & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 \\
+& & &  & \texttt{kLev1} & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 1 \\
+& & &  & \texttt{kLev2} & 4 & 4 & 3 & 3 & 2 & 2 & 2 & 2 & 2 & 2 & 1 \\
+& & &  & \texttt{kLevN} & 4 & 4 & 3 & 3 & 2 & 2 & 2 & 2 & 2 & 2 & 1 \\
+\hline
+\multirow{4}{*}{BrightK} & \multirow{4}{*}{58.2K} & \multirow{4}{*}{214K} & \multirow{4}{*}{3.68}
+& \texttt{kLev0} & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 \\
+& & &  & \texttt{kLev1} & 4 & 4 & 4 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+& & &  & \texttt{kLev2} & 3 & 2 & 2 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+& & &  & \texttt{kLevN} & 3 & 2 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+\hline
+\end{tabular}}
+\caption{Pass comparison for kLev algorithm on Small graphs.}
+\label{label}
+\end{table}

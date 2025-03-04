@@ -1,0 +1,41 @@
+\begin{table}[h!]
+\centering
+\scalebox{0.75}{
+\begin{tabular}{ |p{1.3cm}|p{0.9cm}|p{0.9cm}|p{0.8cm} |p{1.3cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}|p{0.8cm}| }
+\hline
+Dataset & $n$ & $m$ & $m/n$ & Heuristic & $k=1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$ & $\left\lceil m/n\right\rceil$\\
+\hline
+\multirow{4}{*}{RoadnetPA} & \multirow{4}{*}{1.09M} & \multirow{4}{*}{1.54M} & \multirow{4}{*}{1.42}
+& \texttt{kPath0} & 30 & 14 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 14 \\
+& & &  & \texttt{kPath1} & 32 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+& & &  & \texttt{kPath2} & 32 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+& & &  & \texttt{kPathN} & 5 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+\hline
+\multirow{4}{*}{RoadnetCA} & \multirow{4}{*}{1.97M} & \multirow{4}{*}{2.77M} & \multirow{4}{*}{1.41}
+& \texttt{kPath0} & 30 & 15 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 15 \\
+& & &  & \texttt{kPath1} & 29 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+& & &  & \texttt{kPath2} & 23 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+& & &  & \texttt{kPathN} & 5 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+\hline
+\multirow{4}{*}{Orkut} & \multirow{4}{*}{3.07M} & \multirow{4}{*}{117M} & \multirow{4}{*}{38.14}
+& \texttt{kPath0} & T & T & 29 & 19 & 15 & 11 & 11 & 9 & 8 & 8 & 3 \\
+& & &  & \texttt{kPath1} & T & 132 & 28 & 19 & 14 & 11 & 10 & 9 & 8 & 7 & 1 \\
+& & &  & \texttt{kPath2} & T & 36 & 19 & 15 & 12 & 9 & 9 & 8 & 6 & 6 & 1 \\
+& & &  & \texttt{kPathN} & 314 & 66 & 20 & 16 & 94 & 26 & 25 & 8 & 6 & 14 & 1 \\
+\hline
+\multirow{4}{*}{LiveJournal} & \multirow{4}{*}{4.00M} & \multirow{4}{*}{34.7M} & \multirow{4}{*}{8.67}
+& \texttt{kPath0} & T & T & 48 & 24 & 20 & 10 & 15 & 13 & 12 & 2 & 12 \\
+& & &  & \texttt{kPath1} & T & 188 & 47 & 22 & 19 & 16 & 8 & 13 & 1 & 1 & 1 \\
+& & &  & \texttt{kPath2} & T & 57 & 14 & 19 & 27 & 8 & 13 & 11 & 1 & 1 & 1 \\
+& & &  & \texttt{kPathN} & T & 11 & 6 & 4 & 4 & 3 & 3 & 3 & 1 & 1 & 1 \\
+\hline
+\multirow{4}{*}{KonectDblp} & \multirow{4}{*}{7.58M} & \multirow{4}{*}{12.3M} & \multirow{4}{*}{1.62}
+& \texttt{kPath0} & T & T & T & T & 2 & 2 & 2 & 2 & 2 & 2 & T \\
+& & &  & \texttt{kPath1} & T & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+& & &  & \texttt{kPath2} & T & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+& & &  & \texttt{kPathN} & T & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+\hline
+\end{tabular}}
+\caption{Pass comparison for kPath algorithm on Large graphs.}
+\label{label}
+\end{table}

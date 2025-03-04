@@ -1,0 +1,29 @@
+\begin{table}[h!]
+\centering
+\scalebox{0.75}{
+\begin{tabular}{ |p{1.3cm}|p{0.9cm}|p{0.9cm}|p{0.8cm} |p{1.3cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}|p{0.8cm}| }
+\hline
+Dataset & $n$ & $m$ & $m/n$ & Heuristic & $k=1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$ & $\left\lceil m/n\right\rceil$\\
+\hline
+\multirow{4}{*}{Twitch} & \multirow{4}{*}{168K} & \multirow{4}{*}{6.80M} & \multirow{4}{*}{40.43}
+& \texttt{kLev0} & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 \\
+& & &  & \texttt{kLev1} & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 1 \\
+& & &  & \texttt{kLev2} & 4 & 3 & 4 & 4 & 3 & 4 & 3 & 3 & 3 & 3 & 1 \\
+& & &  & \texttt{kLevN} & 4 & 4 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 1 \\
+\hline
+\multirow{4}{*}{Gowalla} & \multirow{4}{*}{197K} & \multirow{4}{*}{950K} & \multirow{4}{*}{4.83}
+& \texttt{kLev0} & 6 & 6 & 6 & 6 & 6 & 6 & 6 & 6 & 6 & 6 & 6 \\
+& & &  & \texttt{kLev1} & 5 & 5 & 5 & 5 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+& & &  & \texttt{kLev2} & 4 & 3 & 2 & 2 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+& & &  & \texttt{kLevN} & 4 & 2 & 2 & 2 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+\hline
+\multirow{4}{*}{Amazon} & \multirow{4}{*}{335K} & \multirow{4}{*}{926K} & \multirow{4}{*}{2.76}
+& \texttt{kLev0} & 6 & 6 & 6 & 6 & 6 & 6 & 6 & 6 & 6 & 6 & 6 \\
+& & &  & \texttt{kLev1} & 5 & 5 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+& & &  & \texttt{kLev2} & 3 & 2 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+& & &  & \texttt{kLevN} & 3 & 2 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+\hline
+\end{tabular}}
+\caption{Pass comparison for kLev algorithm on Medium graphs.}
+\label{label}
+\end{table}

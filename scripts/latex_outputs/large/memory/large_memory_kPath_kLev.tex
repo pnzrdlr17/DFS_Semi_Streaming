@@ -1,0 +1,43 @@
+\begin{table}[h!]
+\centering
+\scalebox{0.75}{
+\begin{tabular}{ |p{1.6cm}|p{0.9cm}|p{0.9cm}|p{0.8cm} |p{1.3cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}| }
+\hline
+\multirow{2}{*}{Dataset} & \multirow{2}{*}{$n$} & \multirow{2}{*}{$m$} & \multirow{2}{*}{$m/n$} & Algorithm & \multicolumn{5}{c|}{\texttt{kPath}} & \multicolumn{5}{c|}{\texttt{kLev}} \\
+\cline{5-15}
+& & & & k & $1$ & $2$ & $5$ & $10$ & $\left\lceil m/n\right\rceil$ & $1$ & $2$ & $5$ & $10$ & $\left\lceil m/n\right\rceil$\\
+\hline
+\multirow{4}{*}{RoadnetPA} & \multirow{4}{*}{1.09M} & \multirow{4}{*}{1.54M} & \multirow{4}{*}{1.42}
+& \texttt{Variant0} & 449 & 567 & 559 & 559 & 567& 420 & 420 & 420 & 420 & 420\\
+& & &  & \texttt{Variant1} & 450 & 170 & 170 & 170 & 170& 393 & 170 & 170 & 170 & 170\\
+& & &  & \texttt{Variant2} & 467 & 170 & 170 & 170 & 170& 488 & 170 & 170 & 170 & 170\\
+& & &  & \texttt{VariantN} & 491 & 170 & 170 & 170 & 170& 450 & 170 & 170 & 170 & 170\\
+\hline
+\multirow{4}{*}{RoadnetCA} & \multirow{4}{*}{1.97M} & \multirow{4}{*}{2.77M} & \multirow{4}{*}{1.41}
+& \texttt{Variant0} & 767 & 983 & 1009 & 1009 & 983& 755 & 755 & 755 & 755 & 755\\
+& & &  & \texttt{Variant1} & 796 & 305 & 305 & 305 & 305& 697 & 305 & 305 & 305 & 305\\
+& & &  & \texttt{Variant2} & 849 & 305 & 305 & 305 & 305& 877 & 305 & 305 & 305 & 305\\
+& & &  & \texttt{VariantN} & 884 & 305 & 305 & 305 & 305& 821 & 305 & 305 & 305 & 305\\
+\hline
+\multirow{4}{*}{Orkut} & \multirow{4}{*}{3.07M} & \multirow{4}{*}{117M} & \multirow{4}{*}{38.14}
+& \texttt{Variant0} & T & T & 2351 & 3781 & 12079& 1345 & 1345 & 1344 & 1344 & 1344\\
+& & &  & \texttt{Variant1} & T & 1564 & 2349 & 3779 & 2983& 1276 & 1362 & 1362 & 1359 & 2983\\
+& & &  & \texttt{Variant2} & T & 1482 & 2405 & 3775 & 2983& 1655 & 1923 & 2747 & 4147 & 2983\\
+& & &  & \texttt{VariantN} & 1342 & 1630 & 2495 & 3889 & 2983& 1653 & 1934 & 2760 & 4152 & 2983\\
+\hline
+\multirow{4}{*}{LiveJournal} & \multirow{4}{*}{4.00M} & \multirow{4}{*}{34.7M} & \multirow{4}{*}{8.67}
+& \texttt{Variant0} & T & T & 3097 & 4796 & 4602& 1593 & 1593 & 1593 & 1593 & 1593\\
+& & &  & \texttt{Variant1} & T & 1956 & 3090 & 1304 & 1304& 1503 & 1579 & 1579 & 1304 & 1304\\
+& & &  & \texttt{Variant2} & T & 2206 & 3096 & 1304 & 1304& 1890 & 2259 & 3317 & 1304 & 1304\\
+& & &  & \texttt{VariantN} & T & 2086 & 3086 & 1304 & 1304& 1899 & 2260 & 3318 & 1304 & 1304\\
+\hline
+\multirow{4}{*}{KonectDblp} & \multirow{4}{*}{7.58M} & \multirow{4}{*}{12.3M} & \multirow{4}{*}{1.62}
+& \texttt{Variant0} & T & T & 3799 & 3799 & T& T & T & T & 2754 & T\\
+& & &  & \texttt{Variant1} & T & 1213 & 1213 & 1213 & 1213& 2557 & 1213 & 1213 & 1213 & 1213\\
+& & &  & \texttt{Variant2} & T & 1213 & 1213 & 1213 & 1213& 3113 & 1213 & 1213 & 1213 & 1213\\
+& & &  & \texttt{VariantN} & T & 1213 & 1213 & 1213 & 1213& 2986 & 1213 & 1213 & 1213 & 1213\\
+\hline
+\end{tabular}}
+\caption{Memory comparison for kPath and kLev algorithms on Large graphs.}
+\label{label}
+\end{table}

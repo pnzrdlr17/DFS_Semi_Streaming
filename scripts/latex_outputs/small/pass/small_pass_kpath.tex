@@ -1,0 +1,29 @@
+\begin{table}[h!]
+\centering
+\scalebox{0.75}{
+\begin{tabular}{ |p{1.3cm}|p{0.9cm}|p{0.9cm}|p{0.8cm} |p{1.3cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}|p{0.8cm}| }
+\hline
+Dataset & $n$ & $m$ & $m/n$ & Heuristic & $k=1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$ & $\left\lceil m/n\right\rceil$\\
+\hline
+\multirow{4}{*}{Belcastro} & \multirow{4}{*}{14.0K} & \multirow{4}{*}{9.03M} & \multirow{4}{*}{643.78}
+& \texttt{kPath0} & 870 & 430 & 277 & 207 & 172 & 142 & 128 & 114 & 102 & 95 & 3 \\
+& & &  & \texttt{kPath1} & 877 & 424 & 282 & 212 & 173 & 148 & 129 & 114 & 104 & 91 & 1 \\
+& & &  & \texttt{kPath2} & 770 & 284 & 194 & 155 & 128 & 112 & 102 & 91 & 83 & 77 & 1 \\
+& & &  & \texttt{kPathN} & 627 & 246 & 156 & 120 & 88 & 81 & 70 & 64 & 54 & 48 & 1 \\
+\hline
+\multirow{4}{*}{ArxAP} & \multirow{4}{*}{18.8K} & \multirow{4}{*}{198K} & \multirow{4}{*}{10.55}
+& \texttt{kPath0} & 231 & 33 & 17 & 12 & 10 & 6 & 7 & 3 & 3 & 3 & 4 \\
+& & &  & \texttt{kPath1} & 221 & 35 & 19 & 12 & 9 & 4 & 6 & 3 & 3 & 2 & 1 \\
+& & &  & \texttt{kPath2} & 190 & 19 & 13 & 8 & 4 & 8 & 3 & 3 & 2 & 2 & 1 \\
+& & &  & \texttt{kPathN} & 70 & 20 & 30 & 5 & 4 & 3 & 3 & 2 & 2 & 2 & 1 \\
+\hline
+\multirow{4}{*}{BrightK} & \multirow{4}{*}{58.2K} & \multirow{4}{*}{214K} & \multirow{4}{*}{3.68}
+& \texttt{kPath0} & 242 & 14 & 6 & 4 & 2 & 2 & 2 & 2 & 2 & 2 & 4 \\
+& & &  & \texttt{kPath1} & 231 & 13 & 4 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+& & &  & \texttt{kPath2} & 195 & 4 & 3 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+& & &  & \texttt{kPathN} & 15 & 5 & 3 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+\hline
+\end{tabular}}
+\caption{Pass comparison for kPath algorithm on Small graphs.}
+\label{label}
+\end{table}

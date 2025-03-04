@@ -1,0 +1,29 @@
+\begin{table}[h!]
+\centering
+\scalebox{0.75}{
+\begin{tabular}{ |p{1.3cm}|p{0.9cm}|p{0.9cm}|p{0.8cm} |p{1.3cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}|p{0.8cm}| }
+\hline
+Dataset & $n$ & $m$ & $m/n$ & Heuristic & $k=1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$ & $\left\lceil m/n\right\rceil$\\
+\hline
+\multirow{4}{*}{Belcastro} & \multirow{4}{*}{14.0K} & \multirow{4}{*}{9.03M} & \multirow{4}{*}{643.78}
+& \texttt{kPath0} & 1420 & 676 & 471 & 340 & 349 & 230 & 206 & 187 & 176 & 161 & 13.3 \\
+& & &  & \texttt{kPath1} & 1459 & 704 & 558 & 390 & 345 & 248 & 220 & 181 & 181 & 155 & 2.16 \\
+& & &  & \texttt{kPath2} & 1254 & 480 & 384 & 259 & 207 & 185 & 165 & 154 & 141 & 133 & 2.22 \\
+& & &  & \texttt{kPathN} & 1012 & 399 & 281 & 194 & 145 & 131 & 130 & 127 & 98.4 & 77.7 & 2.16 \\
+\hline
+\multirow{4}{*}{ArxAP} & \multirow{4}{*}{18.8K} & \multirow{4}{*}{198K} & \multirow{4}{*}{10.55}
+& \texttt{kPath0} & 9.17 & 1.42 & 0.80 & 0.71 & 0.59 & 0.38 & 0.48 & 0.20 & 0.23 & 0.26 & 0.30 \\
+& & &  & \texttt{kPath1} & 9.54 & 1.49 & 1.02 & 0.69 & 0.56 & 0.29 & 0.41 & 0.21 & 0.23 & 0.22 & 0.05 \\
+& & &  & \texttt{kPath2} & 8.50 & 1.05 & 0.78 & 0.49 & 0.28 & 0.51 & 0.21 & 0.22 & 0.19 & 0.21 & 0.06 \\
+& & &  & \texttt{kPathN} & 3.55 & 1.14 & 1.75 & 0.37 & 0.28 & 0.30 & 0.23 & 0.19 & 0.20 & 0.23 & 0.05 \\
+\hline
+\multirow{4}{*}{BrightK} & \multirow{4}{*}{58.2K} & \multirow{4}{*}{214K} & \multirow{4}{*}{3.68}
+& \texttt{kPath0} & 18.8 & 3.24 & 2.57 & 1.93 & 0.22 & 0.22 & 0.21 & 0.25 & 0.24 & 0.22 & 1.87 \\
+& & &  & \texttt{kPath1} & 18.2 & 3.23 & 1.86 & 0.07 & 0.07 & 0.06 & 0.06 & 0.06 & 0.06 & 0.06 & 0.07 \\
+& & &  & \texttt{kPath2} & 15.6 & 1.62 & 1.14 & 0.07 & 0.07 & 0.07 & 0.06 & 0.07 & 0.05 & 0.06 & 0.07 \\
+& & &  & \texttt{kPathN} & 2.86 & 1.92 & 1.13 & 0.06 & 0.07 & 0.07 & 0.06 & 0.06 & 0.06 & 0.06 & 0.06 \\
+\hline
+\end{tabular}}
+\caption{Time comparison for kPath algorithm on Small graphs.}
+\label{label}
+\end{table}

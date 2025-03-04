@@ -1,0 +1,29 @@
+\begin{table}[h!]
+\centering
+\scalebox{0.75}{
+\begin{tabular}{ |p{1.3cm}|p{0.9cm}|p{0.9cm}|p{0.8cm} |p{1.3cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}|p{0.8cm}| }
+\hline
+Dataset & $n$ & $m$ & $m/n$ & Heuristic & $k=1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$ & $\left\lceil m/n\right\rceil$\\
+\hline
+\multirow{4}{*}{Belcastro} & \multirow{4}{*}{14.0K} & \multirow{4}{*}{9.03M} & \multirow{4}{*}{643.78}
+& \texttt{kPath0} & 8.76 & 10.2 & 11.2 & 12.5 & 13.7 & 14.9 & 16.3 & 17.6 & 18.8 & 20.2 & 835 \\
+& & &  & \texttt{kPath1} & 8.84 & 10.1 & 11.1 & 12.4 & 13.6 & 15.0 & 16.2 & 17.7 & 18.9 & 20.2 & 191 \\
+& & &  & \texttt{kPath2} & 9.32 & 10.4 & 11.3 & 12.6 & 13.9 & 14.9 & 16.3 & 17.6 & 18.7 & 20.1 & 191 \\
+& & &  & \texttt{kPathN} & 9.37 & 10.4 & 11.7 & 13.0 & 14.4 & 15.7 & 17.0 & 18.2 & 19.5 & 20.5 & 191 \\
+\hline
+\multirow{4}{*}{ArxAP} & \multirow{4}{*}{18.8K} & \multirow{4}{*}{198K} & \multirow{4}{*}{10.55}
+& \texttt{kPath0} & 10.5 & 11.9 & 13.6 & 15.0 & 17.0 & 18.5 & 20.4 & 22.1 & 23.7 & 25.5 & 27.3 \\
+& & &  & \texttt{kPath1} & 10.6 & 12 & 13.9 & 15.5 & 17.2 & 19.0 & 20.8 & 23.2 & 24.8 & 26.2 & 10.1 \\
+& & &  & \texttt{kPath2} & 11.1 & 12.2 & 13.7 & 15.5 & 17.1 & 18.9 & 20.7 & 22.6 & 24.5 & 26.3 & 9.95 \\
+& & &  & \texttt{kPathN} & 11.5 & 12.2 & 13.9 & 15.5 & 17.3 & 19.1 & 20.9 & 22.7 & 24.5 & 26.3 & 10 \\
+\hline
+\multirow{4}{*}{BrightK} & \multirow{4}{*}{58.2K} & \multirow{4}{*}{214K} & \multirow{4}{*}{3.68}
+& \texttt{kPath0} & 25.3 & 30.2 & 35.5 & 41.1 & 45.3 & 45.4 & 45.2 & 45.4 & 45.3 & 45.3 & 41.2 \\
+& & &  & \texttt{kPath1} & 26.0 & 30.4 & 35.7 & 14.4 & 14.4 & 14.2 & 14.2 & 14.2 & 14.3 & 14.3 & 14.3 \\
+& & &  & \texttt{kPath2} & 28.2 & 31.5 & 35.8 & 14.2 & 14.2 & 14.4 & 14.4 & 14.4 & 14.4 & 14.2 & 14.3 \\
+& & &  & \texttt{kPathN} & 27.4 & 31.9 & 35.8 & 14.3 & 14.2 & 14.3 & 14.3 & 14.3 & 14.2 & 14.3 & 14.2 \\
+\hline
+\end{tabular}}
+\caption{Memory comparison for kPath algorithm on Small graphs.}
+\label{label}
+\end{table}
