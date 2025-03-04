@@ -22,7 +22,8 @@ Experiment types:
 0 - VARN
 1 - VARM
 2 - VARK
-3 - FIXNM {for a fixed N and M, run the algorithm by creating different graphs using different seeds}
+3 - FIXNM {for a fixed N and M (calculated using N and sparsity), run the algorithm by creating different graphs using different seeds}
+4 - EXPLC_M {M provided explicity as input and not calculated based on sparsity}
 */
 
 /*
@@ -113,13 +114,16 @@ Mode parseArgs(int argc, char *argv[]) {
         }
         case PREP_EXP: {
             if (argc < 7) {
-                cerr << "Usage: " << argv[0] << " <mode:PREP_EXP> <exp_type> <N> <sparsity> <graph_type> <Iterations> <seed?>\n";
+                cerr << "Usage: " << argv[0] << " <mode:PREP_EXP> <exp_type> <N> <sparsity_or_M> <graph_type> <Iterations> <seed?>\n";
                 exit(1);
             }
 
             experiment_type = stoi(argv[2]);
             n = stoll(argv[3]);
-            sparsity = stoi(argv[4]);
+
+            if (experiment_type == 4) m = stoll(argv[4]); // EXPLC_M // Usage: <mode:PREP_EXP> <exp_type:4> <N> <M> <graph_type> <Iterations> [seed]
+            else sparsity = stoi(argv[4]);    
+
             graph_type = argv[5];
             iterations = stoi(argv[6]);
 
@@ -128,13 +132,16 @@ Mode parseArgs(int argc, char *argv[]) {
         }
         case RUN_EXP: {
             if (argc < 9) {
-                cerr << "Usage: " << argv[0] << " <mode:RUN_EXP> <exp_type> <N> <sparsity> <graph_type> <Iterations> <seed> <algorithm> <algo_variant> <k>\n";
+                cerr << "Usage: " << argv[0] << " <mode:RUN_EXP> <exp_type> <N> <sparsity_or_M> <graph_type> <Iterations> <seed> <algorithm> <algo_variant> <k>\n";
                 exit(1);
             }
 
             experiment_type = stoi(argv[2]);
             n = stoll(argv[3]);
-            sparsity = stoi(argv[4]); // TODO: Add check for range of values [1, 5]
+
+            if (experiment_type == 4) m = stoll(argv[4]); // EXPLC_M // Usage: <mode:RUN_EXP> <exp_type:4> <N> <M> <graph_type> <Iterations> <seed> <algorithm> <algo_variant> <k>
+            else sparsity = stoi(argv[4]); // TODO: Add check for range of values [1, 5]
+
             graph_type = argv[5];
             iterations = stoi(argv[6]);
             seed_token = stoll(argv[7]);
@@ -143,7 +150,7 @@ Mode parseArgs(int argc, char *argv[]) {
 
             if (algorithm == 0 || algorithm == 2 || algorithm == 3) {
                 if (argc < 10) {
-                    cerr << "Usage: <mode:RUN_EXP> <exp_type> <N> <sparsity> <Iterations> <seed> <algorithm> <algo_variant> <k>\nVariant must be specified for simp(0), kPath(2) and kLev(3) algorithms\n";
+                    cerr << "Usage: <mode:RUN_EXP> <exp_type> <N> <sparsity_or_M> <Iterations> <seed> <algorithm> <algo_variant> <k>\nVariant must be specified for simp(0), kPath(2) and kLev(3) algorithms\n";
                     exit(1);
                 }
                 algo_variant = argv[9][0];
@@ -151,7 +158,7 @@ Mode parseArgs(int argc, char *argv[]) {
 
             if (algorithm == 2 || algorithm == 3) {
                 if (argc < 11) {
-                    cerr << "Usage: <mode:RUN_EXP> <exp_type> <N> <sparsity> <Iterations> <seed> <algorithm> <algo_variant> <k>\nk must be specified for kPath(2) and kLev(3) algorithms\n";
+                    cerr << "Usage: <mode:RUN_EXP> <exp_type> <N> <sparsity_or_M> <Iterations> <seed> <algorithm> <algo_variant> <k>\nk must be specified for kPath(2) and kLev(3) algorithms\n";
                     exit(1);
                 }
                 k = stoll(argv[10]);
