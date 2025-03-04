@@ -78,12 +78,12 @@ int main(int argc, char *argv[]) {
             break;
         }
         case PREP_EXP: { // Execute this before running an experiment with same args for generating required graphs
-            prepareExperiment(experiment_type, n, sparsity, graph_type, iterations, seed_token, m);
+            prepareExperiment(experiment_type, n, m, sparsity, graph_type, iterations, seed_token);
             // cout << "Graphs generated!\nSeed: " << seed_token << "\n";
             break;
         }
         case RUN_EXP: {
-            runExperiment(experiment_type, n, sparsity, graph_type, iterations, seed_token, algorithm, algo_variant, k, m);
+            runExperiment(experiment_type, n, m, sparsity, graph_type, iterations, seed_token, algorithm, algo_variant, k);
             // cout << "Completed running!\n";
             break;
         }

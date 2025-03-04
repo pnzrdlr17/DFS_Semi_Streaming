@@ -33,7 +33,7 @@ inline string getExperimentLabel(int experiment_type) {
 }
 
 // runMode: 0 - prepare, 1 - run
-ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int sparsity, string graph_type, int iterations, ll seed_token, int algorithm, int algo_variant, ll k, ll M)  {
+ExpResult experimentFramework(bool runMode, int experiment_type, ll n, ll M, int sparsity, string graph_type, int iterations, ll seed_token, int algorithm, int algo_variant, ll k)  {
     ExpResult expr;
     AlgorithmResult result;
     string current_file;
@@ -255,31 +255,31 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
     return expr;
 }
 
-void prepareExperiment(int experiment_type, ll n, int sparsity, string graph_type, int iterations, ll seed_token, ll m) {
+void prepareExperiment(int experiment_type, ll n, ll m, int sparsity, string graph_type, int iterations, ll seed_token) {
     ExpResult result;
     
     if (experiment_type < 3) { // VARN, VARM, VARK
-        result = experimentFramework(0, experiment_type, n, sparsity, graph_type, iterations, seed_token, m);
+        result = experimentFramework(0, experiment_type, n, m, sparsity, graph_type, iterations, seed_token);
     }
     else if (experiment_type == 3) { // FIXNM implementation modified to cater both cases Sparsity or M is given
-        result = experimentFramework(0, 3, n, sparsity, graph_type, iterations, seed_token, calculateM(n, sparsity));
+        result = experimentFramework(0, 3, n, calculateM(n, sparsity), sparsity, graph_type, iterations, seed_token);
     }
     else if (experiment_type == 4) { // EXPLC_M implementation using FIXNM
-        result = experimentFramework(0, 3, n, sparsity, graph_type, iterations, seed_token, m);
+        result = experimentFramework(0, 3, n, m, sparsity, graph_type, iterations, seed_token);
     }   
 }
 
-void runExperiment(int experiment_type, ll n, int sparsity, string graph_type, int iterations, ll seed_token, int algorithm, int algo_variant, ll k, ll m) {
+void runExperiment(int experiment_type, ll n, ll m, int sparsity, string graph_type, int iterations, ll seed_token, int algorithm, int algo_variant, ll k) {
     ExpResult result;
     
     if (experiment_type < 3) { // VARN, VARM, VARK
-        result = experimentFramework(1, experiment_type, n, sparsity, graph_type, iterations, seed_token, algorithm, algo_variant, k, m);
+        result = experimentFramework(1, experiment_type, n, m, sparsity, graph_type, iterations, seed_token, algorithm, algo_variant, k);
     }
     else if (experiment_type == 3) { // FIXNM implementation modified to cater both cases Sparsity or M is given
-        result = experimentFramework(1, experiment_type, n, sparsity, graph_type, iterations, seed_token, algorithm, algo_variant, k, calculateM(n, sparsity));
+        result = experimentFramework(1, experiment_type, n, calculateM(n, sparsity), sparsity, graph_type, iterations, seed_token, algorithm, algo_variant, k);
     }
     else if (experiment_type == 4) { // EXPLC_M implementation using FIXNM (case 3)
-        result = experimentFramework(1, 3, n, sparsity, graph_type, iterations, seed_token, algorithm, algo_variant, k, m);
+        result = experimentFramework(1, 3, n, m, sparsity, graph_type, iterations, seed_token, algorithm, algo_variant, k);
     }
 
     vector<AlgorithmStats> algorithmStats = result.algorithmStats;
