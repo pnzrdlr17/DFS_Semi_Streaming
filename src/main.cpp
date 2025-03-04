@@ -16,13 +16,13 @@ Modes:
 RUN_ALGO: Run the given algorithm for the given (filepath) graph
 GEN_GRAPH: Generate a random graph with the given parameters
 PREP_EXP: [Prerun for a particular type of experiment] -- generate all the required graphs in advance
-RUN_EXP: Run an experiment [VARN, VARM, VARK] with the given parameters
+RUN_EXP: Run an experiment [VARN, VARM, VARK, FIXNM, EXPLC_M] with the given parameters
 TODO: Add verify DFS mode
 */
 
 Mode mode = RUN_ALGO;
-ll n, m, k = 1, seed_token = 42;
-int algorithm, experiment_type, sparsity, iterations;
+ll n = 0, m = 0, k = 1, seed_token = 42;
+int algorithm, experiment_type, sparsity = -1, iterations;
 char algo_variant = '0';
 string filePath, graph_type = "POWLAW";
 ifstream fileStream;
@@ -42,6 +42,8 @@ Experiment types:
 0 - VARN
 1 - VARM
 2 - VARK
+3 - FIXNM (M based on sparsity)
+4 - EXPLC_M (FIXNM with M as input)
 */
 
 /*
@@ -76,12 +78,12 @@ int main(int argc, char *argv[]) {
             break;
         }
         case PREP_EXP: { // Execute this before running an experiment with same args for generating required graphs
-            prepareExperiment(experiment_type, n, sparsity, graph_type, iterations, seed_token);
+            prepareExperiment(experiment_type, n, sparsity, graph_type, iterations, seed_token, m);
             // cout << "Graphs generated!\nSeed: " << seed_token << "\n";
             break;
         }
         case RUN_EXP: {
-            runExperiment(experiment_type, n, sparsity, graph_type, iterations, seed_token, algorithm, algo_variant, k);
+            runExperiment(experiment_type, n, sparsity, graph_type, iterations, seed_token, algorithm, algo_variant, k, m);
             // cout << "Completed running!\n";
             break;
         }

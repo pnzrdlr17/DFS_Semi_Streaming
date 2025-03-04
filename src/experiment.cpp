@@ -23,7 +23,8 @@ inline string getExperimentLabel(int experiment_type) {
         case 0: return "VARN";
         case 1: return "VARM";
         case 2: return "VARK";
-        case 3: return "FIXNM";
+        case 3: return "FIXNM"; // Default implementation of FIXNM takes N and sparsity (calculates M)
+        case 4: return "EXPLC_M"; // No separate implementation, using FIXNM by passing M
         default: {
             cerr << "Invalid experiment type\n";
             exit(1);
@@ -32,7 +33,7 @@ inline string getExperimentLabel(int experiment_type) {
 }
 
 // runMode: 0 - prepare, 1 - run
-ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int sparsity, string graph_type, int iterations, ll seed_token, int algorithm, int algo_variant, ll k)  {
+ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int sparsity, string graph_type, int iterations, ll seed_token, int algorithm, int algo_variant, ll k, ll M)  {
     ExpResult expr;
     AlgorithmResult result;
     string current_file;
@@ -208,28 +209,27 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
             break;
         }
         case 3: { // FIXNM
-            ll m = calculateM(n, sparsity);
             testCount = 1;
             runMode ? algoStats.resize(testCount) : graphStats.resize(iterations, vector<GraphStats>(testCount));
 
             for (int itr = 0; itr < iterations; ++itr) {
                 if (runMode) {
-                    current_file = randomGraphsDirectory + generate_file_name(n, m, graph_type, seeds[itr]);
+                    current_file = randomGraphsDirectory + generate_file_name(n, M, graph_type, seeds[itr]);
 
                     if (!file_exists(current_file)) {
                         cerr << "File not found: " << current_file << endl << "Run PREP_EXP with same args before trying RUN_EXP" << endl;
                         exit(1);
                     }
 
-                    result = runAlgorithm(n, m, current_file, algorithm, algo_variant, k);
+                    result = runAlgorithm(n, M, current_file, algorithm, algo_variant, k);
 
                     algoStats[0].avgPasses += result.passCount;
                     // algoStats[0].avgHeight += result.T.getHeight(0);
                     if (result.passCount > algoStats[0].maxPasses) algoStats[0].maxPasses = result.passCount;
                 }
                 else {
-                    generateRandomGraph(n, m, seeds[itr], graph_type);
-                    graphStats[itr][0] = getGraphStats(n, m, seeds[itr], sparsity, graph_type);
+                    generateRandomGraph(n, M, seeds[itr], graph_type);
+                    graphStats[itr][0] = getGraphStats(n, M, seeds[itr], sparsity, graph_type);
                 }
             }
 
@@ -255,37 +255,33 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, int spars
     return expr;
 }
 
-void prepareExperiment(int experiment_type, ll n, int sparsity, string graph_type, int iterations, ll seed_token) {
-    ExpResult result = experimentFramework(0, experiment_type, n, sparsity, graph_type, iterations, seed_token);
-
-    // cout << "Experiment Type: " << getExperimentLabel(experiment_type) << endl << "Graph Stats: \n";
-
-    // int i = 0;
-    // for (const auto& iterationStats : result.graphStats) {
-    //     cout << "Iteration " << ++i << ":\n";
-    //     for (const auto& stats : iterationStats) {
-    //         cout << "n=" << stats.n << " m=" << stats.m
-    //             // << " seed=" << stats.seed
-    //             << " sparsity=" << stats.sparsity
-    //             << " graph_type=" << stats.graph_type << " maxCompSize=" << stats.maxCompSize
-    //             << " numComps=" << stats.numComps << " meanCompSize=" << stats.meanCompSize
-    //             << " stdDevCompSize=" << stats.stdDevCompSize << "\n";
-    //     }
-    // }
-
-    // TODO: use if-else to write cout or write to file
+void prepareExperiment(int experiment_type, ll n, int sparsity, string graph_type, int iterations, ll seed_token, ll m) {
+    ExpResult result;
+    
+    if (experiment_type < 3) { // VARN, VARM, VARK
+        result = experimentFramework(0, experiment_type, n, sparsity, graph_type, iterations, seed_token, m);
+    }
+    else if (experiment_type == 3) { // FIXNM implementation modified to cater both cases Sparsity or M is given
+        result = experimentFramework(0, 3, n, sparsity, graph_type, iterations, seed_token, calculateM(n, sparsity));
+    }
+    else if (experiment_type == 4) { // EXPLC_M implementation using FIXNM
+        result = experimentFramework(0, 3, n, sparsity, graph_type, iterations, seed_token, m);
+    }   
 }
 
-void runExperiment(int experiment_type, ll n, int sparsity, string graph_type, int iterations, ll seed_token, int algorithm, int algo_variant, ll k) {
-    ExpResult result = experimentFramework(1, experiment_type, n, sparsity, graph_type, iterations, seed_token, algorithm, algo_variant, k);
+void runExperiment(int experiment_type, ll n, int sparsity, string graph_type, int iterations, ll seed_token, int algorithm, int algo_variant, ll k, ll m) {
+    ExpResult result;
+    
+    if (experiment_type < 3) { // VARN, VARM, VARK
+        result = experimentFramework(1, experiment_type, n, sparsity, graph_type, iterations, seed_token, algorithm, algo_variant, k, m);
+    }
+    else if (experiment_type == 3) { // FIXNM implementation modified to cater both cases Sparsity or M is given
+        result = experimentFramework(1, experiment_type, n, sparsity, graph_type, iterations, seed_token, algorithm, algo_variant, k, calculateM(n, sparsity));
+    }
+    else if (experiment_type == 4) { // EXPLC_M implementation using FIXNM (case 3)
+        result = experimentFramework(1, 3, n, sparsity, graph_type, iterations, seed_token, algorithm, algo_variant, k, m);
+    }
+
     vector<AlgorithmStats> algorithmStats = result.algorithmStats;
-
-    // cout << "Experiment Type: " << getExperimentLabel(experiment_type) << endl << "Average Passes: \n";
-
-    // for (int i = 0; i < algorithmStats.size(); ++i) {
-    //     cout << algorithmStats[i].current_x << " " << algorithmStats[i].avgPasses << "\n";
-    // }
-    cout<< algorithmStats[0].avgPasses << endl;
-
-    // TODO: write to file / console
+    cout << algorithmStats[0].avgPasses << endl; // For FIXNM the parameter is fixed, seeds vary over iterations, hence only one
 }
