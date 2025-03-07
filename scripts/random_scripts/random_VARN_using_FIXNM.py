@@ -5,6 +5,8 @@ import csv
 from pathlib import Path
 from datetime import datetime
 
+sparsity_label = {2: "logN", 3: "sqrtN", "4": "N"}
+
 def run_experiments(iterations, seed_token, sparsity, graph_type):
     output_dir = f"./results/random/VARN/{graph_type}"
     variants = ["0", "N"]
@@ -19,21 +21,15 @@ def run_experiments(iterations, seed_token, sparsity, graph_type):
 
     # Add a timestamped directory for each run
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    run_output_dir = os.path.join(output_dir, f"seed_{seed_token}_iter_{iterations}_k_{k}_{timestamp}")
+    run_output_dir = os.path.join(output_dir, f"{sparsity_label[sparsity]}_seed_{seed_token}_itr_{iterations}_k_{k}_{timestamp}")
     Path(run_output_dir).mkdir(parents=True, exist_ok=True)
-
-
-    sparsity_folder = f"sparsity_logN" if sparsity == 2 else f"sparsity_sqrtN"
-    sparsity_folder += f"_seed_{seed_token}_k{k}"
-    sparsity_output_dir = os.path.join(run_output_dir, sparsity_folder)
-    Path(sparsity_output_dir).mkdir(parents=True, exist_ok=True)
 
     # Open CSV files for writing
     csv_files = {}
     file_objects = {}
     for algorithm_name, algorithm_code in algorithms.items():
         for variant in variants:
-            results_file = os.path.join(sparsity_output_dir, f"{algorithm_name}_{variant}.csv")
+            results_file = os.path.join(run_output_dir, f"{algorithm_name}_{variant}.csv")
             csvfile = open(results_file, "w", newline="")
             csvwriter = csv.writer(csvfile, delimiter=',')
             csvwriter.writerow(["N", "Time (s)", "Memory (KB)", "Passes"])
