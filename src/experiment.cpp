@@ -183,8 +183,8 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, ll M, int
                         algoStats[i].avgHeight += result.T.getHeight(0);
                         if (result.passCount > algoStats[i].maxPasses) algoStats[i].maxPasses = result.passCount;
 
-                        if (k >= 40) step = 5;
-                        if (k >= 100) step = 50;
+                        if (current_k >= 40) step = 5;
+                        if (current_k >= 100) step = 50;
                         current_k += step;
                         i++;
                     }
