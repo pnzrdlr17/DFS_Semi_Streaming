@@ -17,8 +17,7 @@ def run_experiments_n_10000(iterations, seed_token, sparsity, graph_type):
 
     print(f"Running VARK with {iterations} iterations, for N = 10,000 and sparsity code {sparsity} for k from 1 to N and seed token {seed_token}")
 
-    k_values = list(range(1, 25, 1)) + list(range(25, 50, 5)) + list(range(50, 100, 10)) 
-    + list(range(100, 1000, 100)) + list(range(1000, 5000, 500)) + list(range(5000, 10000, 1000))
+    k_values = list(range(1, 25, 1)) + list(range(25, 50, 5)) + list(range(50, 100, 10)) + list(range(100, 1000, 100)) + list(range(1000, 5000, 500)) + list(range(5000, 10000, 1000))
 
     # Add a timestamped directory for each run
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -37,7 +36,7 @@ def run_experiments_n_10000(iterations, seed_token, sparsity, graph_type):
             csv_files[(algorithm_name, variant)] = csvwriter
             file_objects[(algorithm_name, variant)] = csvfile
 
-    print(f"Generating {iterations} graphs with N={n}, sparsity={sparsity}, seed={seed_token}...")
+    print(f"Generating {iterations} graph(s) with N={n}, sparsity={sparsity}, seed={seed_token}...")
 
     try: # Prepare for the Experiment [PREP_EXP]
         subprocess.run(

@@ -16,11 +16,7 @@ def run_experiments_n_10000(iterations, seed_token, graph_type):
 
     Path(output_dir).mkdir(parents=True, exist_ok=True)
 
-    m_values = list(range(1000, 10_000, 1000)) + list(range(10_000, 25_000, 2500)) + list(range(25_000, 50_000, 5000))
-    + list(range(50_000, 100_000, 10_000)) + list(range(100_000, 500_000, 50_000)) + list(range(500_000, 1000_000, 100_000)) 
-    + list(range(1000_000, 10_000_000, 1000_000)) # can be split
-    + list(range(10_000_000, 40_000_001, 10_000_000)) # can be split
-    + [49_995_000]
+    m_values = list(range(1000, 10_000, 1000)) + list(range(10_000, 25_000, 2500)) + list(range(25_000, 50_000, 5000)) + list(range(50_000, 100_000, 10_000)) + list(range(100_000, 500_000, 50_000)) + list(range(500_000, 1000_000, 100_000)) + list(range(1000_000, 10_000_000, 1000_000)) + list(range(10_000_000, 40_000_001, 10_000_000)) + [49_995_000]
     
     # Add a timestamped directory for each run
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
