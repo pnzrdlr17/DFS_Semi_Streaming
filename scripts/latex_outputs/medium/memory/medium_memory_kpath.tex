@@ -1,0 +1,29 @@
+\begin{table}[h!]
+\centering
+\scalebox{0.75}{
+\begin{tabular}{ |p{1.3cm}|p{0.9cm}|p{0.9cm}|p{0.8cm} |p{1.3cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}|p{0.8cm}| }
+\hline
+Dataset & $n$ & $m$ & $m/n$ & Heuristic & $k=1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$ & $\left\lceil m/n\right\rceil$\\
+\hline
+\multirow{4}{*}{Twitch} & \multirow{4}{*}{168K} & \multirow{4}{*}{6.80M} & \multirow{4}{*}{40.43}
+& \texttt{kPath0} & 74.2 & 85.4 & 102 & 115 & 129 & 147 & 166 & 177 & 195 & 208 & 692 \\
+& & &  & \texttt{kPath1} & 74.2 & 89.3 & 97.8 & 114 & 130 & 145 & 163 & 176 & 192 & 208 & 167 \\
+& & &  & \texttt{kPath2} & 79.6 & 92.2 & 100 & 122 & 138 & 152 & 165 & 180 & 195 & 215 & 167 \\
+& & &  & \texttt{kPathN} & 80.5 & 93.0 & 100 & 118 & 138 & 152 & 166 & 177 & 193 & 217 & 167 \\
+\hline
+\multirow{4}{*}{Gowalla} & \multirow{4}{*}{197K} & \multirow{4}{*}{950K} & \multirow{4}{*}{4.83}
+& \texttt{kPath0} & 84.5 & 95.9 & 118 & 138 & 154 & 168 & 168 & 168 & 168 & 168 & 154 \\
+& & &  & \texttt{kPath1} & 81.5 & 98.1 & 114 & 138 & 48.2 & 48.2 & 48.2 & 48.3 & 48.3 & 48.2 & 48.1 \\
+& & &  & \texttt{kPath2} & 89.1 & 96.5 & 112 & 137 & 48.2 & 48.1 & 48.2 & 48.2 & 48.2 & 48.1 & 48.2 \\
+& & &  & \texttt{kPathN} & 88.0 & 96.3 & 113 & 138 & 48.1 & 48.3 & 48.2 & 48.2 & 48.1 & 48.2 & 48.3 \\
+\hline
+\multirow{4}{*}{Amazon} & \multirow{4}{*}{335K} & \multirow{4}{*}{926K} & \multirow{4}{*}{2.76}
+& \texttt{kPath0} & 138 & 160 & 200 & 219 & 220 & 219 & 220 & 220 & 220 & 219 & 200 \\
+& & &  & \texttt{kPath1} & 138 & 170 & 65.0 & 65.0 & 64.8 & 64.8 & 64.9 & 64.8 & 64.8 & 64.8 & 64.9 \\
+& & &  & \texttt{kPath2} & 149 & 178 & 64.8 & 64.8 & 65.0 & 65.0 & 64.8 & 64.8 & 64.9 & 64.9 & 64.9 \\
+& & &  & \texttt{kPathN} & 144 & 177 & 64.9 & 64.9 & 64.8 & 64.9 & 65.0 & 65.0 & 65.0 & 65.0 & 65.0 \\
+\hline
+\end{tabular}}
+\caption{Memory comparison for kPath algorithm on Medium graphs.}
+\label{label}
+\end{table}

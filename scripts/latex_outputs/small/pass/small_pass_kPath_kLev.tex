@@ -1,0 +1,31 @@
+\begin{table}[h!]
+\centering
+\scalebox{0.75}{
+\begin{tabular}{ |p{1.3cm}|p{0.9cm}|p{0.9cm}|p{0.8cm} |p{1.3cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}| }
+\hline
+\multirow{2}{*}{Dataset} & \multirow{2}{*}{$n$} & \multirow{2}{*}{$m$} & \multirow{2}{*}{$m/n$} & Algorithm & \multicolumn{5}{c|}{\texttt{kPath}} & \multicolumn{5}{c|}{\texttt{kLev}} \\
+\cline{5-15}
+& & & & k & $1$ & $2$ & $5$ & $10$ & $\left\lceil m/n\right\rceil$ & $1$ & $2$ & $5$ & $10$ & $\left\lceil m/n\right\rceil$\\
+\hline
+\multirow{4}{*}{Belcastro} & \multirow{4}{*}{14.0K} & \multirow{4}{*}{9.03M} & \multirow{4}{*}{643.78}
+& \texttt{Variant0} & 870 & 430 & 172 & 95 & 3& 4 & 4 & 4 & 4 & 4\\
+& & &  & \texttt{Variant1} & 877 & 424 & 173 & 91 & 1& 3 & 3 & 3 & 3 & 1\\
+& & &  & \texttt{Variant2} & 770 & 284 & 128 & 77 & 1& 3 & 3 & 3 & 3 & 1\\
+& & &  & \texttt{VariantN} & 627 & 246 & 88 & 48 & 1& 3 & 3 & 3 & 3 & 1\\
+\hline
+\multirow{4}{*}{ArxAP} & \multirow{4}{*}{18.8K} & \multirow{4}{*}{198K} & \multirow{4}{*}{10.55}
+& \texttt{Variant0} & 231 & 33 & 10 & 3 & 4& 5 & 5 & 5 & 5 & 5\\
+& & &  & \texttt{Variant1} & 221 & 35 & 9 & 2 & 1& 4 & 4 & 4 & 4 & 1\\
+& & &  & \texttt{Variant2} & 190 & 19 & 4 & 2 & 1& 4 & 4 & 2 & 2 & 1\\
+& & &  & \texttt{VariantN} & 70 & 20 & 4 & 2 & 1& 4 & 4 & 2 & 2 & 1\\
+\hline
+\multirow{4}{*}{BrightK} & \multirow{4}{*}{58.2K} & \multirow{4}{*}{214K} & \multirow{4}{*}{3.68}
+& \texttt{Variant0} & 242 & 14 & 2 & 2 & 4& 5 & 5 & 5 & 5 & 5\\
+& & &  & \texttt{Variant1} & 231 & 13 & 1 & 1 & 1& 4 & 4 & 1 & 1 & 1\\
+& & &  & \texttt{Variant2} & 195 & 4 & 1 & 1 & 1& 3 & 2 & 1 & 1 & 1\\
+& & &  & \texttt{VariantN} & 15 & 5 & 1 & 1 & 1& 3 & 2 & 1 & 1 & 1\\
+\hline
+\end{tabular}}
+\caption{Pass comparison for kPath and kLev algorithms on Small graphs.}
+\label{label}
+\end{table}

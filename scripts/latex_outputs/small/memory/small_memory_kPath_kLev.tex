@@ -1,0 +1,31 @@
+\begin{table}[h!]
+\centering
+\scalebox{0.75}{
+\begin{tabular}{ |p{1.3cm}|p{0.9cm}|p{0.9cm}|p{0.8cm} |p{1.3cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}| }
+\hline
+\multirow{2}{*}{Dataset} & \multirow{2}{*}{$n$} & \multirow{2}{*}{$m$} & \multirow{2}{*}{$m/n$} & Algorithm & \multicolumn{5}{c|}{\texttt{kPath}} & \multicolumn{5}{c|}{\texttt{kLev}} \\
+\cline{5-15}
+& & & & k & $1$ & $2$ & $5$ & $10$ & $\left\lceil m/n\right\rceil$ & $1$ & $2$ & $5$ & $10$ & $\left\lceil m/n\right\rceil$\\
+\hline
+\multirow{4}{*}{Belcastro} & \multirow{4}{*}{14.0K} & \multirow{4}{*}{9.03M} & \multirow{4}{*}{643.78}
+& \texttt{Variant0} & 8.76 & 10.2 & 13.7 & 20.2 & 835& 8.79 & 9.01 & 8.92 & 9.28 & 37.2\\
+& & &  & \texttt{Variant1} & 8.84 & 10.1 & 13.6 & 20.2 & 191& 8.70 & 8.84 & 8.85 & 9.00 & 191\\
+& & &  & \texttt{Variant2} & 9.32 & 10.4 & 13.9 & 20.1 & 191& 9.70 & 11.0 & 14.9 & 21.3 & 191\\
+& & &  & \texttt{VariantN} & 9.37 & 10.4 & 14.4 & 20.5 & 191& 9.61 & 11.0 & 14.8 & 21.3 & 191\\
+\hline
+\multirow{4}{*}{ArxAP} & \multirow{4}{*}{18.8K} & \multirow{4}{*}{198K} & \multirow{4}{*}{10.55}
+& \texttt{Variant0} & 10.5 & 11.9 & 17.0 & 25.5 & 27.3& 9.77 & 9.69 & 9.77 & 9.79 & 9.77\\
+& & &  & \texttt{Variant1} & 10.6 & 12 & 17.2 & 26.2 & 10.1& 9.28 & 9.33 & 9.43 & 9.54 & 9.96\\
+& & &  & \texttt{Variant2} & 11.1 & 12.2 & 17.1 & 26.3 & 9.95& 11.0 & 12.6 & 17.4 & 25.3 & 9.95\\
+& & &  & \texttt{VariantN} & 11.5 & 12.2 & 17.3 & 26.3 & 10& 10.9 & 12.6 & 17.5 & 25.4 & 10\\
+\hline
+\multirow{4}{*}{BrightK} & \multirow{4}{*}{58.2K} & \multirow{4}{*}{214K} & \multirow{4}{*}{3.68}
+& \texttt{Variant0} & 25.3 & 30.2 & 45.3 & 45.3 & 41.2& 22.2 & 22.2 & 22.1 & 22.2 & 22.1\\
+& & &  & \texttt{Variant1} & 26.0 & 30.4 & 14.4 & 14.3 & 14.3& 20.7 & 21.1 & 14.1 & 14.2 & 14.3\\
+& & &  & \texttt{Variant2} & 28.2 & 31.5 & 14.2 & 14.2 & 14.3& 25.2 & 30.1 & 14.3 & 14.2 & 14.3\\
+& & &  & \texttt{VariantN} & 27.4 & 31.9 & 14.2 & 14.3 & 14.2& 25.2 & 30.1 & 14.3 & 14.2 & 14.2\\
+\hline
+\end{tabular}}
+\caption{Memory comparison for kPath and kLev algorithms on Small graphs.}
+\label{label}
+\end{table}

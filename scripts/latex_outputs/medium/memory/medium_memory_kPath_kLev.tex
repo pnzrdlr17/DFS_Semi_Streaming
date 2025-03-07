@@ -1,0 +1,31 @@
+\begin{table}[h!]
+\centering
+\scalebox{0.75}{
+\begin{tabular}{ |p{1.3cm}|p{0.9cm}|p{0.9cm}|p{0.8cm} |p{1.3cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}| }
+\hline
+\multirow{2}{*}{Dataset} & \multirow{2}{*}{$n$} & \multirow{2}{*}{$m$} & \multirow{2}{*}{$m/n$} & Algorithm & \multicolumn{5}{c|}{\texttt{kPath}} & \multicolumn{5}{c|}{\texttt{kLev}} \\
+\cline{5-15}
+& & & & k & $1$ & $2$ & $5$ & $10$ & $\left\lceil m/n\right\rceil$ & $1$ & $2$ & $5$ & $10$ & $\left\lceil m/n\right\rceil$\\
+\hline
+\multirow{4}{*}{Twitch} & \multirow{4}{*}{168K} & \multirow{4}{*}{6.80M} & \multirow{4}{*}{40.43}
+& \texttt{Variant0} & 74.2 & 85.4 & 129 & 208 & 692& 71.1 & 71.3 & 71.4 & 71.3 & 72.9\\
+& & &  & \texttt{Variant1} & 74.2 & 89.3 & 130 & 208 & 167& 67.5 & 70.7 & 71.2 & 71.0 & 167\\
+& & &  & \texttt{Variant2} & 79.6 & 92.2 & 138 & 215 & 167& 86.5 & 102 & 147 & 227 & 167\\
+& & &  & \texttt{VariantN} & 80.5 & 93.0 & 138 & 217 & 167& 84.8 & 102 & 148 & 225 & 167\\
+\hline
+\multirow{4}{*}{Gowalla} & \multirow{4}{*}{197K} & \multirow{4}{*}{950K} & \multirow{4}{*}{4.83}
+& \texttt{Variant0} & 84.5 & 95.9 & 154 & 168 & 154& 73.8 & 73.8 & 73.6 & 73.7 & 73.7\\
+& & &  & \texttt{Variant1} & 81.5 & 98.1 & 48.2 & 48.2 & 48.1& 69.3 & 71.6 & 48.3 & 48.3 & 48.2\\
+& & &  & \texttt{Variant2} & 89.1 & 96.5 & 48.2 & 48.1 & 48.2& 86.8 & 105 & 48.3 & 48.2 & 48.3\\
+& & &  & \texttt{VariantN} & 88.0 & 96.3 & 48.1 & 48.2 & 48.3& 87.6 & 104 & 48.3 & 48.2 & 48.3\\
+\hline
+\multirow{4}{*}{Amazon} & \multirow{4}{*}{335K} & \multirow{4}{*}{926K} & \multirow{4}{*}{2.76}
+& \texttt{Variant0} & 138 & 160 & 220 & 219 & 200& 131 & 131 & 132 & 132 & 131\\
+& & &  & \texttt{Variant1} & 138 & 170 & 64.8 & 64.8 & 64.9& 124 & 128 & 64.9 & 64.8 & 64.8\\
+& & &  & \texttt{Variant2} & 149 & 178 & 65.0 & 64.9 & 64.9& 154 & 182 & 65.0 & 64.9 & 64.9\\
+& & &  & \texttt{VariantN} & 144 & 177 & 64.8 & 65.0 & 65.0& 151 & 174 & 65.0 & 64.9 & 64.8\\
+\hline
+\end{tabular}}
+\caption{Memory comparison for kPath and kLev algorithms on Medium graphs.}
+\label{label}
+\end{table}
