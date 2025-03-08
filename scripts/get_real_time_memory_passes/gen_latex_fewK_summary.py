@@ -5,21 +5,33 @@ import math
 # Define the graph datasets
 graphs = {
     "small": [
+        # {"label": "CU", "n": 49, "m": 107},
+        # {"label": "AJazz", "n": 198, "m": 2742},
+        # {"label": "HM", "n": 2426, "m": 16631},
         {"label": "Belcastro", "n": 14022, "m": 9027024},
         {"label": "ArxAP", "n": 18771, "m": 198050},
+        # {"label": "AsCaida", "n": 26475, "m": 53381},
         {"label": "BrightK", "n": 58228, "m": 214078}
     ],
     "medium": [
+        # {"label": "LMocha", "n": 104103, "m": 2193083},
+        # {"label": "FlickrE", "n": 105938, "m": 2316948},
+        # {"label": "WordNet", "n": 146005, "m": 656999},
+        # {"label": "Douban", "n": 154908, "m": 327162},
         {"label": "Twitch", "n": 168114, "m": 6797557},
         {"label": "Gowalla", "n": 196591, "m": 950327},
+        # {"label": "Dblp", "n": 317080, "m": 1049866},
         {"label": "Amazon", "n": 334863, "m": 925872}
     ],
     "large": [
-        {"label": "RoadnetPA", "n": 1088092, "m": 1541898},
-        {"label": "RoadnetCA", "n": 1965206, "m": 2766607},
+        # {"label": "RoadnetPA", "n": 1088092, "m": 1541898},
+        # {"label": "Youtube", "n": 1134890, "m": 2987624},
+        # {"label": "Skitter", "n": 1696415, "m": 11095298},
+        # {"label": "RoadnetCA", "n": 1965206, "m": 2766607},
         {"label": "Orkut", "n": 3072441, "m": 117185083},
         {"label": "LiveJournal", "n": 3997962, "m": 34681189},
-        {"label": "KonectDblp", "n": 7577304, "m": 12282059}
+        {"label": "KonectDblp", "n": 7577304, "m": 12282059},
+        # {"label": "Friendster", "n": 65608366, "m": 1806067135}
     ]
 }
 
@@ -36,29 +48,30 @@ def format_number(value):
     else:
         return str(value)
     
-# Function to format cell values
-def format_value(value):
-    value = float(value)
-    if value < 1:
-        return f"{value:.2f}"
-    elif value < 10:
-        return f"{value:.2f}" if value % 1 != 0 else f"{value:.0f}"
-    elif value < 100:
-        return f"{value:.1f}" if value % 1 != 0 else f"{value:.0f}"
-    else:
-        return f"{value:.0f}"
-    
-def get_value(data, metric):
+def get_formatted_value(data, metric):
     if data == "ERROR":
         return "T"
     else:
         data = data.split(",")
-        if metric == "time":
-            return format_value(data[0])
-        elif metric == "memory":
-            return format_value(float(data[1]) / 1024)  # Convert KB to MB
-        elif metric == "pass":
-            return data[2]
+    
+    if metric == "time":
+        value = float(data[0])
+        if value >= 3600:
+            return f"{value / 3600:.2f}h" if value < 36000 else f"{value / 3600:.1f}h" if value < 360000 else f"{value / 3600:.0f}h"
+        elif value >= 60:
+            return f"{value / 60:.2f}m" if value < 600 else f"{value / 60:.1f}m" if value < 6000 else f"{value / 60:.0f}m"
+        else:
+            return f"{value:.2f}s" if value < 10 else f"{value:.1f}s" if value < 100 else f"{value:.0f}s"
+    elif metric == "memory":
+        value = float(data[1])
+        if value >= 1_048_576:  # 1024 * 1024
+            return f"{value / 1_048_576:.2f}G" if value < 10_485_760 else f"{value / 1_048_576:.1f}G" if value < 104_857_600 else f"{value / 1_048_576:.0f}G"
+        elif value >= 1024:
+            return f"{value / 1024:.2f}M" if value < 10_240 else f"{value / 1024:.1f}M" if value < 102_400 else f"{value / 1024:.0f}M"
+        else:
+            return f"{value:.2f}K" if value < 10 else f"{value:.1f}K" if value < 100 else f"{value:.0f}K"
+    elif metric == "pass":
+        return data[2]
 
 def generate_latex_table(group, metric, output_dir):
     if group not in graphs:
@@ -110,7 +123,7 @@ def generate_latex_table(group, metric, output_dir):
                     if os.path.exists(file_name):
                         with open(file_name, "r") as data_file:
                             data = data_file.readline().strip()
-                            latex_content.append(f"& {get_value(data, metric)} ")
+                            latex_content.append(f"& {get_formatted_value(data, metric)} ")
                     else:
                         latex_content.append("& - ")
 
@@ -119,7 +132,7 @@ def generate_latex_table(group, metric, output_dir):
                 if os.path.exists(file_name):
                     with open(file_name, "r") as data_file:
                         data = data_file.readline().strip()
-                        latex_content.append(f"& {get_value(data, metric)}")
+                        latex_content.append(f"& {get_formatted_value(data, metric)}")
                 else:
                     latex_content.append("& -")
 
@@ -150,4 +163,4 @@ if __name__ == "__main__":
 
     generate_latex_table(args.group, args.metric, args.output_dir)
 
-# Usage: python generate_latex_table.py small time output/
+# Usage: python3 scripts/get_real_time_memory_passes/gen_latex_fewK_summary.py large memory scripts/latex_outputs
