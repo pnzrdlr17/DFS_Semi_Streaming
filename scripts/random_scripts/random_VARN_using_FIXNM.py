@@ -5,7 +5,7 @@ import csv
 from pathlib import Path
 from datetime import datetime
 
-sparsity_label = {2: "logN", 3: "sqrtN", "4": "N"}
+sparsity_label = {2: "logN", 3: "sqrtN", 4: "N2"}
 
 def run_experiments(iterations, seed_token, sparsity, graph_type):
     output_dir = f"./results/random/VARN/{graph_type}"

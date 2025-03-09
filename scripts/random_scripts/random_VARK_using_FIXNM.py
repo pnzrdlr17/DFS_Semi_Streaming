@@ -5,7 +5,7 @@ import csv
 from pathlib import Path
 from datetime import datetime
 
-sparsity_label = {2: "logN", 3: "sqrtN", "4": "N"}
+sparsity_label = {2: "logN", 3: "sqrtN", 4: "N2"}
 
 def run_experiments_n_10000(iterations, seed_token, sparsity, graph_type):
     n = 10000
