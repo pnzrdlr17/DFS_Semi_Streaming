@@ -1,0 +1,31 @@
+\begin{table}[h!]
+\centering
+\scalebox{0.75}{
+\begin{tabular}{ |p{1.6cm}|p{0.9cm}|p{0.9cm}|p{0.8cm} |p{1.3cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}| }
+\hline
+\multirow{2}{*}{Dataset} & \multirow{2}{*}{$n$} & \multirow{2}{*}{$m$} & \multirow{2}{*}{$m/n$} & Algorithm & \multicolumn{5}{c|}{\texttt{kPath}} & \multicolumn{5}{c|}{\texttt{kLev}} \\
+\cline{5-15}
+& & & & k & $1$ & $2$ & $5$ & $10$ & $\left\lceil m/n\right\rceil$ & $1$ & $2$ & $5$ & $10$ & $\left\lceil m/n\right\rceil$\\
+\hline
+\multirow{4}{*}{Orkut} & \multirow{4}{*}{3.07M} & \multirow{4}{*}{117M} & \multirow{4}{*}{38.14}
+& \texttt{Variant0} & T & T & 2.66h & 1.92h & 2.39h & 2.71h & 3.10h & 3.48h & 1.53h & 1.83h \\
+& & &  & \texttt{Variant1} & T & 2.16h & 1.70h & 2.74h & 1.72m & 1.88h & 2.06h & 2.16h & 2.21h & 39.4s \\
+& & &  & \texttt{Variant2} & T & 2.58h & 3.20h & 1.51h & 54.8s & 2.36h & 1.97h & 2.04h & 1.69h & 36.6s \\
+& & &  & \texttt{VariantN} & 3.94h & 2.02h & 1.33h & 45.0m & 35.3s & 1.63h & 1.81h & 1.60h & 2.12h & 38.8s \\
+\hline
+\multirow{4}{*}{LiveJournal} & \multirow{4}{*}{4.00M} & \multirow{4}{*}{34.7M} & \multirow{4}{*}{8.67}
+& \texttt{Variant0} & T & T & 8.47h & 42.3s & 5.08h & 5.13h & 4.73h & 4.58h & 5.27h & 5.15h \\
+& & &  & \texttt{Variant1} & T & 7.54h & 3.43h & 17.4s & 17.1s & 5.00h & 4.13h & 3.63h & 11.8s & 10.5s \\
+& & &  & \texttt{Variant2} & T & 9.69h & 4.00h & 12.2s & 11.0s & 4.56h & 4.40h & 3.77h & 10.0s & 10.9s \\
+& & &  & \texttt{VariantN} & T & 4.83h & 4.32h & 10.2s & 11.3s & 4.65h & 4.64h & 4.05h & 11.5s & 11.9s \\
+\hline
+\multirow{4}{*}{KonectDblp} & \multirow{4}{*}{7.58M} & \multirow{4}{*}{12.3M} & \multirow{4}{*}{1.62}
+& \texttt{Variant0} & T & T & 2.35h & 1.96h & T & T & T & T & 11.7h & T \\
+& & &  & \texttt{Variant1} & T & 7.31s & 7.03s & 7.12s & 7.15s & 6.86h & 5.88s & 5.86s & 5.97s & 5.90s \\
+& & &  & \texttt{Variant2} & T & 14.3s & 14.5s & 9.48s & 14.3s & 4.92h & 5.94s & 6.04s & 5.94s & 6.00s \\
+& & &  & \texttt{VariantN} & T & 17.9s & 22.3s & 17.9s & 22.5s & 4.68h & 5.90s & 5.92s & 6.03s & 5.92s \\
+\hline
+\end{tabular}}
+\caption{Time comparison for kPath and kLev algorithms on Large graphs.}
+\label{label}
+\end{table}

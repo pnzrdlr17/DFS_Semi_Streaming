@@ -82,6 +82,7 @@ def generate_latex_table(group, metric, algo, output_dir):
         raise ValueError("Invalid algorithm. Choose from 'kpath' or 'klev'.")
 
     # Create the output directory if it doesn't exist
+    output_dir = os.path.join(output_dir, group, metric)
     os.makedirs(output_dir, exist_ok=True)
 
     # Initialize the LaTeX content
@@ -134,42 +135,42 @@ def generate_latex_table(group, metric, algo, output_dir):
                 latex_content.append("& - \\\\\n")
 
         # For pass table add a row for the reduction in passes from heuristic 0 to N
-        # if metric == "pass":
-        #     latex_content.append("& & &  & Red$\%$ ")
-        #     for k in list(range(1, 11)) + ["C"]:
-        #         file_name_0 = os.path.join("results/real/table_data", f"{label}_{algo}_0_{k}.txt")
-        #         file_name_N = os.path.join("results/real/table_data", f"{label}_{algo}_N_{k}.txt")
-        #         if os.path.exists(file_name_0) and os.path.exists(file_name_N):
-        #             with open(file_name_0, "r") as data_file_0, open(file_name_N, "r") as data_file_N:
-        #                 data_0 = data_file_0.readline().strip().split(",")
-        #                 data_N = data_file_N.readline().strip().split(",")
-        #                 if data_0[2] != "ERROR" and data_N[2] != "ERROR":
-        #                     pass_0 = float(data_0[2])
-        #                     pass_N = float(data_N[2])
-        #                     if pass_0 != 0:
-        #                         reduction = int(((pass_0 - pass_N) / pass_0) * 100)
-        #                         reductions[k].append(reduction)
-        #                         latex_content.append(f"& {reduction} ")
-        #                     else:
-        #                         latex_content.append("& - ")
-        #                 else:
-        #                     latex_content.append("& - ")
-        #         else:
-        #             latex_content.append("& - ")
-        #     latex_content.append("\\\\\n")
+        if metric == "pass":
+            latex_content.append("& & &  & Red$\%$ ")
+            for k in list(range(1, 11)) + ["C"]:
+                file_name_0 = os.path.join("results/real/table_data", f"{label}_{algo}_0_{k}.txt")
+                file_name_N = os.path.join("results/real/table_data", f"{label}_{algo}_N_{k}.txt")
+                if os.path.exists(file_name_0) and os.path.exists(file_name_N):
+                    with open(file_name_0, "r") as data_file_0, open(file_name_N, "r") as data_file_N:
+                        data_0 = data_file_0.readline().strip()
+                        data_N = data_file_N.readline().strip()
+                        if data_0 == "ERROR" or data_N == "ERROR":
+                            latex_content.append("& - ")
+                        else:
+                            pass_0 = int(data_0.split(",")[2])
+                            pass_N = int(data_N.split(",")[2])
+                            if pass_0 == 0:
+                                latex_content.append("& - ")
+                            else:
+                                reduction = int(((pass_0 - pass_N) / pass_0) * 100)
+                                reductions[k].append(reduction)
+                                latex_content.append(f"& {reduction} ")
+                else:
+                    latex_content.append("& - ")
+            latex_content.append("\\\\\n")
 
         latex_content.append("\\hline\n")
 
-    # if metric == "pass":
-    #     latex_content.append("Average  & -  & - & - & - ")
-    #     for k in list(range(1, 11)) + ["C"]:
-    #         if reductions[k]:
-    #             avg_reduction = int(sum(reductions[k]) / len(reductions[k]))
-    #             latex_content.append(f"& {avg_reduction} ")
-    #         else:
-    #             latex_content.append("& - ")
-    #     latex_content.append("\\\\\n")
-    #     latex_content.append("\\hline\n")
+    if metric == "pass":
+        latex_content.append("Average  & -  & - & - & - ")
+        for k in list(range(1, 11)) + ["C"]:
+            if reductions[k]:
+                avg_reduction = int(sum(reductions[k]) / len(reductions[k]))
+                latex_content.append(f"& {avg_reduction} ")
+            else:
+                latex_content.append("& - ")
+        latex_content.append("\\\\\n")
+        latex_content.append("\\hline\n")
 
     latex_content.append("\\end{tabular}}\n")
     latex_content.append(f"\\caption{{{metric.capitalize()} comparison for {algo[0]}{algo[1:].capitalize()} algorithm on {group.capitalize()} graphs.}}\n")

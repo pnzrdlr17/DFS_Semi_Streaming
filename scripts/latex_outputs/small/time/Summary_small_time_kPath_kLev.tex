@@ -1,0 +1,31 @@
+\begin{table}[h!]
+\centering
+\scalebox{0.75}{
+\begin{tabular}{ |p{1.3cm}|p{0.9cm}|p{0.9cm}|p{0.8cm} |p{1.3cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}| }
+\hline
+\multirow{2}{*}{Dataset} & \multirow{2}{*}{$n$} & \multirow{2}{*}{$m$} & \multirow{2}{*}{$m/n$} & Algorithm & \multicolumn{5}{c|}{\texttt{kPath}} & \multicolumn{5}{c|}{\texttt{kLev}} \\
+\cline{5-15}
+& & & & k & $1$ & $2$ & $5$ & $10$ & $\left\lceil m/n\right\rceil$ & $1$ & $2$ & $5$ & $10$ & $\left\lceil m/n\right\rceil$\\
+\hline
+\multirow{4}{*}{Belcastro} & \multirow{4}{*}{14.0K} & \multirow{4}{*}{9.03M} & \multirow{4}{*}{643.78}
+& \texttt{Variant0} & 23.7m & 11.3m & 5.82m & 2.68m & 13.3s & 10.3s & 9.24s & 8.92s & 8.57s & 9.33s \\
+& & &  & \texttt{Variant1} & 24.3m & 11.7m & 5.74m & 2.58m & 2.16s & 8.14s & 7.02s & 8.03s & 7.86s & 2.10s \\
+& & &  & \texttt{Variant2} & 20.9m & 8.01m & 3.45m & 2.21m & 2.22s & 7.60s & 7.32s & 7.36s & 8.06s & 1.78s \\
+& & &  & \texttt{VariantN} & 16.9m & 6.65m & 2.42m & 1.29m & 2.16s & 8.36s & 7.94s & 8.11s & 7.28s & 1.88s \\
+\hline
+\multirow{4}{*}{ArxAP} & \multirow{4}{*}{18.8K} & \multirow{4}{*}{198K} & \multirow{4}{*}{10.55}
+& \texttt{Variant0} & 9.17s & 1.42s & 0.59s & 0.26s & 0.30s & 0.49s & 0.49s & 0.49s & 0.50s & 0.49s \\
+& & &  & \texttt{Variant1} & 9.54s & 1.49s & 0.56s & 0.22s & 0.05s & 0.39s & 0.41s & 0.40s & 0.40s & 0.06s \\
+& & &  & \texttt{Variant2} & 8.50s & 1.05s & 0.28s & 0.21s & 0.06s & 0.38s & 0.50s & 0.40s & 0.56s & 0.05s \\
+& & &  & \texttt{VariantN} & 3.55s & 1.14s & 0.28s & 0.23s & 0.05s & 0.43s & 0.46s & 0.36s & 0.58s & 0.05s \\
+\hline
+\multirow{4}{*}{BrightK} & \multirow{4}{*}{58.2K} & \multirow{4}{*}{214K} & \multirow{4}{*}{3.68}
+& \texttt{Variant0} & 18.8s & 3.24s & 0.22s & 0.22s & 1.87s & 0.89s & 0.91s & 1.07s & 0.91s & 1.02s \\
+& & &  & \texttt{Variant1} & 18.2s & 3.23s & 0.07s & 0.06s & 0.07s & 0.73s & 0.72s & 0.06s & 0.06s & 0.07s \\
+& & &  & \texttt{Variant2} & 15.6s & 1.62s & 0.07s & 0.06s & 0.07s & 0.76s & 0.66s & 0.06s & 0.07s & 0.06s \\
+& & &  & \texttt{VariantN} & 2.86s & 1.92s & 0.07s & 0.06s & 0.06s & 0.91s & 0.87s & 0.06s & 0.06s & 0.06s \\
+\hline
+\end{tabular}}
+\caption{Time comparison for kPath and kLev algorithms on Small graphs.}
+\label{label}
+\end{table}

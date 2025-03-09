@@ -1,0 +1,31 @@
+\begin{table}[h!]
+\centering
+\scalebox{0.75}{
+\begin{tabular}{ |p{1.3cm}|p{0.9cm}|p{0.9cm}|p{0.8cm} |p{1.3cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}| }
+\hline
+\multirow{2}{*}{Dataset} & \multirow{2}{*}{$n$} & \multirow{2}{*}{$m$} & \multirow{2}{*}{$m/n$} & Algorithm & \multicolumn{5}{c|}{\texttt{kPath}} & \multicolumn{5}{c|}{\texttt{kLev}} \\
+\cline{5-15}
+& & & & k & $1$ & $2$ & $5$ & $10$ & $\left\lceil m/n\right\rceil$ & $1$ & $2$ & $5$ & $10$ & $\left\lceil m/n\right\rceil$\\
+\hline
+\multirow{4}{*}{Twitch} & \multirow{4}{*}{168K} & \multirow{4}{*}{6.80M} & \multirow{4}{*}{40.43}
+& \texttt{Variant0} & 40.8m & 1.35m & 25.5s & 22.7s & 18.1s & 19.4s & 19.5s & 18.2s & 22.2s & 36.7s \\
+& & &  & \texttt{Variant1} & 41.3m & 1.24m & 22.8s & 20.0s & 1.91s & 19.0s & 34.9s & 21.0s & 31.4s & 2.59s \\
+& & &  & \texttt{Variant2} & 35.2m & 40.9s & 24.4s & 13.7s & 2.15s & 18.0s & 33.2s & 19.7s & 40.5s & 2.20s \\
+& & &  & \texttt{VariantN} & 1.63m & 42.5s & 24.2s & 12.0s & 1.99s & 30.8s & 37.9s & 22.9s & 24.8s & 2.60s \\
+\hline
+\multirow{4}{*}{Gowalla} & \multirow{4}{*}{197K} & \multirow{4}{*}{950K} & \multirow{4}{*}{4.83}
+& \texttt{Variant0} & 3.23m & 33.5s & 18.2s & 0.96s & 18.1s & 20.3s & 20.0s & 20.4s & 16.4s & 19.9s \\
+& & &  & \texttt{Variant1} & 3.45m & 33.1s & 0.33s & 0.29s & 0.35s & 13.7s & 13.9s & 0.28s & 0.26s & 0.28s \\
+& & &  & \texttt{Variant2} & 2.81m & 23.3s & 0.24s & 0.27s & 0.25s & 15.1s & 14.6s & 0.30s & 0.28s & 0.27s \\
+& & &  & \texttt{VariantN} & 21.4s & 20.8s & 0.28s & 0.24s & 0.31s & 14.7s & 21.2s & 0.28s & 0.31s & 0.25s \\
+\hline
+\multirow{4}{*}{Amazon} & \multirow{4}{*}{335K} & \multirow{4}{*}{926K} & \multirow{4}{*}{2.76}
+& \texttt{Variant0} & 2.91m & 1.57m & 0.78s & 0.99s & 23.8s & 13.4m & 4.29m & 6.07m & 6.86m & 6.72m \\
+& & &  & \texttt{Variant1} & 2.90m & 1.53m & 0.29s & 0.30s & 0.28s & 7.28m & 8.04m & 0.43s & 0.62s & 0.41s \\
+& & &  & \texttt{Variant2} & 2.64m & 31.4s & 0.36s & 0.34s & 0.33s & 12.7m & 18.3m & 1.02s & 1.08s & 1.06s \\
+& & &  & \texttt{VariantN} & 21.7m & 33.8s & 0.57s & 0.38s & 0.62s & 17.5m & 12.5m & 0.61s & 0.55s & 0.51s \\
+\hline
+\end{tabular}}
+\caption{Time comparison for kPath and kLev algorithms on Medium graphs.}
+\label{label}
+\end{table}

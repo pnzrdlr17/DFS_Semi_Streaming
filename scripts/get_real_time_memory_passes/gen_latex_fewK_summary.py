@@ -38,6 +38,7 @@ graphs = {
 # Define the algorithms and heuristics
 algorithms = ["kpath", "klev"]
 heuristics = ["0", "1", "2", "N"]
+k_values = ["1", "2", "5", "10", "C"]
 
 # Format n and m values
 def format_number(value):
@@ -99,7 +100,7 @@ def generate_latex_table(group, metric, output_dir):
     latex_content.append("\\hline\n")
 
     # Initialize reduction storage
-    reductions = {k: [] for k in list(range(1, 11)) + ["C"]}
+    reductions = {(algo, k): [] for algo in algorithms for k in k_values}
 
     for graph in graphs[group]:
         label = graph["label"]
@@ -118,7 +119,7 @@ def generate_latex_table(group, metric, output_dir):
             latex_content.append(f"& \\texttt{{{row_label}}} ")
 
             for algo in algorithms:
-                for k in ["1", "2", "5", "10"]:
+                for k in k_values:
                     file_name = os.path.join("results/real/table_data", f"{label}_{algo}_{heuristic}_{k}.txt")
                     if os.path.exists(file_name):
                         with open(file_name, "r") as data_file:
@@ -127,18 +128,46 @@ def generate_latex_table(group, metric, output_dir):
                     else:
                         latex_content.append("& - ")
 
-                # Handle k=C (m/n)
-                file_name = os.path.join("results/real/table_data", f"{label}_{algo}_{heuristic}_C.txt")
-                if os.path.exists(file_name):
-                    with open(file_name, "r") as data_file:
-                        data = data_file.readline().strip()
-                        latex_content.append(f"& {get_formatted_value(data, metric)}")
-                else:
-                    latex_content.append("& -")
-
             latex_content.append("\\\\\n")
 
+            # For pass table add a row for the reduction in passes from heuristic 0 to N
+        if metric == "pass":
+            latex_content.append("& & &  & Red$\%$ ")
+            for algo in algorithms:
+                for k in k_values:
+                    file_name_0 = os.path.join("results/real/table_data", f"{label}_{algo}_0_{k}.txt")
+                    file_name_N = os.path.join("results/real/table_data", f"{label}_{algo}_N_{k}.txt")
+                    if os.path.exists(file_name_0) and os.path.exists(file_name_N):
+                        with open(file_name_0, "r") as data_file_0, open(file_name_N, "r") as data_file_N:
+                            data_0 = data_file_0.readline().strip()
+                            data_N = data_file_N.readline().strip()
+                            if data_0 == "ERROR" or data_N == "ERROR":
+                                latex_content.append("& - ")
+                            else:
+                                pass_0 = int(data_0.split(",")[2])
+                                pass_N = int(data_N.split(",")[2])
+                                if pass_0 == 0:
+                                    latex_content.append("& - ")
+                                else:
+                                    reduction = int(((pass_0 - pass_N) / pass_0) * 100)
+                                    reductions[(algo, k)].append(reduction)
+                                    latex_content.append(f"& {reduction} ")
+                    else:
+                        latex_content.append("& - ")
+            latex_content.append("\\\\\n")
 
+        latex_content.append("\\hline\n")
+    
+    if metric == "pass":
+        latex_content.append("Average  & -  & - & - & - ")
+        for algo in algorithms:
+            for k in k_values:
+                if reductions[(algo, k)]:
+                    avg_reduction = int(sum(reductions[(algo, k)]) / len(reductions[(algo, k)]))
+                    latex_content.append(f"& {avg_reduction} ")
+                else:
+                    latex_content.append("& - ")
+        latex_content.append("\\\\\n")
         latex_content.append("\\hline\n")
 
     latex_content.append("\\end{tabular}}\n")
@@ -147,7 +176,7 @@ def generate_latex_table(group, metric, output_dir):
     latex_content.append("\\end{table}\n")
 
     # Write the LaTeX content to the output file
-    output_file = os.path.join(output_dir, f"{group}_{metric}_kPath_kLev.tex")
+    output_file = os.path.join(output_dir, f"Summary_{group}_{metric}_kPath_kLev.tex")
     with open(output_file, "w") as f:
         f.writelines(latex_content)
 

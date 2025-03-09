@@ -1,0 +1,31 @@
+\begin{table}[h!]
+\centering
+\scalebox{0.75}{
+\begin{tabular}{ |p{1.6cm}|p{0.9cm}|p{0.9cm}|p{0.8cm} |p{1.3cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}| p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}| }
+\hline
+\multirow{2}{*}{Dataset} & \multirow{2}{*}{$n$} & \multirow{2}{*}{$m$} & \multirow{2}{*}{$m/n$} & Algorithm & \multicolumn{5}{c|}{\texttt{kPath}} & \multicolumn{5}{c|}{\texttt{kLev}} \\
+\cline{5-15}
+& & & & k & $1$ & $2$ & $5$ & $10$ & $\left\lceil m/n\right\rceil$ & $1$ & $2$ & $5$ & $10$ & $\left\lceil m/n\right\rceil$\\
+\hline
+\multirow{4}{*}{Orkut} & \multirow{4}{*}{3.07M} & \multirow{4}{*}{117M} & \multirow{4}{*}{38.14}
+& \texttt{Variant0} & T & T & 2.30G & 3.69G & 11.8G & 1.31G & 1.31G & 1.31G & 1.31G & 1.31G \\
+& & &  & \texttt{Variant1} & T & 1.53G & 2.29G & 3.69G & 2.91G & 1.25G & 1.33G & 1.33G & 1.33G & 2.91G \\
+& & &  & \texttt{Variant2} & T & 1.45G & 2.35G & 3.69G & 2.91G & 1.62G & 1.88G & 2.68G & 4.05G & 2.91G \\
+& & &  & \texttt{VariantN} & 1.31G & 1.59G & 2.44G & 3.80G & 2.91G & 1.61G & 1.89G & 2.70G & 4.05G & 2.91G \\
+\hline
+\multirow{4}{*}{LiveJournal} & \multirow{4}{*}{4.00M} & \multirow{4}{*}{34.7M} & \multirow{4}{*}{8.67}
+& \texttt{Variant0} & T & T & 3.02G & 4.68G & 4.49G & 1.56G & 1.56G & 1.56G & 1.56G & 1.56G \\
+& & &  & \texttt{Variant1} & T & 1.91G & 3.02G & 1.27G & 1.27G & 1.47G & 1.54G & 1.54G & 1.27G & 1.27G \\
+& & &  & \texttt{Variant2} & T & 2.15G & 3.02G & 1.27G & 1.27G & 1.85G & 2.21G & 3.24G & 1.27G & 1.27G \\
+& & &  & \texttt{VariantN} & T & 2.04G & 3.01G & 1.27G & 1.27G & 1.85G & 2.21G & 3.24G & 1.27G & 1.27G \\
+\hline
+\multirow{4}{*}{KonectDblp} & \multirow{4}{*}{7.58M} & \multirow{4}{*}{12.3M} & \multirow{4}{*}{1.62}
+& \texttt{Variant0} & T & T & 3.71G & 3.71G & T & T & T & T & 2.69G & T \\
+& & &  & \texttt{Variant1} & T & 1.18G & 1.18G & 1.18G & 1.18G & 2.50G & 1.18G & 1.18G & 1.18G & 1.18G \\
+& & &  & \texttt{Variant2} & T & 1.18G & 1.18G & 1.18G & 1.18G & 3.04G & 1.18G & 1.18G & 1.18G & 1.18G \\
+& & &  & \texttt{VariantN} & T & 1.18G & 1.18G & 1.18G & 1.18G & 2.92G & 1.18G & 1.18G & 1.18G & 1.18G \\
+\hline
+\end{tabular}}
+\caption{Memory comparison for kPath and kLev algorithms on Large graphs.}
+\label{label}
+\end{table}
