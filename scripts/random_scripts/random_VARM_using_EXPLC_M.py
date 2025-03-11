@@ -90,6 +90,19 @@ def run_experiments_n_10000(iterations, seed_token, graph_type):
                     # Write data to CSV
                     csvwriter.writerow([m, avg_time, memory, avg_passes])
 
+        try:
+            dest = f"/media/user/D2B860A9B8608DB3/UndirectedGraphs/RandomGraphs/VARM_{graph_type}_iter_{iterations}_seed_{seed_token}/"
+            Path(dest).mkdir(parents=True, exist_ok=True)
+            subprocess.run(
+                f"mv input/random_graphs/graph_{n}_{m}_{graph_type}_* "
+                f"{dest}",
+                shell=True,
+                check=True
+            ) # Move the used graphs to the HDD
+        except subprocess.CalledProcessError as e:
+            print(f"Error moving graphs for VARM with N={n}, M={m}: {e}")
+            continue
+
     for csvfile in file_objects.values():
         csvfile.close()
 

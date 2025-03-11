@@ -2,6 +2,7 @@ import os
 import subprocess
 import argparse
 import csv
+import math
 from pathlib import Path
 from datetime import datetime
 
@@ -85,6 +86,25 @@ def run_experiments_n_10000(iterations, seed_token, sparsity, graph_type):
 
                 # Write data to CSV
                 csvwriter.writerow([k, avg_time, memory, avg_passes])
+
+
+    if (sparsity == 2):
+        m = int(n * math.log2(n))
+    elif (sparsity == 3):
+        m = int(n * math.sqrt(n))
+    elif (sparsity == 4):
+            m = int((n * (n - 1)) / 2)
+    try:
+        dest = f"/media/user/D2B860A9B8608DB3/UndirectedGraphs/RandomGraphs/VARK_{graph_type}_{sparsity_label[sparsity]}_iter_{iterations}_seed_{seed_token}/"
+        Path(dest).mkdir(parents=True, exist_ok=True)
+        subprocess.run(
+            f"mv input/random_graphs/graph_{n}_{m}_{graph_type}_* "
+            f"{dest}",
+            shell=True,
+            check=True
+        ) # Move the used graphs to the HDD
+    except subprocess.CalledProcessError as e:
+        print(f"Error moving graphs for VARM with N={n}, M={m}: {e}")
 
     for csvfile in file_objects.values():
         csvfile.close()
