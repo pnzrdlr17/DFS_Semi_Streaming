@@ -1,0 +1,41 @@
+Graph already exists at: ./input/random_graphs/graph_10_33_UNIFORM_6230961512046992312.txt
+Graph already exists at: ./input/random_graphs/graph_10_33_UNIFORM_7871178979383552920.txt
+Graph already exists at: ./input/random_graphs/graph_10_33_UNIFORM_5739955973604961614.txt
+Graph already exists at: ./input/random_graphs/graph_10_33_UNIFORM_3881801951614183358.txt
+Graph already exists at: ./input/random_graphs/graph_10_33_UNIFORM_7032710160631691992.txt
+Graph already exists at: ./input/random_graphs/graph_10_33_UNIFORM_7599700178212337700.txt
+Graph already exists at: ./input/random_graphs/graph_10_33_UNIFORM_1353182403971399009.txt
+Graph already exists at: ./input/random_graphs/graph_10_33_UNIFORM_1070244953599069350.txt
+Graph already exists at: ./input/random_graphs/graph_10_33_UNIFORM_6522163754831416204.txt
+Graph already exists at: ./input/random_graphs/graph_10_33_UNIFORM_6938562734920028533.txt
+mv: target '/media/user/D2B860A9B8608DB3/UndirectedGraphs/RandomGraphs/VARN_UNIFORM_logN_iter_10_seed_1729/' is not a directory
+mv: target '/media/user/D2B860A9B8608DB3/UndirectedGraphs/RandomGraphs/VARN_UNIFORM_logN_iter_10_seed_1729/' is not a directory
+mv: target '/media/user/D2B860A9B8608DB3/UndirectedGraphs/RandomGraphs/VARN_UNIFORM_logN_iter_10_seed_1729/' is not a directory
+Running experiments with 10 iterations, varying N from 10 to 10,000 and seed token 1729
+Running kpath variant 0 with N=10, sparsity=2, seed=1729...
+      Average Passes: 2.0, Time/Memory: 0.00,3732
+Running kpath variant N with N=10, sparsity=2, seed=1729...
+      Average Passes: 1.0, Time/Memory: 0.00,3924
+Running klev variant 0 with N=10, sparsity=2, seed=1729...
+      Average Passes: 2.0, Time/Memory: 0.00,3884
+Running klev variant N with N=10, sparsity=2, seed=1729...
+      Average Passes: 1.0, Time/Memory: 0.00,3964
+Error moving graphs for VARM with N=10, M=33: Command 'mv input/random_graphs/graph_10_33_UNIFORM_* /media/user/D2B860A9B8608DB3/UndirectedGraphs/RandomGraphs/VARN_UNIFORM_logN_iter_10_seed_1729/' returned non-zero exit status 1.
+Running kpath variant 0 with N=20, sparsity=2, seed=1729...
+      Average Passes: 2.0, Time/Memory: 0.00,3928
+Running kpath variant N with N=20, sparsity=2, seed=1729...
+      Average Passes: 1.0, Time/Memory: 0.00,3928
+Running klev variant 0 with N=20, sparsity=2, seed=1729...
+      Average Passes: 3.0, Time/Memory: 0.00,3956
+Running klev variant N with N=20, sparsity=2, seed=1729...
+      Average Passes: 1.0, Time/Memory: 0.00,3952
+Error moving graphs for VARM with N=20, M=86: Command 'mv input/random_graphs/graph_20_86_UNIFORM_* /media/user/D2B860A9B8608DB3/UndirectedGraphs/RandomGraphs/VARN_UNIFORM_logN_iter_10_seed_1729/' returned non-zero exit status 1.
+Running kpath variant 0 with N=1000, sparsity=2, seed=1729...
+      Average Passes: 3.0, Time/Memory: 0.08,5268
+Running kpath variant N with N=1000, sparsity=2, seed=1729...
+      Average Passes: 1.0, Time/Memory: 0.03,5040
+Running klev variant 0 with N=1000, sparsity=2, seed=1729...
+      Average Passes: 3.9, Time/Memory: 0.12,4420
+Running klev variant N with N=1000, sparsity=2, seed=1729...
+      Average Passes: 1.0, Time/Memory: 0.02,5008
+Error moving graphs for VARM with N=1000, M=9965: Command 'mv input/random_graphs/graph_1000_9965_UNIFORM_* /media/user/D2B860A9B8608DB3/UndirectedGraphs/RandomGraphs/VARN_UNIFORM_logN_iter_10_seed_1729/' returned non-zero exit status 1.
