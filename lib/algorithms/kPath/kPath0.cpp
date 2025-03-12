@@ -317,10 +317,10 @@ public:
             return 0;
         }
 
+        int e1, e2;
         string line;
         while (getline(fileStream, line)) {
             istringstream iss(line);
-            int e1, e2;
             if (!(iss >> e1 >> e2)) {
                 cerr << "Error: Malformed or incomplete line: " << line << endl;
                 break; // Exit loop if edge format is invalid
