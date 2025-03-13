@@ -190,6 +190,7 @@ public:
             compEdge[a] = {-1, a};
             compL[a].push_back(a);
             processed[a] = 1;
+            if(!sptree[a].empty()) sptree[a].clear();
         }
 
         for(auto &it: edge_set){
