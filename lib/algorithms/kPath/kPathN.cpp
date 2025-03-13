@@ -232,7 +232,7 @@ public:
                 sptree[final_comp].insert(*it);
                 it = sptree[small_comp].erase(it);
             }
-            sptree[small_comp].insert({u, v});
+            sptree[final_comp].insert({u, v});
         }
     }
 
