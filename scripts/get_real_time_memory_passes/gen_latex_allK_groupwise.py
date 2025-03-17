@@ -195,4 +195,4 @@ if __name__ == "__main__":
 
     generate_latex_table(args.group, args.metric, args.algo, args.output_dir)
 
-# Usage: python3 scripts/get_real_time_memory_passes/gen_latex_allK_groupwise.py large memory scripts/latex_outputs
+# Usage: python3 scripts/get_real_time_memory_passes/gen_latex_allK_groupwise.py large memory kpath scripts/latex_outputs
