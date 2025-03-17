@@ -12,7 +12,7 @@ def run_experiments_n_10000(iterations, seed_token, graph_type):
     algorithms = {"kPath": "2", "kLev":"3"}
     k_values = [2, 5, 10]
 
-    print(f"Running VARM with {iterations} iterations, for N = 10,000 varying M from 1,000 to 49,995,000 and seed token {seed_token}")
+    print(f"Running VARM with {iterations} iterations, for N = 100 varying M from 1,000 to 49,995,000 and seed token {seed_token}")
 
     Path(output_dir).mkdir(parents=True, exist_ok=True)
 
@@ -28,15 +28,26 @@ def run_experiments_n_10000(iterations, seed_token, graph_type):
     # Open CSV files for writing
     csv_files = {}
     file_objects = {}
-    for algorithm_name, algorithm_code in algorithms.items():
-        for variant in variants:
-            for k in k_values:
-                results_file = os.path.join(kLev_output_dir, f"{algorithm_name}{variant}({k}).csv")
-                csvfile = open(results_file, "w", newline="")
-                csvwriter = csv.writer(csvfile, delimiter=',')
-                csvwriter.writerow(["M", "Time (s)", "Memory (KB)", "Passes"])
-                csv_files[(algorithm_name, variant, k)] = csvwriter
-                file_objects[(algorithm_name, variant, k)] = csvfile
+    
+    # kPath
+    for variant in variants:
+        for k in k_values:
+            results_file = os.path.join(kPath_output_dir, f"kPath{variant}({k}).csv")
+            csvfile = open(results_file, "w", newline="")
+            csvwriter = csv.writer(csvfile, delimiter=',')
+            csvwriter.writerow(["M", "Time (s)", "Memory (KB)", "Passes"])
+            csv_files[("kPath", variant, k)] = csvwriter
+            file_objects[("kPath", variant, k)] = csvfile
+
+    # kLev
+    for variant in variants:
+        for k in k_values:
+            results_file = os.path.join(kLev_output_dir, f"kLev{variant}({k}).csv")
+            csvfile = open(results_file, "w", newline="")
+            csvwriter = csv.writer(csvfile, delimiter=',')
+            csvwriter.writerow(["M", "Time (s)", "Memory (KB)", "Passes"])
+            csv_files[("kLev", variant, k)] = csvwriter
+            file_objects[("kLev", variant, k)] = csvfile
 
 
     for m in m_values:
