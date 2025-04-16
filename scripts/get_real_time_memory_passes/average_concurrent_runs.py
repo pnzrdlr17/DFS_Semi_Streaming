@@ -5,7 +5,6 @@ import signal
 from math import ceil
 from pathlib import Path
 from datetime import datetime
-import time
 
 # Define the graph dataset
 graphs = [
@@ -115,7 +114,7 @@ def k_experiments(algorithm, iterations, graph, output_dir):
                 pass_count = passes
 
                 # Write individual iteration data
-                write_to_file(f"{avg_time},{avg_mem},{pass_count},{datetime.now()}", raw_file, "append") # append
+                write_to_file(f"{time},{memory},{passes},{datetime.now()}", raw_file, "append") # append
 
             if len(times) == 0 or len(mems) == 0 or pass_count == 0:
                 print(f"No valid runs for graph {label}, variant {variant}, k={k_val}")
