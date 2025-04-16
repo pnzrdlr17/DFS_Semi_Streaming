@@ -9,7 +9,8 @@ from datetime import datetime
 sparsity_label = {2: "logN", 3: "sqrtN", 4: "N2"}
 
 def run_experiments_n_10000(iterations, seed_token, sparsity, graph_type):
-    n = 10000
+    # n = 10000
+    n = 1000
     variants = ["0", "N"]
     algorithms = {"kPath": "2", "kLev":"3"}
 
@@ -18,7 +19,8 @@ def run_experiments_n_10000(iterations, seed_token, sparsity, graph_type):
 
     print(f"Running VARK with {iterations} iterations, for N = 10,000 and sparsity code {sparsity} for k from 1 to N and seed token {seed_token}")
 
-    k_values = list(range(1, 10, 1))  + list(range(10, 20, 2)) + list(range(20, 40, 5)) + [40, 50, 75, 100] + list(range(250, 1250, 250)) + list(range(2500, 12000, 2500))
+    # k_values = list(range(1, 10, 1))  + list(range(10, 20, 2)) + list(range(20, 40, 5)) + [40, 50, 75, 100] + list(range(250, 1250, 250)) + list(range(2500, 12000, 2500))
+    k_values = list(range(1, 40)) + list(range(40, 100, 5)) + list(range(100, 1001, 50))
 
     # Add a timestamped directory for each run
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -88,23 +90,23 @@ def run_experiments_n_10000(iterations, seed_token, sparsity, graph_type):
                 csvwriter.writerow([k, avg_time, memory, avg_passes])
 
 
-    if (sparsity == 2):
-        m = int(n * math.log2(n))
-    elif (sparsity == 3):
-        m = int(n * math.sqrt(n))
-    elif (sparsity == 4):
-            m = int((n * (n - 1)) / 2)
-    try:
-        dest = f"/media/user/D2B860A9B8608DB3/UndirectedGraphs/RandomGraphs/VARK_{graph_type}_{sparsity_label[sparsity]}_iter_{iterations}_seed_{seed_token}/"
-        Path(dest).mkdir(parents=True, exist_ok=True)
-        subprocess.run(
-            f"mv input/random_graphs/graph_{n}_{m}_{graph_type}_* "
-            f"{dest}",
-            shell=True,
-            check=True
-        ) # Move the used graphs to the HDD
-    except subprocess.CalledProcessError as e:
-        print(f"Error moving graphs for VARM with N={n}, M={m}: {e}")
+    # if (sparsity == 2):
+    #     m = int(n * math.log2(n))
+    # elif (sparsity == 3):
+    #     m = int(n * math.sqrt(n))
+    # elif (sparsity == 4):
+    #         m = int((n * (n - 1)) / 2)
+    # try:
+    #     dest = f"/media/user/D2B860A9B8608DB3/UndirectedGraphs/RandomGraphs/VARK_{graph_type}_{sparsity_label[sparsity]}_iter_{iterations}_seed_{seed_token}/"
+    #     Path(dest).mkdir(parents=True, exist_ok=True)
+    #     subprocess.run(
+    #         f"mv input/random_graphs/graph_{n}_{m}_{graph_type}_* "
+    #         f"{dest}",
+    #         shell=True,
+    #         check=True
+    #     ) # Move the used graphs to the HDD
+    # except subprocess.CalledProcessError as e:
+    #     print(f"Error moving graphs for VARM with N={n}, M={m}: {e}")
 
     for csvfile in file_objects.values():
         csvfile.close()
