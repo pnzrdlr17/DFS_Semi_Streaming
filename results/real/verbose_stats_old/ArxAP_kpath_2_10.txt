@@ -1,0 +1,280 @@
+Iteration 1/5
+Init: 2025-03-22 16:04:05.472059
+Finish: 2025-03-22 16:04:05.713566
+Passes: 
+	Command being timed: "./bin/main RUN_ALGO 18771 198050 ./input/ArxAP/download.tsv.ca-AstroPh/ca-AstroPh/out.ca-AstroPh 2 2 10"
+	User time (seconds): 0.21
+	System time (seconds): 0.00
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.22
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 26384
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 1777
+	Voluntary context switches: 0
+	Involuntary context switches: 11
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0
+
+Iteration 2/5
+Init: 2025-03-22 16:04:05.713728
+Finish: 2025-03-22 16:04:05.950906
+Passes: 
+	Command being timed: "./bin/main RUN_ALGO 18771 198050 ./input/ArxAP/download.tsv.ca-AstroPh/ca-AstroPh/out.ca-AstroPh 2 2 10"
+	User time (seconds): 0.21
+	System time (seconds): 0.00
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.22
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 25840
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 1743
+	Voluntary context switches: 0
+	Involuntary context switches: 7
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0
+
+Iteration 3/5
+Init: 2025-03-22 16:04:05.951079
+Finish: 2025-03-22 16:04:06.193383
+Passes: 
+	Command being timed: "./bin/main RUN_ALGO 18771 198050 ./input/ArxAP/download.tsv.ca-AstroPh/ca-AstroPh/out.ca-AstroPh 2 2 10"
+	User time (seconds): 0.21
+	System time (seconds): 0.00
+	Percent of CPU this job got: 96%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.22
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 26848
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 1806
+	Voluntary context switches: 0
+	Involuntary context switches: 37
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0
+
+Iteration 4/5
+Init: 2025-03-22 16:04:06.193593
+Finish: 2025-03-22 16:04:06.436201
+Passes: 
+	Command being timed: "./bin/main RUN_ALGO 18771 198050 ./input/ArxAP/download.tsv.ca-AstroPh/ca-AstroPh/out.ca-AstroPh 2 2 10"
+	User time (seconds): 0.21
+	System time (seconds): 0.00
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.21
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 25840
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 1743
+	Voluntary context switches: 0
+	Involuntary context switches: 4
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0
+
+Iteration 5/5
+Init: 2025-03-22 16:04:06.436388
+Finish: 2025-03-22 16:04:06.677558
+Passes: 
+	Command being timed: "./bin/main RUN_ALGO 18771 198050 ./input/ArxAP/download.tsv.ca-AstroPh/ca-AstroPh/out.ca-AstroPh 2 2 10"
+	User time (seconds): 0.21
+	System time (seconds): 0.00
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.22
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 27856
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 1869
+	Voluntary context switches: 0
+	Involuntary context switches: 14
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0
+
+Iteration 1/5
+Init: 2025-03-22 16:05:35.312426
+Finish: 2025-03-22 16:05:35.555466
+Passes: 
+	Command being timed: "./bin/main RUN_ALGO 18771 198050 ./input/ArxAP/download.tsv.ca-AstroPh/ca-AstroPh/out.ca-AstroPh 2 2 10"
+	User time (seconds): 0.21
+	System time (seconds): 0.00
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.22
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 25840
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 1743
+	Voluntary context switches: 0
+	Involuntary context switches: 44
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0
+
+Iteration 2/5
+Init: 2025-03-22 16:05:35.555687
+Finish: 2025-03-22 16:05:35.798203
+Passes: 
+	Command being timed: "./bin/main RUN_ALGO 18771 198050 ./input/ArxAP/download.tsv.ca-AstroPh/ca-AstroPh/out.ca-AstroPh 2 2 10"
+	User time (seconds): 0.21
+	System time (seconds): 0.00
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.21
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 25840
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 1743
+	Voluntary context switches: 0
+	Involuntary context switches: 4
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0
+
+Iteration 3/5
+Init: 2025-03-22 16:05:35.798410
+Finish: 2025-03-22 16:05:36.040936
+Passes: 
+	Command being timed: "./bin/main RUN_ALGO 18771 198050 ./input/ArxAP/download.tsv.ca-AstroPh/ca-AstroPh/out.ca-AstroPh 2 2 10"
+	User time (seconds): 0.21
+	System time (seconds): 0.00
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.22
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 25840
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 1743
+	Voluntary context switches: 0
+	Involuntary context switches: 5
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0
+
+Iteration 4/5
+Init: 2025-03-22 16:05:36.041129
+Finish: 2025-03-22 16:05:36.283595
+Passes: 
+	Command being timed: "./bin/main RUN_ALGO 18771 198050 ./input/ArxAP/download.tsv.ca-AstroPh/ca-AstroPh/out.ca-AstroPh 2 2 10"
+	User time (seconds): 0.21
+	System time (seconds): 0.00
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.21
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 25840
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 1743
+	Voluntary context switches: 0
+	Involuntary context switches: 4
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0
+
+Iteration 5/5
+Init: 2025-03-22 16:05:36.283857
+Finish: 2025-03-22 16:05:36.581481
+Passes: 
+	Command being timed: "./bin/main RUN_ALGO 18771 198050 ./input/ArxAP/download.tsv.ca-AstroPh/ca-AstroPh/out.ca-AstroPh 2 2 10"
+	User time (seconds): 0.22
+	System time (seconds): 0.00
+	Percent of CPU this job got: 90%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.25
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 32896
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 2184
+	Voluntary context switches: 0
+	Involuntary context switches: 522
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0
+

@@ -1,0 +1,162 @@
+Init: 2025-03-22 16:06:39.288408
+Iteration 1/5
+Init: 2025-03-22 16:06:39.288902
+Finish: 2025-03-22 16:06:39.366390
+Passes: Running classicalIterativeDFS
+Size of adjList: 450528
+Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	
+Size of dfsTree: 8
+
+	Command being timed: "./bin/main RUN_ALGO 18771 198050 ./input/ArxAP/download.tsv.ca-AstroPh/ca-AstroPh/out.ca-AstroPh 2 N 11"
+	User time (seconds): 0.06
+	System time (seconds): 0.00
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.06
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 8960
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 3
+	Minor (reclaiming a frame) page faults: 685
+	Voluntary context switches: 3
+	Involuntary context switches: 13
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0
+
+Iteration 2/5
+Init: 2025-03-22 16:06:39.366652
+Finish: 2025-03-22 16:06:39.444237
+Passes: Running classicalIterativeDFS
+Size of adjList: 450528
+Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	
+Size of dfsTree: 8
+
+	Command being timed: "./bin/main RUN_ALGO 18771 198050 ./input/ArxAP/download.tsv.ca-AstroPh/ca-AstroPh/out.ca-AstroPh 2 N 11"
+	User time (seconds): 0.06
+	System time (seconds): 0.00
+	Percent of CPU this job got: 96%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.06
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 8736
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 2
+	Minor (reclaiming a frame) page faults: 673
+	Voluntary context switches: 0
+	Involuntary context switches: 61
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0
+
+Iteration 3/5
+Init: 2025-03-22 16:06:39.444516
+Finish: 2025-03-22 16:06:39.516187
+Passes: Running classicalIterativeDFS
+Size of adjList: 450528
+Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	
+Size of dfsTree: 8
+
+	Command being timed: "./bin/main RUN_ALGO 18771 198050 ./input/ArxAP/download.tsv.ca-AstroPh/ca-AstroPh/out.ca-AstroPh 2 N 11"
+	User time (seconds): 0.06
+	System time (seconds): 0.00
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.06
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 8848
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 681
+	Voluntary context switches: 0
+	Involuntary context switches: 10
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0
+
+Iteration 4/5
+Init: 2025-03-22 16:06:39.516434
+Finish: 2025-03-22 16:06:39.593477
+Passes: Running classicalIterativeDFS
+Size of adjList: 450528
+Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	
+Size of dfsTree: 8
+
+	Command being timed: "./bin/main RUN_ALGO 18771 198050 ./input/ArxAP/download.tsv.ca-AstroPh/ca-AstroPh/out.ca-AstroPh 2 N 11"
+	User time (seconds): 0.06
+	System time (seconds): 0.00
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.06
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 8832
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 680
+	Voluntary context switches: 0
+	Involuntary context switches: 6
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0
+
+Iteration 5/5
+Init: 2025-03-22 16:06:39.593768
+Finish: 2025-03-22 16:06:39.670573
+Passes: Running classicalIterativeDFS
+Size of adjList: 450528
+Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	Size of Stack: 48	
+Size of dfsTree: 8
+
+	Command being timed: "./bin/main RUN_ALGO 18771 198050 ./input/ArxAP/download.tsv.ca-AstroPh/ca-AstroPh/out.ca-AstroPh 2 N 11"
+	User time (seconds): 0.06
+	System time (seconds): 0.00
+	Percent of CPU this job got: 96%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.06
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 8928
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 686
+	Voluntary context switches: 0
+	Involuntary context switches: 24
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0
+
+Finish: 2025-03-22 16:06:39.670798
