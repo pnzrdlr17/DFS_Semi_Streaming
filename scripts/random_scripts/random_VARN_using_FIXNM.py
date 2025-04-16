@@ -18,7 +18,8 @@ def run_experiments(iterations, seed_token, sparsity, graph_type):
 
     Path(output_dir).mkdir(parents=True, exist_ok=True)
 
-    n_values = list(range(10, 101, 10)) + list(range(150, 550, 50)) + list(range(600, 1100, 100)) + list(range(1200, 2200, 200)) + list(range(2500, 5500, 500)) + list(range(6000, 11000, 1000))
+    # n_values = list(range(10, 101, 10)) + list(range(150, 550, 50)) + list(range(600, 1100, 100)) + list(range(1200, 2200, 200)) + list(range(2500, 5500, 500)) + list(range(6000, 11000, 1000))
+    n_values = list(range(10, 100, 10)) + list(range(100, 1001, 50)) 
 
     # Add a timestamped directory for each run
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -87,24 +88,24 @@ def run_experiments(iterations, seed_token, sparsity, graph_type):
                 # Write data to CSV
                 csvwriter.writerow([n, avg_time, memory, avg_passes])
 
-        if (sparsity == 2):
-            m = int(n * math.log2(n))
-        elif (sparsity == 3):
-            m = int(n * math.sqrt(n))
-        elif (sparsity == 4):
-            m = int((n * (n - 1)) / 2)
-        try:
-            dest = f"/media/user/D2B860A9B8608DB3/UndirectedGraphs/RandomGraphs/VARN_{graph_type}_{sparsity_label[sparsity]}_iter_{iterations}_seed_{seed_token}/"
-            Path(dest).mkdir(parents=True, exist_ok=True)
-            subprocess.run(
-                f"mv input/random_graphs/graph_{n}_{m}_{graph_type}_* "
-                f"{dest}",
-                shell=True,
-                check=True
-            ) # Move the used graphs to the HDD
-        except subprocess.CalledProcessError as e:
-            print(f"Error moving graphs for VARM with N={n}, M={m}: {e}")
-            continue
+        # if (sparsity == 2):
+        #     m = int(n * math.log2(n))
+        # elif (sparsity == 3):
+        #     m = int(n * math.sqrt(n))
+        # elif (sparsity == 4):
+        #     m = int((n * (n - 1)) / 2)
+        # try:
+        #     dest = f"/media/user/D2B860A9B8608DB3/UndirectedGraphs/RandomGraphs/VARN_{graph_type}_{sparsity_label[sparsity]}_iter_{iterations}_seed_{seed_token}/"
+        #     Path(dest).mkdir(parents=True, exist_ok=True)
+        #     subprocess.run(
+        #         f"mv input/random_graphs/graph_{n}_{m}_{graph_type}_* "
+        #         f"{dest}",
+        #         shell=True,
+        #         check=True
+        #     ) # Move the used graphs to the HDD
+        # except subprocess.CalledProcessError as e:
+        #     print(f"Error moving graphs for VARN with N={n}, M={m}: {e}")
+        #     continue
 
     for csvfile in file_objects.values():
         csvfile.close()
@@ -114,14 +115,15 @@ if __name__ == "__main__":
     parser.add_argument(
         "-i", "--iterations",
         type=int,
-        default=1,
+        default=100,
         help="Number of iterations to run for each combination (default: 1)"
     )
     parser.add_argument(
         "-s", "--seed-token",
         type=int,
         required=True,
-        help="Seed token to generate random seeds"
+        help="Seed token to generate random seeds",
+        default=1729
     )
     parser.add_argument(
         "-sp", "--sparsity",
