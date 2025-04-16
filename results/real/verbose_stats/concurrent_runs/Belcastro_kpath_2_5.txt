@@ -1,0 +1,292 @@
+Init: 2025-04-16 03:59:26.454790
+Iteration 1/10
+Init: 2025-04-16 03:59:26.454908
+Finish: 2025-04-16 04:05:05.491687
+Passes: 128
+
+	Command being timed: "./bin/main RUN_ALGO 14022 9027024 ./input/Belcastro/belcastro_n_14022_m_9027024.edg 2 2 5"
+	User time (seconds): 334.93
+	System time (seconds): 4.06
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:39.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13312
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2880
+	Voluntary context switches: 1
+	Involuntary context switches: 345
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Iteration 2/10
+Init: 2025-04-16 04:05:05.491831
+Finish: 2025-04-16 04:10:53.256128
+Passes: 128
+
+	Command being timed: "./bin/main RUN_ALGO 14022 9027024 ./input/Belcastro/belcastro_n_14022_m_9027024.edg 2 2 5"
+	User time (seconds): 343.52
+	System time (seconds): 4.22
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:47.74
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13312
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2881
+	Voluntary context switches: 1
+	Involuntary context switches: 101
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Iteration 3/10
+Init: 2025-04-16 04:10:53.256424
+Finish: 2025-04-16 04:16:38.652261
+Passes: 128
+
+	Command being timed: "./bin/main RUN_ALGO 14022 9027024 ./input/Belcastro/belcastro_n_14022_m_9027024.edg 2 2 5"
+	User time (seconds): 341.15
+	System time (seconds): 4.22
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:45.38
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13312
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2881
+	Voluntary context switches: 1
+	Involuntary context switches: 193
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Iteration 4/10
+Init: 2025-04-16 04:16:38.652410
+Finish: 2025-04-16 04:22:25.747537
+Passes: 128
+
+	Command being timed: "./bin/main RUN_ALGO 14022 9027024 ./input/Belcastro/belcastro_n_14022_m_9027024.edg 2 2 5"
+	User time (seconds): 343.06
+	System time (seconds): 4.01
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:47.08
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13312
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2882
+	Voluntary context switches: 1
+	Involuntary context switches: 279
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Iteration 5/10
+Init: 2025-04-16 04:22:25.747670
+Finish: 2025-04-16 04:27:54.933008
+Passes: 128
+
+	Command being timed: "./bin/main RUN_ALGO 14022 9027024 ./input/Belcastro/belcastro_n_14022_m_9027024.edg 2 2 5"
+	User time (seconds): 325.07
+	System time (seconds): 4.08
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:29.16
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13312
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2883
+	Voluntary context switches: 1
+	Involuntary context switches: 176
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Iteration 6/10
+Init: 2025-04-16 04:27:54.933255
+Finish: 2025-04-16 04:33:38.553462
+Passes: 128
+
+	Command being timed: "./bin/main RUN_ALGO 14022 9027024 ./input/Belcastro/belcastro_n_14022_m_9027024.edg 2 2 5"
+	User time (seconds): 339.52
+	System time (seconds): 4.05
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:43.58
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13312
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2880
+	Voluntary context switches: 1
+	Involuntary context switches: 209
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Iteration 7/10
+Init: 2025-04-16 04:33:38.553626
+Finish: 2025-04-16 04:39:07.185540
+Passes: 128
+
+	Command being timed: "./bin/main RUN_ALGO 14022 9027024 ./input/Belcastro/belcastro_n_14022_m_9027024.edg 2 2 5"
+	User time (seconds): 325.24
+	System time (seconds): 3.37
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:28.62
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13312
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2880
+	Voluntary context switches: 0
+	Involuntary context switches: 248
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Iteration 8/10
+Init: 2025-04-16 04:39:07.185709
+Finish: 2025-04-16 04:44:50.063645
+Passes: 128
+
+	Command being timed: "./bin/main RUN_ALGO 14022 9027024 ./input/Belcastro/belcastro_n_14022_m_9027024.edg 2 2 5"
+	User time (seconds): 339.50
+	System time (seconds): 3.35
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:42.86
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13312
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2882
+	Voluntary context switches: 1
+	Involuntary context switches: 200
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Iteration 9/10
+Init: 2025-04-16 04:44:50.063810
+Finish: 2025-04-16 04:50:32.589044
+Passes: 128
+
+	Command being timed: "./bin/main RUN_ALGO 14022 9027024 ./input/Belcastro/belcastro_n_14022_m_9027024.edg 2 2 5"
+	User time (seconds): 339.22
+	System time (seconds): 3.26
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:42.48
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13312
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2882
+	Voluntary context switches: 1
+	Involuntary context switches: 110
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Iteration 10/10
+Init: 2025-04-16 04:50:32.589255
+Finish: 2025-04-16 04:56:09.813826
+Passes: 128
+
+	Command being timed: "./bin/main RUN_ALGO 14022 9027024 ./input/Belcastro/belcastro_n_14022_m_9027024.edg 2 2 5"
+	User time (seconds): 333.79
+	System time (seconds): 3.39
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:37.19
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13312
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2882
+	Voluntary context switches: 1
+	Involuntary context switches: 205
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Finish: 2025-04-16 04:56:09.813958

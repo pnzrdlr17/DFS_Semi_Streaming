@@ -1,0 +1,292 @@
+Init: 2025-04-16 11:41:06.560897
+Iteration 1/10
+Init: 2025-04-16 11:41:06.561058
+Finish: 2025-04-16 11:47:38.476654
+Passes: 3
+
+	Command being timed: "./bin/main RUN_ALGO 334863 925872 ./input/Amazon/download.tsv.com-amazon/com-amazon/out.com-amazon 3 2 1"
+	User time (seconds): 391.58
+	System time (seconds): 0.26
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:31.87
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 154624
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 38729
+	Voluntary context switches: 1
+	Involuntary context switches: 344
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Iteration 2/10
+Init: 2025-04-16 11:47:38.476821
+Finish: 2025-04-16 11:54:06.159672
+Passes: 3
+
+	Command being timed: "./bin/main RUN_ALGO 334863 925872 ./input/Amazon/download.tsv.com-amazon/com-amazon/out.com-amazon 3 2 1"
+	User time (seconds): 387.37
+	System time (seconds): 0.24
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:27.64
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 156672
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 38730
+	Voluntary context switches: 1
+	Involuntary context switches: 446
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Iteration 3/10
+Init: 2025-04-16 11:54:06.159847
+Finish: 2025-04-16 12:00:34.448490
+Passes: 3
+
+	Command being timed: "./bin/main RUN_ALGO 334863 925872 ./input/Amazon/download.tsv.com-amazon/com-amazon/out.com-amazon 3 2 1"
+	User time (seconds): 388.00
+	System time (seconds): 0.24
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:28.26
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 155648
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 38729
+	Voluntary context switches: 1
+	Involuntary context switches: 391
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Iteration 4/10
+Init: 2025-04-16 12:00:34.448662
+Finish: 2025-04-16 12:07:01.999530
+Passes: 3
+
+	Command being timed: "./bin/main RUN_ALGO 334863 925872 ./input/Amazon/download.tsv.com-amazon/com-amazon/out.com-amazon 3 2 1"
+	User time (seconds): 387.26
+	System time (seconds): 0.24
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:27.52
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 156672
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 38729
+	Voluntary context switches: 1
+	Involuntary context switches: 379
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Iteration 5/10
+Init: 2025-04-16 12:07:01.999705
+Finish: 2025-04-16 12:13:30.652985
+Passes: 3
+
+	Command being timed: "./bin/main RUN_ALGO 334863 925872 ./input/Amazon/download.tsv.com-amazon/com-amazon/out.com-amazon 3 2 1"
+	User time (seconds): 388.36
+	System time (seconds): 0.24
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:28.62
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 156672
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 38729
+	Voluntary context switches: 1
+	Involuntary context switches: 382
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Iteration 6/10
+Init: 2025-04-16 12:13:30.653238
+Finish: 2025-04-16 12:19:57.436004
+Passes: 3
+
+	Command being timed: "./bin/main RUN_ALGO 334863 925872 ./input/Amazon/download.tsv.com-amazon/com-amazon/out.com-amazon 3 2 1"
+	User time (seconds): 386.50
+	System time (seconds): 0.22
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:26.77
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 156672
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 38729
+	Voluntary context switches: 1
+	Involuntary context switches: 557
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Iteration 7/10
+Init: 2025-04-16 12:19:57.436292
+Finish: 2025-04-16 12:26:58.490565
+Passes: 3
+
+	Command being timed: "./bin/main RUN_ALGO 334863 925872 ./input/Amazon/download.tsv.com-amazon/com-amazon/out.com-amazon 3 2 1"
+	User time (seconds): 420.54
+	System time (seconds): 0.45
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 7:01.02
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 153600
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 106696
+	Voluntary context switches: 1
+	Involuntary context switches: 541
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Iteration 8/10
+Init: 2025-04-16 12:26:58.490731
+Finish: 2025-04-16 12:33:26.689913
+Passes: 3
+
+	Command being timed: "./bin/main RUN_ALGO 334863 925872 ./input/Amazon/download.tsv.com-amazon/com-amazon/out.com-amazon 3 2 1"
+	User time (seconds): 387.91
+	System time (seconds): 0.25
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:28.18
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 156672
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 38730
+	Voluntary context switches: 1
+	Involuntary context switches: 405
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Iteration 9/10
+Init: 2025-04-16 12:33:26.690105
+Finish: 2025-04-16 12:39:55.071703
+Passes: 3
+
+	Command being timed: "./bin/main RUN_ALGO 334863 925872 ./input/Amazon/download.tsv.com-amazon/com-amazon/out.com-amazon 3 2 1"
+	User time (seconds): 388.08
+	System time (seconds): 0.25
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:28.33
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 156672
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 38728
+	Voluntary context switches: 1
+	Involuntary context switches: 306
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Iteration 10/10
+Init: 2025-04-16 12:39:55.071925
+Finish: 2025-04-16 12:46:23.161063
+Passes: 3
+
+	Command being timed: "./bin/main RUN_ALGO 334863 925872 ./input/Amazon/download.tsv.com-amazon/com-amazon/out.com-amazon 3 2 1"
+	User time (seconds): 387.79
+	System time (seconds): 0.25
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:28.05
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 156672
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 38730
+	Voluntary context switches: 1
+	Involuntary context switches: 309
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Finish: 2025-04-16 12:46:23.161293
