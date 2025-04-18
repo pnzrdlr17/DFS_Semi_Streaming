@@ -40,6 +40,8 @@ algorithms = ["kpath", "klev"]
 heuristics = ["0", "1", "2", "N"]
 k_values = ["1", "2", "5", "10", "C"]
 
+results_dir = "results/real/avg_filtered"
+
 # Format n and m values
 def format_number(value):
     if value >= 1_000_000:
@@ -120,7 +122,7 @@ def generate_latex_table(group, metric, output_dir):
 
             for algo in algorithms:
                 for k in k_values:
-                    file_name = os.path.join("results/real/table_data", f"{label}_{algo}_{heuristic}_{k}.txt")
+                    file_name = os.path.join(results_dir, f"{label}_{algo}_{heuristic}_{k}.txt")
                     if os.path.exists(file_name):
                         with open(file_name, "r") as data_file:
                             data = data_file.readline().strip()
@@ -135,8 +137,8 @@ def generate_latex_table(group, metric, output_dir):
             latex_content.append("& & &  & Red$\%$ ")
             for algo in algorithms:
                 for k in k_values:
-                    file_name_0 = os.path.join("results/real/table_data", f"{label}_{algo}_0_{k}.txt")
-                    file_name_N = os.path.join("results/real/table_data", f"{label}_{algo}_N_{k}.txt")
+                    file_name_0 = os.path.join(results_dir, f"{label}_{algo}_0_{k}.txt")
+                    file_name_N = os.path.join(results_dir, f"{label}_{algo}_N_{k}.txt")
                     if os.path.exists(file_name_0) and os.path.exists(file_name_N):
                         with open(file_name_0, "r") as data_file_0, open(file_name_N, "r") as data_file_N:
                             data_0 = data_file_0.readline().strip()
