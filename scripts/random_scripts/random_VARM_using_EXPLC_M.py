@@ -7,8 +7,8 @@ from datetime import datetime
 
 def run_experiments_n_10000(iterations, seed_token, graph_type):
     output_dir = f"./results/random/VARM/{graph_type}"
-    # n = 10000
-    n = 1000
+    n = 10000
+    # n = 1000
     variants = ["0", "N"]
     algorithms = {"kPath": "2", "kLev":"3"}
     k_values = [2, 5, 10]
@@ -18,8 +18,10 @@ def run_experiments_n_10000(iterations, seed_token, graph_type):
     Path(output_dir).mkdir(parents=True, exist_ok=True)
 
     # m_values = [100, 500, 1000] + list(range(2_500, 10_000, 2_500)) + list(range(10_000, 30_000, 5_000)) + list(range(30_000, 60_000, 10_000)) + [75_000] + list(range(100_000, 500_000, 100_000)) + [500_000, 750_000, 1_000_000] + list(range(2_500_000, 10_000_000, 2_500_000)) + [10_000_000, 25_000_000, 49_995_000]
-    m_values = list(range(100, 1000, 100)) + list(range(1000, 20000, 1000)) + list(range(20000, 100000, 10000)) + list(range(100000, 400001, 100000)) + [499500]
+    # m_values = list(range(100, 1000, 100)) + list(range(1000, 20000, 1000)) + list(range(20000, 100000, 10000)) + list(range(100000, 400001, 100000)) + [499500]
     
+    m_values = list(range(1000, 10001, 1000)) + list(range(12_500, 25_001, 2_500)) + list(range(30_000, 100_000, 10_000)) + list(range(100_000, 1_000_001, 100_000)) + list(range(2_000_000, 10_000_000, 2_000_000)) + list(range(10_000_000, 40_000_001, 5_000_000)) + [49_995_000]
+
     # Add a timestamped directory for each run
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     kLev_output_dir = os.path.join(output_dir, f"kLev_N_10000_seed_{seed_token}_iter_{iterations}_{timestamp}")

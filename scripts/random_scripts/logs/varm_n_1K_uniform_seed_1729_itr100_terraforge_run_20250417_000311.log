@@ -1,0 +1,3 @@
+usage: random_VARN_using_FIXNM.py [-h] [-i ITERATIONS] -s SEED_TOKEN -sp
+                                  SPARSITY -g GRAPH_TYPE
+random_VARN_using_FIXNM.py: error: the following arguments are required: -sp/--sparsity

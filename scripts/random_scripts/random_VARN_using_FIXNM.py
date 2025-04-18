@@ -19,7 +19,9 @@ def run_experiments(iterations, seed_token, sparsity, graph_type):
     Path(output_dir).mkdir(parents=True, exist_ok=True)
 
     # n_values = list(range(10, 101, 10)) + list(range(150, 550, 50)) + list(range(600, 1100, 100)) + list(range(1200, 2200, 200)) + list(range(2500, 5500, 500)) + list(range(6000, 11000, 1000))
-    n_values = list(range(10, 100, 10)) + list(range(100, 1001, 50)) 
+    # n_values = list(range(10, 100, 10)) + list(range(100, 1001, 50)) 
+
+    n_values = list(range(10, 100, 10)) + list(range(100, 1001, 100)) + list(range(1250, 2501, 250)) + list(range(3000, 5001, 500)) + list(range(6000, 10001, 1000))
 
     # Add a timestamped directory for each run
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
