@@ -1,0 +1,10 @@
+Iteration 1/10 for Graph Belcastro running kpath0 with k=644...
+    Passes: 3, Time/Memory: 11.83,854016, Output: ['3']
+Traceback (most recent call last):
+  File "/home/shahbazk/Projects/DFS_Semi_Streaming/scripts/get_real_time_memory_passes/average_concurrent_runs.py", line 160, in <module>
+    run_experiments(args.algorithm, args.iterations, args.output_dir)
+  File "/home/shahbazk/Projects/DFS_Semi_Streaming/scripts/get_real_time_memory_passes/average_concurrent_runs.py", line 138, in run_experiments
+    k_experiments(algorithm,iterations, graph, output_dir)
+  File "/home/shahbazk/Projects/DFS_Semi_Streaming/scripts/get_real_time_memory_passes/average_concurrent_runs.py", line 118, in k_experiments
+    write_to_file(f"{avg_time},{avg_mem},{pass_count},{datetime.now()}", raw_file, "append") # append
+UnboundLocalError: local variable 'avg_time' referenced before assignment

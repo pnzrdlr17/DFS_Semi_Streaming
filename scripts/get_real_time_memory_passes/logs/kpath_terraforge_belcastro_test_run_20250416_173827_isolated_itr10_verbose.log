@@ -1,0 +1,4 @@
+  File "/home/shahbazk/Projects/DFS_Semi_Streaming/scripts/get_real_time_memory_passes/average_concurrent_runs.py", line 117
+    write_to_file(f"{time},{memory},{passes},{datetime.now().strftime("%Y%m%d_%H%M%S")}\n", raw_file, "append") # append
+                                                                       ^
+SyntaxError: f-string: unmatched '('

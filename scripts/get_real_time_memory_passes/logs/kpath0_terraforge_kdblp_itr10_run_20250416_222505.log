@@ -1,0 +1,9 @@
+Iteration 1/10 for Graph KonectDblp running kpath0 with k=2...
+Traceback (most recent call last):
+  File "/home/shahbazk/Projects/DFS_Semi_Streaming/scripts/get_real_time_memory_passes/average_concurrent_runs.py", line 160, in <module>
+    
+  File "/home/shahbazk/Projects/DFS_Semi_Streaming/scripts/get_real_time_memory_passes/average_concurrent_runs.py", line 138, in run_experiments
+    if algorithm == "kpath" or algorithm == "klev":
+  File "/home/shahbazk/Projects/DFS_Semi_Streaming/scripts/get_real_time_memory_passes/average_concurrent_runs.py", line 102, in k_experiments
+    # Execute the binary
+ValueError: too many values to unpack (expected 3)

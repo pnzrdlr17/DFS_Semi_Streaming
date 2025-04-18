@@ -1,0 +1,32 @@
+Iteration 1/5 for Graph LiveJournal running klev0 with k=10...
+    Passes: , Time/Memory: Error: File does not exist: ./input/LiveJournal/live_journal_n_3997962_m_34681189_5:.edg
+Command exited with non-zero status 1
+0.00,3072, Output: ['']
+Error parsing time/memory for LiveJournal, variant 0, k=10: could not convert string to float: 'Error: File does not exist: ./input/LiveJournal/live_journal_n_3997962_m_34681189_5:.edg\nCommand exited with non-zero status 1\n0.00'
+Error running graph LiveJournal, variant 0, k=10
+Iteration 2/5 for Graph LiveJournal running klev0 with k=10...
+    Passes: , Time/Memory: Error: File does not exist: ./input/LiveJournal/live_journal_n_3997962_m_34681189_5:.edg
+Command exited with non-zero status 1
+0.00,3072, Output: ['']
+Error parsing time/memory for LiveJournal, variant 0, k=10: could not convert string to float: 'Error: File does not exist: ./input/LiveJournal/live_journal_n_3997962_m_34681189_5:.edg\nCommand exited with non-zero status 1\n0.00'
+Error running graph LiveJournal, variant 0, k=10
+Iteration 3/5 for Graph LiveJournal running klev0 with k=10...
+    Passes: , Time/Memory: Error: File does not exist: ./input/LiveJournal/live_journal_n_3997962_m_34681189_5:.edg
+Command exited with non-zero status 1
+0.00,3072, Output: ['']
+Error parsing time/memory for LiveJournal, variant 0, k=10: could not convert string to float: 'Error: File does not exist: ./input/LiveJournal/live_journal_n_3997962_m_34681189_5:.edg\nCommand exited with non-zero status 1\n0.00'
+Error running graph LiveJournal, variant 0, k=10
+Iteration 4/5 for Graph LiveJournal running klev0 with k=10...
+    Passes: , Time/Memory: Error: File does not exist: ./input/LiveJournal/live_journal_n_3997962_m_34681189_5:.edg
+Command exited with non-zero status 1
+0.00,3072, Output: ['']
+Error parsing time/memory for LiveJournal, variant 0, k=10: could not convert string to float: 'Error: File does not exist: ./input/LiveJournal/live_journal_n_3997962_m_34681189_5:.edg\nCommand exited with non-zero status 1\n0.00'
+Error running graph LiveJournal, variant 0, k=10
+Iteration 5/5 for Graph LiveJournal running klev0 with k=10...
+    Passes: , Time/Memory: Error: File does not exist: ./input/LiveJournal/live_journal_n_3997962_m_34681189_5:.edg
+Command exited with non-zero status 1
+0.00,3072, Output: ['']
+Error parsing time/memory for LiveJournal, variant 0, k=10: could not convert string to float: 'Error: File does not exist: ./input/LiveJournal/live_journal_n_3997962_m_34681189_5:.edg\nCommand exited with non-zero status 1\n0.00'
+Error running graph LiveJournal, variant 0, k=10
+No valid runs for graph LiveJournal, variant 0, k=10
+Results for LiveJournal running klev0 saved to ./results/real/average_concurrent_runs
