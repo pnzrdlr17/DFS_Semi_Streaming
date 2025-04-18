@@ -6,22 +6,22 @@
 Dataset & $n$ & $m$ & $m/n$ & Heuristic & $k=1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$ & $\left\lceil m/n\right\rceil$\\
 \hline
 \multirow{4}{*}{Orkut} & \multirow{4}{*}{3.07M} & \multirow{4}{*}{117M} & \multirow{4}{*}{38.14}
-& \texttt{kPath0} & T & T & 2.50h & 2.28h & 2.66h & 1.67h & 1.82h & 1.13h & 2.07h & 1.92h & 2.39h \\
-& & &  & \texttt{kPath1} & T & 2.16h & 1.75h & 1.76h & 1.70h & 1.51h & 2.15h & 1.84h & 3.15h & 2.74h & 1.72m \\
-& & &  & \texttt{kPath2} & T & 2.58h & 2.21h & 2.56h & 3.20h & 2.84h & 2.75h & 2.92h & 2.30h & 1.51h & 54.8s \\
-& & &  & \texttt{kPathN} & 3.94h & 2.02h & 1.48h & 48.8m & 1.33h & 47.5m & 45.6m & 38.4m & 1.20h & 45.0m & 35.3s \\
+& \texttt{kPath0} & - & - & - & - & - & - & - & - & - & - & - \\
+& & &  & \texttt{kPath1} & - & - & - & - & - & - & - & - & - & - & 56.3s \\
+& & &  & \texttt{kPath2} & - & - & - & - & - & - & - & - & - & - & 55.6s \\
+& & &  & \texttt{kPathN} & - & - & - & - & - & - & - & - & - & - & 56.2s \\
 \hline
 \multirow{4}{*}{LiveJournal} & \multirow{4}{*}{4.00M} & \multirow{4}{*}{34.7M} & \multirow{4}{*}{8.67}
-& \texttt{kPath0} & T & T & 8.17h & 8.08h & 8.47h & 2.62h & 3.11h & 4.98h & 7.81h & 42.3s & 5.08h \\
-& & &  & \texttt{kPath1} & T & 7.54h & 5.91h & 4.63h & 3.43h & 8.93h & 3.20h & 6.51h & 19.2s & 17.4s & 17.1s \\
-& & &  & \texttt{kPath2} & T & 9.69h & 8.39h & 4.57h & 4.00h & 1.63h & 2.10h & 3.26h & 12.5s & 12.2s & 11.0s \\
-& & &  & \texttt{kPathN} & T & 4.83h & 3.23h & 2.28h & 4.32h & 1.25h & 1.66h & 2.52h & 10.1s & 10.2s & 11.3s \\
+& \texttt{kPath0} & - & - & - & - & - & - & - & - & - & - & - \\
+& & &  & \texttt{kPath1} & - & - & - & - & - & - & - & - & 17.0s & 17.0s & 16.9s \\
+& & &  & \texttt{kPath2} & - & - & - & - & - & - & - & - & 16.9s & 16.8s & 17.0s \\
+& & &  & \texttt{kPathN} & - & - & - & - & - & - & - & - & 16.8s & 16.8s & 17.0s \\
 \hline
 \multirow{4}{*}{KonectDblp} & \multirow{4}{*}{7.58M} & \multirow{4}{*}{12.3M} & \multirow{4}{*}{1.62}
-& \texttt{kPath0} & T & T & T & T & 2.35h & 2.53h & 1.48h & 1.46h & 2.01h & 1.96h & T \\
-& & &  & \texttt{kPath1} & T & 7.31s & 7.09s & 7.59s & 7.03s & 7.10s & 7.21s & 7.76s & 7.20s & 7.12s & 7.15s \\
-& & &  & \texttt{kPath2} & T & 14.3s & 14.1s & 14.5s & 14.5s & 14.4s & 14.0s & 12.1s & 9.55s & 9.48s & 14.3s \\
-& & &  & \texttt{kPathN} & T & 17.9s & 22.2s & 18.1s & 22.3s & 16.1s & 23.0s & 22.3s & 18.0s & 17.9s & 22.5s \\
+& \texttt{kPath0} & - & - & - & - & - & - & - & - & - & - & - \\
+& & &  & \texttt{kPath1} & - & 9.42s & 9.42s & 9.40s & 9.45s & 9.44s & 9.39s & 9.43s & 9.42s & 9.52s & 9.45s \\
+& & &  & \texttt{kPath2} & - & 9.41s & 9.39s & 9.50s & 9.43s & 9.48s & 9.47s & 9.46s & 9.45s & 9.50s & 9.57s \\
+& & &  & \texttt{kPathN} & - & 9.64s & 9.45s & 9.45s & 9.52s & 9.50s & 9.46s & 9.57s & 9.49s & 9.38s & 9.38s \\
 \hline
 \end{tabular}}
 \caption{Time comparison for kPath algorithm on Large graphs.}
