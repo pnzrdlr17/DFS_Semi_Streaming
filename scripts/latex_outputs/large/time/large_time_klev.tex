@@ -6,22 +6,22 @@
 Dataset & $n$ & $m$ & $m/n$ & Heuristic & $k=1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$ & $\left\lceil m/n\right\rceil$\\
 \hline
 \multirow{4}{*}{Orkut} & \multirow{4}{*}{3.07M} & \multirow{4}{*}{117M} & \multirow{4}{*}{38.14}
-& \texttt{kLev0} & 2.71h & 3.10h & 3.87h & 3.36h & 3.48h & 3.70h & 3.51h & 2.24h & 1.55h & 1.53h & 1.83h \\
-& & &  & \texttt{kLev1} & 1.88h & 2.06h & 1.83h & 1.72h & 2.16h & 2.20h & 2.17h & 2.17h & 2.02h & 2.21h & 39.4s \\
-& & &  & \texttt{kLev2} & 2.36h & 1.97h & 2.20h & 1.65h & 2.04h & 1.80h & 1.60h & 1.71h & 1.66h & 1.69h & 36.6s \\
-& & &  & \texttt{kLevN} & 1.63h & 1.81h & 1.88h & 1.63h & 1.60h & 1.60h & 1.59h & 1.72h & 2.00h & 2.12h & 38.8s \\
+& \texttt{kLev0} & - & - & - & - & - & - & - & - & - & - & - \\
+& & &  & \texttt{kLev1} & - & - & - & - & - & - & - & - & - & - & 56.6s \\
+& & &  & \texttt{kLev2} & - & - & - & - & - & - & - & - & - & - & 56.2s \\
+& & &  & \texttt{kLevN} & - & - & - & - & - & - & - & - & - & 3.63h & 56.1s \\
 \hline
 \multirow{4}{*}{LiveJournal} & \multirow{4}{*}{4.00M} & \multirow{4}{*}{34.7M} & \multirow{4}{*}{8.67}
-& \texttt{kLev0} & 5.13h & 4.73h & 4.78h & 4.20h & 4.58h & 4.29h & 4.62h & 5.18h & 5.16h & 5.27h & 5.15h \\
-& & &  & \texttt{kLev1} & 5.00h & 4.13h & 3.94h & 4.18h & 3.63h & 3.87h & 3.76h & 3.87h & 11.7s & 11.8s & 10.5s \\
-& & &  & \texttt{kLev2} & 4.56h & 4.40h & 3.97h & 4.36h & 3.77h & 3.70h & 4.13h & 4.05h & 10.8s & 10.0s & 10.9s \\
-& & &  & \texttt{kLevN} & 4.65h & 4.64h & 4.34h & 4.52h & 4.05h & 4.08h & 4.16h & 4.08h & 11.4s & 11.5s & 11.9s \\
+& \texttt{kLev0} & - & - & - & - & - & - & - & - & - & - & - \\
+& & &  & \texttt{kLev1} & - & - & - & - & - & - & - & - & 16.8s & 16.8s & 16.9s \\
+& & &  & \texttt{kLev2} & - & - & - & - & - & - & - & - & 16.8s & 16.8s & 16.8s \\
+& & &  & \texttt{kLevN} & - & - & - & - & - & - & - & - & 16.9s & 17.1s & 17.0s \\
 \hline
 \multirow{4}{*}{KonectDblp} & \multirow{4}{*}{7.58M} & \multirow{4}{*}{12.3M} & \multirow{4}{*}{1.62}
-& \texttt{kLev0} & T & T & T & T & T & T & T & T & T & 11.7h & T \\
-& & &  & \texttt{kLev1} & 6.86h & 5.88s & 5.96s & 5.93s & 5.86s & 5.92s & 5.88s & 5.97s & 5.88s & 5.97s & 5.90s \\
-& & &  & \texttt{kLev2} & 4.92h & 5.94s & 5.87s & 5.96s & 6.04s & 5.89s & 5.99s & 5.54s & 5.96s & 5.94s & 6.00s \\
-& & &  & \texttt{kLevN} & 4.68h & 5.90s & 5.94s & 5.95s & 5.92s & 5.89s & 5.99s & 6.04s & 5.91s & 6.03s & 5.92s \\
+& \texttt{kLev0} & - & - & - & - & - & - & - & - & - & - & - \\
+& & &  & \texttt{kLev1} & - & 9.40s & 9.42s & 9.45s & 9.45s & 9.41s & 9.48s & 9.44s & 9.44s & 9.32s & 9.47s \\
+& & &  & \texttt{kLev2} & - & 9.39s & 9.41s & 9.39s & 9.39s & 9.48s & 9.55s & 9.40s & 9.49s & 9.46s & 9.44s \\
+& & &  & \texttt{kLevN} & - & 9.45s & 9.45s & 9.46s & 9.54s & 9.52s & 9.51s & 9.48s & 9.43s & 9.34s & 9.34s \\
 \hline
 \end{tabular}}
 \caption{Time comparison for kLev algorithm on Large graphs.}

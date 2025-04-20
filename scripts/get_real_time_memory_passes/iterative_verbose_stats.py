@@ -5,6 +5,7 @@ import signal
 from math import ceil
 from pathlib import Path
 from datetime import datetime
+import time
 
 # Define the graph dataset
 graphs = [
@@ -12,9 +13,9 @@ graphs = [
     # {"label": "AJazz", "n": 198, "m": 2742, "path": "./input/AJazz/download.tsv.arenas-jazz/arenas-jazz/out.arenas-jazz"},
     # {"label": "HM", "n": 2426, "m": 16631, "path": "./input/HM/download.tsv.petster-hamster/petster-hamster/out.petster-hamster"},
     {"label": "Belcastro", "n": 14022, "m": 9027024, "path": "./input/Belcastro/belcastro_n_14022_m_9027024.edg"},
-    {"label": "ArxAP", "n": 18771, "m": 198050, "path": "./input/ArxAP/download.tsv.ca-AstroPh/ca-AstroPh/out.ca-AstroPh"},
+    # {"label": "ArxAP", "n": 18771, "m": 198050, "path": "./input/ArxAP/download.tsv.ca-AstroPh/ca-AstroPh/out.ca-AstroPh"},
     # {"label": "AsCaida", "n": 26475, "m": 53381, "path": "./input/AsCaida/download.tsv.as-caida20071105/as-caida20071105/out.as-caida20071105"},
-    {"label": "BrightK", "n": 58228, "m": 214078, "path": "./input/BrightK/download.tsv.loc-brightkite_edges/loc-brightkite_edges/out.loc-brightkite_edges"},
+    # {"label": "BrightK", "n": 58228, "m": 214078, "path": "./input/BrightK/download.tsv.loc-brightkite_edges/loc-brightkite_edges/out.loc-brightkite_edges"},
     # {"label": "LMocha", "n": 104103, "m": 2193083, "path": "./input/LMocha/download.tsv.livemocha/livemocha/out.livemocha"},
     # {"label": "FlickrE", "n": 105938, "m": 2316948, "path": "./input/FlickrE/download.tsv.flickrEdges/flickrEdges/out.flickrEdges"},
     # {"label": "WordNet", "n": 146005, "m": 656999, "path": "./input/WordNet/download.tsv.wordnet-words/wordnet-words/out.wordnet-words"},
@@ -69,6 +70,12 @@ def write_to_file(output, output_file, mode):
     else:
         print("Invalid mode")
 
+# belcastro 2 n 10/5/2/1 260  
+# twitch 2 n 10/5/2/1 380
+# amazon 2 n 10/5/2/1 50
+# 690 ~ 10 hrs
+# 2*120 = 240 ~ 4 hrs
+
 def k_experiments(algorithm, iterations, graph, output_dir):
     label, n, m, input_path = graph["label"], graph["n"], graph["m"], graph["path"]
     variants = ["N", "2", "1", "0"]
@@ -92,6 +99,10 @@ def k_experiments(algorithm, iterations, graph, output_dir):
                 )
                 
                 write_to_file(f"Finish: {datetime.now()}\n" + output, output_file, "append") # append / overwrite
+
+                # Add a 30-second timeout after each run
+                print("Waiting for 30 seconds before the next run...")
+                time.sleep(30)
             
             write_to_file(f"Finish: {datetime.now()}\n", output_file, "append")
 

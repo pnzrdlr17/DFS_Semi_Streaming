@@ -6,22 +6,22 @@
 Dataset & $n$ & $m$ & $m/n$ & Heuristic & $k=1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$ & $\left\lceil m/n\right\rceil$\\
 \hline
 \multirow{4}{*}{Orkut} & \multirow{4}{*}{3.07M} & \multirow{4}{*}{117M} & \multirow{4}{*}{38.14}
-& \texttt{kPath0} & T & T & 1.74G & 2.01G & 2.30G & 2.57G & 2.86G & 3.14G & 3.41G & 3.69G & 11.8G \\
-& & &  & \texttt{kPath1} & T & 1.53G & 1.79G & 2.02G & 2.29G & 2.57G & 2.86G & 3.13G & 3.41G & 3.69G & 2.91G \\
-& & &  & \texttt{kPath2} & T & 1.45G & 1.85G & 2.17G & 2.35G & 2.60G & 2.90G & 3.15G & 3.41G & 3.69G & 2.91G \\
-& & &  & \texttt{kPathN} & 1.31G & 1.59G & 1.89G & 2.16G & 2.44G & 2.70G & 2.97G & 3.19G & 3.53G & 3.80G & 2.91G \\
+& \texttt{kPath0} & - & - & - & - & - & - & - & - & - & - & - \\
+& & &  & \texttt{kPath1} & - & - & - & - & - & - & - & - & - & - & 2.91G \\
+& & &  & \texttt{kPath2} & - & - & - & - & - & - & - & - & - & - & 2.91G \\
+& & &  & \texttt{kPathN} & - & - & - & - & - & - & - & - & - & - & 2.91G \\
 \hline
 \multirow{4}{*}{LiveJournal} & \multirow{4}{*}{4.00M} & \multirow{4}{*}{34.7M} & \multirow{4}{*}{8.67}
-& \texttt{kPath0} & T & T & 2.27G & 2.65G & 3.02G & 3.43G & 3.76G & 4.11G & 4.49G & 4.68G & 4.49G \\
-& & &  & \texttt{kPath1} & T & 1.91G & 2.34G & 2.69G & 3.02G & 3.40G & 3.78G & 4.12G & 1.27G & 1.27G & 1.27G \\
-& & &  & \texttt{kPath2} & T & 2.15G & 2.39G & 2.63G & 3.02G & 3.39G & 3.73G & 4.09G & 1.27G & 1.27G & 1.27G \\
-& & &  & \texttt{kPathN} & T & 2.04G & 2.42G & 2.64G & 3.01G & 3.40G & 3.74G & 4.09G & 1.27G & 1.27G & 1.27G \\
+& \texttt{kPath0} & - & - & - & - & - & - & - & - & - & - & - \\
+& & &  & \texttt{kPath1} & - & - & - & - & - & - & - & - & 1.27G & 1.27G & 1.27G \\
+& & &  & \texttt{kPath2} & - & - & - & - & - & - & - & - & 1.27G & 1.27G & 1.27G \\
+& & &  & \texttt{kPathN} & - & - & - & - & - & - & - & - & 1.27G & 1.27G & 1.27G \\
 \hline
 \multirow{4}{*}{KonectDblp} & \multirow{4}{*}{7.58M} & \multirow{4}{*}{12.3M} & \multirow{4}{*}{1.62}
-& \texttt{kPath0} & T & T & T & T & 3.71G & 3.71G & 3.71G & 3.71G & 3.71G & 3.71G & T \\
-& & &  & \texttt{kPath1} & T & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G \\
-& & &  & \texttt{kPath2} & T & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G \\
-& & &  & \texttt{kPathN} & T & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G \\
+& \texttt{kPath0} & - & - & - & - & - & - & - & - & - & - & - \\
+& & &  & \texttt{kPath1} & - & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G \\
+& & &  & \texttt{kPath2} & - & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G \\
+& & &  & \texttt{kPathN} & - & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G & 1.18G \\
 \hline
 \end{tabular}}
 \caption{Memory comparison for kPath algorithm on Large graphs.}
