@@ -1,0 +1,32 @@
+Iteration 1/5 for Graph RoadnetCA running kpath0 with k=2...
+    Passes: , Time/Memory: Error: File does not exist: ./input/RoadnetCA/roadnetCA_n_1965206_m_2766607.edg
+Command exited with non-zero status 1
+0.00,3072, Output: ['']
+Error parsing time/memory for RoadnetCA, variant 0, k=2: could not convert string to float: 'Error: File does not exist: ./input/RoadnetCA/roadnetCA_n_1965206_m_2766607.edg\nCommand exited with non-zero status 1\n0.00'
+Error running graph RoadnetCA, variant 0, k=2
+Iteration 2/5 for Graph RoadnetCA running kpath0 with k=2...
+    Passes: , Time/Memory: Error: File does not exist: ./input/RoadnetCA/roadnetCA_n_1965206_m_2766607.edg
+Command exited with non-zero status 1
+0.00,3072, Output: ['']
+Error parsing time/memory for RoadnetCA, variant 0, k=2: could not convert string to float: 'Error: File does not exist: ./input/RoadnetCA/roadnetCA_n_1965206_m_2766607.edg\nCommand exited with non-zero status 1\n0.00'
+Error running graph RoadnetCA, variant 0, k=2
+Iteration 3/5 for Graph RoadnetCA running kpath0 with k=2...
+    Passes: , Time/Memory: Error: File does not exist: ./input/RoadnetCA/roadnetCA_n_1965206_m_2766607.edg
+Command exited with non-zero status 1
+0.00,3072, Output: ['']
+Error parsing time/memory for RoadnetCA, variant 0, k=2: could not convert string to float: 'Error: File does not exist: ./input/RoadnetCA/roadnetCA_n_1965206_m_2766607.edg\nCommand exited with non-zero status 1\n0.00'
+Error running graph RoadnetCA, variant 0, k=2
+Iteration 4/5 for Graph RoadnetCA running kpath0 with k=2...
+    Passes: , Time/Memory: Error: File does not exist: ./input/RoadnetCA/roadnetCA_n_1965206_m_2766607.edg
+Command exited with non-zero status 1
+0.00,3072, Output: ['']
+Error parsing time/memory for RoadnetCA, variant 0, k=2: could not convert string to float: 'Error: File does not exist: ./input/RoadnetCA/roadnetCA_n_1965206_m_2766607.edg\nCommand exited with non-zero status 1\n0.00'
+Error running graph RoadnetCA, variant 0, k=2
+Iteration 5/5 for Graph RoadnetCA running kpath0 with k=2...
+    Passes: , Time/Memory: Error: File does not exist: ./input/RoadnetCA/roadnetCA_n_1965206_m_2766607.edg
+Command exited with non-zero status 1
+0.00,3072, Output: ['']
+Error parsing time/memory for RoadnetCA, variant 0, k=2: could not convert string to float: 'Error: File does not exist: ./input/RoadnetCA/roadnetCA_n_1965206_m_2766607.edg\nCommand exited with non-zero status 1\n0.00'
+Error running graph RoadnetCA, variant 0, k=2
+No valid runs for graph RoadnetCA, variant 0, k=2
+Results for RoadnetCA running kpath0 saved to ./results/real/average_concurrent_runs

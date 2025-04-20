@@ -1,0 +1,9 @@
+Iteration 1/5 for Graph KonectDblp running kpath1 with k=1...
+Traceback (most recent call last):
+  File "/home/shahbazk/Projects/DFS_Semi_Streaming/scripts/get_real_time_memory_passes/average_concurrent_runs.py", line 161, in <module>
+    run_experiments(args.algorithm, args.iterations, args.output_dir)
+  File "/home/shahbazk/Projects/DFS_Semi_Streaming/scripts/get_real_time_memory_passes/average_concurrent_runs.py", line 139, in run_experiments
+    k_experiments(algorithm, iterations, graph, output_dir)
+  File "/home/shahbazk/Projects/DFS_Semi_Streaming/scripts/get_real_time_memory_passes/average_concurrent_runs.py", line 103, in k_experiments
+    time, memory, passes = run_command(
+ValueError: too many values to unpack (expected 3)
