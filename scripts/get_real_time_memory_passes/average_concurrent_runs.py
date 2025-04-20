@@ -11,7 +11,7 @@ graphs = [
     # {"label": "CU", "n": 49, "m": 107, "path": "./input/CU/download.tsv.contiguous-usa/contiguous-usa/out.contiguous-usa"},
     # {"label": "AJazz", "n": 198, "m": 2742, "path": "./input/AJazz/download.tsv.arenas-jazz/arenas-jazz/out.arenas-jazz"},
     # {"label": "HM", "n": 2426, "m": 16631, "path": "./input/HM/download.tsv.petster-hamster/petster-hamster/out.petster-hamster"},
-    # {"label": "Belcastro", "n": 14022, "m": 9027024, "path": "./input/Belcastro/belcastro_n_14022_m_9027024.edg"},
+    # {"label": "Belcastro", "n": 14022, "m": 9027024, "path": "./input/Belcastro/belcastro_n_14022_m_9027024_2.edg"},
     # {"label": "ArxAP", "n": 18771, "m": 198050, "path": "./input/ArxAP/download.tsv.ca-AstroPh/ca-AstroPh/out.ca-AstroPh"},
     # {"label": "AsCaida", "n": 26475, "m": 53381, "path": "./input/AsCaida/download.tsv.as-caida20071105/as-caida20071105/out.as-caida20071105"},
     # {"label": "BrightK", "n": 58228, "m": 214078, "path": "./input/BrightK/download.tsv.loc-brightkite_edges/loc-brightkite_edges/out.loc-brightkite_edges"},
@@ -27,9 +27,9 @@ graphs = [
     # {"label": "Youtube", "n": 1134890, "m": 2987624, "path": "./input/Youtube/youtube_n_1134890_m_2987624.edg"},
     # {"label": "Skitter", "n": 1696415, "m": 11095298, "path": "./input/Skitter/skitter_n_1696415_m_11095298.edg"},
     # {"label": "RoadnetCA", "n": 1965206, "m": 2766607, "path": "./input/RoadnetCA/roadnetCA_n_1965206_m_2766607.edg"},
-    # {"label": "Orkut", "n": 3072441, "m": 117185083, "path": "./input/Orkut/orkut_graph_n_3072441_m_117185083.edg"},
-    # {"label": "LiveJournal", "n": 3997962, "m": 34681189, "path": "./input/LiveJournal/live_journal_n_3997962_m_34681189.edg"},
-    # {"label": "KonectDblp", "n": 7577304, "m": 12282059, "path": "./input/KonectDblp/konect_dblp_n_7577304_m_12282059.edg"},
+    # {"label": "Orkut", "n": 3072441, "m": 117185083, "path": "./input/Orkut/orkut_graph_n_3072441_m_117185083_5.edg"},
+    {"label": "LiveJournal", "n": 3997962, "m": 34681189, "path": "./input/LiveJournal/live_journal_n_3997962_m_34681189_20.edg"},
+    # {"label": "KonectDblp", "n": 7577304, "m": 12282059, "path": "./input/KonectDblp/konect_dblp_n_7577304_m_12282059_10.edg"},
     # {"label": "Friendster", "n": 65608366, "m": 1806067135, "path": "./input/Friendster/friendster_n_65608366_m_1806067135.edg"},
 ]
 
@@ -49,9 +49,11 @@ def run_command(command, label, algorithm, variant = None, k = 0):
 
     except subprocess.TimeoutExpired:
         os.killpg(os.getpgid(p.pid), signal.SIGTERM) # Kill the process and its children
-        return f"Timeout (12hrs) expired for graph {label}, {algorithm}{variant}, k={k}.\nProcess killed."
+        print(f"Timeout (12hrs) expired for graph {label}, {algorithm}{variant}, k={k}.\nProcess killed.")
+        return None, None, None
     except subprocess.CalledProcessError as e:
-        return f"Error running graph {label}, {algorithm}{variant}: {e}, k={k}"
+        print(f"Error running graph {label}, {algorithm}{variant}: {e}, k={k}")
+        return None, None, None
 
     # Parse the output
     stdout, stderr = p.communicate() # Get stdout/stderr
@@ -82,10 +84,12 @@ def write_to_file(output, output_file, mode):
 
 def k_experiments(algorithm, iterations, graph, output_dir):
     label, n, m, input_path = graph["label"], graph["n"], graph["m"], graph["path"]
-    variants = ["N", "2", "1", "0"]
+    variants = ["2"]
     
     for variant in variants:
-        for k in ["C", 10, 5, 2, 1]:
+        #for k in ["C", 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]:
+        #for k in [10, 5, 2, 1]:
+        for k in [1]:
             k_val = ceil(m / n) if k == "C" else k
             avg_file = os.path.join(output_dir, f"{label}_{algorithm}_{variant}_{k}.txt")
             raw_file = os.path.join(output_dir, f"{label}_{algorithm}_{variant}_{k}_raw.txt")
@@ -114,7 +118,7 @@ def k_experiments(algorithm, iterations, graph, output_dir):
                 pass_count = passes
 
                 # Write individual iteration data
-                write_to_file(f"{time},{memory},{passes},{datetime.now().strftime("%Y%m%d_%H%M%S")}\n", raw_file, "append") # append
+                write_to_file(f'{time},{memory},{passes},{datetime.now().strftime("%Y%m%d_%H%M%S")}\n', raw_file, "append") # append
 
             if len(times) == 0 or len(mems) == 0 or pass_count == 0:
                 print(f"No valid runs for graph {label}, variant {variant}, k={k_val}")
@@ -134,7 +138,7 @@ def run_experiments(algorithm, iterations, output_dir):
 
     for graph in graphs: # Loop over each graph
        if algorithm == "kpath" or algorithm == "klev":
-        k_experiments(algorithm,iterations, graph, output_dir)
+        k_experiments(algorithm, iterations, graph, output_dir)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run k-path or k-level algorithms on real graphs and capture time and memory data.")
