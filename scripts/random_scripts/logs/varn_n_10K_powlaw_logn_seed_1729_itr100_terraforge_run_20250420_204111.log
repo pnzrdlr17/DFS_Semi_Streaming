@@ -145,3 +145,13 @@ Running klev variant N with N=900, sparsity=2, seed=1729...
       Average Passes: 1.0, Time/Memory: 0.30,8192
 Running kpath variant 0 with N=1000, sparsity=2, seed=1729...
       Average Passes: 3.17, Time/Memory: 1.38,4096
+Graph already exists at: ./input/random_graphs/graph_2000_21931_POWLAW_6230961512046992311.txt
+Graph already exists at: ./input/random_graphs/graph_2000_21931_POWLAW_7871178979383552919.txt
+Graph already exists at: ./input/random_graphs/graph_2000_21931_POWLAW_5739955973604961613.txt
+Graph already exists at: ./input/random_graphs/graph_2000_21931_POWLAW_3881801951614183357.txt
+Graph already exists at: ./input/random_graphs/graph_2000_21931_POWLAW_7032710160631691991.txt
+Graph already exists at: ./input/random_graphs/graph_2000_21931_POWLAW_7599700178212337699.txt
+Graph already exists at: ./input/random_graphs/graph_2000_21931_POWLAW_1353182403971399009.txt
+Graph already exists at: ./input/random_graphs/graph_2000_21931_POWLAW_1070244953599069350.txt
+Graph already exists at: ./input/random_graphs/graph_2000_21931_POWLAW_6522163754831416203.txt
+Graph already exists at: ./input/random_graphs/graph_2000_21931_POWLAW_6938562734920028532.txt
