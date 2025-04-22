@@ -1,0 +1,11 @@
+Iteration 1/2 for Graph Orkut running kpathN with k=1...
+Timeout (12hrs) expired for graph Orkut, kpathN, k=1.
+Process killed.
+Error running graph Orkut, variant N, k=1
+Iteration 2/2 for Graph Orkut running kpathN with k=1...
+    Passes: , Time/Memory: Command terminated by signal 15
+11928.52,1452036, Output: ['']
+Error parsing time/memory for Orkut, variant N, k=1: could not convert string to float: 'Command terminated by signal 15\n11928.52'
+Error running graph Orkut, variant N, k=1
+No valid runs for graph Orkut, variant N, k=1
+Results for Orkut running kpathN saved to ./results/real/average_concurrent_runs

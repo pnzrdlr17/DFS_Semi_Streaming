@@ -1,0 +1,11 @@
+Iteration 1/2 for Graph KonectDblp running kpath1 with k=1...
+Timeout (12hrs) expired for graph KonectDblp, kpath1, k=1.
+Process killed.
+Error running graph KonectDblp, variant 1, k=1
+Iteration 2/2 for Graph KonectDblp running kpath1 with k=1...
+    Passes: , Time/Memory: Command terminated by signal 15
+10689.25,2981148, Output: ['']
+Error parsing time/memory for KonectDblp, variant 1, k=1: could not convert string to float: 'Command terminated by signal 15\n10689.25'
+Error running graph KonectDblp, variant 1, k=1
+No valid runs for graph KonectDblp, variant 1, k=1
+Results for KonectDblp running kpath1 saved to ./results/real/average_concurrent_runs
