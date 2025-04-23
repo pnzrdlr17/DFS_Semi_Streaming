@@ -1,0 +1,7 @@
+Iteration 1/1 for Graph KonectDblp running kpath0 with k=7...
+    Passes: , Time/Memory: Command terminated by signal 15
+13.92,3300352, Output: ['']
+Error parsing time/memory for KonectDblp, variant 0, k=7: could not convert string to float: 'Command terminated by signal 15\n13.92'
+Error running graph KonectDblp, variant 0, k=7
+No valid runs for graph KonectDblp, variant 0, k=7
+Results for KonectDblp running kpath0 saved to ./results/real/average_concurrent_runs
