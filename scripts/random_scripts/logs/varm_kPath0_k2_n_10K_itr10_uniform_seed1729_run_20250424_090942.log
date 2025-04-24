@@ -1,0 +1,13 @@
+Graph already exists at: ./input/random_graphs/graph_10000_35000000_UNIFORM_6230961512046992311.txt
+Graph already exists at: ./input/random_graphs/graph_10000_35000000_UNIFORM_7871178979383552919.txt
+Graph already exists at: ./input/random_graphs/graph_10000_35000000_UNIFORM_5739955973604961613.txt
+Graph already exists at: ./input/random_graphs/graph_10000_35000000_UNIFORM_3881801951614183357.txt
+Graph already exists at: ./input/random_graphs/graph_10000_35000000_UNIFORM_7032710160631691991.txt
+Graph already exists at: ./input/random_graphs/graph_10000_35000000_UNIFORM_7599700178212337699.txt
+Graph already exists at: ./input/random_graphs/graph_10000_35000000_UNIFORM_1353182403971399009.txt
+Graph already exists at: ./input/random_graphs/graph_10000_35000000_UNIFORM_1070244953599069350.txt
+Graph already exists at: ./input/random_graphs/graph_10000_35000000_UNIFORM_6522163754831416203.txt
+Graph already exists at: ./input/random_graphs/graph_10000_35000000_UNIFORM_6938562734920028532.txt
+Running VARM with 10 iterations, for N = 100 varying M from 1,000 to 49,995,000 and seed token 1729
+Running EXPLC_M with kPath0 for N=10000, M=35000000, k=2, seed=1729...
+      Average Passes: 20.7, Time/Memory: 1800.65,9216
