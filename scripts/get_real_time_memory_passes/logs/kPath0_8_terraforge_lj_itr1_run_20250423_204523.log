@@ -1,0 +1,6 @@
+Iteration 1/1 for Graph LiveJournal running kpath0 with k=8...
+Timeout (12hrs) expired for graph LiveJournal, kpath0, k=8.
+Process killed.
+Error running graph LiveJournal, variant 0, k=8
+No valid runs for graph LiveJournal, variant 0, k=8
+Results for LiveJournal running kpath0 saved to ./results/real/average_concurrent_runs

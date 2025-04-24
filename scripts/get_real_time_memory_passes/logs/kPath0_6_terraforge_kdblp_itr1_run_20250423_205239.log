@@ -1,0 +1,6 @@
+Iteration 1/1 for Graph KonectDblp running kpath0 with k=6...
+Timeout (12hrs) expired for graph KonectDblp, kpath0, k=6.
+Process killed.
+Error running graph KonectDblp, variant 0, k=6
+No valid runs for graph KonectDblp, variant 0, k=6
+Results for KonectDblp running kpath0 saved to ./results/real/average_concurrent_runs

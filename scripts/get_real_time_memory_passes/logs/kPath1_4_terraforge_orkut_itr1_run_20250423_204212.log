@@ -1,0 +1,6 @@
+Iteration 1/1 for Graph Orkut running kpath1 with k=4...
+Timeout (12hrs) expired for graph Orkut, kpath1, k=4.
+Process killed.
+Error running graph Orkut, variant 1, k=4
+No valid runs for graph Orkut, variant 1, k=4
+Results for Orkut running kpath1 saved to ./results/real/average_concurrent_runs
