@@ -1,0 +1,3 @@
+Iteration 1/1 for Graph LiveJournal running kpathN with k=4...
+    Passes: 4, Time/Memory: 20782.51,2751616, Output: ['4']
+Results for LiveJournal running kpathN saved to ./results/real/average_concurrent_runs
