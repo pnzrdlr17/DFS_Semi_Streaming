@@ -98,3 +98,6 @@ Graph already exists at: ./input/random_graphs/graph_10000_40000000_UNIFORM_7983
 Graph already exists at: ./input/random_graphs/graph_10000_40000000_UNIFORM_4940913311242578590.txt
 Graph already exists at: ./input/random_graphs/graph_10000_40000000_UNIFORM_2264398621601381987.txt
 Graph already exists at: ./input/random_graphs/graph_10000_40000000_UNIFORM_7632458674696225362.txt
+Running VARM with 100 iterations, for N = 100 varying M from 1,000 to 49,995,000 and seed token 1729
+Running EXPLC_M with kPath0 for N=10000, M=40000000, k=2, seed=1729...
+      Average Passes: 20.78, Time/Memory: 20761.12,9216
