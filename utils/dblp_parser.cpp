@@ -8,7 +8,7 @@
  *      ./dblp_parser <path_to_out.dblp-author>
  * 5. OR compile and run at once using:
  *      g++ -o dblp_parser dblp_parser.cpp && ./dblp_parser <path_to_out.dblp-author>
- * 6. You should get an output file with the name `output_roadnetCA_graph.edg` in accordance with the required format.
+ * 6. You should get an output file with the name `output_dblp_graph.edg` in accordance with the required format.
 */
 
 #include <iostream>

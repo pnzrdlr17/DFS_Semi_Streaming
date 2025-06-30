@@ -12,11 +12,11 @@ This document lists the sources for larger graph datasets used in this project a
    - Size: ~125MB compressed, ~500MB uncompressed.
    - Nodes: 3,997,962
    - Edges: 34,681,189
-3. [**Friendster social network**](https://snap.stanford.edu/data/com-Friendster.html): [Download Link](https://example.com/graph4)
+3. [**Friendster social network**](https://snap.stanford.edu/data/com-Friendster.html): [Download Link](https://snap.stanford.edu/data/bigdata/communities/com-friendster.ungraph.txt.gz)
    - Size: ~8.7GB compressed, ~31GB uncompressed.
    - Nodes: 65,608,366
    - Edges: 1,806,067,135
-4. [**Orkut social network**](https://snap.stanford.edu/data/com-Orkut.html): [Download Link](https://example.com/graph3)
+4. [**Orkut social network**](https://snap.stanford.edu/data/com-Orkut.html): [Download Link](https://snap.stanford.edu/data/bigdata/communities/com-orkut.ungraph.txt.gz)
    - Size: ~450MB compressed, ~1.7GB uncompressed.
    - Nodes: 3,072,441
    - Edges: 117,185,083
