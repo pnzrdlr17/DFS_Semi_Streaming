@@ -1,0 +1,15 @@
+🎯 Total configurations to run: 4
+🔄 Running with 30 parallel workers
+❌ File not found: ./input/KonectDblp/konect_dblp_n_7577304_m_12282059_9.edg
+❌ File not found: ./input/KonectDblp/konect_dblp_n_7577304_m_12282059_10.edg
+❌ [1/4] Failed KonectDblp kpathN k=1
+❌ [2/4] Failed KonectDblp kpath0 k=2
+❌ File not found: ./input/KonectDblp/konect_dblp_n_7577304_m_12282059_11.edg
+❌ File not found: ./input/KonectDblp/konect_dblp_n_7577304_m_12282059_12.edg
+❌ [3/4] Failed KonectDblp kpath2 k=1
+❌ [4/4] Failed KonectDblp kpath1 k=1
+
+🏁 All experiments completed!
+✅ Successful: 0
+❌ Failed: 4
+📁 Results saved in ./results/real/average_concurrent_runs
