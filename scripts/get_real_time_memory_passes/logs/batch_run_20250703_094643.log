@@ -1,0 +1,30 @@
+🎯 Total configurations to run: 3
+🔄 Running with 36 parallel workers
+🚀 Running Belcastro with kpath0, k=7, iterations=2, file=1
+  📊 Iteration 1/2 for Belcastro kpath0 k=7...
+🚀 Running Belcastro with kpath1, k=6, iterations=2, file=2
+  📊 Iteration 1/2 for Belcastro kpath1 k=6...
+🚀 Running Belcastro with kpath1, k=10, iterations=3, file=3
+  📊 Iteration 1/3 for Belcastro kpath1 k=10...
+    Passes: 91, Time/Memory: 203.52,19496, Output: ['91']
+  📊 Iteration 2/3 for Belcastro kpath1 k=10...
+    Passes: 128, Time/Memory: 296.23,16416, Output: ['128']
+  📊 Iteration 2/2 for Belcastro kpath0 k=7...
+    Passes: 148, Time/Memory: 332.59,14372, Output: ['148']
+  📊 Iteration 2/2 for Belcastro kpath1 k=6...
+    Passes: 91, Time/Memory: 203.25,19492, Output: ['91']
+  📊 Iteration 3/3 for Belcastro kpath1 k=10...
+    Passes: 128, Time/Memory: 295.33,16420, Output: ['128']
+✅ Completed Belcastro kpath0 k=7: 295.78s, 16418.0KB
+✅ [1/3] Completed Belcastro kpath0 k=7
+    Passes: 91, Time/Memory: 203.65,19556, Output: ['91']
+✅ Completed Belcastro kpath1 k=10: 203.47s, 19514.67KB
+✅ [2/3] Completed Belcastro kpath1 k=10
+    Passes: 148, Time/Memory: 331.48,14372, Output: ['148']
+✅ Completed Belcastro kpath1 k=6: 332.03s, 14372.0KB
+✅ [3/3] Completed Belcastro kpath1 k=6
+
+🏁 All experiments completed!
+✅ Successful: 3
+❌ Failed: 0
+📁 Results saved in ./results/real/average_concurrent_runs
