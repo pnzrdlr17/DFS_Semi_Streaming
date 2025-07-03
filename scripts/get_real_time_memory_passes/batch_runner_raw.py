@@ -6,22 +6,66 @@ from pathlib import Path
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+# {"label": "Belcastro", "n": 14022, "m": 9027024, "path": "./input/Belcastro/belcastro_n_14022_m_9027024_2.edg"},
+# {"label": "ArxAP", "n": 18771, "m": 198050, "path": "./input/ArxAP/download.tsv.ca-AstroPh/ca-AstroPh/out.ca-AstroPh"},
+# {"label": "BrightK", "n": 58228, "m": 214078, "path": "./input/BrightK/download.tsv.loc-brightkite_edges/loc-brightkite_edges/out.loc-brightkite_edges"},
+
+# {"label": "Twitch", "n": 168114, "m": 6797557, "path": "./input/Twitch/twitch_gamer_n_168114_m_6797557.edg"},
+# {"label": "Gowalla", "n": 196591, "m": 950327, "path": "./input/Gowalla/download.tsv.loc-gowalla_edges/loc-gowalla_edges/out.loc-gowalla_edges"},
+# {"label": "Amazon", "n": 334863, "m": 925872, "path": "./input/Amazon/download.tsv.com-amazon/com-amazon/out.com-amazon"},
+
+
 # Augmented graph dataset with embedded run configurations
 graphs = [
+    {
+        "label": "BrightK",
+        "n": 58228,
+        "m": 214078,
+        "base_path": "./input/BrightK/download.tsv.loc-brightkite_edges/loc-brightkite_edges/out.loc-brightkite_edges",
+        "run_configs": [
+            #{"algo": "kpath", "variant": "0", "k": 1, "iterations": 10, "file_number": 1},
+            #{"algo": "kpath", "variant": "2", "k": 1, "iterations": 10, "file_number": 2},
+            #{"algo": "kpath", "variant": "1", "k": 1, "iterations": 10, "file_number": 3},
+        ]
+    },
+    {
+        "label": "Gowalla",
+        "n": 196591,
+        "m": 950327,
+        "base_path": "./input/Gowalla/download.tsv.loc-gowalla_edges/loc-gowalla_edges/out.loc-gowalla_edges",
+        "run_configs": [
+            #{"algo": "klev", "variant": "N", "k": 1, "iterations": 10, "file_number": 1},
+            #{"algo": "klev", "variant": "0", "k": 10, "iterations": 10, "file_number": 2},
+            #{"algo": "klev", "variant": "0", "k": 2, "iterations": 10, "file_number": 3}
+        ]
+    },
+    {
+        "label": "Amazon",
+        "n": 334863,
+        "m": 925872,
+        "base_path": "./input/Amazon/download.tsv.com-amazon/com-amazon/out.com-amazon",
+        "run_configs": [
+            {"algo": "klev", "variant": "N", "k": 2, "iterations": 10, "file_number": 1},
+            {"algo": "klev", "variant": "0", "k": 10, "iterations": 10, "file_number": 2},
+            {"algo": "klev", "variant": "1", "k": 1, "iterations": 10, "file_number": 3},
+        ]
+    },
     {
         "label": "Orkut", 
         "n": 3072441, 
         "m": 117185083, 
         "base_path": "./input/Orkut/orkut_graph_n_3072441_m_117185083",
         "run_configs": [
-            {"algo": "klev", "variant": "2", "k": 6, "iterations": 10, "file_number": 1},
-            {"algo": "klev", "variant": "2", "k": 5, "iterations": 8, "file_number": 2},
-            {"algo": "klev", "variant": "2", "k": 4, "iterations": 10, "file_number": 3},
-            {"algo": "klev", "variant": "2", "k": 3, "iterations": 10, "file_number": 4},
-            {"algo": "klev", "variant": "2", "k": 2, "iterations": 5, "file_number": 5},
-            {"algo": "klev", "variant": "2", "k": 1, "iterations": 8, "file_number": 6},
-            {"algo": "klev", "variant": "1", "k": 7, "iterations": 4, "file_number": 7},
-            {"algo": "klev", "variant": "1", "k": 6, "iterations": 10, "file_number": 8},
+            #{"algo": "kpath", "variant": "N", "k": 1, "iterations": 10, "file_number": 1},
+            #{"algo": "kpath", "variant": "2", "k": 1, "iterations": 10, "file_number": 2},
+            #{"algo": "kpath", "variant": "1", "k": 1, "iterations": 10, "file_number": 3},
+            #{"algo": "kpath", "variant": "0", "k": 1, "iterations": 10, "file_number": 4},
+            #---{"algo": "kpath", "variant": "0", "k": 7, "iterations": 2, "file_number": 5},
+            #---{"algo": "kpath", "variant": "0", "k": 6, "iterations": 10, "file_number": 6},
+            #{"algo": "klev", "variant": "2", "k": 7, "iterations": 3, "file_number": 7},
+            #{"algo": "kpath", "variant": "0", "k": 4, "iterations": 10, "file_number": 8},
+            #{"algo": "kpath", "variant": "0", "k": 3, "iterations": 9, "file_number": 9},
+            #{"algo": "kpath", "variant": "0", "k": 2, "iterations": 9, "file_number": 10},
         ]
     },
     {
@@ -30,14 +74,14 @@ graphs = [
         "m": 34681189, 
         "base_path": "./input/LiveJournal/live_journal_n_3997962_m_34681189",
         "run_configs": [
-            # {"algo": "klev", "variant": "0", "k": "C", "iterations": 4, "file_number": 1},
-            # {"algo": "klev", "variant": "0", "k": 10, "iterations": 6, "file_number": 2},
-            {"algo": "klev", "variant": "0", "k": 9, "iterations": 10, "file_number": 3},
-            {"algo": "klev", "variant": "0", "k": 8, "iterations": 10, "file_number": 4},
-            {"algo": "klev", "variant": "1", "k": 8, "iterations": 10, "file_number": 5},
-            {"algo": "klev", "variant": "2", "k": 8, "iterations": 5, "file_number": 6},
-            {"algo": "klev", "variant": "N", "k": 8, "iterations": 4, "file_number": 7},
-            {"algo": "klev", "variant": "N", "k": 7, "iterations": 10, "file_number": 8},
+            #{"algo": "klev", "variant": "0", "k": 4, "iterations": 9, "file_number": 1},
+            #{"algo": "klev", "variant": "0", "k": 7, "iterations": 7, "file_number": 2},
+            #{"algo": "klev", "variant": "0", "k": 3, "iterations": 9, "file_number": 3},
+            #{"algo": "klev", "variant": "0", "k": 2, "iterations": 8, "file_number": 4},
+            #{"algo": "klev", "variant": "0", "k": 6, "iterations": 7, "file_number": 5},
+            #{"algo": "kpath", "variant": "0", "k": 1, "iterations": 1, "file_number": 6},
+            #{"algo": "kpath", "variant": "1", "k": 1, "iterations": 1, "file_number": 7},
+            #{"algo": "klev", "variant": "0", "k": 5, "iterations": 3, "file_number": 8},
         ]
     },
     {
@@ -46,14 +90,19 @@ graphs = [
         "m": 12282059, 
         "base_path": "./input/KonectDblp/konect_dblp_n_7577304_m_12282059",
         "run_configs": [
-            # {"algo": "kpath", "variant": "N", "k": 1, "iterations": 10, "file_number": 1},
-            # {"algo": "kpath", "variant": "0", "k": 1, "iterations": 10, "file_number": 2},
-            {"algo": "kpath", "variant": "2", "k": 1, "iterations": 10, "file_number": 3},
-            {"algo": "kpath", "variant": "1", "k": 1, "iterations": 10, "file_number": 4},
-            {"algo": "klev", "variant": "0", "k": "C", "iterations": 4, "file_number": 5},
-            {"algo": "klev", "variant": "0", "k": 10, "iterations": 10, "file_number": 6},
-            {"algo": "klev", "variant": "1", "k": 1, "iterations": 3, "file_number": 7},
-            {"algo": "klev", "variant": "0", "k": 1, "iterations": 9, "file_number": 8},
+            #{"algo": "kpath", "variant": "0", "k": 9, "iterations": 9, "file_number": 1},
+            #{"algo": "kpath", "variant": "0", "k": 8, "iterations": 9, "file_number": 2},
+            #{"algo": "kpath", "variant": "0", "k": 7, "iterations": 9, "file_number": 3},
+            #{"algo": "klev", "variant": "0", "k": 7, "iterations": 8, "file_number": 4},
+            #{"algo": "kpath", "variant": "0", "k": 5, "iterations": 9, "file_number": 5},
+            #{"algo": "kpath", "variant": "0", "k": 6, "iterations": 9, "file_number": 6},
+            #{"algo": "klev", "variant": "0", "k": 8, "iterations": 1, "file_number": 7},
+            #{"algo": "kpath", "variant": "0", "k": 10, "iterations": 9, "file_number": 8},
+            #{"algo": "kpath", "variant": "0", "k": 4, "iterations": 9, "file_number": 9},
+            #{"algo": "kpath", "variant": "N", "k": 1, "iterations": 6, "file_number": 10},
+            #{"algo": "kpath", "variant": "2", "k": 1, "iterations": 9, "file_number": 11},
+            #{"algo": "kpath", "variant": "1", "k": 1, "iterations": 9, "file_number": 12},
+            #{"algo": "kpath", "variant": "0", "k": 1, "iterations": 9, "file_number": 13}
         ]
     }
 ]
@@ -173,7 +222,7 @@ def run_single_config(graph, config, output_dir):
     print(f"✅ Completed {label} {algo}{variant} k={k_val}: {avg_time}s, {avg_mem}KB")
     return True
 
-def run_all_experiments(output_dir="./results/real/average_concurrent_runs", max_workers=32):
+def run_all_experiments(output_dir="./results/real/average_concurrent_runs", max_workers=40):
     """Run all experiments defined in the graphs list"""
     Path(output_dir).mkdir(parents=True, exist_ok=True)
 
@@ -222,6 +271,6 @@ def run_all_experiments(output_dir="./results/real/average_concurrent_runs", max
 if __name__ == "__main__":
     # You can adjust max_workers based on your system
     # Recommended: number of CPU cores or number of available graph file copies
-    run_all_experiments(max_workers=24)
+    run_all_experiments(max_workers=36)
 
 # Usage: (ulimit -s unlimited; nohup python3 scripts/get_real_time_memory_passes/batch_runner_raw.py > "scripts/get_real_time_memory_passes/logs/batch_run_$(date +%Y%m%d_%H%M%S).log" 2>&1 < /dev/null &)
