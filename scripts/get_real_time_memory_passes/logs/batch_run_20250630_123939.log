@@ -1,0 +1,22 @@
+🎯 Total configurations to run: 1
+🔄 Running with 30 parallel workers
+🚀 Running LiveJournal with klev1, k=1, iterations=6, file=1
+  📊 Iteration 1/6 for LiveJournal klev1 k=1...
+    Passes: 5, Time/Memory: 29281.70,1557536, Output: ['5']
+  📊 Iteration 2/6 for LiveJournal klev1 k=1...
+    Passes: 5, Time/Memory: 29076.26,1557624, Output: ['5']
+  📊 Iteration 3/6 for LiveJournal klev1 k=1...
+    Passes: 5, Time/Memory: 29707.92,1561628, Output: ['5']
+  📊 Iteration 4/6 for LiveJournal klev1 k=1...
+    Passes: 5, Time/Memory: 29675.60,1576996, Output: ['5']
+  📊 Iteration 5/6 for LiveJournal klev1 k=1...
+    Passes: 5, Time/Memory: 28875.72,1573924, Output: ['5']
+  📊 Iteration 6/6 for LiveJournal klev1 k=1...
+    Passes: 5, Time/Memory: 29288.02,1576004, Output: ['5']
+✅ Completed LiveJournal klev1 k=1: 29317.54s, 1567285.33KB
+✅ [1/1] Completed LiveJournal klev1 k=1
+
+🏁 All experiments completed!
+✅ Successful: 1
+❌ Failed: 0
+📁 Results saved in ./results/real/average_concurrent_runs
