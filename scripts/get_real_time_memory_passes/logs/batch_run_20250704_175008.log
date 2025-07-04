@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/shahbazk/Projects/DFS_Semi_Streaming/scripts/get_real_time_memory_passes/batch_runner_raw.py", line 52, in <module>
+    {"algo": "klev", "variant": "1", "k": C, "iterations": 30, "file_number": 5}
+                                          ^
+NameError: name 'C' is not defined
