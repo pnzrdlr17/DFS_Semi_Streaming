@@ -1,0 +1,19 @@
+🎯 Total configurations to run: 2
+🔄 Running with 30 parallel workers
+🚀 Running LiveJournal with kpath0, k=1, iterations=1, file=6
+  📊 Iteration 1/1 for LiveJournal kpath0 k=1...
+🚀 Running KonectDblp with klev0, k=8, iterations=2, file=7
+  📊 Iteration 1/2 for KonectDblp klev0 k=8...
+    Passes: 6, Time/Memory: 77836.17,2813988, Output: ['6']
+  📊 Iteration 2/2 for KonectDblp klev0 k=8...
+    Passes: 6, Time/Memory: 80713.44,2823204, Output: ['6']
+✅ Completed KonectDblp klev0 k=8: 79274.8s, 2818596.0KB
+✅ [1/2] Completed KonectDblp klev0 k=8
+    Passes: 9465, Time/Memory: 227287.23,1681060, Output: ['9465']
+✅ Completed LiveJournal kpath0 k=1: 227287.23s, 1681060.0KB
+✅ [2/2] Completed LiveJournal kpath0 k=1
+
+🏁 All experiments completed!
+✅ Successful: 2
+❌ Failed: 0
+📁 Results saved in ./results/real/average_concurrent_runs

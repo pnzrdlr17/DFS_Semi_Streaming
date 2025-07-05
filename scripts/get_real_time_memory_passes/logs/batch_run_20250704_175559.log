@@ -1,0 +1,12 @@
+🎯 Total configurations to run: 1
+🔄 Running with 36 parallel workers
+🚀 Running Orkut with kpath0, k=4, iterations=1, file=8
+  📊 Iteration 1/1 for Orkut kpath0 k=4...
+    Passes: 19, Time/Memory: 8912.48,2107320, Output: ['19']
+✅ Completed Orkut kpath0 k=4: 8912.48s, 2107320.0KB
+✅ [1/1] Completed Orkut kpath0 k=4
+
+🏁 All experiments completed!
+✅ Successful: 1
+❌ Failed: 0
+📁 Results saved in ./results/real/average_concurrent_runs
