@@ -1,0 +1,34 @@
+🎯 Total configurations to run: 3
+🔄 Running with 36 parallel workers
+🚀 Running KonectDblp with klev0, k=7, iterations=3, file=4
+  📊 Iteration 1/3 for KonectDblp klev0 k=7...
+🚀 Running KonectDblp with kpath0, k=5, iterations=3, file=5
+  📊 Iteration 1/3 for KonectDblp kpath0 k=5...
+🚀 Running KonectDblp with kpath0, k=4, iterations=3, file=9
+  📊 Iteration 1/3 for KonectDblp kpath0 k=4...
+    Passes: 2, Time/Memory: 11274.64,3877940, Output: ['2']
+  📊 Iteration 2/3 for KonectDblp kpath0 k=5...
+    Passes: 2, Time/Memory: 11501.58,3876948, Output: ['2']
+  📊 Iteration 2/3 for KonectDblp kpath0 k=4...
+    Passes: 6, Time/Memory: 85108.92,2835492, Output: ['6']
+  📊 Iteration 2/3 for KonectDblp klev0 k=7...
+    Passes: 2, Time/Memory: 10936.77,3877952, Output: ['2']
+  📊 Iteration 3/3 for KonectDblp kpath0 k=5...
+    Passes: 2, Time/Memory: 11303.61,3876924, Output: ['2']
+  📊 Iteration 3/3 for KonectDblp kpath0 k=4...
+    Passes: 6, Time/Memory: 75918.12,2812020, Output: ['6']
+  📊 Iteration 3/3 for KonectDblp klev0 k=7...
+    Passes: 2, Time/Memory: 10468.87,3877976, Output: ['2']
+✅ Completed KonectDblp kpath0 k=5: 10893.43s, 3877956.0KB
+✅ [1/3] Completed KonectDblp kpath0 k=5
+    Passes: 2, Time/Memory: 10953.96,3877932, Output: ['2']
+✅ Completed KonectDblp kpath0 k=4: 11253.05s, 3877268.0KB
+✅ [2/3] Completed KonectDblp kpath0 k=4
+    Passes: 6, Time/Memory: 81785.39,2836600, Output: ['6']
+✅ Completed KonectDblp klev0 k=7: 80937.48s, 2828037.33KB
+✅ [3/3] Completed KonectDblp klev0 k=7
+
+🏁 All experiments completed!
+✅ Successful: 3
+❌ Failed: 0
+📁 Results saved in ./results/real/average_concurrent_runs
