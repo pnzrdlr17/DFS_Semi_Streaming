@@ -1,0 +1,26 @@
+🎯 Total configurations to run: 1
+🔄 Running with 36 parallel workers
+🚀 Running KonectDblp with klev0, k=6, iterations=8, file=7
+  📊 Iteration 1/8 for KonectDblp klev0 k=6...
+    Passes: 6, Time/Memory: 81351.23,2824228, Output: ['6']
+  📊 Iteration 2/8 for KonectDblp klev0 k=6...
+    Passes: 6, Time/Memory: 79237.40,2831392, Output: ['6']
+  📊 Iteration 3/8 for KonectDblp klev0 k=6...
+    Passes: 6, Time/Memory: 83129.01,2816060, Output: ['6']
+  📊 Iteration 4/8 for KonectDblp klev0 k=6...
+    Passes: 6, Time/Memory: 86739.02,2806852, Output: ['6']
+  📊 Iteration 5/8 for KonectDblp klev0 k=6...
+    Passes: 6, Time/Memory: 83685.02,2811940, Output: ['6']
+  📊 Iteration 6/8 for KonectDblp klev0 k=6...
+    Passes: 6, Time/Memory: 77141.57,2812992, Output: ['6']
+  📊 Iteration 7/8 for KonectDblp klev0 k=6...
+    Passes: 6, Time/Memory: 77619.20,2807844, Output: ['6']
+  📊 Iteration 8/8 for KonectDblp klev0 k=6...
+    Passes: 6, Time/Memory: 81158.16,2813016, Output: ['6']
+✅ Completed KonectDblp klev0 k=6: 81257.58s, 2815540.5KB
+✅ [1/1] Completed KonectDblp klev0 k=6
+
+🏁 All experiments completed!
+✅ Successful: 1
+❌ Failed: 0
+📁 Results saved in ./results/real/average_concurrent_runs
