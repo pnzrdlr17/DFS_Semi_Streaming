@@ -1,0 +1,22 @@
+🎯 Total configurations to run: 1
+🔄 Running with 36 parallel workers
+🚀 Running LiveJournal with kpath2, k=6, iterations=6, file=3
+  📊 Iteration 1/6 for LiveJournal kpath2 k=6...
+    Passes: 8, Time/Memory: 14039.51,3542796, Output: ['8']
+  📊 Iteration 2/6 for LiveJournal kpath2 k=6...
+    Passes: 8, Time/Memory: 13586.49,3543352, Output: ['8']
+  📊 Iteration 3/6 for LiveJournal kpath2 k=6...
+    Passes: 8, Time/Memory: 13715.38,3543268, Output: ['8']
+  📊 Iteration 4/6 for LiveJournal kpath2 k=6...
+    Passes: 8, Time/Memory: 14156.66,3543404, Output: ['8']
+  📊 Iteration 5/6 for LiveJournal kpath2 k=6...
+    Passes: 8, Time/Memory: 14992.22,3543344, Output: ['8']
+  📊 Iteration 6/6 for LiveJournal kpath2 k=6...
+    Passes: 8, Time/Memory: 15100.76,3543332, Output: ['8']
+✅ Completed LiveJournal kpath2 k=6: 14265.17s, 3543249.33KB
+✅ [1/1] Completed LiveJournal kpath2 k=6
+
+🏁 All experiments completed!
+✅ Successful: 1
+❌ Failed: 0
+📁 Results saved in ./results/real/average_concurrent_runs
