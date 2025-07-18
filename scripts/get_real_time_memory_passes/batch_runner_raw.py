@@ -18,6 +18,17 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 # Augmented graph dataset with embedded run configurations
 graphs = [
     {
+        "label": "Belcastro",
+        "n": 14022,
+        "m": 9027024,
+        "base_path": "./input/Belcastro/belcastro_n_14022_m_9027024",
+        "run_configs": [
+            #{"algo": "klev", "variant": "N", "k": 6, "iterations": 12, "file_number": 1},
+            #{"algo": "klev", "variant": "0", "k": 3, "iterations": 12, "file_number": 2},
+            #{"algo": "klev", "variant": "0", "k": 1, "iterations": 12, "file_number": 3}
+        ]
+    },
+    {
         "label": "BrightK",
         "n": 58228,
         "m": 214078,
@@ -26,6 +37,19 @@ graphs = [
             #{"algo": "kpath", "variant": "0", "k": 1, "iterations": 10, "file_number": 1},
             #{"algo": "kpath", "variant": "2", "k": 1, "iterations": 10, "file_number": 2},
             #{"algo": "kpath", "variant": "1", "k": 1, "iterations": 10, "file_number": 3},
+        ]
+    },
+    {
+        "label": "Twitch",
+        "n": 168114,
+        "m": 6797557,
+        "base_path": "./input/Twitch/twitch_gamer_n_168114_m_6797557",
+        "run_configs": [
+            #{"algo": "kpath", "variant": "2", "k": 1, "iterations": 12, "file_number": 1},
+            #{"algo": "kpath", "variant": "N", "k": 1, "iterations": 10, "file_number": 2},
+            #{"algo": "kpath", "variant": "0", "k": 2, "iterations": 12, "file_number": 3},
+            #{"algo": "kpath", "variant": "0", "k": 2, "iterations": 12, "file_number": 4},
+            #{"algo": "klev", "variant": "1", "k": "C", "iterations": 30, "file_number": 5}
         ]
     },
     {
@@ -45,9 +69,11 @@ graphs = [
         "m": 925872,
         "base_path": "./input/Amazon/download.tsv.com-amazon/com-amazon/out.com-amazon",
         "run_configs": [
-            {"algo": "klev", "variant": "N", "k": 2, "iterations": 10, "file_number": 1},
-            {"algo": "klev", "variant": "0", "k": 10, "iterations": 10, "file_number": 2},
-            {"algo": "klev", "variant": "1", "k": 1, "iterations": 10, "file_number": 3},
+            #{"algo": "klev", "variant": "0", "k": 10, "iterations": 20, "file_number": 1},
+            #{"algo": "klev", "variant": "0", "k": 4, "iterations": 20, "file_number": 2},
+            #{"algo": "klev", "variant": "0", "k": 3, "iterations": 20, "file_number": 3},
+            #{"algo": "klev", "variant": "0", "k": 2, "iterations": 20, "file_number": 4},
+            #{"algo": "klev", "variant": "N", "k": 2, "iterations": 20, "file_number": 5}
         ]
     },
     {
@@ -62,8 +88,8 @@ graphs = [
             #{"algo": "kpath", "variant": "0", "k": 1, "iterations": 10, "file_number": 4},
             #---{"algo": "kpath", "variant": "0", "k": 7, "iterations": 2, "file_number": 5},
             #---{"algo": "kpath", "variant": "0", "k": 6, "iterations": 10, "file_number": 6},
-            #{"algo": "klev", "variant": "2", "k": 7, "iterations": 3, "file_number": 7},
-            #{"algo": "kpath", "variant": "0", "k": 4, "iterations": 10, "file_number": 8},
+            #---{"algo": "klev", "variant": "2", "k": 7, "iterations": 3, "file_number": 7},
+            #{"algo": "kpath", "variant": "0", "k": 2, "iterations": 2, "file_number": 8},
             #{"algo": "kpath", "variant": "0", "k": 3, "iterations": 9, "file_number": 9},
             #{"algo": "kpath", "variant": "0", "k": 2, "iterations": 9, "file_number": 10},
         ]
@@ -74,14 +100,19 @@ graphs = [
         "m": 34681189, 
         "base_path": "./input/LiveJournal/live_journal_n_3997962_m_34681189",
         "run_configs": [
-            #{"algo": "klev", "variant": "0", "k": 4, "iterations": 9, "file_number": 1},
-            #{"algo": "klev", "variant": "0", "k": 7, "iterations": 7, "file_number": 2},
-            #{"algo": "klev", "variant": "0", "k": 3, "iterations": 9, "file_number": 3},
-            #{"algo": "klev", "variant": "0", "k": 2, "iterations": 8, "file_number": 4},
-            #{"algo": "klev", "variant": "0", "k": 6, "iterations": 7, "file_number": 5},
-            #{"algo": "kpath", "variant": "0", "k": 1, "iterations": 1, "file_number": 6},
-            #{"algo": "kpath", "variant": "1", "k": 1, "iterations": 1, "file_number": 7},
-            #{"algo": "klev", "variant": "0", "k": 5, "iterations": 3, "file_number": 8},
+            {"algo": "klev", "variant": "0", "k": 1, "iterations": 1, "file_number": 1},
+            {"algo": "klev", "variant": "0", "k": 2, "iterations": 6, "file_number": 2},
+            {"algo": "kpath", "variant": "0", "k": 6, "iterations": 6, "file_number": 3},
+            {"algo": "kpath", "variant": "0", "k": 8, "iterations": 1, "file_number": 4},
+            {"algo": "kpath", "variant": "2", "k": 3, "iterations": 7, "file_number": 5},
+            {"algo": "kpath", "variant": "2", "k": 4, "iterations": 4, "file_number": 6},
+            {"algo": "kpath", "variant": "2", "k": 6, "iterations": 2, "file_number": 7},
+            {"algo": "kpath", "variant": "N", "k": 2, "iterations": 3, "file_number": 8},
+            #{"algo": "kpath", "variant": "N", "k": 5, "iterations": 6, "file_number": 9},
+            #{"algo": "kpath", "variant": "N", "k": 1, "iterations": 9, "file_number": 10},
+            #{"algo": "kpath", "variant": "2", "k": 5, "iterations": 9, "file_number": 11},
+            #{"algo": "kpath", "variant": "2", "k": 4, "iterations": 9, "file_number": 12},
+            #{"algo": "kpath", "variant": "2", "k": 3, "iterations": 9, "file_number": 13},
         ]
     },
     {
@@ -90,15 +121,15 @@ graphs = [
         "m": 12282059, 
         "base_path": "./input/KonectDblp/konect_dblp_n_7577304_m_12282059",
         "run_configs": [
-            #{"algo": "kpath", "variant": "0", "k": 9, "iterations": 9, "file_number": 1},
-            #{"algo": "kpath", "variant": "0", "k": 8, "iterations": 9, "file_number": 2},
-            #{"algo": "kpath", "variant": "0", "k": 7, "iterations": 9, "file_number": 3},
-            #{"algo": "klev", "variant": "0", "k": 7, "iterations": 8, "file_number": 4},
-            #{"algo": "kpath", "variant": "0", "k": 5, "iterations": 9, "file_number": 5},
-            #{"algo": "kpath", "variant": "0", "k": 6, "iterations": 9, "file_number": 6},
-            #{"algo": "klev", "variant": "0", "k": 8, "iterations": 1, "file_number": 7},
-            #{"algo": "kpath", "variant": "0", "k": 10, "iterations": 9, "file_number": 8},
-            #{"algo": "kpath", "variant": "0", "k": 4, "iterations": 9, "file_number": 9},
+            {"algo": "klev", "variant": "0", "k": 3, "iterations": 5, "file_number": 1},
+            #{"algo": "kpath", "variant": "0", "k": 2, "iterations": 9, "file_number": 2},
+            {"algo": "kpath", "variant": "0", "k": 3, "iterations": 1, "file_number": 3},
+            #{"algo": "kpath", "variant": "0", "k": "C", "iterations": 9, "file_number": 4},
+            #{"algo": "klev", "variant": "0", "k": 2, "iterations": 10, "file_number": 5},
+            #{"algo": "klev", "variant": "0", "k": 4, "iterations": 9, "file_number": 6},
+            #{"algo": "klev", "variant": "0", "k": 6, "iterations": 3, "file_number": 7},
+            #{"algo": "klev", "variant": "0", "k": 3, "iterations": 9, "file_number": 8},
+            #{"algo": "kpath", "variant": "0", "k": 3, "iterations": 10, "file_number": 9},
             #{"algo": "kpath", "variant": "N", "k": 1, "iterations": 6, "file_number": 10},
             #{"algo": "kpath", "variant": "2", "k": 1, "iterations": 9, "file_number": 11},
             #{"algo": "kpath", "variant": "1", "k": 1, "iterations": 9, "file_number": 12},

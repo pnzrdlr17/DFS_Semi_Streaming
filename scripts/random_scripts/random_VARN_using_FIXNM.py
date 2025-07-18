@@ -144,3 +144,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     run_experiments(args.iterations, args.seed_token, args.sparsity, args.graph_type)
+
+
+# Usage: (ulimit -s unlimited; nohup python3 scripts/random_scripts/random_VARN_using_FIXNM.py -i 100 -s 1729 -sp 2 -g POWLAW > "scripts/random_scripts/logs/varn_n_10K_powlaw_logn_seed_1729_itr100_terraforge_run_$(date +%Y%m%d_%H%M%S).log" 2>&1 < /dev/null &)
