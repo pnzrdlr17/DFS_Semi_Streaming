@@ -68,7 +68,7 @@ def generate_single_graph(n: int, m: int, seed: int, graph_type: str) -> Tuple[b
         # Call the main binary with GEN_GRAPH mode
         # Usage: ./bin/main GEN_GRAPH <n> <m> <seed> <graph_type>
         cmd = [
-            os.path.join(project_root, 'bin/main'),
+            './bin/main',
             'GEN_GRAPH',
             str(n), str(m), str(seed), graph_type
         ]
@@ -78,7 +78,7 @@ def generate_single_graph(n: int, m: int, seed: int, graph_type: str) -> Tuple[b
             cwd=project_root,
             capture_output=True,
             text=True,
-            timeout=300  # 5 minute timeout
+            timeout=1800  # 60 minute timeout
         )
         
         if result.returncode == 0:
@@ -147,7 +147,7 @@ def main():
     parser.add_argument("-p", "--processes", type=int, default=30,
                        help="Maximum number of parallel processes")
     parser.add_argument("-sf", "--seed-file", type=str,
-                       default="../../seed_1000x_token_1729.txt",
+                       default="seed_1000x_token_1729.txt",
                        help="Path to seed token file")
     
     args = parser.parse_args()
