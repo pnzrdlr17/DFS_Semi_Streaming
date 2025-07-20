@@ -1,0 +1,169 @@
+Generating graphs for 80 (n,m) pairs with 10 iterations each
+Total graphs to generate: 800
+Using 30 parallel processes
+Graph type: POWLAW
+Sparsity: 2
+✓ Generated graph n=40, m=212, seed=6522163754831416203, type=POWLAW -> ./input/random_graphs/graph_40_212_POWLAW_6522163754831416203.txt
+✓ Generated graph n=40, m=212, seed=7032710160631691991, type=POWLAW -> ./input/random_graphs/graph_40_212_POWLAW_7032710160631691991.txt
+✓ Generated graph n=40, m=212, seed=1070244953599069350, type=POWLAW -> ./input/random_graphs/graph_40_212_POWLAW_1070244953599069350.txt
+✓ Generated graph n=40, m=212, seed=3881801951614183357, type=POWLAW -> ./input/random_graphs/graph_40_212_POWLAW_3881801951614183357.txt
+✓ Generated graph n=40, m=212, seed=6230961512046992311, type=POWLAW -> ./input/random_graphs/graph_40_212_POWLAW_6230961512046992311.txt
+✓ Generated graph n=40, m=212, seed=1353182403971399009, type=POWLAW -> ./input/random_graphs/graph_40_212_POWLAW_1353182403971399009.txt
+✓ Generated graph n=40, m=212, seed=7871178979383552919, type=POWLAW -> ./input/random_graphs/graph_40_212_POWLAW_7871178979383552919.txt
+✓ Generated graph n=40, m=212, seed=5739955973604961613, type=POWLAW -> ./input/random_graphs/graph_40_212_POWLAW_5739955973604961613.txt
+✓ Generated graph n=40, m=212, seed=6938562734920028532, type=POWLAW -> ./input/random_graphs/graph_40_212_POWLAW_6938562734920028532.txt
+✓ Generated graph n=40, m=212, seed=7599700178212337699, type=POWLAW -> ./input/random_graphs/graph_40_212_POWLAW_7599700178212337699.txt
+✓ Generated graph n=4500, m=54610, seed=3881801951614183357, type=POWLAW -> ./input/random_graphs/graph_4500_54610_POWLAW_3881801951614183357.txt
+✓ Generated graph n=10000, m=17500, seed=6230961512046992311, type=POWLAW -> ./input/random_graphs/graph_10000_17500_POWLAW_6230961512046992311.txt
+✓ Generated graph n=10000, m=17500, seed=6522163754831416203, type=POWLAW -> ./input/random_graphs/graph_10000_17500_POWLAW_6522163754831416203.txt
+✓ Generated graph n=10000, m=17500, seed=1353182403971399009, type=POWLAW -> ./input/random_graphs/graph_10000_17500_POWLAW_1353182403971399009.txt
+✓ Generated graph n=10000, m=17500, seed=5739955973604961613, type=POWLAW -> ./input/random_graphs/graph_10000_17500_POWLAW_5739955973604961613.txt
+✓ Generated graph n=10000, m=17500, seed=3881801951614183357, type=POWLAW -> ./input/random_graphs/graph_10000_17500_POWLAW_3881801951614183357.txt
+✓ Generated graph n=10000, m=17500, seed=1070244953599069350, type=POWLAW -> ./input/random_graphs/graph_10000_17500_POWLAW_1070244953599069350.txt
+✓ Generated graph n=10000, m=17500, seed=7871178979383552919, type=POWLAW -> ./input/random_graphs/graph_10000_17500_POWLAW_7871178979383552919.txt
+✓ Generated graph n=10000, m=17500, seed=7599700178212337699, type=POWLAW -> ./input/random_graphs/graph_10000_17500_POWLAW_7599700178212337699.txt
+✗ Timeout generating graph n=4500, m=54610, seed=7599700178212337699
+✗ Timeout generating graph n=10000, m=17500, seed=7032710160631691991
+✗ Timeout generating graph n=10000, m=30000000, seed=6522163754831416203
+✗ Timeout generating graph n=10000, m=17500, seed=6938562734920028532
+✗ Timeout generating graph n=10000, m=30000000, seed=1353182403971399009
+✗ Timeout generating graph n=10000, m=30000000, seed=7871178979383552919
+✗ Timeout generating graph n=10000, m=30000000, seed=3881801951614183357
+✗ Timeout generating graph n=4500, m=54610, seed=7871178979383552919
+✗ Timeout generating graph n=10000, m=30000000, seed=5739955973604961613
+✗ Timeout generating graph n=4500, m=54610, seed=6230961512046992311
+✗ Timeout generating graph n=10000, m=30000000, seed=6938562734920028532
+✗ Timeout generating graph n=4500, m=54610, seed=7032710160631691991
+✗ Timeout generating graph n=10000, m=30000000, seed=7599700178212337699
+✗ Timeout generating graph n=4500, m=54610, seed=1353182403971399009
+✗ Timeout generating graph n=4500, m=54610, seed=5739955973604961613
+✗ Timeout generating graph n=4500, m=54610, seed=1070244953599069350
+✗ Timeout generating graph n=10000, m=30000000, seed=6230961512046992311
+✗ Timeout generating graph n=4500, m=54610, seed=6522163754831416203
+✗ Timeout generating graph n=10000, m=30000000, seed=7032710160631691991
+✗ Timeout generating graph n=4500, m=54610, seed=6938562734920028532
+✗ Timeout generating graph n=10000, m=30000000, seed=1070244953599069350
+✓ Generated graph n=20, m=86, seed=6230961512046992311, type=POWLAW -> ./input/random_graphs/graph_20_86_POWLAW_6230961512046992311.txt
+✓ Generated graph n=20, m=86, seed=3881801951614183357, type=POWLAW -> ./input/random_graphs/graph_20_86_POWLAW_3881801951614183357.txt
+✓ Generated graph n=20, m=86, seed=5739955973604961613, type=POWLAW -> ./input/random_graphs/graph_20_86_POWLAW_5739955973604961613.txt
+✓ Generated graph n=20, m=86, seed=6938562734920028532, type=POWLAW -> ./input/random_graphs/graph_20_86_POWLAW_6938562734920028532.txt
+✓ Generated graph n=20, m=86, seed=7599700178212337699, type=POWLAW -> ./input/random_graphs/graph_20_86_POWLAW_7599700178212337699.txt
+✓ Generated graph n=20, m=86, seed=6522163754831416203, type=POWLAW -> ./input/random_graphs/graph_20_86_POWLAW_6522163754831416203.txt
+✓ Generated graph n=20, m=86, seed=7032710160631691991, type=POWLAW -> ./input/random_graphs/graph_20_86_POWLAW_7032710160631691991.txt
+✓ Generated graph n=20, m=86, seed=7871178979383552919, type=POWLAW -> ./input/random_graphs/graph_20_86_POWLAW_7871178979383552919.txt
+✓ Generated graph n=20, m=86, seed=1353182403971399009, type=POWLAW -> ./input/random_graphs/graph_20_86_POWLAW_1353182403971399009.txt
+✓ Generated graph n=20, m=86, seed=1070244953599069350, type=POWLAW -> ./input/random_graphs/graph_20_86_POWLAW_1070244953599069350.txt
+✗ Timeout generating graph n=7000, m=89411, seed=6230961512046992311
+✗ Timeout generating graph n=7000, m=89411, seed=7871178979383552919
+✗ Timeout generating graph n=7000, m=89411, seed=5739955973604961613
+✗ Timeout generating graph n=7000, m=89411, seed=3881801951614183357
+✗ Timeout generating graph n=7000, m=89411, seed=7032710160631691991
+✗ Timeout generating graph n=7000, m=89411, seed=7599700178212337699
+✗ Timeout generating graph n=7000, m=89411, seed=1353182403971399009
+✗ Timeout generating graph n=7000, m=89411, seed=1070244953599069350
+✗ Timeout generating graph n=7000, m=89411, seed=6522163754831416203
+✗ Timeout generating graph n=7000, m=89411, seed=6938562734920028532
+✗ Timeout generating graph n=10000, m=1000000, seed=5739955973604961613
+✗ Timeout generating graph n=10000, m=1000000, seed=6230961512046992311
+✗ Timeout generating graph n=10000, m=1000000, seed=7871178979383552919
+✗ Timeout generating graph n=10000, m=1000000, seed=3881801951614183357
+✗ Timeout generating graph n=10000, m=1000000, seed=1353182403971399009
+✗ Timeout generating graph n=10000, m=1000000, seed=7599700178212337699
+✗ Timeout generating graph n=9000, m=118221, seed=6938562734920028532
+✗ Timeout generating graph n=10000, m=1000000, seed=1070244953599069350
+✗ Timeout generating graph n=10000, m=1000000, seed=7032710160631691991
+✗ Timeout generating graph n=10000, m=1000000, seed=6938562734920028532
+✗ Timeout generating graph n=10000, m=1000000, seed=6522163754831416203
+✗ Timeout generating graph n=9000, m=118221, seed=7032710160631691991
+✗ Timeout generating graph n=9000, m=118221, seed=7599700178212337699
+✗ Timeout generating graph n=9000, m=118221, seed=7871178979383552919
+✗ Timeout generating graph n=9000, m=118221, seed=6230961512046992311
+✗ Timeout generating graph n=9000, m=118221, seed=1353182403971399009
+✗ Timeout generating graph n=9000, m=118221, seed=5739955973604961613
+✗ Timeout generating graph n=9000, m=118221, seed=6522163754831416203
+✗ Timeout generating graph n=9000, m=118221, seed=3881801951614183357
+✗ Timeout generating graph n=9000, m=118221, seed=1070244953599069350
+✓ Generated graph n=3000, m=34652, seed=1070244953599069350, type=POWLAW -> ./input/random_graphs/graph_3000_34652_POWLAW_1070244953599069350.txt
+✗ Timeout generating graph n=10000, m=10000000, seed=6230961512046992311
+✗ Timeout generating graph n=10000, m=10000000, seed=7871178979383552919
+✗ Timeout generating graph n=10000, m=10000000, seed=5739955973604961613
+✗ Timeout generating graph n=10000, m=10000000, seed=3881801951614183357
+✗ Timeout generating graph n=10000, m=10000000, seed=7032710160631691991
+✗ Timeout generating graph n=10000, m=10000000, seed=7599700178212337699
+✗ Timeout generating graph n=10000, m=10000000, seed=1353182403971399009
+✗ Timeout generating graph n=10000, m=10000000, seed=1070244953599069350
+✗ Timeout generating graph n=10000, m=10000000, seed=6522163754831416203
+✗ Timeout generating graph n=10000, m=10000000, seed=6938562734920028532
+✗ Timeout generating graph n=3000, m=34652, seed=6230961512046992311
+✗ Timeout generating graph n=3000, m=34652, seed=7871178979383552919
+✗ Timeout generating graph n=10000, m=2000000, seed=1070244953599069350
+✗ Timeout generating graph n=3000, m=34652, seed=5739955973604961613
+✗ Timeout generating graph n=3000, m=34652, seed=3881801951614183357
+✗ Timeout generating graph n=3000, m=34652, seed=7599700178212337699
+✗ Timeout generating graph n=3000, m=34652, seed=7032710160631691991
+✗ Timeout generating graph n=3000, m=34652, seed=6522163754831416203
+✗ Timeout generating graph n=3000, m=34652, seed=1353182403971399009
+✗ Timeout generating graph n=10000, m=2000000, seed=6230961512046992311
+✗ Timeout generating graph n=3000, m=34652, seed=6938562734920028532
+✗ Timeout generating graph n=10000, m=2000000, seed=5739955973604961613
+✗ Timeout generating graph n=10000, m=2000000, seed=7871178979383552919
+✗ Timeout generating graph n=10000, m=2000000, seed=1353182403971399009
+✗ Timeout generating graph n=10000, m=2000000, seed=3881801951614183357
+✗ Timeout generating graph n=10000, m=2000000, seed=7032710160631691991
+✗ Timeout generating graph n=10000, m=2000000, seed=6938562734920028532
+✗ Timeout generating graph n=10000, m=2000000, seed=7599700178212337699
+✗ Timeout generating graph n=10000, m=2000000, seed=6522163754831416203
+✓ Generated graph n=900, m=8832, seed=7871178979383552919, type=POWLAW -> ./input/random_graphs/graph_900_8832_POWLAW_7871178979383552919.txt
+✓ Generated graph n=900, m=8832, seed=6230961512046992311, type=POWLAW -> ./input/random_graphs/graph_900_8832_POWLAW_6230961512046992311.txt
+✓ Generated graph n=900, m=8832, seed=5739955973604961613, type=POWLAW -> ./input/random_graphs/graph_900_8832_POWLAW_5739955973604961613.txt
+✓ Generated graph n=900, m=8832, seed=3881801951614183357, type=POWLAW -> ./input/random_graphs/graph_900_8832_POWLAW_3881801951614183357.txt
+✓ Generated graph n=900, m=8832, seed=7599700178212337699, type=POWLAW -> ./input/random_graphs/graph_900_8832_POWLAW_7599700178212337699.txt
+✓ Generated graph n=900, m=8832, seed=6522163754831416203, type=POWLAW -> ./input/random_graphs/graph_900_8832_POWLAW_6522163754831416203.txt
+✓ Generated graph n=900, m=8832, seed=1353182403971399009, type=POWLAW -> ./input/random_graphs/graph_900_8832_POWLAW_1353182403971399009.txt
+✓ Generated graph n=900, m=8832, seed=1070244953599069350, type=POWLAW -> ./input/random_graphs/graph_900_8832_POWLAW_1070244953599069350.txt
+✓ Generated graph n=900, m=8832, seed=7032710160631691991, type=POWLAW -> ./input/random_graphs/graph_900_8832_POWLAW_7032710160631691991.txt
+✓ Generated graph n=900, m=8832, seed=6938562734920028532, type=POWLAW -> ./input/random_graphs/graph_900_8832_POWLAW_6938562734920028532.txt
+✗ Timeout generating graph n=10000, m=800000, seed=6230961512046992311
+✗ Timeout generating graph n=10000, m=800000, seed=7871178979383552919
+✓ Generated graph n=10000, m=8000, seed=6230961512046992311, type=POWLAW -> ./input/random_graphs/graph_10000_8000_POWLAW_6230961512046992311.txt
+✓ Generated graph n=10000, m=8000, seed=7871178979383552919, type=POWLAW -> ./input/random_graphs/graph_10000_8000_POWLAW_7871178979383552919.txt
+✓ Generated graph n=10000, m=8000, seed=5739955973604961613, type=POWLAW -> ./input/random_graphs/graph_10000_8000_POWLAW_5739955973604961613.txt
+✓ Generated graph n=10000, m=8000, seed=3881801951614183357, type=POWLAW -> ./input/random_graphs/graph_10000_8000_POWLAW_3881801951614183357.txt
+✓ Generated graph n=10000, m=8000, seed=7599700178212337699, type=POWLAW -> ./input/random_graphs/graph_10000_8000_POWLAW_7599700178212337699.txt
+✓ Generated graph n=10000, m=8000, seed=7032710160631691991, type=POWLAW -> ./input/random_graphs/graph_10000_8000_POWLAW_7032710160631691991.txt
+✓ Generated graph n=10000, m=8000, seed=1353182403971399009, type=POWLAW -> ./input/random_graphs/graph_10000_8000_POWLAW_1353182403971399009.txt
+✓ Generated graph n=10000, m=8000, seed=1070244953599069350, type=POWLAW -> ./input/random_graphs/graph_10000_8000_POWLAW_1070244953599069350.txt
+✓ Generated graph n=10000, m=8000, seed=6522163754831416203, type=POWLAW -> ./input/random_graphs/graph_10000_8000_POWLAW_6522163754831416203.txt
+✓ Generated graph n=10000, m=4000, seed=6230961512046992311, type=POWLAW -> ./input/random_graphs/graph_10000_4000_POWLAW_6230961512046992311.txt
+✓ Generated graph n=10000, m=4000, seed=7871178979383552919, type=POWLAW -> ./input/random_graphs/graph_10000_4000_POWLAW_7871178979383552919.txt
+✓ Generated graph n=10000, m=4000, seed=5739955973604961613, type=POWLAW -> ./input/random_graphs/graph_10000_4000_POWLAW_5739955973604961613.txt
+✓ Generated graph n=10000, m=4000, seed=3881801951614183357, type=POWLAW -> ./input/random_graphs/graph_10000_4000_POWLAW_3881801951614183357.txt
+✓ Generated graph n=10000, m=4000, seed=7032710160631691991, type=POWLAW -> ./input/random_graphs/graph_10000_4000_POWLAW_7032710160631691991.txt
+✓ Generated graph n=10000, m=4000, seed=7599700178212337699, type=POWLAW -> ./input/random_graphs/graph_10000_4000_POWLAW_7599700178212337699.txt
+✓ Generated graph n=10000, m=4000, seed=1353182403971399009, type=POWLAW -> ./input/random_graphs/graph_10000_4000_POWLAW_1353182403971399009.txt
+✓ Generated graph n=10000, m=8000, seed=6938562734920028532, type=POWLAW -> ./input/random_graphs/graph_10000_8000_POWLAW_6938562734920028532.txt
+✓ Generated graph n=10000, m=4000, seed=6522163754831416203, type=POWLAW -> ./input/random_graphs/graph_10000_4000_POWLAW_6522163754831416203.txt
+✓ Generated graph n=10000, m=4000, seed=1070244953599069350, type=POWLAW -> ./input/random_graphs/graph_10000_4000_POWLAW_1070244953599069350.txt
+✓ Generated graph n=10000, m=4000, seed=6938562734920028532, type=POWLAW -> ./input/random_graphs/graph_10000_4000_POWLAW_6938562734920028532.txt
+✗ Timeout generating graph n=10000, m=800000, seed=5739955973604961613
+✗ Timeout generating graph n=10000, m=800000, seed=3881801951614183357
+✗ Timeout generating graph n=10000, m=800000, seed=7032710160631691991
+✗ Timeout generating graph n=10000, m=800000, seed=7599700178212337699
+✗ Timeout generating graph n=10000, m=800000, seed=1353182403971399009
+✗ Timeout generating graph n=10000, m=800000, seed=1070244953599069350
+✗ Timeout generating graph n=10000, m=800000, seed=6522163754831416203
+✗ Timeout generating graph n=10000, m=800000, seed=6938562734920028532
+✗ Timeout generating graph n=10000, m=200000, seed=6230961512046992311
+✗ Timeout generating graph n=10000, m=200000, seed=7871178979383552919
+✗ Timeout generating graph n=10000, m=200000, seed=5739955973604961613
+✗ Timeout generating graph n=10000, m=200000, seed=3881801951614183357
+✗ Timeout generating graph n=10000, m=200000, seed=7032710160631691991
+✗ Timeout generating graph n=10000, m=200000, seed=7599700178212337699
+✗ Timeout generating graph n=10000, m=200000, seed=1353182403971399009
+✗ Timeout generating graph n=10000, m=200000, seed=1070244953599069350
+✗ Timeout generating graph n=10000, m=200000, seed=6522163754831416203
+✗ Timeout generating graph n=10000, m=200000, seed=6938562734920028532
+✗ Timeout generating graph n=10000, m=49995000, seed=6230961512046992311
+✗ Timeout generating graph n=10000, m=49995000, seed=7871178979383552919
+✗ Timeout generating graph n=10000, m=49995000, seed=5739955973604961613
+✗ Timeout generating graph n=10000, m=49995000, seed=7032710160631691991

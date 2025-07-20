@@ -1,0 +1,20 @@
+Generating graphs for 1 (n,m) pairs with 10 iterations each
+Total graphs to generate: 10
+Using 30 parallel processes
+Graph type: POWLAW
+Sparsity: 4
+✓ Generated graph n=1000, m=499500, seed=3881801951614183357, type=POWLAW -> ./input/random_graphs/graph_1000_499500_POWLAW_3881801951614183357.txt (Time: 121.61s)
+✓ Generated graph n=1000, m=499500, seed=1353182403971399009, type=POWLAW -> ./input/random_graphs/graph_1000_499500_POWLAW_1353182403971399009.txt (Time: 210.80s)
+✓ Generated graph n=1000, m=499500, seed=1070244953599069350, type=POWLAW -> ./input/random_graphs/graph_1000_499500_POWLAW_1070244953599069350.txt (Time: 306.90s)
+✓ Generated graph n=1000, m=499500, seed=6230961512046992311, type=POWLAW -> ./input/random_graphs/graph_1000_499500_POWLAW_6230961512046992311.txt (Time: 318.24s)
+✓ Generated graph n=1000, m=499500, seed=6522163754831416203, type=POWLAW -> ./input/random_graphs/graph_1000_499500_POWLAW_6522163754831416203.txt (Time: 455.84s)
+✓ Generated graph n=1000, m=499500, seed=7871178979383552919, type=POWLAW -> ./input/random_graphs/graph_1000_499500_POWLAW_7871178979383552919.txt (Time: 650.91s)
+✓ Generated graph n=1000, m=499500, seed=7599700178212337699, type=POWLAW -> ./input/random_graphs/graph_1000_499500_POWLAW_7599700178212337699.txt (Time: 689.80s)
+✓ Generated graph n=1000, m=499500, seed=7032710160631691991, type=POWLAW -> ./input/random_graphs/graph_1000_499500_POWLAW_7032710160631691991.txt (Time: 700.43s)
+✓ Generated graph n=1000, m=499500, seed=5739955973604961613, type=POWLAW -> ./input/random_graphs/graph_1000_499500_POWLAW_5739955973604961613.txt (Time: 784.30s)
+✓ Generated graph n=1000, m=499500, seed=6938562734920028532, type=POWLAW -> ./input/random_graphs/graph_1000_499500_POWLAW_6938562734920028532.txt (Time: 795.50s)
+
+Graph generation completed in 795.55 seconds
+Successful: 10
+Failed: 0
+Total: 10

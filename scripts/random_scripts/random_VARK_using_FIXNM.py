@@ -9,23 +9,23 @@ from datetime import datetime
 sparsity_label = {2: "logN", 3: "sqrtN", 4: "N2"}
 
 def run_experiments_n_10000(iterations, seed_token, sparsity, graph_type):
-    n = 10000
-    # n = 1000
+    #n = 10000
+    n = 1000
     variants = ["0", "N"]
     algorithms = {"kPath": "2", "kLev":"3"}
 
     output_dir = f"./results/random/VARK/{graph_type}"
     Path(output_dir).mkdir(parents=True, exist_ok=True)
 
-    print(f"Running VARK with {iterations} iterations, for N = 10,000 and sparsity code {sparsity} for k from 1 to N and seed token {seed_token}")
+    print(f"Running VARK with {iterations} iterations, for N = 10,00 and sparsity code {sparsity} for k from 1 to N and seed token {seed_token}")
 
-    # k_values = list(range(1, 10, 1))  + list(range(10, 20, 2)) + list(range(20, 40, 5)) + [40, 50, 75, 100] + list(range(250, 1250, 250)) + list(range(2500, 12000, 2500))
+    k_values = list(range(1, 10, 1))  + list(range(10, 20, 2)) + list(range(20, 40, 5)) + [40, 50, 75, 100] + list(range(250, 1250, 250)) + list(range(2500, 12000, 2500))
     # k_values = list(range(1, 40)) + list(range(40, 100, 5)) + list(range(100, 1001, 50))
-    k_values = list(range(1, 15, 1)) + list(range(15, 50, 5)) + list(range(50, 100, 10)) + list(range(100, 300, 50)) + list(range(300, 500, 100)) + list(range(500, 1000, 250)) + list(range(1000, 3000, 500)) + list(range(3000, 5000, 1000)) + list(range(5000, 10001, 2500))
+    # k_values = list(range(1, 15, 1)) + list(range(15, 50, 5)) + list(range(50, 100, 10)) + list(range(100, 300, 50)) + list(range(300, 500, 100)) + list(range(500, 1000, 250)) + list(range(1000, 3000, 500)) + list(range(3000, 5000, 1000)) + list(range(5000, 10001, 2500))
 
     # Add a timestamped directory for each run
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    sparsity_dir = os.path.join(output_dir, f"sparsity_{sparsity_label[sparsity]}_N_10000_seed_{seed_token}_iter_{iterations}_{timestamp}")
+    sparsity_dir = os.path.join(output_dir, f"sparsity_{sparsity_label[sparsity]}_N_{n}_seed_{seed_token}_iter_{iterations}_{timestamp}")
     Path(sparsity_dir).mkdir(parents=True, exist_ok=True)
 
     # Open CSV files for writing
