@@ -34,14 +34,14 @@ def calculate_m(n: int, sparsity: int) -> int:
 def get_varn_values() -> List[int]:
     """Extract n values from VARN script following experiment.cpp case 0 pattern"""
     # Hardcoded 1K values (following case 0 pattern: start=10, step=10, then step=50 when n >= 100)
-    # return [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000]
+    return [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000]
     
     # Old 10K values (commented out)
-    return (list(range(10, 100, 10)) + 
-            list(range(100, 1001, 100)) + 
-            list(range(1250, 2501, 250)) + 
-            list(range(3000, 5001, 500)) + 
-            list(range(6000, 10001, 1000)))
+    #return (list(range(10, 100, 10)) + 
+    #        list(range(100, 1001, 100)) + 
+    #        list(range(1250, 2501, 250)) + 
+    #        list(range(3000, 5001, 500)) + 
+    #        list(range(6000, 10001, 1000)))
 
 def get_varm_values() -> List[int]:
     """Extract m values from VARM script (complete graph pattern, n=1000)"""
