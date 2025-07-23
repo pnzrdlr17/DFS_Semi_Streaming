@@ -10,7 +10,8 @@ sparsity_label = {2: "logN", 3: "sqrtN", 4: "N2"}
 
 def run_experiments(iterations, seed_token, sparsity, graph_type):
     output_dir = f"./results/random/VARN/{graph_type}"
-    variants = ["0", "N"]
+    #variants = ["0", "N"]
+    variants = ["1", "2"]
     algorithms = {"kpath": "2", "klev":"3"} # kpath, klev
     k = 5
 
@@ -21,7 +22,7 @@ def run_experiments(iterations, seed_token, sparsity, graph_type):
     # n_values = list(range(10, 101, 10)) + list(range(150, 550, 50)) + list(range(600, 1100, 100)) + list(range(1200, 2200, 200)) + list(range(2500, 5500, 500)) + list(range(6000, 11000, 1000))
     # n_values = list(range(10, 100, 10)) + list(range(100, 1001, 50)) 
 
-    # n_values = list(range(10, 100, 10)) + list(range(100, 1001, 100)) + list(range(1250, 2501, 250)) + list(range(3000, 5001, 500)) + list(range(6000, 10001, 1000))
+    #n_values = list(range(10, 100, 10)) + list(range(100, 1001, 100)) + list(range(1250, 2501, 250)) + list(range(3000, 5001, 500)) + list(range(6000, 10001, 1000))
 
     n_values = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000]
 
