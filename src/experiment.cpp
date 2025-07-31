@@ -224,8 +224,8 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, ll M, int
                     result = runAlgorithm(n, M, current_file, algorithm, algo_variant, k);
 
                     algoStats[0].avgPasses += result.passCount;
-                    // algoStats[0].avgHeight += result.T.getHeight(0);
-                    if (result.passCount > algoStats[0].maxPasses) algoStats[0].maxPasses = result.passCount;
+                    algoStats[0].avgHeight += result.T.getHeight(result.T.getRoot());
+                    // if (result.passCount > algoStats[0].maxPasses) algoStats[0].maxPasses = result.passCount;
                 }
                 else {
                     generateRandomGraph(n, M, seeds[itr], graph_type);
@@ -236,7 +236,7 @@ ExpResult experimentFramework(bool runMode, int experiment_type, ll n, ll M, int
             if (runMode) {
                 for (int i = 0; i < testCount; ++i) {
                     algoStats[i].avgPasses /= iterations;
-                    // algoStats[i].avgHeight /= iterations;
+                    algoStats[i].avgHeight /= iterations;
                 }
                 expr.algorithmStats = algoStats;
             }
@@ -283,5 +283,5 @@ void runExperiment(int experiment_type, ll n, ll m, int sparsity, string graph_t
     }
 
     vector<AlgorithmStats> algorithmStats = result.algorithmStats;
-    cout << algorithmStats[0].avgPasses << endl; // For FIXNM the parameter is fixed, seeds vary over iterations, hence only one
+    cout << algorithmStats[0].avgPasses << ' ' << algorithmStats[0].avgHeight << endl; // For FIXNM the parameter is fixed, seeds vary over iterations, hence only one
 }
