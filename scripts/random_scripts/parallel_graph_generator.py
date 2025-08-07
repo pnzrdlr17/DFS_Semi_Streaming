@@ -36,7 +36,9 @@ def get_varn_values() -> List[int]:
     # Hardcoded 1K values (following case 0 pattern: start=10, step=10, then step=50 when n >= 100)
     #return [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000]
     
-    return (list(range(10, 100, 10)) + list(range(100, 1000, 100)) + list(range(1000, 2000, 200)) + list(range(2000, 5000, 500)) + list(range(5000, 10001, 1000)))
+    #return (list(range(10, 100, 10)) + list(range(100, 1000, 100)) + list(range(1000, 2000, 200)) + list(range(2000, 5000, 500)) + list(range(5000, 10001, 1000)))
+
+    return (list(range(2000, 5000, 500)) + list(range(5000, 10001, 1000)))
 
     # Old 10K values (commented out)
     #return (list(range(10, 100, 10)) + 
@@ -48,11 +50,13 @@ def get_varn_values() -> List[int]:
 def get_varm_values() -> List[int]:
     """Extract m values from VARM script (complete graph pattern, n=1000)"""
     # Hardcoded complete graph values up to n*(n-1)/2 = 499500
-    return [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000,
-            2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000,
-            12000, 13000, 14000, 15000, 16000, 17000, 18000, 19000, 20000,
-            30000, 40000, 50000, 60000, 70000, 80000, 90000, 100000,
-            200000, 300000, 400000]
+    return list(range(1000, 10000, 1000)) + list(range(10_000, 20_000, 2000)) + list(range(25_000, 50_000, 5000)) + list(range(50_000, 100_000, 10_000)) + list(range(100_000, 1_000_001, 100_000)) + list(range(2_000_000, 10_000_000, 2_000_000)) + list(range(10_000_000, 40_000_001, 5_000_000)) + [49_995_000]
+
+    #return [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000,
+    #        2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000,
+    #        12000, 13000, 14000, 15000, 16000, 17000, 18000, 19000, 20000,
+    #        30000, 40000, 50000, 60000, 70000, 80000, 90000, 100000,
+    #        200000, 300000, 400000]
     
     # Old 10K values (commented out)
     # return (list(range(1000, 10001, 1000)) + 
@@ -126,13 +130,13 @@ def generate_nm_pairs(experiment_type: str, sparsity: int = 2) -> List[Tuple[int
             pairs.append((n, m))
     
     elif experiment_type == "VARM":
-        n = 1000  # Fixed n for VARM (reduced from 10000 to 1000)
+        n = 10000  # Fixed n for VARM (reduced from 10000 to 1000)
         m_values = get_varm_values()
         for m in m_values:
             pairs.append((n, m))
     
     elif experiment_type == "VARK":
-        n = 1000  # Fixed n for VARK (reduced from 10000 to 1000)
+        n = 10000  # Fixed n for VARK (reduced from 10000 to 1000)
         m = calculate_m(n, sparsity)
         pairs.append((n, m))
     
