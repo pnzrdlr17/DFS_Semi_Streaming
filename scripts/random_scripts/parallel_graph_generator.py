@@ -36,9 +36,9 @@ def get_varn_values() -> List[int]:
     # Hardcoded 1K values (following case 0 pattern: start=10, step=10, then step=50 when n >= 100)
     #return [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000]
     
-    #return (list(range(10, 100, 10)) + list(range(100, 1000, 100)) + list(range(1000, 2000, 200)) + list(range(2000, 5000, 500)) + list(range(5000, 10001, 1000)))
-
-    return (list(range(2000, 5000, 500)) + list(range(5000, 10001, 1000)))
+    return (list(range(10, 100, 10)) + list(range(100, 1000, 100)) + list(range(1000, 2000, 200)) + list(range(2000, 5000, 500)) + list(range(5000, 10001, 1000)))
+    
+    #return (list(range(2000, 5000, 500)) + list(range(5000, 10001, 1000)))
 
     # Old 10K values (commented out)
     #return (list(range(10, 100, 10)) + 

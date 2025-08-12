@@ -42,7 +42,7 @@ def run_experiments(iterations, seed_token, sparsity, graph_type):
                 csv_filepath = os.path.join(dir_path, csv_filename)
 
                 # Open CSV file and write header
-                csvfile = open(csv_filepath, "w", newline="")
+                csvfile = open(csv_filepath, "w", newline="", buffering=1)
                 csvwriter = csv.writer(csvfile, delimiter=',')
                 csvwriter.writerow(["N", "Time (s)", "Memory (KB)", "AvgPasses", "AvgHeight"])
 

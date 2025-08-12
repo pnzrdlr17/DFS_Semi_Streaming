@@ -1,0 +1,5 @@
+Generating graphs for 1 (n,m) pairs with 1000 iterations each
+Total graphs to generate: 1000
+Using 30 parallel processes
+Graph type: POWLAW
+Sparsity: 2
