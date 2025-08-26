@@ -113,3 +113,5 @@ int main(int argc, char* argv[]) {
     
     return 0;
 }
+
+// Usage :: nohup ./scripts/random_scripts/validate_graphs > scripts/random_scripts/validate_graphs_aug_10.log  2>&1 < /dev/null &
