@@ -1,0 +1,9 @@
+Processing graphs for 1 (n,m) pairs with 100 iterations each
+Total graphs to process: 100
+Using 25 parallel processes
+Graph type: UNIFORM
+Sparsity: 4
+HDD cache location: /media/HDD/Projects/ExpDFS/
+Working directory: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs
+Validation failures will be logged to: /media/HDD/Projects/ExpDFS/validation_failures.log
+
