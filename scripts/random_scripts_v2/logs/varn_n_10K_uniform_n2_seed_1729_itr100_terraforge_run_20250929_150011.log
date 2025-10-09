@@ -4786,3 +4786,420 @@ Graph already exists at: ./input/random_graphs/graph_8000_31996000_UNIFORM_79838
 Graph already exists at: ./input/random_graphs/graph_8000_31996000_UNIFORM_4940913311242578590.txt
 Graph already exists at: ./input/random_graphs/graph_8000_31996000_UNIFORM_2264398621601381987.txt
 Graph already exists at: ./input/random_graphs/graph_8000_31996000_UNIFORM_7632458674696225362.txt
+      Average Passes: 2.85,  Average Height: 6000.0, Time/Memory: 1283.45,12380
+Running klev variant 0 with N=6000, sparsity=4, k=2, seed=1729...
+      Average Passes: 3.0,  Average Height: 6000.0, Time/Memory: 2149.81,5220
+Running klev variant 1 with N=6000, sparsity=4, k=2, seed=1729...
+      Average Passes: 2.0,  Average Height: 6000.0, Time/Memory: 1665.22,6260
+Running klev variant 2 with N=6000, sparsity=4, k=2, seed=1729...
+      Average Passes: 2.0,  Average Height: 6000.0, Time/Memory: 1431.56,7204
+Running klev variant N with N=6000, sparsity=4, k=2, seed=1729...
+      Average Passes: 2.0,  Average Height: 6000.0, Time/Memory: 1394.07,7204
+Running klev variant 0 with N=6000, sparsity=4, k=5, seed=1729...
+      Average Passes: 3.0,  Average Height: 6000.0, Time/Memory: 2164.82,6180
+Running klev variant 1 with N=6000, sparsity=4, k=5, seed=1729...
+      Average Passes: 2.0,  Average Height: 6000.0, Time/Memory: 1669.88,6248
+Running klev variant 2 with N=6000, sparsity=4, k=5, seed=1729...
+      Average Passes: 2.0,  Average Height: 6000.0, Time/Memory: 1336.63,8224
+Running klev variant N with N=6000, sparsity=4, k=5, seed=1729...
+      Average Passes: 1.08,  Average Height: 6000.0, Time/Memory: 909.70,7220
+Running klev variant 0 with N=6000, sparsity=4, k=10, seed=1729...
+      Average Passes: 3.0,  Average Height: 6000.0, Time/Memory: 2113.02,6180
+Running klev variant 1 with N=6000, sparsity=4, k=10, seed=1729...
+      Average Passes: 2.0,  Average Height: 6000.0, Time/Memory: 1671.74,7240
+Running klev variant 2 with N=6000, sparsity=4, k=10, seed=1729...
+      Average Passes: 2.0,  Average Height: 6000.0, Time/Memory: 1339.54,11300
+Running klev variant N with N=6000, sparsity=4, k=10, seed=1729...
+      Average Passes: 1.0,  Average Height: 6000.0, Time/Memory: 864.78,7204
+Running kpath variant 0 with N=7000, sparsity=4, k=2, seed=1729...
+      Average Passes: 19.89,  Average Height: 7000.0, Time/Memory: 12434.47,6232
+Running kpath variant 1 with N=7000, sparsity=4, k=2, seed=1729...
+      Average Passes: 19.86,  Average Height: 7000.0, Time/Memory: 12182.24,6200
+Running kpath variant 2 with N=7000, sparsity=4, k=2, seed=1729...
+      Average Passes: 8.46,  Average Height: 7000.0, Time/Memory: 5275.98,6204
+Running kpath variant N with N=7000, sparsity=4, k=2, seed=1729...
+      Average Passes: 4.42,  Average Height: 7000.0, Time/Memory: 2737.57,6248
+Running kpath variant 0 with N=7000, sparsity=4, k=5, seed=1729...
+      Average Passes: 5.99,  Average Height: 7000.0, Time/Memory: 3634.04,10276
+Running kpath variant 1 with N=7000, sparsity=4, k=5, seed=1729...
+      Average Passes: 5.15,  Average Height: 7000.0, Time/Memory: 3172.57,9252
+Running kpath variant 2 with N=7000, sparsity=4, k=5, seed=1729...
+      Average Passes: 4.77,  Average Height: 7000.0, Time/Memory: 2962.45,8260
+Running kpath variant N with N=7000, sparsity=4, k=5, seed=1729...
+      Average Passes: 3.0,  Average Height: 7000.0, Time/Memory: 1841.17,9252
+Running kpath variant 0 with N=7000, sparsity=4, k=10, seed=1729...
+      Average Passes: 4.88,  Average Height: 7000.0, Time/Memory: 2976.32,13348
+Running kpath variant 1 with N=7000, sparsity=4, k=10, seed=1729...
+      Average Passes: 3.89,  Average Height: 7000.0, Time/Memory: 2377.77,12324
+Running kpath variant 2 with N=7000, sparsity=4, k=10, seed=1729...
+      Average Passes: 3.62,  Average Height: 7000.0, Time/Memory: 2233.31,12340
+Running kpath variant N with N=7000, sparsity=4, k=10, seed=1729...
+      Average Passes: 2.88,  Average Height: 7000.0, Time/Memory: 1770.67,12364
+Running klev variant 0 with N=7000, sparsity=4, k=2, seed=1729...
+      Average Passes: 3.01,  Average Height: 7000.0, Time/Memory: 2970.63,7204
+Running klev variant 1 with N=7000, sparsity=4, k=2, seed=1729...
+      Average Passes: 2.0,  Average Height: 7000.0, Time/Memory: 2321.55,6180
+Running klev variant 2 with N=7000, sparsity=4, k=2, seed=1729...
+      Average Passes: 2.0,  Average Height: 7000.0, Time/Memory: 1972.59,7204
+Running klev variant N with N=7000, sparsity=4, k=2, seed=1729...
+      Average Passes: 2.0,  Average Height: 7000.0, Time/Memory: 1902.98,7228
+Running klev variant 0 with N=7000, sparsity=4, k=5, seed=1729...
+      Average Passes: 3.0,  Average Height: 7000.0, Time/Memory: 2967.37,6180
+Running klev variant 1 with N=7000, sparsity=4, k=5, seed=1729...
+      Average Passes: 2.0,  Average Height: 7000.0, Time/Memory: 2323.58,6208
+Running klev variant 2 with N=7000, sparsity=4, k=5, seed=1729...
+      Average Passes: 2.0,  Average Height: 7000.0, Time/Memory: 1832.08,9252
+Running klev variant N with N=7000, sparsity=4, k=5, seed=1729...
+      Average Passes: 1.11,  Average Height: 7000.0, Time/Memory: 1273.32,9316
+Running klev variant 0 with N=7000, sparsity=4, k=10, seed=1729...
+      Average Passes: 3.0,  Average Height: 7000.0, Time/Memory: 2956.96,8240
+Running klev variant 1 with N=7000, sparsity=4, k=10, seed=1729...
+      Average Passes: 2.0,  Average Height: 7000.0, Time/Memory: 2340.75,8272
+Running klev variant 2 with N=7000, sparsity=4, k=10, seed=1729...
+      Average Passes: 2.0,  Average Height: 7000.0, Time/Memory: 1831.05,12372
+Running klev variant N with N=7000, sparsity=4, k=10, seed=1729...
+      Average Passes: 1.0,  Average Height: 7000.0, Time/Memory: 1202.76,9280
+Running kpath variant 0 with N=8000, sparsity=4, k=2, seed=1729...
+      Average Passes: 20.26,  Average Height: 8000.0, Time/Memory: 16015.77,7236
+Running kpath variant 1 with N=8000, sparsity=4, k=2, seed=1729...
+      Average Passes: 20.18,  Average Height: 8000.0, Time/Memory: 15860.62,7204
+Running kpath variant 2 with N=8000, sparsity=4, k=2, seed=1729...
+      Average Passes: 8.76,  Average Height: 8000.0, Time/Memory: 7034.89,7204
+Running kpath variant N with N=8000, sparsity=4, k=2, seed=1729...
+      Average Passes: 4.62,  Average Height: 8000.0, Time/Memory: 3815.07,7204
+Running kpath variant 0 with N=8000, sparsity=4, k=5, seed=1729...
+      Average Passes: 6.02,  Average Height: 8000.0, Time/Memory: 4701.42,10308
+Running kpath variant 1 with N=8000, sparsity=4, k=5, seed=1729...
+      Average Passes: 5.25,  Average Height: 8000.0, Time/Memory: 4279.47,10276
+Running kpath variant 2 with N=8000, sparsity=4, k=5, seed=1729...
+      Average Passes: 4.86,  Average Height: 8000.0, Time/Memory: 3913.24,9252
+Running kpath variant N with N=8000, sparsity=4, k=5, seed=1729...
+      Average Passes: 3.0,  Average Height: 8000.0, Time/Memory: 2569.95,9252
+Running kpath variant 0 with N=8000, sparsity=4, k=10, seed=1729...
+      Average Passes: 4.94,  Average Height: 8000.0, Time/Memory: 4190.73,12324
+Running kpath variant 1 with N=8000, sparsity=4, k=10, seed=1729...
+      Average Passes: 3.97,  Average Height: 8000.0, Time/Memory: 3400.30,13348
+Running kpath variant 2 with N=8000, sparsity=4, k=10, seed=1729...
+      Average Passes: 3.74,  Average Height: 8000.0, Time/Memory: 3117.39,13348
+Running kpath variant N with N=8000, sparsity=4, k=10, seed=1729...
+      Average Passes: 2.95,  Average Height: 8000.0, Time/Memory: 2494.98,13348
+Running klev variant 0 with N=8000, sparsity=4, k=2, seed=1729...
+      Average Passes: 3.0,  Average Height: 8000.0, Time/Memory: 3995.76,6288
+Running klev variant 1 with N=8000, sparsity=4, k=2, seed=1729...
+      Average Passes: 2.0,  Average Height: 8000.0, Time/Memory: 3106.27,7220
+Running klev variant 2 with N=8000, sparsity=4, k=2, seed=1729...
+      Average Passes: 2.0,  Average Height: 8000.0, Time/Memory: 2598.46,8228
+Running klev variant N with N=8000, sparsity=4, k=2, seed=1729...
+      Average Passes: 2.0,  Average Height: 8000.0, Time/Memory: 2576.90,8228
+Running klev variant 0 with N=8000, sparsity=4, k=5, seed=1729...
+      Average Passes: 3.0,  Average Height: 8000.0, Time/Memory: 3913.09,6228
+Running klev variant 1 with N=8000, sparsity=4, k=5, seed=1729...
+      Average Passes: 2.0,  Average Height: 8000.0, Time/Memory: 3111.22,7232
+Running klev variant 2 with N=8000, sparsity=4, k=5, seed=1729...
+      Average Passes: 2.0,  Average Height: 8000.0, Time/Memory: 2430.34,9284
+Running klev variant N with N=8000, sparsity=4, k=5, seed=1729...
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_6230961512046992311.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_7871178979383552919.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_5739955973604961613.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_3881801951614183357.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_7032710160631691991.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_7599700178212337699.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_1353182403971399009.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_1070244953599069350.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_6522163754831416203.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_6938562734920028532.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_4040737767143389431.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_1250005700364523649.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_1309542850049879452.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_2429002973740178792.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_7663871783842725848.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_320375091487821987.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_5906957480796939447.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_1250773459040295677.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_7146860528564146064.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_3438400432146115956.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_7473196763798409428.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_5139481885857321791.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_5142811650494845597.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_3010622984418968408.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_6002685213311538187.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_5708372698381010775.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_521787134863155063.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_1731523882129807996.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_1853590723603270879.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_7029781962072644698.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_6785030173969523435.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_5529616217668449934.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_1024517563182776983.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_3224265581699847191.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_5258051056098597521.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_1647170069535670909.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_4122784633514911760.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_7706236040662210848.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_824387247617288499.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_1632192924771168275.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_7161906730445628483.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_6802378520969450157.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_4552998297316576788.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_8031431416522537101.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_6143643868734370809.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_3272308573967577038.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_5636411189175451024.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_5349491008325879064.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_6614505080519948832.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_7938560551762094560.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_7917045922527545890.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_4445925461710302877.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_3865339568260874865.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_7921282862123281598.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_6224222471595207695.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_1128313391724783137.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_716820155901718944.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_8718380604043999642.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_5063475852268941542.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_4997514996153925447.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_8446481348147407377.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_3817405844514670994.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_6529943913552561417.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_2909934787168262407.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_1170385908854608748.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_6022436717541034636.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_199422815561151340.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_3713827327871807734.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_175493991617213850.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_5108599054664628607.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_6764066939395682287.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_9130666990809746335.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_7644420139408884785.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_1458186392400727732.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_1392892770529522614.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_9060210648189963449.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_4250897495980125004.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_8794274795737982182.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_2089506265998900862.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_5497874167834979553.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_4060584409398689268.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_1332005502874566195.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_1722224698700348310.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_8626102704817790064.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_7905487461282246979.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_8448596294177070022.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_4795749165124911768.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_4934890601268679176.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_1992204328026194281.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_7118744415197196276.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_2718103348384927511.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_9059990922233379852.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_7449662661572224354.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_3221421291694197220.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_8867616339855336876.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_5894893360759659423.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_7983805977214098674.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_4940913311242578590.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_2264398621601381987.txt
+Graph already exists at: ./input/random_graphs/graph_9000_40495500_UNIFORM_7632458674696225362.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_6230961512046992311.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_7871178979383552919.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_5739955973604961613.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_3881801951614183357.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_7032710160631691991.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_7599700178212337699.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_1353182403971399009.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_1070244953599069350.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_6522163754831416203.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_6938562734920028532.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_4040737767143389431.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_1250005700364523649.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_1309542850049879452.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_2429002973740178792.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_7663871783842725848.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_320375091487821987.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_5906957480796939447.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_1250773459040295677.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_7146860528564146064.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_3438400432146115956.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_7473196763798409428.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_5139481885857321791.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_5142811650494845597.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_3010622984418968408.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_6002685213311538187.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_5708372698381010775.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_521787134863155063.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_1731523882129807996.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_1853590723603270879.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_7029781962072644698.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_6785030173969523435.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_5529616217668449934.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_1024517563182776983.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_3224265581699847191.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_5258051056098597521.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_1647170069535670909.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_4122784633514911760.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_7706236040662210848.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_824387247617288499.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_1632192924771168275.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_7161906730445628483.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_6802378520969450157.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_4552998297316576788.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_8031431416522537101.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_6143643868734370809.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_3272308573967577038.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_5636411189175451024.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_5349491008325879064.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_6614505080519948832.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_7938560551762094560.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_7917045922527545890.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_4445925461710302877.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_3865339568260874865.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_7921282862123281598.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_6224222471595207695.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_1128313391724783137.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_716820155901718944.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_8718380604043999642.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_5063475852268941542.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_4997514996153925447.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_8446481348147407377.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_3817405844514670994.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_6529943913552561417.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_2909934787168262407.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_1170385908854608748.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_6022436717541034636.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_199422815561151340.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_3713827327871807734.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_175493991617213850.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_5108599054664628607.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_6764066939395682287.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_9130666990809746335.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_7644420139408884785.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_1458186392400727732.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_1392892770529522614.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_9060210648189963449.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_4250897495980125004.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_8794274795737982182.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_2089506265998900862.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_5497874167834979553.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_4060584409398689268.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_1332005502874566195.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_1722224698700348310.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_8626102704817790064.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_7905487461282246979.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_8448596294177070022.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_4795749165124911768.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_4934890601268679176.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_1992204328026194281.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_7118744415197196276.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_2718103348384927511.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_9059990922233379852.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_7449662661572224354.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_3221421291694197220.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_8867616339855336876.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_5894893360759659423.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_7983805977214098674.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_4940913311242578590.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_2264398621601381987.txt
+Graph already exists at: ./input/random_graphs/graph_10000_49995000_UNIFORM_7632458674696225362.txt
+      Average Passes: 1.08,  Average Height: 8000.0, Time/Memory: 1687.17,9252
+Running klev variant 0 with N=8000, sparsity=4, k=10, seed=1729...
+      Average Passes: 3.0,  Average Height: 8000.0, Time/Memory: 3981.14,8260
+Running klev variant 1 with N=8000, sparsity=4, k=10, seed=1729...
+      Average Passes: 2.0,  Average Height: 8000.0, Time/Memory: 3143.65,8272
+Running klev variant 2 with N=8000, sparsity=4, k=10, seed=1729...
+      Average Passes: 2.0,  Average Height: 8000.0, Time/Memory: 2452.85,13348
+Running klev variant N with N=8000, sparsity=4, k=10, seed=1729...
+      Average Passes: 1.0,  Average Height: 8000.0, Time/Memory: 1621.58,9252
+Running kpath variant 0 with N=9000, sparsity=4, k=2, seed=1729...
+      Average Passes: 20.5,  Average Height: 9000.0, Time/Memory: 20385.86,7204
+Running kpath variant 1 with N=9000, sparsity=4, k=2, seed=1729...
+      Average Passes: 20.58,  Average Height: 9000.0, Time/Memory: 20781.64,7232
+Running kpath variant 2 with N=9000, sparsity=4, k=2, seed=1729...
+      Average Passes: 8.8,  Average Height: 9000.0, Time/Memory: 8996.12,8228
+Running kpath variant N with N=9000, sparsity=4, k=2, seed=1729...
+      Average Passes: 4.66,  Average Height: 9000.0, Time/Memory: 4673.33,8236
+Running kpath variant 0 with N=9000, sparsity=4, k=5, seed=1729...
+      Average Passes: 6.1,  Average Height: 9000.0, Time/Memory: 6132.55,11756
+Running kpath variant 1 with N=9000, sparsity=4, k=5, seed=1729...
+      Average Passes: 5.33,  Average Height: 9000.0, Time/Memory: 5382.34,10340
+Running kpath variant 2 with N=9000, sparsity=4, k=5, seed=1729...
+      Average Passes: 4.93,  Average Height: 9000.0, Time/Memory: 4990.99,11300
+Running kpath variant N with N=9000, sparsity=4, k=5, seed=1729...
+      Average Passes: 3.0,  Average Height: 9000.0, Time/Memory: 2999.06,10364
+Running kpath variant 0 with N=9000, sparsity=4, k=10, seed=1729...
+      Average Passes: 4.93,  Average Height: 9000.0, Time/Memory: 4938.75,15680
+Running kpath variant 1 with N=9000, sparsity=4, k=10, seed=1729...
+      Average Passes: 3.99,  Average Height: 9000.0, Time/Memory: 4052.73,14400
+Running kpath variant 2 with N=9000, sparsity=4, k=10, seed=1729...
+      Average Passes: 3.85,  Average Height: 9000.0, Time/Memory: 3902.32,15396
+Running kpath variant N with N=9000, sparsity=4, k=10, seed=1729...
+      Average Passes: 2.99,  Average Height: 9000.0, Time/Memory: 2987.42,14372
+Running klev variant 0 with N=9000, sparsity=4, k=2, seed=1729...
+      Average Passes: 3.0,  Average Height: 9000.0, Time/Memory: 5020.55,8292
+Running klev variant 1 with N=9000, sparsity=4, k=2, seed=1729...
+      Average Passes: 2.0,  Average Height: 9000.0, Time/Memory: 4006.50,7204
+Running klev variant 2 with N=9000, sparsity=4, k=2, seed=1729...
+      Average Passes: 2.02,  Average Height: 9000.0, Time/Memory: 3371.51,8264
+Running klev variant N with N=9000, sparsity=4, k=2, seed=1729...
+      Average Passes: 2.0,  Average Height: 9000.0, Time/Memory: 3263.82,8256
+Running klev variant 0 with N=9000, sparsity=4, k=5, seed=1729...
+      Average Passes: 3.0,  Average Height: 9000.0, Time/Memory: 5048.46,8280
+Running klev variant 1 with N=9000, sparsity=4, k=5, seed=1729...
+      Average Passes: 2.0,  Average Height: 9000.0, Time/Memory: 4032.55,7248
+Running klev variant 2 with N=9000, sparsity=4, k=5, seed=1729...
+      Average Passes: 2.0,  Average Height: 9000.0, Time/Memory: 3126.42,10304
+Running klev variant N with N=9000, sparsity=4, k=5, seed=1729...
+      Average Passes: 1.08,  Average Height: 9000.0, Time/Memory: 2191.04,10328
+Running klev variant 0 with N=9000, sparsity=4, k=10, seed=1729...
+      Average Passes: 3.0,  Average Height: 9000.0, Time/Memory: 5052.32,8252
+Running klev variant 1 with N=9000, sparsity=4, k=10, seed=1729...
+      Average Passes: 2.0,  Average Height: 9000.0, Time/Memory: 4010.25,10304
+Running klev variant 2 with N=9000, sparsity=4, k=10, seed=1729...
+      Average Passes: 2.0,  Average Height: 9000.0, Time/Memory: 3078.26,15428
+Running klev variant N with N=9000, sparsity=4, k=10, seed=1729...
+      Average Passes: 1.0,  Average Height: 9000.0, Time/Memory: 2060.48,11300
+Running kpath variant 0 with N=10000, sparsity=4, k=2, seed=1729...
+      Average Passes: 20.8,  Average Height: 10000.0, Time/Memory: 25645.52,9560
+Running kpath variant 1 with N=10000, sparsity=4, k=2, seed=1729...
+      Average Passes: 20.97,  Average Height: 10000.0, Time/Memory: 26215.44,8252
+Running kpath variant 2 with N=10000, sparsity=4, k=2, seed=1729...
+      Average Passes: 8.97,  Average Height: 10000.0, Time/Memory: 11129.91,9220
+Running kpath variant N with N=10000, sparsity=4, k=2, seed=1729...
+      Average Passes: 4.81,  Average Height: 10000.0, Time/Memory: 6346.12,9096
+Running kpath variant 0 with N=10000, sparsity=4, k=5, seed=1729...
+      Average Passes: 6.2,  Average Height: 10000.0, Time/Memory: 7842.38,10276
+Running kpath variant 1 with N=10000, sparsity=4, k=5, seed=1729...
+      Average Passes: 5.57,  Average Height: 10000.0, Time/Memory: 7050.38,11300
+Running kpath variant 2 with N=10000, sparsity=4, k=5, seed=1729...
+      Average Passes: 4.96,  Average Height: 10000.0, Time/Memory: 6419.13,12252
+Running kpath variant N with N=10000, sparsity=4, k=5, seed=1729...
+      Average Passes: 3.0,  Average Height: 10000.0, Time/Memory: 3915.69,11300
+Running kpath variant 0 with N=10000, sparsity=4, k=10, seed=1729...
+      Average Passes: 4.95,  Average Height: 10000.0, Time/Memory: 6158.41,16428
+Running kpath variant 1 with N=10000, sparsity=4, k=10, seed=1729...
+      Average Passes: 3.99,  Average Height: 10000.0, Time/Memory: 5061.55,15476
+Running kpath variant 2 with N=10000, sparsity=4, k=10, seed=1729...
+      Average Passes: 3.9,  Average Height: 10000.0, Time/Memory: 5065.90,16308
+Running kpath variant N with N=10000, sparsity=4, k=10, seed=1729...
+      Average Passes: 2.99,  Average Height: 10000.0, Time/Memory: 3782.79,15404
+Running klev variant 0 with N=10000, sparsity=4, k=2, seed=1729...
+      Average Passes: 3.0,  Average Height: 10000.0, Time/Memory: 6401.52,6176
+Running klev variant 1 with N=10000, sparsity=4, k=2, seed=1729...
+      Average Passes: 2.0,  Average Height: 10000.0, Time/Memory: 5082.62,7204
+Running klev variant 2 with N=10000, sparsity=4, k=2, seed=1729...
+      Average Passes: 2.0,  Average Height: 10000.0, Time/Memory: 4210.58,8312
+Running klev variant N with N=10000, sparsity=4, k=2, seed=1729...
+      Average Passes: 2.0,  Average Height: 10000.0, Time/Memory: 4098.93,7200
+Running klev variant 0 with N=10000, sparsity=4, k=5, seed=1729...
+      Average Passes: 3.0,  Average Height: 10000.0, Time/Memory: 6403.35,9252
+Running klev variant 1 with N=10000, sparsity=4, k=5, seed=1729...
+      Average Passes: 2.0,  Average Height: 10000.0, Time/Memory: 5103.54,8280
+Running klev variant 2 with N=10000, sparsity=4, k=5, seed=1729...
+      Average Passes: 2.0,  Average Height: 10000.0, Time/Memory: 3945.93,11304
+Running klev variant N with N=10000, sparsity=4, k=5, seed=1729...
+      Average Passes: 1.15,  Average Height: 10000.0, Time/Memory: 2845.26,10276
+Running klev variant 0 with N=10000, sparsity=4, k=10, seed=1729...
+      Average Passes: 3.0,  Average Height: 10000.0, Time/Memory: 6450.33,9476
+Running klev variant 1 with N=10000, sparsity=4, k=10, seed=1729...
+      Average Passes: 2.0,  Average Height: 10000.0, Time/Memory: 5133.92,9252
+Running klev variant 2 with N=10000, sparsity=4, k=10, seed=1729...
+      Average Passes: 2.0,  Average Height: 10000.0, Time/Memory: 3915.77,17472
+Running klev variant N with N=10000, sparsity=4, k=10, seed=1729...
+      Average Passes: 1.0,  Average Height: 10000.0, Time/Memory: 2618.21,11296
