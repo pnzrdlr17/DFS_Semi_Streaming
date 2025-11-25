@@ -1,0 +1,231 @@
+Processing graphs for 5 (n,m) pairs with 100 iterations each
+Total graphs to process: 500
+Using 30 parallel processes
+Graph type: POWLAW
+Sparsity: 3
+HDD cache location: input/dump_graphs
+Working directory: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs
+Validation failures will be logged to: input/dump_graphs/validation_failures.log
+
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_1353182403971399009.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_5139481885857321791.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_1731523882129807996.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_1070244953599069350.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_3010622984418968408.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_1853590723603270879.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_5739955973604961613.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_6522163754831416203.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_4040737767143389431.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_521787134863155063.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_5708372698381010775.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_6938562734920028532.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_5906957480796939447.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_5142811650494845597.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_2429002973740178792.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_7473196763798409428.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_3881801951614183357.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_6002685213311538187.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_7599700178212337699.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_1250773459040295677.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_7029781962072644698.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_6230961512046992311.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_7871178979383552919.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_1250005700364523649.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_7146860528564146064.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_3438400432146115956.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_320375091487821987.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_7032710160631691991.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_1309542850049879452.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_7663871783842725848.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_5529616217668449934.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_1024517563182776983.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_5258051056098597521.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_1647170069535670909.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_3224265581699847191.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_6785030173969523435.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_1632192924771168275.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_6802378520969450157.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_4552998297316576788.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_4122784633514911760.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_7161906730445628483.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_824387247617288499.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_7706236040662210848.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_5636411189175451024.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_8031431416522537101.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_7917045922527545890.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_6143643868734370809.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_5349491008325879064.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_6614505080519948832.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_6224222471595207695.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_3865339568260874865.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_3272308573967577038.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_4445925461710302877.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_1128313391724783137.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_7938560551762094560.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_7921282862123281598.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_5063475852268941542.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_4997514996153925447.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_8718380604043999642.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_716820155901718944.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_8446481348147407377.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_3817405844514670994.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_2909934787168262407.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_6529943913552561417.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_199422815561151340.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_1170385908854608748.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_6022436717541034636.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_3713827327871807734.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_6764066939395682287.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_175493991617213850.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_9130666990809746335.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_5108599054664628607.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_1458186392400727732.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_9060210648189963449.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_1392892770529522614.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_8794274795737982182.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_2089506265998900862.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_4250897495980125004.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_5497874167834979553.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_8448596294177070022.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_8626102704817790064.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_4060584409398689268.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_7905487461282246979.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_1722224698700348310.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_7644420139408884785.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_4934890601268679176.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_1332005502874566195.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_4795749165124911768.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_1992204328026194281.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_7118744415197196276.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_2718103348384927511.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_9059990922233379852.txt
+⏭ ALREADY_EXISTS in working dir: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_3221421291694197220.txt
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_2264398621601381987.txt (Time: 225081.37s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_5894893360759659423.txt (Time: 246618.19s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_8867616339855336876.txt (Time: 248511.92s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_4940913311242578590.txt (Time: 253410.56s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_7632458674696225362.txt (Time: 255924.68s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_7449662661572224354.txt (Time: 267728.82s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_6000_464758_POWLAW_7983805977214098674.txt (Time: 279161.17s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_7029781962072644698.txt (Time: 50066.96s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_1309542850049879452.txt (Time: 409930.68s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_1250773459040295677.txt (Time: 410168.95s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_7146860528564146064.txt (Time: 414759.37s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_7871178979383552919.txt (Time: 416266.54s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_1070244953599069350.txt (Time: 420718.43s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_5139481885857321791.txt (Time: 421371.76s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_3438400432146115956.txt (Time: 430979.93s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_5906957480796939447.txt (Time: 432967.55s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_7599700178212337699.txt (Time: 436812.76s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_6522163754831416203.txt (Time: 437175.71s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_6230961512046992311.txt (Time: 438341.67s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_320375091487821987.txt (Time: 439108.92s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_7032710160631691991.txt (Time: 443602.18s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_3881801951614183357.txt (Time: 444012.37s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_1250005700364523649.txt (Time: 447446.58s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_2429002973740178792.txt (Time: 449858.69s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_7663871783842725848.txt (Time: 451086.96s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_5739955973604961613.txt (Time: 452123.85s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_5142811650494845597.txt (Time: 454843.84s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_7473196763798409428.txt (Time: 456377.61s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_7917045922527545890.txt (Time: 50.98s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_4040737767143389431.txt (Time: 456994.05s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_1353182403971399009.txt (Time: 458173.65s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_6938562734920028532.txt (Time: 459536.06s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_521787134863155063.txt (Time: 387975.25s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_3010622984418968408.txt (Time: 418002.01s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_5708372698381010775.txt (Time: 406234.97s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_1731523882129807996.txt (Time: 409203.27s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_6002685213311538187.txt (Time: 421796.92s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_1853590723603270879.txt (Time: 441005.94s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_6785030173969523435.txt (Time: 448108.82s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_1024517563182776983.txt (Time: 399859.01s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_4122784633514911760.txt (Time: 389203.65s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_5529616217668449934.txt (Time: 415697.20s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_5258051056098597521.txt (Time: 426203.30s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_4552998297316576788.txt (Time: 410455.74s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_8031431416522537101.txt (Time: 414558.95s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_6802378520969450157.txt (Time: 421831.10s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_7706236040662210848.txt (Time: 432871.10s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_6143643868734370809.txt (Time: 430861.92s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_1647170069535670909.txt (Time: 462128.76s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_1632192924771168275.txt (Time: 452757.38s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_3224265581699847191.txt (Time: 479543.68s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_4445925461710302877.txt (Time: 438879.77s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_7921282862123281598.txt (Time: 438121.50s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_824387247617288499.txt (Time: 465171.01s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_7161906730445628483.txt (Time: 462755.06s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_6224222471595207695.txt (Time: 447430.05s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_3865339568260874865.txt (Time: 451517.39s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_7938560551762094560.txt (Time: 456800.40s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_4060584409398689268.txt (Time: 94.59s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_3272308573967577038.txt (Time: 480785.32s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_5349491008325879064.txt (Time: 477789.05s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_5636411189175451024.txt (Time: 495362.97s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_6614505080519948832.txt (Time: 506453.75s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_8718380604043999642.txt (Time: 470332.50s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_716820155901718944.txt (Time: 492957.95s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_4997514996153925447.txt (Time: 484414.88s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_5063475852268941542.txt (Time: 491858.15s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_1128313391724783137.txt (Time: 518649.15s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_8446481348147407377.txt (Time: 503747.46s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_3817405844514670994.txt (Time: 544091.38s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_1170385908854608748.txt (Time: 510487.36s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_2909934787168262407.txt (Time: 554370.57s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_6529943913552561417.txt (Time: 556995.26s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_199422815561151340.txt (Time: 519861.62s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_6764066939395682287.txt (Time: 513539.50s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_3713827327871807734.txt (Time: 531148.03s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_6022436717541034636.txt (Time: 548914.95s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_5108599054664628607.txt (Time: 535501.29s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_7644420139408884785.txt (Time: 527329.57s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_175493991617213850.txt (Time: 567645.08s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_8794274795737982182.txt (Time: 537992.34s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_5497874167834979553.txt (Time: 530186.27s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_9130666990809746335.txt (Time: 572692.39s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_1722224698700348310.txt (Time: 534235.29s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_9060210648189963449.txt (Time: 571188.76s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_4250897495980125004.txt (Time: 569376.33s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_1392892770529522614.txt (Time: 575563.77s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_1332005502874566195.txt (Time: 566058.21s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_1458186392400727732.txt (Time: 584643.15s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_2089506265998900862.txt (Time: 583518.07s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_8626102704817790064.txt (Time: 562147.08s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_7905487461282246979.txt (Time: 557796.02s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_8448596294177070022.txt (Time: 572901.12s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_7118744415197196276.txt (Time: 465381.50s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_1992204328026194281.txt (Time: 556910.21s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_4795749165124911768.txt (Time: 585466.28s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_2718103348384927511.txt (Time: 556085.03s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_4934890601268679176.txt (Time: 587127.66s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_9059990922233379852.txt (Time: 565623.87s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_7449662661572224354.txt (Time: 459975.27s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_8000_715541_POWLAW_5142811650494845597.txt (Time: 90.52s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_8000_715541_POWLAW_1250773459040295677.txt (Time: 77255.01s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_3221421291694197220.txt (Time: 459134.07s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_7983805977214098674.txt (Time: 463200.02s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_8867616339855336876.txt (Time: 469911.54s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_5894893360759659423.txt (Time: 492156.17s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_4940913311242578590.txt (Time: 508362.34s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_7632458674696225362.txt (Time: 514842.87s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_7000_585662_POWLAW_2264398621601381987.txt (Time: 528142.77s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_8000_715541_POWLAW_6230961512046992311.txt (Time: 735255.52s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_8000_715541_POWLAW_3881801951614183357.txt (Time: 735197.78s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_8000_715541_POWLAW_4040737767143389431.txt (Time: 713972.83s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_8000_715541_POWLAW_1353182403971399009.txt (Time: 730761.83s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_8000_715541_POWLAW_5739955973604961613.txt (Time: 786470.23s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_8000_715541_POWLAW_7871178979383552919.txt (Time: 800756.77s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_8000_715541_POWLAW_7032710160631691991.txt (Time: 789206.39s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_8000_715541_POWLAW_1250005700364523649.txt (Time: 761276.73s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_8000_715541_POWLAW_7599700178212337699.txt (Time: 789454.90s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_8000_715541_POWLAW_6522163754831416203.txt (Time: 782125.46s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_8000_715541_POWLAW_1070244953599069350.txt (Time: 785850.80s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_8000_715541_POWLAW_7663871783842725848.txt (Time: 752585.68s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_8000_715541_POWLAW_320375091487821987.txt (Time: 734459.05s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_8000_715541_POWLAW_6938562734920028532.txt (Time: 796814.69s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_8000_715541_POWLAW_2429002973740178792.txt (Time: 795257.62s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_8000_715541_POWLAW_1309542850049879452.txt (Time: 820231.62s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_8000_715541_POWLAW_5906957480796939447.txt (Time: 735713.02s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_8000_715541_POWLAW_7146860528564146064.txt (Time: 736297.30s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_8000_715541_POWLAW_7473196763798409428.txt (Time: 766087.24s)
+✓ GENERATED: /home/shahbazk/Projects/DFS_Semi_Streaming/input/random_graphs/graph_8000_715541_POWLAW_1731523882129807996.txt (Time: 675082.38s)
