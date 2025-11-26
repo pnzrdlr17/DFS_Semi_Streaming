@@ -1,0 +1,74 @@
+Belcastro:
+  klev:
+    variant N: k=6
+
+Amazon:
+  klev:
+    variant 0: k=2
+    variant 0: k=3
+    variant 0: k=4
+    variant 0: k=10
+    variant 1: k=1
+    variant N: k=2
+
+Orkut:
+  kpath:
+    variant 0: k=1
+    variant 1: k=1
+    variant 2: k=1
+    variant N: k=1
+
+LiveJournal:
+  klev:
+    variant 0: k=1
+    variant 0: k=2
+  kpath:
+    variant 0: k=1
+    variant 0: k=2
+    variant 0: k=3
+    variant 0: k=4
+    variant 0: k=5
+    variant 0: k=6
+    variant 0: k=7
+    variant 0: k=8
+    variant 0: k=9
+    variant 0: k=C
+    variant 1: k=1
+    variant 1: k=2
+    variant 1: k=3
+    variant 1: k=4
+    variant 1: k=5
+    variant 1: k=6
+    variant 1: k=7
+    variant 1: k=8
+    variant 2: k=1
+    variant 2: k=2
+    variant 2: k=3
+    variant 2: k=4
+    variant 2: k=5
+    variant 2: k=6
+    variant 2: k=7
+    variant 2: k=8
+    variant N: k=1
+    variant N: k=2
+    variant N: k=3
+    variant N: k=4
+    variant N: k=5
+    variant N: k=8
+
+KonectDblp:
+  klev:
+    variant 0: k=2
+    variant 0: k=3
+    variant 0: k=4
+    variant 0: k=5
+    variant 0: k=6
+  kpath:
+    variant 0: k=1
+    variant 0: k=2
+    variant 0: k=3
+    variant 0: k=C
+    variant 1: k=1
+    variant 2: k=1
+    variant N: k=1
+

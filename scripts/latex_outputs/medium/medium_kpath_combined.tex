@@ -1,0 +1,77 @@
+\begin{table}[h!]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Dataset & Metric & Heuristic & $k=1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$ & $\left\lceil m/n\right\rceil$\\
+\hline
+\multirow{13}{*}{\shortstack{{Twitch} \\ [15pt] $n = 168K$ \\ [7pt] $m = 6.80M$ \\ [7pt] $m/n = 40.43$}} & \multirow{5}{*}{Pass}
+& \texttt{kPath0} & 1692 & 41 & 17 & 12 & 10 & 8 & 7 & 7 & 6 & 6 & 3 \\
+& & \texttt{kPath1} & 1732 & 40 & 17 & 12 & 9 & 8 & 6 & 6 & 5 & 5 & 1 \\
+& & \texttt{kPath2} & 1418 & 20 & 13 & 9 & 8 & 6 & 6 & 5 & 5 & 4 & 1 \\
+& & \texttt{kPathN} & 1173 & 19 & 12 & 9 & 7 & 6 & 6 & 5 & 5 & 4 & 1 \\
+& & Red$\%$ & 30 & 53 & 29 & 25 & 30 & 25 & 14 & 28 & 16 & 33 & 66 \\
+\cline{2-14} &
+\multirow{5}{*}{Time}
+& \texttt{kPath0} & 1.04h & 1.69m & 49.8s & 37.6s & 36.6s & 27.9s & 27.8s & 38.0s & 26.3s & 33.3s & 27.8s \\
+& & \texttt{kPath1} & 1.06h & 1.68m & 55.3s & 45.9s & 34.0s & 38.3s & 22.8s & 29.9s & 22.8s & 28.2s & 2.44s \\
+& & \texttt{kPath2} & 46.9m & 55.9s & 47.3s & 29.5s & 36.2s & 23.2s & 29.0s & 21.7s & 27.1s & 17.8s & 2.46s \\
+& & \texttt{kPathN} & 39.6m & 51.9s & 43.5s & 31.6s & 24.5s & 24.3s & 31.9s & 22.8s & 30.7s & 17.6s & 2.47s \\
+& & Red$\%$ & 36 & 48 & 12 & 15 & 33 & 13 & -14 & 40 & -16 & 47 & 91 \\
+\cline{2-14} &
+\multirow{5}{*}{Memory}
+& \texttt{kPath0} & 73.7M & 84.9M & 101M & 113M & 128M & 145M & 165M & 177M & 195M & 208M & 691M \\
+& & \texttt{kPath1} & 73.3M & 89.0M & 96.3M & 113M & 129M & 144M & 162M & 175M & 191M & 206M & 166M \\
+& & \texttt{kPath2} & 79.2M & 91.5M & 98.9M & 121M & 137M & 150M & 165M & 179M & 194M & 212M & 166M \\
+& & \texttt{kPathN} & 79.4M & 91.5M & 103M & 119M & 138M & 153M & 161M & 178M & 194M & 213M & 166M \\
+& & Red$\%$ & -7 & -7 & -1 & -4 & -7 & -5 & 2 & 0 & 0 & -2 & 76 \\
+\hline
+\hline
+\multirow{13}{*}{\shortstack{{Gowalla} \\ [15pt] $n = 197K$ \\ [7pt] $m = 950K$ \\ [7pt] $m/n = 4.83$}} & \multirow{5}{*}{Pass}
+& \texttt{kPath0} & 617 & 32 & 6 & 4 & 6 & 2 & 2 & 2 & 2 & 2 & 6 \\
+& & \texttt{kPath1} & 603 & 28 & 6 & 5 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+& & \texttt{kPath2} & 475 & 7 & 5 & 2 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+& & \texttt{kPathN} & 340 & 5 & 4 & 2 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+& & Red$\%$ & 44 & 84 & 33 & 50 & 83 & 50 & 50 & 50 & 50 & 50 & 83 \\
+\cline{2-14} &
+\multirow{5}{*}{Time}
+& \texttt{kPath0} & 4.78m & 55.2s & 28.7s & 18.6s & 30.4s & 1.03s & 1.03s & 1.03s & 1.04s & 1.03s & 30.2s \\
+& & \texttt{kPath1} & 4.64m & 54.1s & 36.4s & 36.9s & 0.35s & 0.35s & 0.35s & 0.35s & 0.35s & 0.35s & 0.35s \\
+& & \texttt{kPath2} & 4.21m & 38.8s & 37.1s & 17.2s & 0.35s & 0.36s & 0.36s & 0.35s & 0.35s & 0.35s & 0.36s \\
+& & \texttt{kPathN} & 3.42m & 31.8s & 36.8s & 17.1s & 0.35s & 0.36s & 0.36s & 0.35s & 0.35s & 0.35s & 0.35s \\
+& & Red$\%$ & 28 & 42 & -28 & 8 & 98 & 65 & 65 & 66 & 66 & 66 & 98 \\
+\cline{2-14} &
+\multirow{5}{*}{Memory}
+& \texttt{kPath0} & 84.5M & 95.7M & 116M & 136M & 154M & 165M & 165M & 166M & 166M & 166M & 154M \\
+& & \texttt{kPath1} & 80.6M & 97.3M & 114M & 137M & 48.0M & 48.0M & 48.0M & 47.0M & 48.0M & 48.0M & 48.0M \\
+& & \texttt{kPath2} & 88.0M & 96.3M & 111M & 137M & 48.0M & 48.0M & 48.0M & 48.0M & 48.0M & 48.0M & 48.0M \\
+& & \texttt{kPathN} & 93.4M & 101M & 111M & 137M & 48.0M & 48.0M & 48.0M & 48.0M & 48.0M & 48.0M & 48.0M \\
+& & Red$\%$ & -10 & -5 & 4 & 0 & 68 & 70 & 70 & 71 & 71 & 71 & 68 \\
+\hline
+\hline
+\multirow{13}{*}{\shortstack{{Amazon} \\ [15pt] $n = 335K$ \\ [7pt] $m = 926K$ \\ [7pt] $m/n = 2.76$}} & \multirow{5}{*}{Pass}
+& \texttt{kPath0} & 309 & 107 & 8 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 8 \\
+& & \texttt{kPath1} & 322 & 100 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+& & \texttt{kPath2} & 246 & 7 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+& & \texttt{kPathN} & 211 & 4 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+& & Red$\%$ & 31 & 96 & 87 & 50 & 50 & 50 & 50 & 50 & 50 & 50 & 87 \\
+\cline{2-14} &
+\multirow{5}{*}{Time}
+& \texttt{kPath0} & 5.78m & 3.59m & 1.02m & 1.26s & 1.26s & 1.27s & 1.26s & 1.26s & 1.26s & 1.29s & 1.01m \\
+& & \texttt{kPath1} & 5.82m & 3.41m & 0.44s & 0.44s & 0.44s & 0.44s & 0.44s & 0.44s & 0.44s & 0.44s & 0.44s \\
+& & \texttt{kPath2} & 5.16m & 1.34m & 0.44s & 0.44s & 0.44s & 0.44s & 0.44s & 0.44s & 0.44s & 0.45s & 0.45s \\
+& & \texttt{kPathN} & 3.67m & 1.28m & 0.44s & 0.44s & 0.44s & 0.44s & 0.44s & 0.44s & 0.44s & 0.43s & 0.44s \\
+& & Red$\%$ & 36 & 64 & 99 & 65 & 65 & 65 & 65 & 65 & 65 & 66 & 99 \\
+\cline{2-14} &
+\multirow{5}{*}{Memory}
+& \texttt{kPath0} & 137M & 159M & 199M & 217M & 217M & 217M & 217M & 217M & 217M & 217M & 199M \\
+& & \texttt{kPath1} & 137M & 169M & 64.0M & 64.0M & 64.0M & 64.0M & 64.0M & 64.0M & 64.0M & 64.0M & 64.0M \\
+& & \texttt{kPath2} & 148M & 177M & 64.0M & 64.0M & 64.0M & 64.0M & 64.0M & 64.0M & 64.0M & 64.0M & 64.0M \\
+& & \texttt{kPathN} & 157M & 177M & 64.0M & 64.0M & 64.0M & 64.0M & 64.0M & 64.0M & 64.0M & 64.0M & 64.0M \\
+& & Red$\%$ & -14 & -11 & 67 & 70 & 70 & 70 & 70 & 70 & 70 & 70 & 67 \\
+\hline
+\end{tabular}%
+}
+\caption{Performance of kPath algorithms on Medium graphs.}
+\label{tab:medium_kpath}
+\end{table}

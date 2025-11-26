@@ -1,0 +1,19 @@
+Orkut:
+  kpath:
+    variant 0: k={1, 3}
+    variant 1: k=1
+    variant 2: k=1
+
+LiveJournal:
+  kpath:
+    variant 0: k={1, 2, 3, 4}
+    variant 1: k=1
+    variant 2: k=1
+    variant N: k=1
+
+KonectDblp:
+  klev:
+    variant 0: k={2, 3, 4}
+  kpath:
+    variant 0: k=2
+

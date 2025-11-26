@@ -1,0 +1,26 @@
+Orkut:
+  kpath:
+    variant 0: k={1, 2, 3, 4, 6}
+    variant 1: k=1
+    variant 2: k=1
+    variant N: k=1
+
+LiveJournal:
+  klev:
+    variant 0: k={1, 2, 3, 4, 6, 7}
+  kpath:
+    variant 0: k={1, 2, 3, 4, 5, 6, 7, 8, 9, 10, C}
+    variant 1: k={1, 2, 3, 4, 5, 6, 7, 8}
+    variant 2: k={1, 2, 3, 4, 5, 6, 7}
+    variant N: k={1, 2, 3, 4, 5, 6, 7, 8}
+
+KonectDblp:
+  klev:
+    variant 0: k={2, 3, 4, 5, 6, 7}
+  kpath:
+    variant 0: k={1, 2, 3, 4, 5, 6, 7, 8, 9, 10, C}
+    variant 1: k=1
+    variant 2: k=1
+    variant N: k=1
+
+#runs less than 10, where time is within 10% of minimum
