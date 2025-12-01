@@ -603,22 +603,20 @@ if __name__ == "__main__":
 # deactivate
 
 # Generate all plots (using latest files)
-# python plot_system.py -i results/random_v2 -o plots
+# python3 scripts/random_scripts_v2/plot_system_v3.py -i results/random_v3 -o plots_v3
 
 # Generate only kpath plots with k=2
-# python plot_system.py -i results/random_v2 -o plots -a kpath -k k2
+# python3 scripts/random_scripts_v2/plot_system_v3.py -i results/random_v3 -o plots_v3 -a kpath -k k2
 
 # Generate VARN experiments only, with UNIFORM graphs
-# python plot_system.py -e VARN -g UNIFORM
-
-# Use oldest files instead of latest (for reproducibility)
-# python plot_system.py --use-oldest
+# python3 scripts/random_scripts_v2/plot_system_v3.py -i results/random_v3 -o plots_v3 -e VARN -g UNIFORM
 
 # Generate only sqrtN sparsity with k=5
-# python plot_system.py -s sqrtN -k k5
+# python3 scripts/random_scripts_v2/plot_system_v3.py -i results/random_v3 -o plots_v3 -s sqrtN -k k5
 
-# Combine filters: VARN + UNIFORM + logN + k=10 + kLev
-# python plot_system.py -e VARN -g UNIFORM -s logN -k k10 -a klev
+# Generate all plots with specific parameters
+# python3 scripts/random_scripts_v2/plot_system_v3.py -i results/random_v3 -o plots_v3 -e VARN -g POWLAW -s sqrtN -k k2 -a kPath
+
 
 
 
