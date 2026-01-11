@@ -66,7 +66,7 @@ int main(int argc, char *argv[]) {
             AlgorithmResult result = runAlgorithm(n, m, filePath, algorithm, algo_variant, k);
             // TODO fix n, m, k to ll in all algorithm files
             // cout << "PassCount: " << result.passCount << "\n";
-            cout<< result.passCount << endl;
+            cout<< result.passCount << ' ' << result.T.getHeight(0) << endl;
             break;
         }
         case GEN_GRAPH: {
