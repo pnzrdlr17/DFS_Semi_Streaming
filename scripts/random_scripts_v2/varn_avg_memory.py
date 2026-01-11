@@ -136,7 +136,7 @@ def run_experiments(iterations, seed_token, seed_file, sparsity, graph_type):
                     for i in range(iterations):
                         try: 
                             result = subprocess.run(
-                            ["/usr/bin/time", "-f", "%U,%M", "./bin/main", "RUN_ALGO", str(n), str(m), get_graph_filename(n, m, seeds[i], graph_type), algorithm_code, variant, str(k)],
+                            ["/usr/bin/time", "-f", "%U,%M", "./bin/main", "RUN_ALGO", str(n), str(m), f"input/random_graphs/{get_graph_filename(n, m, seeds[i], graph_type)}", algorithm_code, variant, str(k)],
                             stdout=subprocess.PIPE,
                             stderr=subprocess.PIPE,
                             text=True,
@@ -151,7 +151,7 @@ def run_experiments(iterations, seed_token, seed_file, sparsity, graph_type):
                         user_time_mem = result.stderr.strip()  # Time and memory are in stderr
                         avg_passes += float(output[0])  # Assuming pass count is the first value of stdout
                         avg_height += float(output[1])  # Assuming height is the second value of stdout
-                        print(f"      Passes: {avg_passes},  Height: {avg_height}, Time/Memory: {user_time_mem}")
+                        print(f"      Passes: {output[0]},  Height: {output[1]}, Time/Memory: {user_time_mem}")
 
                         # Extract time and memory
                         try:
