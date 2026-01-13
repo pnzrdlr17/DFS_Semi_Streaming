@@ -5,9 +5,6 @@ import csv
 from pathlib import Path
 from datetime import datetime
 from typing import List
-import math
-
-sparsity_label = {2: "logN", 3: "sqrtN", 4: "N2"}
 
 def read_seed_tokens(seed_file: str, num_seeds: int) -> List[int]:
     """Read seed tokens from file"""
@@ -19,32 +16,16 @@ def read_seed_tokens(seed_file: str, num_seeds: int) -> List[int]:
         print(f"Seed file {seed_file} not found!")
         return []
     
-def calculate_m(n: int, sparsity: int) -> int:
-    """Calculate m based on n and sparsity, matching experiment.cpp logic"""
-    if sparsity == 0:
-        return min(2 * n, (n * (n - 1)) // 2)
-    elif sparsity == 1:
-        return min(5 * n, (n * (n - 1)) // 2)
-    elif sparsity == 2:
-        return int(n * math.log2(n))
-    elif sparsity == 3:
-        return int(n * math.sqrt(n))
-    elif sparsity == 4:
-        return (n * (n - 1)) // 2
-    else:
-        raise ValueError(f"Invalid sparsity: {sparsity}")
-
 def get_graph_filename(n: int, m: int, seed: int, graph_type: str) -> str:
     """Generate the graph filename based on parameters"""
     return f"graph_{n}_{m}_{graph_type}_{seed}.txt"
 
-
-def run_experiments(iterations, seed_token, seed_file, sparsity, graph_type):
-    base_output_dir = f"./results/random_v4/VARN/{graph_type}"
+def run_experiments(iterations, seed_token, seed_file, graph_type):
+    base_output_dir = f"./results/random_v4/VARM/{graph_type}"
+    n = 10000
     variants = ["0", "1", "2", "N"]
     algorithms = {"kpath": "2", "klev":"3"} # kpath, klev
     k_values = [2, 5, 10]
-
 
     seeds = read_seed_tokens(seed_file, iterations)
 
@@ -56,12 +37,11 @@ def run_experiments(iterations, seed_token, seed_file, sparsity, graph_type):
         print(f"Warning: Only {len(seeds)} seeds available, but {args.iterations} iterations requested")
         args.iterations = len(seeds)
 
-
-    print(f"Running experiments with {iterations} iterations, varying N from 10 to 10,000 and seed token {seed_token}")
+    print(f"Running VARM with {iterations} iterations, for N = {n} varying M from {n/10} to {n*(n-1)/2} and seed token {seed_token}")
 
     Path(base_output_dir).mkdir(parents=True, exist_ok=True)
-
-    n_values = list(range(10, 100, 10)) + list(range(100, 1000, 100)) + list(range(1000, 2000, 200)) + list(range(2000, 5000, 500)) + list(range(5000, 10001, 1000))
+    
+    m_values = list(range(1000, 10000, 1000)) + list(range(10_000, 20_000, 2000)) + list(range(25_000, 50_000, 5000)) + list(range(50_000, 100_000, 10_000)) + list(range(100_000, 1_000_001, 100_000)) + list(range(2_000_000, 10_000_000, 2_000_000)) + list(range(10_000_000, 40_000_001, 5_000_000)) + [49_995_000]
 
     # Add a timestamped directory for each run
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -75,7 +55,6 @@ def run_experiments(iterations, seed_token, seed_file, sparsity, graph_type):
         for k in k_values:# Create directory structure: UNIFORM/logN/kPath/k2/
             dir_path = os.path.join(
                 base_output_dir,
-                sparsity_label[sparsity],               # logN
                 algorithm_name,                         # kPath
                 f"k{k}"                                 # k2
             )
@@ -88,7 +67,7 @@ def run_experiments(iterations, seed_token, seed_file, sparsity, graph_type):
                 # Open CSV file and write header
                 csvfile = open(csv_filepath, "w", newline="", buffering=1)
                 csvwriter = csv.writer(csvfile, delimiter=',')
-                csvwriter.writerow(["N", "Time (s)", "Memory (KB)", "AvgPasses", "AvgHeight"])
+                csvwriter.writerow(["M", "Time (s)", "Memory (KB)", "AvgPasses", "AvgHeight"])
 
                 # Store the CSV writer and file object
                 csv_files[(algorithm_name, variant, k)] = csvwriter
@@ -96,37 +75,24 @@ def run_experiments(iterations, seed_token, seed_file, sparsity, graph_type):
 
                 print(f"Created: {csv_filepath}")
 
-    # Create all the graphs first
-    for n in n_values:
+
+    for m in m_values:
         try: # Prepare for the Experiment [PREP_EXP]
             subprocess.run(
-                ["./bin/main", "PREP_EXP", "3", str(n), str(sparsity), graph_type, str(iterations), str(seed_token)],
+                ["./bin/main", "PREP_EXP", "4", str(n), str(m), graph_type, str(iterations), str(seed_token)], 
                 check=True
-            ) # 3 for FIXNM type experiment
+            ) # 4 for EXPLC_M
         except subprocess.CalledProcessError as e:
-            print(f"Error generating graph with N={n}, sparsity={sparsity}, iterations={iterations}, seed={seed_token}: {e}")
+            print(f"Error generating graph with N={n}, M={m}, iterations={iterations}, seed={seed_token}: {e}")
             continue
 
-    for n in n_values:
-        m = calculate_m(n, sparsity)
+    for m in m_values:
         for algorithm_name, algorithm_code in algorithms.items():
-            for k in k_values:
-                for variant in variants:
+            for variant in variants:
+                for k in k_values:
                     csvwriter = csv_files[(algorithm_name, variant, k)]
 
-                    print(f"Running {algorithm_name} variant {variant} with N={n}, sparsity={sparsity}, k={k}, seed={seed_token}...")
-
-                    # try: # Run the Experiment [RUN_EXP]
-                    #     result = subprocess.run(
-                    #         ["/usr/bin/time", "-f", "%U,%M", "./bin/main", "RUN_EXP", "3", str(n), str(sparsity), graph_type, str(iterations), str(seed_token), algorithm_code, variant, str(k)],
-                    #         stdout=subprocess.PIPE,
-                    #         stderr=subprocess.PIPE,
-                    #         text=True,
-                    #         check=True
-                    #     )
-                    # except subprocess.CalledProcessError as e:
-                    #     print(f"Error running {algorithm_name} variant {variant} with N={n}, sparsity={sparsity}, k={k}, seed={seed_token}: {e}")
-                    #     continue
+                    print(f"Running EXPLC_M with {algorithm_name}{variant} for N={n}, M={m}, k={k}, seed={seed_token}...")
 
                     avg_time = 0
                     avg_memory = 0
@@ -143,7 +109,7 @@ def run_experiments(iterations, seed_token, seed_file, sparsity, graph_type):
                             check=True
                         )
                         except subprocess.CalledProcessError as e:
-                            print(f"Error running {algorithm_name} variant {variant} with N={n}, sparsity={sparsity}, k={k}, seed={seeds[i]}: {e}")
+                            print(f"Error running EXPLC_M with {algorithm_name}{variant} for N={n}, M={m}, k={k}, seed={seed_token}: {e}")
                             continue
                         
                         # Parse the output
@@ -157,7 +123,7 @@ def run_experiments(iterations, seed_token, seed_file, sparsity, graph_type):
                         try:
                             user_time, memory = map(float, user_time_mem.split(","))
                         except ValueError:
-                            print(f"Error parsing time/memory for N={n}, sparsity={sparsity}, seed={seed_token}")
+                            print(f"Error parsing time/memory for  N={n}, M={m}, k={k}, seed={seed_token}: {e}")
                             continue
 
                         # Calculate average time
@@ -169,8 +135,9 @@ def run_experiments(iterations, seed_token, seed_file, sparsity, graph_type):
                     avg_passes /= float(iterations)
                     avg_height /= float(iterations)
 
+
                     # Write data to CSV
-                    csvwriter.writerow([n, avg_time, avg_memory, avg_passes, avg_height])
+                    csvwriter.writerow([m, avg_time, avg_memory, avg_passes, avg_height])
 
     for csvfile in file_objects.values():
         csvfile.close()
@@ -180,28 +147,20 @@ if __name__ == "__main__":
     parser.add_argument(
         "-i", "--iterations",
         type=int,
-        default=10,
-        help="Number of iterations to run for each combination (default: 10)"
+        default=1,
+        help="Number of iterations to run for each combination (default: 1)"
     )
     parser.add_argument(
         "-s", "--seed-token",
         type=int,
         required=True,
-        help="Seed token to generate random seeds",
-        default=1729
+        help="Seed token to generate random seeds"
     )
     parser.add_argument(
         "-sf", "--seed-file", 
         type=str,
         default="../../seed_1000x_token_1729.txt",
         help="Path to seed token file"
-    )
-    parser.add_argument(
-        "-sp", "--sparsity",
-        type=int,
-        required=True,
-        help="Sparsity value for the graph generation (2 or 3)",
-        default=2
     )
     parser.add_argument(
         "-g", "--graph-type",
@@ -212,7 +171,4 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    run_experiments(args.iterations, args.seed_token, args.seed_file, args.sparsity, args.graph_type)
-
-
-# Usage: (ulimit -s unlimited; nohup python3 scripts/random_scripts_v2/varn_avg_memory.py -i 10 -s 1729 -sf seed_1000x_token_1729.txt -sp 2 -g UNIFORM > "scripts/random_scripts_v2/logs/varn_n_10K_uniform_logn_seed_1729_itr10_terraforge_run_$(date +%Y%m%d_%H%M%S).log" 2>&1 < /dev/null &)
+    run_experiments(args.iterations, args.seed_token, args.seed_file, args.graph_type)

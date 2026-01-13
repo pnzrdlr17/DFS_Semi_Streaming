@@ -5,14 +5,55 @@ import csv
 import math
 from pathlib import Path
 from datetime import datetime
+from typing import List
 
 sparsity_label = {2: "logN", 3: "sqrtN", 4: "N2"}
 
-def run_experiments(iterations, seed_token, sparsity, graph_type):
-    base_output_dir = f"./results/random_v2/VARK/{graph_type}"
+def read_seed_tokens(seed_file: str, num_seeds: int) -> List[int]:
+    """Read seed tokens from file"""
+    try:
+        with open(seed_file, 'r') as f:
+            seeds = [int(line.strip()) for line in f.readlines()[:num_seeds]]
+        return seeds
+    except FileNotFoundError:
+        print(f"Seed file {seed_file} not found!")
+        return []
+    
+def calculate_m(n: int, sparsity: int) -> int:
+    """Calculate m based on n and sparsity, matching experiment.cpp logic"""
+    if sparsity == 0:
+        return min(2 * n, (n * (n - 1)) // 2)
+    elif sparsity == 1:
+        return min(5 * n, (n * (n - 1)) // 2)
+    elif sparsity == 2:
+        return int(n * math.log2(n))
+    elif sparsity == 3:
+        return int(n * math.sqrt(n))
+    elif sparsity == 4:
+        return (n * (n - 1)) // 2
+    else:
+        raise ValueError(f"Invalid sparsity: {sparsity}")
+
+def get_graph_filename(n: int, m: int, seed: int, graph_type: str) -> str:
+    """Generate the graph filename based on parameters"""
+    return f"graph_{n}_{m}_{graph_type}_{seed}.txt"
+
+def run_experiments(iterations, seed_token, seed_file, sparsity, graph_type):
+    base_output_dir = f"./results/random_v4/VARK/{graph_type}"
     n = 10000
+    m = calculate_m(n, sparsity)
     variants = ["0", "1", "2", "N"]
     algorithms = {"kPath": "2", "kLev":"3"}
+
+    seeds = read_seed_tokens(seed_file, iterations)
+
+    if not seeds:
+        print("No seeds found. Exiting.")
+        return
+
+    if len(seeds) < args.iterations:
+        print(f"Warning: Only {len(seeds)} seeds available, but {args.iterations} iterations requested")
+        args.iterations = len(seeds)
 
     print(f"Running VARK with {iterations} iterations, for N = {n} and sparsity code {sparsity} for k from 1 to N and seed token {seed_token}")
 
@@ -69,37 +110,49 @@ def run_experiments(iterations, seed_token, sparsity, graph_type):
 
                 print(f"Running FIXNM with {algorithm_name}{variant} for N={n}, sparsity={sparsity}, k={k}, seed={seed_token}...")
 
-                try:  # Run the Experiment [RUN_EXP]
-                    result = subprocess.run(
-                        ["/usr/bin/time", "-f", "%U,%M", "./bin/main", "RUN_EXP", "3", str(n), str(sparsity), graph_type, str(iterations), str(seed_token), algorithm_code, variant, str(k)],
+                avg_time = 0
+                avg_memory = 0
+                avg_passes = 0
+                avg_height = 0
+
+                for i in range(iterations):
+                    try: 
+                        result = subprocess.run(
+                        ["/usr/bin/time", "-f", "%U,%M", "./bin/main", "RUN_ALGO", str(n), str(m), f"input/random_graphs/{get_graph_filename(n, m, seeds[i], graph_type)}", algorithm_code, variant, str(k)],
                         stdout=subprocess.PIPE,
                         stderr=subprocess.PIPE,
                         text=True,
                         check=True
                     )
-                except subprocess.CalledProcessError as e:
-                    print(f"Error running FIXNM with {algorithm_name}{variant} for N={n}, sparsity={sparsity}, k={k}, seed={seed_token}: {e}")
-                    continue
+                    except subprocess.CalledProcessError as e:
+                        print(f"Error running FIXNM with {algorithm_name}{variant} for N={n}, sparsity={sparsity}, k={k}, seed={seed_token}: {e}")
+                        continue
+                    
+                    # Parse the output
+                    output = result.stdout.strip().split()
+                    user_time_mem = result.stderr.strip()  # Time and memory are in stderr
+                    avg_passes += float(output[0])  # Assuming pass count is the first value of stdout
+                    avg_height += float(output[1])  # Assuming height is the second value of stdout
+                    print(f"      Passes: {output[0]},  Height: {output[1]}, Time/Memory: {user_time_mem}")
 
-                # Parse the output
-                output = result.stdout.strip().split()
-                user_time_mem = result.stderr.strip()  # Time and memory are in stderr
-                avg_passes = float(output[0])  # Assuming pass count is the first value of stdout
-                avg_height = float(output[1])  # Assuming height is the second value of stdout
-                print(f"      Average Passes: {avg_passes}, Time/Memory: {user_time_mem}")
+                    # Extract time and memory
+                    try:
+                        user_time, memory = map(float, user_time_mem.split(","))
+                    except ValueError:
+                        print(f"Error parsing time/memory for N={n}, sparsity={sparsity}, k={k}, seed={seed_token}")
+                        continue
 
-                # Extract time and memory
-                try:
-                    user_time, memory = map(float, user_time_mem.split(","))
-                except ValueError:
-                    print(f"Error parsing time/memory for N={n}, sparsity={sparsity}, k={k}, seed={seed_token}")
-                    continue
+                    # Calculate average time
+                    avg_time += user_time
+                    avg_memory += memory
 
-                # Calculate average time
-                avg_time = user_time / float(iterations)
+                avg_time /= float(iterations)
+                avg_memory /= float(iterations)
+                avg_passes /= float(iterations)
+                avg_height /= float(iterations)
 
                 # Write data to CSV
-                csvwriter.writerow([k, avg_time, memory, avg_passes, avg_height])
+                csvwriter.writerow([k, avg_time, avg_memory, avg_passes, avg_height])
 
     for csvfile in file_objects.values():
         csvfile.close()
@@ -119,6 +172,12 @@ if __name__ == "__main__":
         help="Seed token to generate random seeds"
     )
     parser.add_argument(
+        "-sf", "--seed-file", 
+        type=str,
+        default="../../seed_1000x_token_1729.txt",
+        help="Path to seed token file"
+    )
+    parser.add_argument(
         "-sp", "--sparsity",
         type=int,
         required=True,
@@ -134,4 +193,4 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    run_experiments(args.iterations, args.seed_token, args.sparsity, args.graph_type)
+    run_experiments(args.iterations, args.seed_token, args.seed_file, args.sparsity, args.graph_type)
