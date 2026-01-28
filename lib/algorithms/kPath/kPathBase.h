@@ -39,7 +39,7 @@ public:
 
     /* Default Common implementation for all derived classes */
 
-    virtual int addEdgeS(list<edg>& edges) { // overridden in kPath0
+    virtual int addEdgeS(list<edg>& edges) { // overridden in kPath0, kPathA, kPathB
         prepass();
         for(auto it=edges.begin();it!=edges.end();it++){
             addEdge(it->first,it->second);
@@ -47,7 +47,7 @@ public:
         return postpass();
     }
 
-    virtual int processEdgeStream(ifstream& fileStream) { // overridden in kPath0
+    virtual int processEdgeStream(ifstream& fileStream) { // overridden in kPath0, kPathA, kPathB
         prepass();
         for (int i = 1; i < n; ++i) // Add artificial edges (disconnected graph connections)
             addEdge(0, i);
