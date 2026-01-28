@@ -7,13 +7,13 @@
 #define edg pair<int, int>
 using namespace std;
 
-class kPathA : public kPathBase{ // only H2, copied from kPath0 + H3 => H2 + H3 (no H1)
+class kPathD : public kPathBase{ // only H2, copied from kPath0 + H3 => H2 + H3 (no H1)
     int k_opt;
     vector<set<edg>> sptree;
 
 public:
 
-    kPathA (int size,int spaceOpt) {
+    kPathD (int size,int spaceOpt) {
         n = size+1;
         visited.resize(size+1,0);
         saved_edges.resize(size+1);

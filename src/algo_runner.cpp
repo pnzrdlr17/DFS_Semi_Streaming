@@ -60,6 +60,10 @@ AlgorithmResult runAlgorithm(ll n, ll m, const string& filePath, int algorithm, 
                 case '0': dfs = new kPath0(n, k); break;
                 case '1': dfs = new kPath1(n, k); break;
                 case '2': dfs = new kPath2(n, k); break;
+                case 'A': dfs = new kPathA(n, k); break;
+                case 'B': dfs = new kPathB(n, k); break;
+                case 'C': dfs = new kPathC(n, k); break;
+                case 'D': dfs = new kPathD(n, k); break;
                 case 'X': dfs = new kPath1x(n, k); break;
                 default: dfs = new kPathN(n, k); break;
             }

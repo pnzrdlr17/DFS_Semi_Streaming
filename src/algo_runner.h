@@ -14,6 +14,10 @@
 #include "../lib/algorithms/kPath/kPath1x.cpp"
 #include "../lib/algorithms/kPath/kPath2.cpp"
 #include "../lib/algorithms/kPath/kPathN.cpp"
+#include "../lib/algorithms/kPath/kPathA.cpp"
+#include "../lib/algorithms/kPath/kPathB.cpp"
+#include "../lib/algorithms/kPath/kPathC.cpp"
+#include "../lib/algorithms/kPath/kPathD.cpp"
 #include "../lib/algorithms/classicalDFS/iterativeDFS.h"
 #include <filesystem>
 #define ll long long int
