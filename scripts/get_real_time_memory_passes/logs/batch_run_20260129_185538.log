@@ -1,0 +1,32 @@
+🎯 Total configurations to run: 5
+🔄 Running with 36 parallel workers
+🚀 Running Belcastro with klevA, k=10, iterations=1, file=1
+  📊 Iteration 1/1 for Belcastro klevA k=10...
+🚀 Running Belcastro with klevC, k=644, iterations=1, file=2
+  📊 Iteration 1/1 for Belcastro klevC k=644...
+🚀 Running Belcastro with kpathC, k=3, iterations=1, file=3
+  📊 Iteration 1/1 for Belcastro kpathC k=3...
+🚀 Running Belcastro with kpathC, k=4, iterations=1, file=4
+  📊 Iteration 1/1 for Belcastro kpathC k=4...
+🚀 Running Belcastro with kpathC, k=5, iterations=1, file=5
+  📊 Iteration 1/1 for Belcastro kpathC k=5...
+      Passes: 1,  Height: 0, Time/Memory: 2.95,194680
+✅ Completed Belcastro klevC k=644: 2.95s, 194680.0KB
+✅ [1/5] Completed Belcastro klevC k=C
+      Passes: 4,  Height: 12595, Time/Memory: 14.74,21628
+✅ Completed Belcastro klevA k=10: 14.74s, 21628.0KB
+✅ [2/5] Completed Belcastro klevA k=10
+      Passes: 87,  Height: 13304, Time/Memory: 214.97,13428
+✅ Completed Belcastro kpathC k=5: 214.97s, 13428.0KB
+✅ [3/5] Completed Belcastro kpathC k=5
+      Passes: 109,  Height: 13244, Time/Memory: 267.19,12424
+✅ Completed Belcastro kpathC k=4: 267.19s, 12424.0KB
+✅ [4/5] Completed Belcastro kpathC k=4
+      Passes: 150,  Height: 13254, Time/Memory: 366.39,10344
+✅ Completed Belcastro kpathC k=3: 366.39s, 10344.0KB
+✅ [5/5] Completed Belcastro kpathC k=3
+
+🏁 All experiments completed!
+✅ Successful: 5
+❌ Failed: 0
+📁 Results saved in ./results/real/average_concurrent_runs
