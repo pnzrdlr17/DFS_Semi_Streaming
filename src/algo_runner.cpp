@@ -91,6 +91,10 @@ AlgorithmResult runAlgorithm(ll n, ll m, const string& filePath, int algorithm, 
                 case '0': dfs = new kLev0(n, k); break;
                 case '1': dfs = new kLev1(n, k); break;
                 case '2': dfs = new kLev2(n, k); break;
+                case 'A': dfs = new kLevA(n, k); break;
+                case 'B': dfs = new kLevB(n, k); break;
+                case 'C': dfs = new kLevC(n, k); break;
+                case 'D': dfs = new kLevD(n, k); break;
                 case 'X': dfs = new kLev0x(n, k); break;
                 case 'Y': dfs = new kLev1y(n, k); break;
                 default: dfs = new kLevN(n, k); break;
