@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/shahbazk/Projects/DFS_Semi_Streaming/scripts/get_real_time_memory_passes/batch_runner_raw.py", line 93, in <module>
+    {"algo": "kpath", "variant": "B", "k": C, "iterations": 10, "file_number": 4},
+                                           ^
+NameError: name 'C' is not defined
