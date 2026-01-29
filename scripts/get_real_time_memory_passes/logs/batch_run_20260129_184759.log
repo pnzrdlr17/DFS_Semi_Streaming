@@ -1,0 +1,47 @@
+🎯 Total configurations to run: 8
+🔄 Running with 36 parallel workers
+🚀 Running Belcastro with klevB, k=10, iterations=1, file=1
+  📊 Iteration 1/1 for Belcastro klevB k=10...
+🚀 Running Belcastro with klevB, k=9, iterations=1, file=2
+  📊 Iteration 1/1 for Belcastro klevB k=9...
+🚀 Running Belcastro with klevB, k=8, iterations=1, file=3
+  📊 Iteration 1/1 for Belcastro klevB k=8...
+🚀 Running Belcastro with klevB, k=7, iterations=1, file=4
+  📊 Iteration 1/1 for Belcastro klevB k=7...
+🚀 Running Belcastro with klevB, k=6, iterations=1, file=5
+  📊 Iteration 1/1 for Belcastro klevB k=6...
+🚀 Running Belcastro with klevB, k=5, iterations=1, file=6
+  📊 Iteration 1/1 for Belcastro klevB k=5...
+🚀 Running Belcastro with klevB, k=4, iterations=1, file=7
+  📊 Iteration 1/1 for Belcastro klevB k=4...
+🚀 Running Belcastro with klevB, k=3, iterations=1, file=8
+  📊 Iteration 1/1 for Belcastro klevB k=3...
+      Passes: 4,  Height: 12595, Time/Memory: 14.40,8316
+✅ Completed Belcastro klevB k=4: 14.4s, 8316.0KB
+✅ [1/8] Completed Belcastro klevB k=4
+      Passes: 4,  Height: 12595, Time/Memory: 14.49,7256
+✅ Completed Belcastro klevB k=9: 14.49s, 7256.0KB
+✅ [2/8] Completed Belcastro klevB k=9
+      Passes: 4,  Height: 12595, Time/Memory: 14.70,8348
+✅ Completed Belcastro klevB k=6: 14.7s, 8348.0KB
+✅ [3/8] Completed Belcastro klevB k=6
+      Passes: 4,  Height: 12595, Time/Memory: 14.79,9316
+✅ Completed Belcastro klevB k=10: 14.79s, 9316.0KB
+✅ [4/8] Completed Belcastro klevB k=10
+      Passes: 4,  Height: 12595, Time/Memory: 14.93,8276
+✅ Completed Belcastro klevB k=7: 14.93s, 8276.0KB
+✅ [5/8] Completed Belcastro klevB k=7
+      Passes: 4,  Height: 12595, Time/Memory: 14.94,8312
+✅ Completed Belcastro klevB k=5: 14.94s, 8312.0KB
+✅ [6/8] Completed Belcastro klevB k=5
+      Passes: 4,  Height: 12595, Time/Memory: 15.24,9328
+✅ Completed Belcastro klevB k=8: 15.24s, 9328.0KB
+✅ [7/8] Completed Belcastro klevB k=8
+      Passes: 4,  Height: 12595, Time/Memory: 17.14,8320
+✅ Completed Belcastro klevB k=3: 17.14s, 8320.0KB
+✅ [8/8] Completed Belcastro klevB k=3
+
+🏁 All experiments completed!
+✅ Successful: 8
+❌ Failed: 0
+📁 Results saved in ./results/real/average_concurrent_runs

@@ -1,0 +1,97 @@
+🎯 Total configurations to run: 18
+🔄 Running with 36 parallel workers
+🚀 Running Belcastro with klevA, k=644, iterations=1, file=1
+  📊 Iteration 1/1 for Belcastro klevA k=644...
+🚀 Running Belcastro with klevA, k=9, iterations=1, file=2
+  📊 Iteration 1/1 for Belcastro klevA k=9...
+🚀 Running Belcastro with klevA, k=8, iterations=1, file=3
+  📊 Iteration 1/1 for Belcastro klevA k=8...
+🚀 Running Belcastro with klevA, k=7, iterations=1, file=4
+  📊 Iteration 1/1 for Belcastro klevA k=7...
+🚀 Running Belcastro with klevA, k=6, iterations=1, file=5
+  📊 Iteration 1/1 for Belcastro klevA k=6...
+🚀 Running Belcastro with klevA, k=5, iterations=1, file=6
+  📊 Iteration 1/1 for Belcastro klevA k=5...
+🚀 Running Belcastro with klevA, k=4, iterations=1, file=7
+  📊 Iteration 1/1 for Belcastro klevA k=4...
+🚀 Running Belcastro with klevA, k=3, iterations=1, file=8
+  📊 Iteration 1/1 for Belcastro klevA k=3...
+🚀 Running Belcastro with klevB, k=644, iterations=1, file=9
+  📊 Iteration 1/1 for Belcastro klevB k=644...
+🚀 Running Twitch with klevC, k=41, iterations=1, file=1
+  📊 Iteration 1/1 for Twitch klevC k=41...
+🚀 Running Twitch with klevC, k=10, iterations=1, file=2
+  📊 Iteration 1/1 for Twitch klevC k=10...
+🚀 Running Twitch with klevC, k=9, iterations=1, file=3
+  📊 Iteration 1/1 for Twitch klevC k=9...
+🚀 Running Twitch with klevC, k=8, iterations=1, file=4
+  📊 Iteration 1/1 for Twitch klevC k=8...
+🚀 Running Twitch with klevC, k=7, iterations=1, file=5
+  📊 Iteration 1/1 for Twitch klevC k=7...
+🚀 Running Twitch with klevC, k=6, iterations=1, file=6
+  📊 Iteration 1/1 for Twitch klevC k=6...
+🚀 Running Twitch with klevC, k=5, iterations=1, file=7
+  📊 Iteration 1/1 for Twitch klevC k=5...
+🚀 Running Twitch with klevD, k=6, iterations=1, file=8
+  📊 Iteration 1/1 for Twitch klevD k=6...
+🚀 Running Twitch with klevD, k=5, iterations=1, file=9
+  📊 Iteration 1/1 for Twitch klevD k=5...
+      Passes: 1,  Height: 0, Time/Memory: 2.79,169916
+✅ Completed Twitch klevC k=41: 2.79s, 169916.0KB
+✅ [1/18] Completed Twitch klevC k=C
+      Passes: 1,  Height: 0, Time/Memory: 2.85,194728
+✅ Completed Belcastro klevB k=644: 2.85s, 194728.0KB
+✅ [2/18] Completed Belcastro klevB k=C
+      Passes: 1,  Height: 0, Time/Memory: 2.97,193648
+✅ Completed Belcastro klevA k=644: 2.97s, 193648.0KB
+✅ [3/18] Completed Belcastro klevA k=C
+      Passes: 4,  Height: 12595, Time/Memory: 14.44,15440
+✅ Completed Belcastro klevA k=5: 14.44s, 15440.0KB
+✅ [4/18] Completed Belcastro klevA k=5
+      Passes: 4,  Height: 12595, Time/Memory: 14.49,19596
+✅ Completed Belcastro klevA k=8: 14.49s, 19596.0KB
+✅ [5/18] Completed Belcastro klevA k=8
+      Passes: 4,  Height: 12595, Time/Memory: 14.66,16492
+✅ Completed Belcastro klevA k=6: 14.66s, 16492.0KB
+✅ [6/18] Completed Belcastro klevA k=6
+      Passes: 4,  Height: 12595, Time/Memory: 14.69,14460
+✅ Completed Belcastro klevA k=4: 14.69s, 14460.0KB
+✅ [7/18] Completed Belcastro klevA k=4
+      Passes: 4,  Height: 12595, Time/Memory: 15.10,17536
+✅ Completed Belcastro klevA k=7: 15.1s, 17536.0KB
+✅ [8/18] Completed Belcastro klevA k=7
+      Passes: 4,  Height: 12595, Time/Memory: 15.36,19560
+✅ Completed Belcastro klevA k=9: 15.36s, 19560.0KB
+✅ [9/18] Completed Belcastro klevA k=9
+      Passes: 4,  Height: 12595, Time/Memory: 18.45,12408
+✅ Completed Belcastro klevA k=3: 18.45s, 12408.0KB
+✅ [10/18] Completed Belcastro klevA k=3
+      Passes: 4,  Height: 89376, Time/Memory: 33.33,71804
+✅ Completed Twitch klevC k=5: 33.33s, 71804.0KB
+✅ [11/18] Completed Twitch klevC k=5
+      Passes: 4,  Height: 89376, Time/Memory: 35.30,69780
+✅ Completed Twitch klevC k=10: 35.3s, 69780.0KB
+✅ [12/18] Completed Twitch klevC k=10
+      Passes: 4,  Height: 89376, Time/Memory: 36.23,67704
+✅ Completed Twitch klevC k=7: 36.23s, 67704.0KB
+✅ [13/18] Completed Twitch klevC k=7
+      Passes: 4,  Height: 89376, Time/Memory: 37.56,71824
+✅ Completed Twitch klevC k=8: 37.56s, 71824.0KB
+✅ [14/18] Completed Twitch klevC k=8
+      Passes: 4,  Height: 89376, Time/Memory: 37.97,67696
+✅ Completed Twitch klevC k=9: 37.97s, 67696.0KB
+✅ [15/18] Completed Twitch klevC k=9
+      Passes: 4,  Height: 89187, Time/Memory: 39.10,151696
+✅ Completed Twitch klevD k=5: 39.1s, 151696.0KB
+✅ [16/18] Completed Twitch klevD k=5
+      Passes: 4,  Height: 89376, Time/Memory: 43.15,70804
+✅ Completed Twitch klevC k=6: 43.15s, 70804.0KB
+✅ [17/18] Completed Twitch klevC k=6
+      Passes: 4,  Height: 89032, Time/Memory: 47.37,167064
+✅ Completed Twitch klevD k=6: 47.37s, 167064.0KB
+✅ [18/18] Completed Twitch klevD k=6
+
+🏁 All experiments completed!
+✅ Successful: 18
+❌ Failed: 0
+📁 Results saved in ./results/real/average_concurrent_runs
