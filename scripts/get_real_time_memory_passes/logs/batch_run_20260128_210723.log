@@ -285,3 +285,20 @@
   📊 Iteration 6/10 for Orkut kpathA k=9...
     Passes: 7, Time/Memory: 6447.81,3551916, Output: ['7']
   📊 Iteration 7/10 for Orkut kpathA k=9...
+    Passes: 7 2522634, Time/Memory: 8018.76,3548384, Output: ['7 2522634']
+  📊 Iteration 8/10 for Orkut kpathA k=9...
+    Passes: 7 2522634, Time/Memory: 6774.66,3549816, Output: ['7 2522634']
+  📊 Iteration 9/10 for Orkut kpathA k=9...
+    Passes: 7 2522634, Time/Memory: 7425.41,3551832, Output: ['7 2522634']
+  📊 Iteration 10/10 for Orkut kpathA k=9...
+    Passes: , Time/Memory: Command terminated by signal 15
+5168.21,3486820, Output: ['']
+Error parsing time/memory for Orkut, variant A, k=9: could not convert string to float: 'Command terminated by signal 15\n5168.21'
+    ❌ Error in iteration 10
+✅ Completed Orkut kpathA k=9: 7459.15s, 3550502.22KB
+✅ [18/18] Completed Orkut kpathA k=9
+
+🏁 All experiments completed!
+✅ Successful: 18
+❌ Failed: 0
+📁 Results saved in ./results/real/average_concurrent_runs
