@@ -73,6 +73,30 @@ AlgorithmResult runAlgorithm(ll n, ll m, const string& filePath, int algorithm, 
             }
             result.passCount = dfs->getPass();
             result.T = dfs->getT();
+
+            /*
+            // Verify DFS correctness using verifyDFS()
+
+            list<edg> edges;
+            resetFileStream();
+            int e1, e2;
+            string line;
+            while (getline(fileStream, line)) {
+                istringstream iss(line);
+                if (!(iss >> e1 >> e2)) {
+                    cerr << "Error: Malformed or incomplete line: " << line << endl;
+                    break; // Exit loop if edge format is invalid
+                }
+                edges.push_back({e1, e2});
+            }
+            if (!verifyDFS(edges, result.T)) {
+                cerr << "Error: The resulting DFS tree is incorrect." << endl;
+            }
+            else {
+                cout << "DFS verification passed." << endl;
+            }
+            */
+
             delete dfs;
             break;
         }
@@ -105,6 +129,30 @@ AlgorithmResult runAlgorithm(ll n, ll m, const string& filePath, int algorithm, 
             }
             result.passCount = dfs->getPass();
             result.T = dfs->getT();
+
+            /*
+            // Verify DFS correctness using verifyDFS()
+
+            list<edg> edges;
+            resetFileStream();
+            int e1, e2;
+            string line;
+            while (getline(fileStream, line)) {
+                istringstream iss(line);
+                if (!(iss >> e1 >> e2)) {
+                    cerr << "Error: Malformed or incomplete line: " << line << endl;
+                    break; // Exit loop if edge format is invalid
+                }
+                edges.push_back({e1, e2});
+            }
+            if (!verifyDFS(edges, result.T)) {
+                cerr << "Error: The resulting DFS tree is incorrect." << endl;
+            }
+            else {
+                cout << "DFS verification passed." << endl;
+            }
+            */
+
             delete dfs;
             break;
         }

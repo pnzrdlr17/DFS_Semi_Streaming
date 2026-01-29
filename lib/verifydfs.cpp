@@ -1,5 +1,4 @@
-#include "tree.cpp"
-#include "levelAnc.cpp"
+#include "verifydfs.h"
 #define edg pair<int, int>
 using namespace std;
 
