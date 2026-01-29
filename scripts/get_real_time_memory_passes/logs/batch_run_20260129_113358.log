@@ -1,0 +1,10 @@
+🎯 Total configurations to run: 1
+🔄 Running with 18 parallel workers
+🚀 Running Twitch with kpathC, k=41, iterations=2, file=3
+  📊 Iteration 1/2 for Twitch kpathC k=41...
+💥 [1/1] Exception in Twitch kpathC k=C: name 'printf' is not defined
+
+🏁 All experiments completed!
+✅ Successful: 0
+❌ Failed: 1
+📁 Results saved in ./results/real/average_concurrent_runs

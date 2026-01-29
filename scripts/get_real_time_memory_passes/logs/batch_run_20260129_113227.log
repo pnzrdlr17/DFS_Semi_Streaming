@@ -1,0 +1,14 @@
+🎯 Total configurations to run: 1
+🔄 Running with 18 parallel workers
+🚀 Running Twitch with kpathC, k=41, iterations=2, file=3
+  📊 Iteration 1/2 for Twitch kpathC k=41...
+      Passes: 1,  Height: 0, Time/Memory: 2.42,169928
+  📊 Iteration 2/2 for Twitch kpathC k=41...
+      Passes: 1,  Height: 0, Time/Memory: 2.50,170104
+✅ Completed Twitch kpathC k=41: 2.46s, 170016.0KB
+✅ [1/1] Completed Twitch kpathC k=C
+
+🏁 All experiments completed!
+✅ Successful: 1
+❌ Failed: 0
+📁 Results saved in ./results/real/average_concurrent_runs
