@@ -23,6 +23,7 @@
 #include "../lib/algorithms/kPath/kPathC.cpp"
 #include "../lib/algorithms/kPath/kPathD.cpp"
 #include "../lib/algorithms/classicalDFS/iterativeDFS.h"
+#include "../lib/verifydfs.h"
 #include <filesystem>
 #define ll long long int
 using namespace std;
