@@ -1,0 +1,97 @@
+🎯 Total configurations to run: 18
+🔄 Running with 36 parallel workers
+🚀 Running Orkut with klevA, k=39, iterations=1, file=1
+  📊 Iteration 1/1 for Orkut klevA k=39...
+🚀 Running Orkut with klevA, k=10, iterations=1, file=3
+  📊 Iteration 1/1 for Orkut klevA k=10...
+🚀 Running Orkut with klevB, k=10, iterations=1, file=7
+  📊 Iteration 1/1 for Orkut klevB k=10...
+🚀 Running Orkut with klevB, k=39, iterations=1, file=6
+  📊 Iteration 1/1 for Orkut klevB k=39...
+🚀 Running Orkut with klevA, k=9, iterations=1, file=5
+  📊 Iteration 1/1 for Orkut klevA k=9...
+🚀 Running Orkut with klevB, k=9, iterations=1, file=8
+  📊 Iteration 1/1 for Orkut klevB k=9...
+🚀 Running Orkut with klevB, k=8, iterations=1, file=9
+  📊 Iteration 1/1 for Orkut klevB k=8...
+🚀 Running Orkut with klevB, k=7, iterations=1, file=10
+  📊 Iteration 1/1 for Orkut klevB k=7...
+🚀 Running Orkut with klevC, k=39, iterations=1, file=11
+  📊 Iteration 1/1 for Orkut klevC k=39...
+🚀 Running Orkut with klevC, k=9, iterations=1, file=13
+  📊 Iteration 1/1 for Orkut klevC k=9...
+🚀 Running Orkut with klevC, k=10, iterations=1, file=12
+  📊 Iteration 1/1 for Orkut klevC k=10...
+🚀 Running Orkut with klevC, k=8, iterations=1, file=14
+  📊 Iteration 1/1 for Orkut klevC k=8...
+🚀 Running Orkut with klevC, k=7, iterations=1, file=15
+  📊 Iteration 1/1 for Orkut klevC k=7...
+🚀 Running Orkut with klevD, k=39, iterations=1, file=16
+  📊 Iteration 1/1 for Orkut klevD k=39...
+🚀 Running Orkut with klevD, k=10, iterations=1, file=17
+  📊 Iteration 1/1 for Orkut klevD k=10...
+🚀 Running Orkut with klevD, k=9, iterations=1, file=18
+  📊 Iteration 1/1 for Orkut klevD k=9...
+🚀 Running Orkut with klevD, k=8, iterations=1, file=19
+  📊 Iteration 1/1 for Orkut klevD k=8...
+🚀 Running Orkut with klevD, k=7, iterations=1, file=20
+  📊 Iteration 1/1 for Orkut klevD k=7...
+      Passes: 1,  Height: 0, Time/Memory: 62.43,3049440
+✅ Completed Orkut klevD k=39: 62.43s, 3049440.0KB
+✅ [1/18] Completed Orkut klevD k=C
+      Passes: 1,  Height: 0, Time/Memory: 62.46,3046212
+✅ Completed Orkut klevB k=39: 62.46s, 3046212.0KB
+✅ [2/18] Completed Orkut klevB k=C
+      Passes: 1,  Height: 0, Time/Memory: 63.48,3044448
+✅ Completed Orkut klevC k=39: 63.48s, 3044448.0KB
+✅ [3/18] Completed Orkut klevC k=C
+      Passes: 1,  Height: 0, Time/Memory: 64.83,3047232
+✅ Completed Orkut klevA k=39: 64.83s, 3047232.0KB
+✅ [4/18] Completed Orkut klevA k=C
+      Passes: 6,  Height: 2346174, Time/Memory: 13161.02,1455472
+✅ Completed Orkut klevB k=9: 13161.02s, 1455472.0KB
+✅ [5/18] Completed Orkut klevB k=9
+      Passes: 5,  Height: 2348390, Time/Memory: 13278.47,1387584
+✅ Completed Orkut klevC k=9: 13278.47s, 1387584.0KB
+✅ [6/18] Completed Orkut klevC k=9
+      Passes: 6,  Height: 2347761, Time/Memory: 13304.57,1473816
+✅ Completed Orkut klevB k=8: 13304.57s, 1473816.0KB
+✅ [7/18] Completed Orkut klevB k=8
+      Passes: 6,  Height: 2348096, Time/Memory: 13328.02,1449676
+✅ Completed Orkut klevB k=10: 13328.02s, 1449676.0KB
+✅ [8/18] Completed Orkut klevB k=10
+      Passes: 6,  Height: 2346283, Time/Memory: 13345.90,1479364
+✅ Completed Orkut klevB k=7: 13345.9s, 1479364.0KB
+✅ [9/18] Completed Orkut klevB k=7
+      Passes: 5,  Height: 2347637, Time/Memory: 13378.52,1392324
+✅ Completed Orkut klevC k=7: 13378.52s, 1392324.0KB
+✅ [10/18] Completed Orkut klevC k=7
+      Passes: 5,  Height: 2347460, Time/Memory: 13522.20,1397904
+✅ Completed Orkut klevC k=10: 13522.2s, 1397904.0KB
+✅ [11/18] Completed Orkut klevC k=10
+      Passes: 5,  Height: 2346941, Time/Memory: 13542.98,1396788
+✅ Completed Orkut klevC k=8: 13542.98s, 1396788.0KB
+✅ [12/18] Completed Orkut klevC k=8
+      Passes: 5,  Height: 2347742, Time/Memory: 13899.65,3511644
+✅ Completed Orkut klevD k=7: 13899.65s, 3511644.0KB
+✅ [13/18] Completed Orkut klevD k=7
+      Passes: 5,  Height: 2348878, Time/Memory: 13935.06,4384664
+✅ Completed Orkut klevD k=10: 13935.06s, 4384664.0KB
+✅ [14/18] Completed Orkut klevD k=10
+      Passes: 5,  Height: 2349401, Time/Memory: 13956.78,4067784
+✅ Completed Orkut klevA k=9: 13956.78s, 4067784.0KB
+✅ [15/18] Completed Orkut klevA k=9
+      Passes: 5,  Height: 2347909, Time/Memory: 13977.29,3785912
+✅ Completed Orkut klevD k=8: 13977.29s, 3785912.0KB
+✅ [16/18] Completed Orkut klevD k=8
+      Passes: 5,  Height: 2349401, Time/Memory: 13994.78,4090952
+✅ Completed Orkut klevD k=9: 13994.78s, 4090952.0KB
+✅ [17/18] Completed Orkut klevD k=9
+      Passes: 5,  Height: 2348878, Time/Memory: 14301.96,4403588
+✅ Completed Orkut klevA k=10: 14301.96s, 4403588.0KB
+✅ [18/18] Completed Orkut klevA k=10
+
+🏁 All experiments completed!
+✅ Successful: 18
+❌ Failed: 0
+📁 Results saved in ./results/real/average_concurrent_runs

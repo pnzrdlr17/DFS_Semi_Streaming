@@ -1,0 +1,123 @@
+🎯 Total configurations to run: 16
+🔄 Running with 36 parallel workers
+🚀 Running Orkut with kpathB, k=9, iterations=1, file=1
+  📊 Iteration 1/1 for Orkut kpathB k=9...
+🚀 Running Orkut with kpathB, k=8, iterations=1, file=3
+  📊 Iteration 1/1 for Orkut kpathB k=8...
+🚀 Running Orkut with kpathB, k=7, iterations=1, file=5
+  📊 Iteration 1/1 for Orkut kpathB k=7...
+🚀 Running Orkut with kpathC, k=39, iterations=10, file=6
+  📊 Iteration 1/10 for Orkut kpathC k=39...
+🚀 Running Orkut with kpathC, k=9, iterations=1, file=7
+  📊 Iteration 1/1 for Orkut kpathC k=9...
+🚀 Running Orkut with kpathC, k=8, iterations=1, file=9
+  📊 Iteration 1/1 for Orkut kpathC k=8...
+🚀 Running Orkut with kpathC, k=7, iterations=1, file=11
+  📊 Iteration 1/1 for Orkut kpathC k=7...
+🚀 Running Orkut with kpathC, k=6, iterations=1, file=12
+  📊 Iteration 1/1 for Orkut kpathC k=6...
+🚀 Running Orkut with kpathC, k=5, iterations=1, file=13
+  📊 Iteration 1/1 for Orkut kpathC k=5...
+🚀 Running Orkut with kpathD, k=39, iterations=10, file=14
+  📊 Iteration 1/10 for Orkut kpathD k=39...
+🚀 Running Orkut with kpathD, k=9, iterations=1, file=15
+  📊 Iteration 1/1 for Orkut kpathD k=9...
+🚀 Running Orkut with kpathD, k=8, iterations=1, file=16
+  📊 Iteration 1/1 for Orkut kpathD k=8...
+🚀 Running Orkut with klevA, k=2, iterations=1, file=17
+  📊 Iteration 1/1 for Orkut klevA k=2...
+🚀 Running Orkut with klevB, k=2, iterations=1, file=18
+  📊 Iteration 1/1 for Orkut klevB k=2...
+🚀 Running Orkut with klevC, k=2, iterations=1, file=19
+  📊 Iteration 1/1 for Orkut klevC k=2...
+🚀 Running Orkut with klevD, k=2, iterations=1, file=20
+  📊 Iteration 1/1 for Orkut klevD k=2...
+      Passes: 1,  Height: 0, Time/Memory: 56.92,3050288
+  📊 Iteration 2/10 for Orkut kpathD k=39...
+      Passes: 1,  Height: 0, Time/Memory: 58.27,3051488
+  📊 Iteration 2/10 for Orkut kpathC k=39...
+      Passes: 1,  Height: 0, Time/Memory: 55.79,3052492
+  📊 Iteration 3/10 for Orkut kpathC k=39...
+      Passes: 1,  Height: 0, Time/Memory: 57.44,3051508
+  📊 Iteration 3/10 for Orkut kpathD k=39...
+      Passes: 1,  Height: 0, Time/Memory: 61.12,3050488
+  📊 Iteration 4/10 for Orkut kpathD k=39...
+      Passes: 1,  Height: 0, Time/Memory: 60.35,3051488
+  📊 Iteration 4/10 for Orkut kpathC k=39...
+      Passes: 1,  Height: 0, Time/Memory: 64.59,3051392
+  📊 Iteration 5/10 for Orkut kpathC k=39...
+      Passes: 1,  Height: 0, Time/Memory: 68.10,3051396
+  📊 Iteration 5/10 for Orkut kpathD k=39...
+      Passes: 1,  Height: 0, Time/Memory: 67.44,3053428
+  📊 Iteration 6/10 for Orkut kpathC k=39...
+      Passes: 1,  Height: 0, Time/Memory: 63.16,3050488
+  📊 Iteration 6/10 for Orkut kpathD k=39...
+      Passes: 1,  Height: 0, Time/Memory: 62.40,3051428
+  📊 Iteration 7/10 for Orkut kpathC k=39...
+      Passes: 1,  Height: 0, Time/Memory: 62.66,3051456
+  📊 Iteration 7/10 for Orkut kpathD k=39...
+      Passes: 1,  Height: 0, Time/Memory: 64.64,3050360
+  📊 Iteration 8/10 for Orkut kpathC k=39...
+      Passes: 1,  Height: 0, Time/Memory: 68.89,3052428
+  📊 Iteration 8/10 for Orkut kpathD k=39...
+      Passes: 1,  Height: 0, Time/Memory: 63.37,3052528
+  📊 Iteration 9/10 for Orkut kpathC k=39...
+      Passes: 1,  Height: 0, Time/Memory: 63.96,3049384
+  📊 Iteration 9/10 for Orkut kpathD k=39...
+      Passes: 1,  Height: 0, Time/Memory: 65.49,3049296
+  📊 Iteration 10/10 for Orkut kpathC k=39...
+      Passes: 1,  Height: 0, Time/Memory: 66.66,3048428
+  📊 Iteration 10/10 for Orkut kpathD k=39...
+      Passes: 1,  Height: 0, Time/Memory: 62.46,3048436
+✅ Completed Orkut kpathC k=39: 62.48s, 3051233.6KB
+✅ [1/16] Completed Orkut kpathC k=C
+      Passes: 1,  Height: 0, Time/Memory: 61.08,3052472
+✅ Completed Orkut kpathD k=39: 63.0s, 3050833.6KB
+✅ [2/16] Completed Orkut kpathD k=C
+      Passes: 5,  Height: 2521316, Time/Memory: 5285.21,3629048
+✅ Completed Orkut kpathD k=9: 5285.21s, 3629048.0KB
+✅ [3/16] Completed Orkut kpathD k=9
+      Passes: 5,  Height: 2587769, Time/Memory: 5100.87,3340904
+✅ Completed Orkut kpathC k=8: 5100.87s, 3340904.0KB
+✅ [4/16] Completed Orkut kpathC k=8
+      Passes: 6,  Height: 2588017, Time/Memory: 5714.16,3327796
+✅ Completed Orkut kpathB k=8: 5714.16s, 3327796.0KB
+✅ [5/16] Completed Orkut kpathB k=8
+      Passes: 7,  Height: 2584313, Time/Memory: 6352.65,3002192
+✅ Completed Orkut kpathB k=7: 6352.65s, 3002192.0KB
+✅ [6/16] Completed Orkut kpathB k=7
+      Passes: 6,  Height: 2521785, Time/Memory: 7130.91,3277252
+✅ Completed Orkut kpathD k=8: 7130.91s, 3277252.0KB
+✅ [7/16] Completed Orkut kpathD k=8
+      Passes: 5,  Height: 2581946, Time/Memory: 6309.69,3583056
+✅ Completed Orkut kpathC k=9: 6309.69s, 3583056.0KB
+✅ [8/16] Completed Orkut kpathC k=9
+      Passes: 6,  Height: 2347790, Time/Memory: 13933.21,1443956
+✅ Completed Orkut klevB k=2: 13933.21s, 1443956.0KB
+✅ [9/16] Completed Orkut klevB k=2
+      Passes: 5,  Height: 2347790, Time/Memory: 14027.17,1377428
+✅ Completed Orkut klevC k=2: 14027.17s, 1377428.0KB
+✅ [10/16] Completed Orkut klevC k=2
+      Passes: 5,  Height: 2347125, Time/Memory: 14204.57,2071632
+✅ Completed Orkut klevD k=2: 14204.57s, 2071632.0KB
+✅ [11/16] Completed Orkut klevD k=2
+      Passes: 5,  Height: 2347125, Time/Memory: 14462.79,2059384
+✅ Completed Orkut klevA k=2: 14462.79s, 2059384.0KB
+✅ [12/16] Completed Orkut klevA k=2
+      Passes: 6,  Height: 2588623, Time/Memory: 5170.47,2999460
+✅ Completed Orkut kpathC k=7: 5170.47s, 2999460.0KB
+✅ [13/16] Completed Orkut kpathC k=7
+      Passes: 6,  Height: 2576002, Time/Memory: 6970.16,3592784
+✅ Completed Orkut kpathB k=9: 6970.16s, 3592784.0KB
+✅ [14/16] Completed Orkut kpathB k=9
+      Passes: 8,  Height: 2584402, Time/Memory: 5173.39,2428792
+✅ Completed Orkut kpathC k=5: 5173.39s, 2428792.0KB
+✅ [15/16] Completed Orkut kpathC k=5
+      Passes: 7,  Height: 2576957, Time/Memory: 5718.85,2698908
+✅ Completed Orkut kpathC k=6: 5718.85s, 2698908.0KB
+✅ [16/16] Completed Orkut kpathC k=6
+
+🏁 All experiments completed!
+✅ Successful: 16
+❌ Failed: 0
+📁 Results saved in ./results/real/average_concurrent_runs
