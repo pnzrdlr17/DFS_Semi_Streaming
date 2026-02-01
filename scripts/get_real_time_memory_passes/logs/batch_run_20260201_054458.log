@@ -1,0 +1,24 @@
+🎯 Total configurations to run: 4
+🔄 Running with 36 parallel workers
+🚀 Running Amazon with kpathD, k=1, iterations=1, file=1
+  📊 Iteration 1/1 for Amazon kpathD k=1...
+❌ File not found: ./input/ArxAP/download.tsv.ca-AstroPh/ca-AstroPh/out.ca-AstroPh.edg
+🚀 Running BrightK with kpathD, k=1, iterations=1, file=1
+  📊 Iteration 1/1 for BrightK kpathD k=1...
+❌ [1/4] Failed ArxAP kpathD k=1
+🚀 Running Gowalla with kpathD, k=1, iterations=1, file=1
+  📊 Iteration 1/1 for Gowalla kpathD k=1...
+      Passes: 34,  Height: 11430, Time/Memory: 5.66,27736
+✅ Completed BrightK kpathD k=1: 5.66s, 27736.0KB
+✅ [2/4] Completed BrightK kpathD k=1
+      Passes: 35,  Height: 49781, Time/Memory: 42.88,93872
+✅ Completed Gowalla kpathD k=1: 42.88s, 93872.0KB
+✅ [3/4] Completed Gowalla kpathD k=1
+      Passes: 145,  Height: 84750, Time/Memory: 192.67,158780
+✅ Completed Amazon kpathD k=1: 192.67s, 158780.0KB
+✅ [4/4] Completed Amazon kpathD k=1
+
+🏁 All experiments completed!
+✅ Successful: 3
+❌ Failed: 1
+📁 Results saved in ./results/real/average_concurrent_runs
