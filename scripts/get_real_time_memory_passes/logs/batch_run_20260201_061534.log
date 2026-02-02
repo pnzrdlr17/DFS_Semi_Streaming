@@ -1,0 +1,27 @@
+🎯 Total configurations to run: 2
+🔄 Running with 36 parallel workers
+🚀 Running Orkut with kpathA, k=5, iterations=3, file=1
+  📊 Iteration 1/3 for Orkut kpathA k=5...
+🚀 Running Orkut with kpathA, k=4, iterations=4, file=4
+  📊 Iteration 1/4 for Orkut kpathA k=4...
+      Passes: 12,  Height: 2499522, Time/Memory: 7950.66,2385028
+  📊 Iteration 2/3 for Orkut kpathA k=5...
+      Passes: 16,  Height: 2502215, Time/Memory: 9798.62,2164644
+  📊 Iteration 2/4 for Orkut kpathA k=4...
+      Passes: 12,  Height: 2499522, Time/Memory: 7684.23,2395696
+  📊 Iteration 3/3 for Orkut kpathA k=5...
+      Passes: 16,  Height: 2502215, Time/Memory: 8921.31,2170328
+  📊 Iteration 3/4 for Orkut kpathA k=4...
+      Passes: 12,  Height: 2499522, Time/Memory: 7791.06,2394636
+✅ Completed Orkut kpathA k=5: 7808.65s, 2391786.67KB
+✅ [1/2] Completed Orkut kpathA k=5
+      Passes: 16,  Height: 2502215, Time/Memory: 9584.51,2170344
+  📊 Iteration 4/4 for Orkut kpathA k=4...
+      Passes: 16,  Height: 2502215, Time/Memory: 9631.95,2169320
+✅ Completed Orkut kpathA k=4: 9484.1s, 2168659.0KB
+✅ [2/2] Completed Orkut kpathA k=4
+
+🏁 All experiments completed!
+✅ Successful: 2
+❌ Failed: 0
+📁 Results saved in ./results/real/average_concurrent_runs
